@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a18a3f3ba3c341169e10f9f19903d462" Name="Diagram1">
+        <EntityTypeShape EntityType="PolicyCheckModel.AOBoatDetail" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PolicyCheckModel.AOCaravanDetail" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PolicyCheckModel.CAllrisksBicycle" Width="1.5" PointX="3" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PolicyCheckModel.CBuildingsPrevInsurance" Width="1.5" PointX="3" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PolicyCheckModel.CCContentsPrevInsurance" Width="1.5" PointX="3" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PolicyCheckModel.CSpecifiedItem" Width="1.5" PointX="3" PointY="25.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PolicyCheckModel.MPClaimsLoss" Width="1.5" PointX="3" PointY="29" IsExpanded="true" />
+        <EntityTypeShape EntityType="PolicyCheckModel.MPConviction" Width="1.5" PointX="3" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PolicyCheckModel.PolicyMain" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PolicyCheckModel.PropertyODCommunicationAddress" Width="1.5" PointX="3" PointY="35.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PolicyCheckModel.PropertyODInterestedParty" Width="1.5" PointX="3" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PolicyCheckModel.PropertyODRiskPropertyAddress" Width="1.5" PointX="3" PointY="42.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PolicyCheckModel.ProposerDetail" Width="1.5" PointX="3" PointY="45.75" IsExpanded="true" />
+        <AssociationConnector Association="PolicyCheckModel.FK_POLICYID" ManuallyRouted="false" />
+        <AssociationConnector Association="PolicyCheckModel.FK_POLICYID1" ManuallyRouted="false" />
+        <AssociationConnector Association="PolicyCheckModel.FK_POLICYID20" ManuallyRouted="false" />
+        <AssociationConnector Association="PolicyCheckModel.FK_POLICYID10" ManuallyRouted="false" />
+        <AssociationConnector Association="PolicyCheckModel.FK_POLICYID11" ManuallyRouted="false" />
+        <AssociationConnector Association="PolicyCheckModel.FK_POLICYID33" ManuallyRouted="false" />
+        <AssociationConnector Association="PolicyCheckModel.FK_POLICYID25" ManuallyRouted="false" />
+        <AssociationConnector Association="PolicyCheckModel.FK_POLICYID26" ManuallyRouted="false" />
+        <AssociationConnector Association="PolicyCheckModel.FK_POLICYID55" ManuallyRouted="false" />
+        <AssociationConnector Association="PolicyCheckModel.FK_POLICYID7" ManuallyRouted="false" />
+        <AssociationConnector Association="PolicyCheckModel.FK_POLICYID8" ManuallyRouted="false" />
+        <AssociationConnector Association="PolicyCheckModel.FK_POLICYID9" ManuallyRouted="false" />
+        <AssociationConnector Association="PolicyCheckModel.FK_PolicyMain_PolicyMain" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

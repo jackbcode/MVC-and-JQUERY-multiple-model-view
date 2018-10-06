@@ -1,0 +1,64 @@
+﻿@model List<PolicyCheck.Models.CAllrisksBicycle>
+
+
+@{
+    ViewBag.Title = "Insert Bulk Data";
+}
+<style>
+    td {
+        padding: 5px;
+    }
+</style>
+<div style="width:700px; padding:5px; background-color:white;">
+    @using (Html.BeginForm("BulkData", "Home", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        if (ViewBag.Message != null)
+        {
+            <div style="border:solid 1px green">
+                @ViewBag.Message
+            </div>
+        }
+
+        
+        <table id="dataTable" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <th>Value</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Territory</th>
+
+
+                <th></th>
+            </tr>
+            @if (Model != null && Model.Count > 0)
+            {
+                int j = 0;
+                foreach (var i in Model)
+                {
+            <tr style="border:1px solid black">
+                <td>@Html.TextBoxFor(a => a[j].AllrisksBicyclePolicyId)</td>
+                <td>@Html.TextBoxFor(a => a[j].BicycleId)</td>
+                <td>@Html.TextBoxFor(a => a[j].BicycleValue)</td>
+                <td>@Html.TextBoxFor(a => a[j].BicycleMake)</td>
+                <td>@Html.TextBoxFor(a => a[j].BicycleModel)</td>
+                <td>@Html.TextBoxFor(a => a[j].BicycleTerritory)</td>
+
+
+            </tr>
+                    j++;
+                }
+            }
+        </table>
+        <input type="submit" value="Save Bulk Data" />
+    }
+</div>
+
+
+
+
+
+
+

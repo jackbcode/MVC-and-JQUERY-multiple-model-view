@@ -1,0 +1,65 @@
+﻿@model PolicyCheck.Models.MPConviction
+@using PolicyCheck.Helper
+
+
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+
+<div class="convictionRow">
+
+    @using (Html.BeginCollectionItem("Convictions"))
+    {
+    <div class="form-group whiteDiv">
+        <div id="allrisksTitle2" class="wrapper8">
+            <div class="form-group" style="float: left; width: 150px; margin-right:30px">
+                <p class=" = font-weight-bold popOut">Date</p>
+            </div>
+            <div class="form-group" style="float: left; width: 150px; margin-right:30px ">
+                <p class=" = font-weight-bold popOut">Pending</p>
+            </div>
+            <div class="form-group" style="float: left; width: 150px; margin-right:30px">
+                <p class=" = font-weight-bold popOut">Type</p>
+            </div>
+
+
+        </div>
+
+        <div id="allrisksTitle2" class="wrapper8">
+            <div class="form-group" style="float: left; width: 150px; margin-right:30px; ">
+                @Html.EditorFor(x => x.ConvictionDate, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+
+            <div class="form-group" style="float: left; width: 150px; margin-right:30px ">
+                @Html.DropDownListFor(x => x.Pending, Model.YN, "MS", new { @id = "buildingsContent", @class = "form-control" })
+            </div>
+
+            <div class="form-group" style="float: left; width: 250px; margin-right:30px ">
+                @Html.DropDownListFor(x => x.ConvictionType, Model.CL, "MS", new { @id = "buildingsContent", @class = "form-control" })
+                @*@Html.EditorFor(x => x.BicycleTerritory)*@
+                @*@Html.DropDownListFor(x => x.BicycleTerritory, ViewData["Territory2"] as SelectList)*@
+                @*@Html.DropDownList("BicycleTerritory", ViewBag.Territory2 as IEnumerable<SelectListItem>, new { @class = "form-control" })*@
+
+            </div>
+
+
+        </div>
+    </div>
+
+        <br />
+
+
+
+
+        @*<a href="#" class="deleteRow btn btn-primary">delete</a>*@
+    }
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+
+@section Scripts
+{
+
+
+}
+

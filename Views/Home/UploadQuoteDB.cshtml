@@ -1,0 +1,3483 @@
+﻿@model IEnumerable<PolicyCheck.Models.PolicyCheckUploadParagon_Result>
+
+@{
+    /**/
+
+    ViewBag.Title = "UploadQuoteDB";
+}
+
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+@foreach (var item in Model.Take(1))
+{
+
+
+    @*-------------------------------------------------DIV ONE ------------------------------------------------*@
+
+
+    <div class="divSquare" id="divOne">
+
+        <p class="header2">Property -  Client Ref: @ViewBag.Message</p>
+
+        <div class="wrapper">
+            <div class="form-group  first">
+                <div class="wrapper2">
+                    <div class="first2">
+                        Postcode:
+                    </div>
+                    <div class="col-md-7 second2 displayFor ">
+                        @Html.DisplayFor(modelItem => item.Riskpcode)
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper2">
+                    <div class="first3">
+                        YrBuilt:
+                    </div>
+                    <div class="col-md-6 second2 displayFor">
+                        @Html.DisplayFor(modelItem => item.Year_blt)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        @*------------------- TYPE OF HOUSE - -------------------------------*@
+
+
+        <div class="form-group">
+            <div class="wrapper3">
+                <div class="first2">
+                    Type:
+                </div>
+                <div class="col-md-7 second2 displayFor">
+                    @Html.DisplayFor(modelItem => item.HouseType)
+                </div>
+            </div>
+        </div>
+
+        @*------------------- walls - -------------------------------*@
+        <div class="form-group">
+            <div class="wrapper3">
+                <div class="first2">
+                    Walls:
+                </div>
+                <div class="col-md-7 second2 displayFor">
+                    @Html.DisplayFor(modelItem => item.Walls)
+                </div>
+            </div>
+        </div>
+
+        @*------------------- Roof/flat% - -------------------------------*@
+
+        <div class="wrapper">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <div class="first2">
+                        Roof:
+                    </div>
+                    <div class="col-md-10 second3 displayFor ">
+                        @Html.DisplayFor(modelItem => item.Roof)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first6 extraPadding3">
+                        Flat%:
+                    </div>
+                    <div class="col-md-5 second displayFor">
+                        @Html.DisplayFor(modelItem => item.Flatroofpc)
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        @*------------------- rooms - -------------------------------*@
+
+
+        <div class="wrapper">
+            <div class="form-group" style="float: left; width: 190px; ">
+                <div class="wrapperRooms">
+                    <div class="first2 ">
+                        Bedrooms:
+                    </div>
+                    <div class="col-md-5 second displayFor ">
+                        @Html.DisplayFor(modelItem => item.Bedrooms)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 150px; ">
+                <div class="wrapperRooms">
+                    <div class="first3">
+                        Rooms:
+                    </div>
+                    <div class="col-md-5 second displayFor ">
+                        @Html.DisplayFor(modelItem => item.Rooms)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 150px; ">
+                <div class="wrapperRooms">
+                    <div class="first3">
+                        Floors:
+                    </div>
+                    <div class="col-md-5 second displayFor">
+                        @Html.DisplayFor(modelItem => item.Floors)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 65px; ">
+                <div class="wrapperRooms">
+                    <div class="second col-md-12 displayFor">
+                        @Html.DisplayFor(modelItem => item.Floorno)
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+        @*------------------- Prelim Qs/Bathrooms - -------------------------------*@
+
+        <div class="wrapper prelimhide">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <div class="first4 popOut">
+                        Prelim Qs>
+                    </div>
+                    <div class="col-md-3 second2">
+                        <div class="wrapperButton">
+                            <div class="buttonFirst"> <div id="preLim" class="buttonEntry pad"></div> </div>
+                            <div class="buttonSecond"> <button type="button" id="prelimQuestionsButton" class="btn btn-primary btn-Entry"></button> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-group second prelimhide ">
+                <div class="wrapper5">
+                    <div class="first6">
+                        Bathrooms:
+                    </div>
+                    <div class="col-md-4 second displayFor">
+                        @Html.DisplayFor(modelItem => item.Bathrooms)
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+        @*------------------- Use/Occupancy - -------------------------------*@
+
+        <div class="wrapper prelimhide ">
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4 popOut">
+                        Use/Occupancy>
+                    </div>
+                    <div class="col-md-3 second2">
+                        <div class="wrapperButton">
+                            <div class="buttonFirst"> <div id="useOcc" class="buttonEntry pad"></div> </div>
+                            <div class="buttonSecond"> <button type="button" id="useOccupancyButton" class="btn btn-primary btn-Entry"></button> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @*------------------- Security/Extended - -------------------------------*@
+
+        <div class="wrapper prelimhide ">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <div class="first4 popOut">
+                        Security>
+                    </div>
+                    <div class="col-md-5 second" id="prelimQs">
+                        <div class="wrapperButton">
+                            <div class="buttonFirst"> <div id="Security" class="buttonEntry pad"></div> </div>
+                            <div class="buttonSecond"> <button type="button" id="SecurityButton" class="btn btn-primary btn-Entry"></button> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first6">
+                        Extended?
+                    </div>
+                    <div class="col-md-5 second displayFor">
+                        @Html.DisplayFor(modelItem => item.Extended)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        @*------------------- Survey/Report & Yr Extended - -------------------------------*@
+
+        <div class="wrapper prelimhide ">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <div class="first4 popOut">
+                        Survey/Reports>
+                    </div>
+                    <div class="col-md-5 second" id="prelimQs">
+
+                        <div class="buttonFirst"> <div id="SurveyRe" class="buttonEntry pad"></div> </div>
+                        <div class="buttonSecond"> <button type="button" id="SurveyReButton" class="btn btn-primary btn-Entry"></button> </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first6">
+                        Yr Extended:
+                    </div>
+                    <div class="col-md-5 second displayFor ">
+                        @Html.DisplayFor(modelItem => item.Yearextended)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        @*------------------- Other Details/Heating - -------------------------------*@
+
+
+        <div class="wrapper prelimhide ">
+            <div class="form-group OD" style="float: left; width: 190px; ">
+                <div class="wrapper6">
+                    <div class="first2 popOut">
+                        Other Dets>
+                    </div>
+                    <div class="col-md-5 second triple2 ">
+                        <div class="buttonFirst"> <div id="othDetails" class="buttonEntry pad"></div> </div>
+                        <div class="buttonSecond"> <button type="button" id="othDetailsButton" class="btn btn-primary btn-Entry"></button> </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 190px; ">
+                <div class="wrapper6">
+                    <div class="first8">
+                        Heat P:
+                    </div>
+                    <div class="col-md-5 second triple2 displayFor ">
+                        @Html.DisplayFor(modelItem => item.PrimaryHeating)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 190px; ">
+                <div class="wrapper6">
+                    <div class="first8">
+                        Heats S:
+                    </div>
+                    <div class="col-md-5 second triple2 displayFor ">
+                        @Html.DisplayFor(modelItem => item.SecondaryHeating)
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    @*-------------------------------------------------DIV TWO ------------------------------------------------*@
+
+    <div class="divSquare" id="divTwo">
+       
+
+        <div id="ProposersDisplay">
+
+
+
+        </div>
+
+    </div>
+
+
+    @*-------------------------------------------------DIV THREE ------------------------------------------------*@
+
+    <div class="divSquare2" id="divThree">
+        <p class="header2">Cover</p>
+
+        @*------------------- Buildings & Contents - -------------------------------*@
+
+
+        <div class="form-group">
+            <div class="wrapper2">
+                <div class="firstCover">
+                    <p class="popOut">Buildings & Contents</p>
+                </div>
+                <div class="col-md-7 second">
+                    <div class="buttonFirst"> <div id="buildContDetails" class="buttonEntry pad"></div> </div>
+                    <div class="buttonSecond"> <button type="button" id="buildContButton" class="btn btn-primary btn-Entry"></button> </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="form-group  first">
+                <div class="wrapper2">
+                    <div class="firstCover">
+                        Buildings Total
+                    </div>
+                    <div class="col-md-4 second displayFor">
+                        @Html.DisplayFor(modelItem => item.Buildingssi)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper2">
+                    <div class="firstCover">
+                        Building Xs
+                    </div>
+                    <div class="col-md-4 second displayFor">
+                        @Html.DisplayFor(modelItem => item.Buildtotxs)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="wrapper">
+            <div class="form-group  first">
+                <div class="wrapper2">
+                    <div class="firstCover">
+                        Content Total
+                    </div>
+                    <div class="col-md-4 second displayFor">
+                        @Html.DisplayFor(modelItem => item.Contentssi)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper2">
+                    <div class="firstCover">
+                        Content Xs
+                    </div>
+                    <div class="col-md-4 second displayFor ">
+                        @Html.DisplayFor(modelItem => item.Contstotxs)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        @*------------------- All Risks/Spec Items - -------------------------------*@
+
+
+        <div class="wrapper">
+            <div class="form-group  first">
+                <div class="wrapper2">
+                    <div class="firstCover popOut">
+                        All Risks>
+                    </div>
+                    <div class="col-md-5 second" id="prelimQs">
+                        <div class="buttonFirst"> <div id="ARPrev" class="buttonEntry pad"></div> </div>
+                        <div class="buttonSecond"> <button type="button" id="allRisks2" class="btn btn-primary btn-Entry"></button> </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="firstCover popOut">
+                        Spec Items>
+                    </div>
+                    <div class="col-md-5 second ">
+                        <div class="buttonFirst"> <div id="SI" class="buttonEntry pad">CHK</div> </div>
+                        <div class="buttonSecond"> <button type="button" id="SIButton" class="btn btn-primary btn-Entry"></button> </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    @*-------------------------------------------------DIV FOUR ------------------------------------------------*@
+
+    <div class="divSquare2" id="divFour">
+        <p class="header2">Add Ons/Other</p>
+
+        <div class="wrapper">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <div class="first4">
+                        Legal Expenses
+                    </div>
+                    <div class="col-md-4 second displayFor" id="prelimQs">
+                        @Html.DisplayFor(modelItem => item.Legalexpenses)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first4 extraPadding">
+                        Motor Policy
+                    </div>
+                    <div class="col-md-5 second displayFor ">
+                        @Html.DisplayFor(modelItem => item.Currentmotorpolicy)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="wrapper">
+            <div class="form-group  first">
+                <div class="wrapper3">
+                    <div class="first4">
+                        Motor Insurer
+                    </div>
+                    <div class="col-md-12 second3 displayFor">
+                        @Html.DisplayFor(modelItem => item.MotorInsurer)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        @*<div class="wrapper prelimhide">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.AOCaravans, htmlAttributes: new { @class = " control-label col-md-10 popOut" })
+                    </div>
+                    <div class="col-md-5 second" id="prelimQs">*@
+        @*<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#prelimQuestions">Select</button>*@
+        @*@Html.DropDownListFor(model => model.AOCaravans, Model.yesNo, "MS", new { @id = "caravan", @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.AOCaravans, "", new { @class = "text-danger" })*@
+        @*</div>
+                </div>
+            </div>*@
+
+
+
+        @*<div class="form-group second prelimhide ">
+                <div class="wrapper5">
+                    <div class="first7">
+                        @Html.LabelFor(model => model.AOSummationCaravansEnteredDetails, htmlAttributes: new { @class = " control-label col-md-12" })
+                    </div>
+                    <div class="col-md-4 second ">
+                        @Html.EditorFor(model => model.AOSummationCaravansEnteredDetails, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.AOSummationCaravansEnteredDetails, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>*@
+
+
+        @*</div>
+
+            <div class="wrapper prelimhide">
+                <div class="form-group  first">
+                    <div class="wrapper4">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.AOBoats, htmlAttributes: new { @class = " control-label col-md-10 popOut" })
+                        </div>
+                        <div class="col-md-5 second" id="prelimQs">
+                            @*<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#prelimQuestions">Select</button>*@
+        @*@Html.DropDownListFor(model => model.AOBoats, Model.yesNo, "MS", new { @id = "boat", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.AOBoats, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>*@
+
+
+
+        @*<div class="form-group second prelimhide ">
+                    <div class="wrapper5">
+                        <div class="first7">
+                            @Html.LabelFor(model => model.AOSummationBoatEnteredDetails, htmlAttributes: new { @class = " control-label col-md-12" })
+                        </div>
+                        <div class="col-md-4 second ">
+                            @Html.EditorFor(model => model.AOSummationBoatEnteredDetails, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.AOSummationBoatEnteredDetails, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>*@
+
+
+
+        <div class="wrapper">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <div class="first4">
+                        Searches Cons>
+                    </div>
+                    <div class="col-md-5 second displayFor ">
+                        @Html.DisplayFor(modelItem => item.Consentforsearches)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first7 ">
+                        Scheme No:
+                    </div>
+                    <div class="col-md-4  second displayFor ">
+                        @Html.DisplayFor(modelItem => item.Scheme)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="wrapper">
+            <div class="form-group  first">
+                <div class="wrapper3">
+                    <div class="first4">
+                        Cover Date:
+                    </div>
+                    <div class="col-md-6 second displayFor">
+                        @Html.DisplayFor(modelItem => item.Coverdate)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <input type="submit" value="Check Quote" Policy" class="btn btn-outline-primary btn-lg" id="checkpolicybutton" />
+
+
+
+
+
+    </div>
+
+    @*-------------------------------PRELIM QUESTIONS MODAL ----------------------------------------*@
+
+    <div id="preliminaryQuestions" style='display:none' class="popQuestions">
+
+        <p class="header2">Preliminary Questions</p>
+
+        <p Class="popOut" id="proposers">FOR THE PROPOSER(S), THEIR FAMILY OR ANYONE NORMALLY LIVING WITH THEM:</p>
+
+        <div class="wrapper">
+            <div class="form-group">
+                <div class="wrapper9">
+                    <div class="first12">
+                        Insurance Declined?
+                    </div>
+                    <div id="InsRef" class="col-md-3 second2 displayFor">
+                        @Html.DisplayFor(modelItem => item.Refused)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="form-group">
+                <div class="wrapper9">
+                    <div class="first12">
+                        Convictions?
+                    </div>
+                    <div class="col-md-3 second2 displayFor">
+                        @Html.DisplayFor(modelItem => item.Unspent_pending)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="form-group">
+                <div class="wrapper9">
+                    <div class="first12">
+                        Bankrupt?
+                    </div>
+                    <div class="col-md-3 second2 displayFor">
+                        @Html.DisplayFor(modelItem => item.Bankrupt)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <p class="popOut" id="proposers">FOR THE RISK PROPERTY TO BE COVERED:</p>
+
+
+        <div class="wrapper10">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <p class="popOut" id="freeFrom"> Is It Free From: </p>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first7">
+                        In Good Repair?
+                    </div>
+                    <div class="col-md-5 second displayFor ">
+                        @Html.DisplayFor(modelItem => item.Goodrepair)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        @*-------------------------NEARQUARRY----------------------------*@
+
+        <div class="wrapper10">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <div class="first4">
+                        Near River/Quarry?
+                    </div>
+                    <div class="col-md-5 second displayFor" id="prelimQs">
+                        @Html.DisplayFor(modelItem => item.Riverquarry)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first7">
+                        RQ Distance
+                    </div>
+                    <div class="col-md-5 second displayFor ">
+                        @Html.DisplayFor(modelItem => item.Riverdistance)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        @*-------------------------STORMFLOOD/Building Listed----------------------------*@
+
+
+        <div class="wrapper10">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <div class="first4">
+                        Storm/Flood?
+                    </div>
+                    <div class="col-md-5 second displayFor" id="prelimQs">
+                        @Html.DisplayFor(modelItem => item.Storm)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first7">
+                        Building Listed:
+                    </div>
+                    <div class="col-md-5 second displayFor ">
+                        @Html.DisplayFor(modelItem => item.BuildingListed)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        @*------------------- subsidence/building listed - -------------------------------*@
+
+        <div class="wrapper10 ">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <div class="first4">
+                        Subsidence?
+                    </div>
+                    <div class="col-md-5 second displayFor" id="prelimQs">
+                        @Html.DisplayFor(modelItem => item.Subsidence)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first7">
+                        Repaired/Monitored?
+                    </div>
+                    <div class="col-md-5 second displayFor ">
+                        @Html.DisplayFor(modelItem => item.Repaired)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        @*------------------- Landslip/Underpinned --------------------------------*@
+
+        <div class="wrapper10 ">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <div class="first4">
+                        Landslip?
+                    </div>
+                    <div class="col-md-5 second displayFor" id="prelimQs">
+                        @Html.DisplayFor(modelItem => item.Landslip)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first7">
+                        Underpinned?
+                    </div>
+                    <div class="col-md-5 second displayFor ">
+                        @Html.DisplayFor(modelItem => item.Underpinned)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        @*------------------- Ground Heave --------------------------------*@
+
+        <div class="wrapper10 ">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <div class="first4">
+                        Ground Heave?
+                    </div>
+                    <div class="col-md-5 second displayFor" id="prelimQs">
+                        @Html.DisplayFor(modelItem => item.Groundheave)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button type="button" class="btn btn-primary" id="prelimHideButton">Complete</button>
+
+    </div>
+
+    @*-------------------------------Use/Occupancy MODAL ----------------------------------------*@
+
+    <div id="useOccupancyQuestions" style='display:none' class="popQuestions">
+
+        <p class="header2">Property Use / Occupancy</p>
+
+        <br />
+
+        @*-------------------------Accomodation----------------------------*@
+
+
+        <div class="form-group">
+            <div class="wrapper10">
+                <div class="first4">
+                    Accomodation:
+                </div>
+                <div id="occRef" class="col-md-7 second2 displayFor">
+                    @Html.DisplayFor(modelItem => item.OccupancyAccomodation)
+                </div>
+            </div>
+        </div>
+
+        @*------------------- Residence- -------------------------------*@
+        <div class="form-group">
+            <div class="wrapper10">
+                <div class="first4">
+                    Residence:
+                </div>
+                <div class="col-md-7 second2 displayFor">
+                    @Html.DisplayFor(modelItem => item.Residence)
+                </div>
+            </div>
+        </div>
+
+        @*------------------- Unnoccupied- -------------------------------*@
+        <div class="form-group">
+            <div class="wrapper10">
+                <div class="first4">
+                    Unoccupied:
+                </div>
+                <div class="col-md-7 second2 displayFor">
+                    @Html.DisplayFor(modelItem => item.OccupancyUnoccupied)
+                </div>
+            </div>
+        </div>
+
+        @*------------------- Business Use/Stock- -------------------------------*@
+
+        <div class="wrapper10">
+            <div class="form-group  first">
+                <div class="wrapper12">
+                    <div class="first4">
+                        Business Use:
+                    </div>
+                    <div class="col-md-4 second2 displayFor" id="prelimQs">
+                        @Html.DisplayFor(modelItem => item.Businessuse)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first7">
+                        Stock:
+                    </div>
+                    <div class="col-md-8 second displayFor">
+                        @Html.DisplayFor(modelItem => item.Stock)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        @*------------------- HolidayHome/Equipment- -------------------------------*@
+
+        <div class="wrapper10">
+            <div class="form-group  first">
+                <div class="wrapper12">
+                    <div class="first4">
+                        Holiday Home?
+                    </div>
+                    <div class="col-md-4 second2 displayFor" id="prelimQs">
+                        @Html.DisplayFor(modelItem => item.Holidayhome)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first7">
+                        Equipment:
+                    </div>
+                    <div class="col-md-8 second displayFor ">
+                        @Html.DisplayFor(modelItem => item.Equipment)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        @*------------------- Paying Guests- -------------------------------*@
+
+        <div class="wrapper10">
+            <div class="form-group  first">
+                <div class="wrapper12">
+                    <div class="first4">
+                        Paying Guests?
+                    </div>
+                    <div class="col-md-4 second2 displayFor" id="prelimQs">
+                        @Html.DisplayFor(modelItem => item.Paying_guests)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first7">
+                        PG Number:
+                    </div>
+                    <div class="col-md-8 second displayFor">
+                        @Html.DisplayFor(modelItem => item.Payingguestno)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        @*-------------------------Smokers----------------------------*@
+
+
+        <div class="wrapper10">
+            <div class="form-group  first">
+                <div class="wrapper12">
+                    <div class="first4">
+                        Smokers
+                    </div>
+                    <div class="col-md-4 second2 displayFor" id="prelimQs">
+                        @Html.DisplayFor(modelItem => item.Smokers)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="popOut" id="proposers">Number Of Occupants:</p>
+
+        <div class="wrapper10">
+            <div class="form-group  first">
+                <div class="wrapper2">
+                    <div class="first2">
+                        Adults:
+                    </div>
+                    <div class="col-md-7 second displayFor ">
+                        @Html.DisplayFor(modelItem => item.Adults)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="wrapper10">
+            <div class="form-group  first">
+                <div class="wrapper2">
+                    <div class="first2">
+                        Children:
+                    </div>
+                    <div class="col-md-7 second displayFor">
+                        @Html.DisplayFor(modelItem => item.C_Children)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button type="button" class="btn btn-primary btn-padding" id="useOccupancyHideButton">Complete</button>
+    </div>
+
+    @*-------------------------------Security QUESTIONS MODAL ----------------------------------------*@
+
+    <div id="securityQuestions" style='display:none' class="popQuestionsSecurity">
+
+        <p class="header2">Property Security</p>
+
+
+        <div class="securityModal">
+            <br />
+
+            @*------------------- Exit doors/Neighbourhood watch - -------------------------------*@
+
+            <div class="wrapperSec  ">
+                <div class="form-group  first">
+                    <div class="wrapper4">
+                        <div id="secRef" class="first4">
+                            Final Exit Doors?
+                        </div>
+                        <div class="col-md-4 second displayFor" id="prelimQs">
+                            @Html.DisplayFor(modelItem => item.Main_door)
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group second ">
+                    <div class="wrapper5">
+                        <div class="first4 extraPadding2">
+                            NHood Watch?
+                        </div>
+                        <div class="col-md-4 second displayFor">
+                            @Html.DisplayFor(modelItem => item.Nhood_watch)
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            @*------------------- other doors/smokealarm - -------------------------------*@
+
+            <div class="wrapperSec ">
+                <div class="form-group  first">
+                    <div class="wrapper4">
+                        <div class="first4">
+                            Other Doors?
+                        </div>
+                        <div class="col-md-4 second displayFor" id="prelimQs">
+                            @Html.DisplayFor(modelItem => item.Other_door)
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group second ">
+                    <div class="wrapper5">
+                        <div class="first4 extraPadding2">
+                            Smoke Alarm?
+                        </div>
+                        <div class="col-md-4 second displayFor">
+                            @Html.DisplayFor(modelItem => item.Smokealarm)
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            @*------------------- patio/self contained - -------------------------------*@
+
+            <div class="wrapper ">
+                <div class="form-group  first">
+                    <div class="wrapper4">
+                        <div class="first4">
+                            Patio Doors?
+                        </div>
+                        <div class="col-md-4 second displayFor" id="prelimQs">
+                            @Html.DisplayFor(modelItem => item.French_door)
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group second ">
+                    <div class="wrapper5">
+                        <div class="first4 extraPadding2">
+                            Self Contained?
+                        </div>
+                        <div class="col-md-4 second displayFor">
+                            @Html.DisplayFor(modelItem => item.Self_contained)
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            @*------------------- Windows - -------------------------------*@
+
+            <div class="wrapper">
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            Windows?
+                        </div>
+                        <div class="col-md-3 second2 displayFor">
+                            @Html.DisplayFor(modelItem => item.Windows)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*------------------- Intruder alram/ Alarm type - -------------------------------*@
+
+            <div class="wrapperSec">
+                <div class="form-group  first">
+                    <div class="wrapper4">
+                        <div class="first4">
+                            Intruder Alarm
+                        </div>
+                        <div class="col-md-5 second displayFor" id="prelimQs">
+                            @Html.DisplayFor(modelItem => item.Alarm)
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group second2 ">
+                    <div class="wrapperContained">
+                        <div class="first4 extraPadding">
+                            Alarm Type:
+                        </div>
+                        <div class="col-md-6 second2 displayFor ">
+                            @Html.DisplayFor(modelItem => item.Alarm_type)
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            @*------------------- Accreditation 1 - -------------------------------*@
+
+            <br />
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        Accred Details (1):
+                    </div>
+                    <div class="col-md-7 second2 displayFor">
+                        @Html.DisplayFor(modelItem => item.AlarmAccredDetails1)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        AD (1) Other:
+                    </div>
+                    <div class="col-md-7 second2 displayFor">
+                        @Html.DisplayFor(modelItem => item.Ftx_accreddetails1)
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrapperSec">
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            Spec Contract?
+                        </div>
+                        <div class="col-md-3 second2 displayFor">
+                            @Html.DisplayFor(modelItem => item.Alarm_maint)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="wrapper">
+                <div class="form-group  first">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            Date Installed:
+                        </div>
+                        <div class="col-md-12 second3 displayFor ">
+                            @Html.DisplayFor(modelItem => item.Alarm_install)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper">
+                    <div class="first4">
+                        Maintainer:
+                    </div>
+                    <div class="col-md-7 second2 displayFor">
+                        @Html.DisplayFor(modelItem => item.AlarmMaintainceCompany)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="wrapper">
+                    <div class="first4">
+                        Maintainer Oth:
+                    </div>
+                    <div class="col-md-7 second2 displayFor">
+                        @Html.DisplayFor(modelItem => item.Alarmmaintnm)
+                    </div>
+                </div>
+            </div>
+
+
+            @*------------------- Accreditation 2 - -------------------------------*@
+
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        Accred Details(2):
+                    </div>
+                    <div class="col-md-7 second2 displayFor">
+                        @Html.DisplayFor(modelItem => item.AlarmAccredDetails2)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        AD (2) Free Text:
+                    </div>
+                    <div class="col-md-7 second2 displayFor">
+                        @Html.DisplayFor(modelItem => item.Ftx_accreddetails2)
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <button type="button" class="btn btn-primary btn-padding" id="SecHideButton">Complete</button>
+
+        </div>
+
+    </div>
+
+    @*-------------------------------SURVEY QUESTIONS MODAL ----------------------------------------*@
+
+    <div id="SurveyReQuestions" style='display:none' class="popQuestionsSurvey">
+
+        <p class="header2">Survey/Report Details</p>
+
+
+        <div class="securityModal">
+            <br />
+
+            @*------------------- RICS/FSVA SURVEY -------------------------------*@
+
+            <div class="wrapperSec">
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            RICS/FSVA Survey?
+                        </div>
+                        <div class="col-md-3 second2 displayFor" id="ricFSV">
+                            @Html.DisplayFor(modelItem => item.Survey)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*------------------- RICS/FSVA SURVEY DATE -------------------------------*@
+
+            <div class="wrapper">
+                <div class="form-group  first">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            Date:
+                        </div>
+                        <div class="col-md-12 second3 displayFor ">
+                            @Html.DisplayFor(modelItem => item.Survey_date)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*------------------- RICS/FSVA SURVEYORS namse -------------------------------*@
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        Surveyor's Name:
+                    </div>
+                    <div class="col-md-7 second2 displayFor">
+                        @Html.DisplayFor(modelItem => item.Survey_name)
+                    </div>
+                </div>
+            </div>
+
+
+
+            @*------------------- RICS/FSVA Date Proof Rec -------------------------------*@
+
+            <div class="wrapper">
+                <div class="form-group  first">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            Date Proof Rec:
+                        </div>
+                        <div class="col-md-12 second3 displayFor">
+                            @Html.DisplayFor(modelItem => item.Survey_name)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*------------------- STRUCTURAL ENGINEERING REPORT -------------------------------*@
+
+            <div class="wrapperSec">
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            Struct Engineer Report?
+                        </div>
+                        <div class="col-md-3 second2 displayFor">
+                            @Html.DisplayFor(modelItem => item.Structural)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*-------------------STRUCTURAL ENGINEERING REPORT DATE -------------------------------*@
+
+            <div class="wrapper">
+                <div class="form-group  first">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            Date:
+                        </div>
+                        <div class="col-md-12 second3 displayFor">
+                            @Html.DisplayFor(modelItem => item.Structural_date)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*------------------- STRUCTURAL ENGINEERING REPORT NAME -------------------------------*@
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        Engineer's Name:
+                    </div>
+                    <div class="col-md-7 second2 displayFor">
+                        @Html.DisplayFor(modelItem => item.Structural_name)
+                    </div>
+                </div>
+            </div>
+
+            @*------------------- NHBC GUARANTEE -------------------------------*@
+
+            <div class="wrapperSec">
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            NHBC Guarantee?
+                        </div>
+                        <div class="col-md-3 second2 displayFor">
+                            @Html.DisplayFor(modelItem => item.Nhbc_proof)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*------------------- RICS/FSVA SURVEY DATE -------------------------------*@
+
+            <div class="wrapper">
+                <div class="form-group  first">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            Date:
+                        </div>
+                        <div class="col-md-12 second3 displayFor ">
+                            @Html.DisplayFor(modelItem => item.Nhbc_proof_expires)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <button type="button" class="btn btn-primary btn-padding" id="SurveyReQuestionsHideButton">Complete</button>
+
+        </div>
+
+    </div>
+
+
+    @*-------------------------------- OTHER DETAILS MODAL --------------------------------------------------------------------------*@
+
+    <div id="othDetailsQuestions" style='display:none' class="popQuestionsOD">
+
+        <p class="header2">Other Details</p>
+
+
+        <div class="odModal">
+            <br />
+
+            @*------------------- RISK PROPERTY ADDRESS-------------------------------*@
+
+            <div class="threeDivs">
+                <h5 class="popOut">RISK PROPERTY ADDRESS</h5>
+
+
+
+                <div class="form-group">
+                    Name/Number:
+                    <div id="NN" class="col-md-10 displayFor">
+                        @Html.DisplayFor(modelItem => item.Riskaddr1)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    Street:
+                    <div class="col-md-10 displayFor">
+                        @Html.DisplayFor(modelItem => item.Riskaddr2)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    Town:
+                    <div class="col-md-10 displayFor">
+                        @Html.DisplayFor(modelItem => item.Riskaddr3)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    County:
+                    <div class="col-md-10 displayFor">
+                        @Html.DisplayFor(modelItem => item.Riskaddr4)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    Postcode:
+                    <div class="col-md-10 displayFor">
+                        @Html.DisplayFor(modelItem => item.Riskpcode)
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="threeDivs">
+                <h5 class="popOut">COMMUNICATION ADDRESS</h5>
+
+                <div class="form-group">
+                    Name/Number:
+                    <div class="col-md-10 displayFor">
+                        @Html.DisplayFor(modelItem => item.Commaddr1)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    Street:
+                    <div class="col-md-10 displayFor">
+                        @Html.DisplayFor(modelItem => item.Commaddr2)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    Town:
+                    <div class="col-md-10 displayFor">
+                        @Html.DisplayFor(modelItem => item.Commaddr3)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    County:
+                    <div class="col-md-10 displayFor">
+                        @Html.DisplayFor(modelItem => item.Commaddr4)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    Postcode
+                    <div class="col-md-10 displayFor">
+                        @Html.DisplayFor(modelItem => item.Commpcode)
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="threeDivs">
+                <h5 class="popOut">INTERESTED PARTY</h5>
+
+
+
+
+                <div class="form-group">
+                    Type:
+                    <div class="col-md-10 displayFor">
+                        @Html.DisplayFor(modelItem => item.InterestedPartyType)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    IP Name:
+                    <div class="col-md-10 displayFor">
+                        @Html.DisplayFor(modelItem => item.InterestedPartyName)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    IP Name:
+                    <div class="col-md-10 displayFor">
+                        @Html.DisplayFor(modelItem => item.Interestunlist)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    Name/Number:
+                    <div class="col-md-10 displayFor">
+                        @Html.DisplayFor(modelItem => item.Interestaddr1)
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    Street:
+                    <div class="col-md-10 displayFor">
+                        @Html.DisplayFor(modelItem => item.Interestaddr2)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    Town:
+                    <div class="col-md-10 displayFor">
+                        @Html.DisplayFor(modelItem => item.Interestaddr3)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    County:
+                    <div class="col-md-10 displayFor">
+                        @Html.DisplayFor(modelItem => item.Interestaddr4)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    Postcode:
+                    <div class="col-md-10 displayFor">
+                        @Html.DisplayFor(modelItem => item.Interestpcode)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    Ref/Mortgage No:
+                    <div class="col-md-10 displayFor">
+                        @Html.DisplayFor(modelItem => item.Reference)
+                    </div>
+                </div>
+
+                <br />
+
+                <button type="button" class="btn btn-primary" id="othDetailsHideButton">Complete</button>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    @*-------------------------------- BUILDINGS AND CONTENTS MODAL --------------------------------------------------------------------------*@
+
+    <div id="buildContsQuestions" style='display:none' class="popQuestionsBC">
+
+        <p class="header2">Buildings / Content Cover</p>
+
+
+        <div class="odModal">
+            <br />
+
+
+            <div class="twodivs">
+
+                <p class="font-weight-bold buildings popOut"> BUILDINGS</p>
+
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            Cover Type:
+                        </div>
+                        <div class="col-md-7 second2 displayFor" id="BC">
+                            @Html.DisplayFor(modelItem => item.Buildingscover)
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group ">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            Sum Insured:
+                        </div>
+                        <div class="col-md-12 second3 displayFor ">
+                            @Html.DisplayFor(modelItem => item.Reqbuildcover)
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group ">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            Vol Excess:
+                        </div>
+                        <div class="col-md-12 second3 displayFor ">
+                            @Html.DisplayFor(modelItem => item.Buildvolxs)
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            XS Buy Back?
+                        </div>
+                        <div class="col-md-3 second2 displayFor">
+                            @Html.DisplayFor(modelItem => item.Buildbuyback)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group second ">
+                    <div class="wrapper2">
+                        <div class="firstCover popOut">
+                            Prev Insurer >
+                        </div>
+                        <div class="col-md-6 second ">
+
+                            <div class="buttonFirst"> <div id="buildPrev" class="buttonEntry pad"></div></div>
+                            <div class="buttonSecond"> <button type="button" id="buildPrevButton" class="btn btn-primary btn-Entry"></button> </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="twodivs">
+
+                <p class="font-weight-bold buildings popOut"> CONTENTS</p>
+
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            Cover Type:
+                        </div>
+                        <div class="col-md-7 second2 displayFor">
+                            @Html.DisplayFor(modelItem => item.Contentscover)
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group ">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            Sums Insured Value:
+                        </div>
+                        <div class="col-md-12 second3 displayFor">
+                            @Html.DisplayFor(modelItem => item.Contsgoods)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            Sum Insured 1 Item:
+                        </div>
+                        <div class="col-md-12 second3 displayFor ">
+                            @Html.DisplayFor(modelItem => item.Contsgoodslimit)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            Valuables Value:
+                        </div>
+                        <div class="col-md-12 second3 displayFor">
+                            @Html.DisplayFor(modelItem => item.Contsvals)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            Valuables 1 item:
+                        </div>
+                        <div class="col-md-12 second3 displayFor ">
+                            @Html.DisplayFor(modelItem => item.Contsvalslimit)
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group ">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            Vol Excess:
+                        </div>
+                        <div class="col-md-12 second3 displayFor ">
+                            @Html.DisplayFor(modelItem => item.Contsvolxs)
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            XS Buy Back?
+                        </div>
+                        <div class="col-md-3 second2 displayFor">
+                            @Html.DisplayFor(modelItem => item.Contsbuyback)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group second ">
+                    <div class="wrapper2">
+                        <div class="firstCover">
+                            Prev Insurer >
+                        </div>
+                        <div class="col-md-6 second ">
+                            <div class="buttonFirst"> <div id="contPrev" class="buttonEntry pad"></div></div>
+                            <div class="buttonSecond"> <button type="button" id="contPrevButton" class="btn btn-primary btn-Entry"></button> </div>
+                        </div>
+                    </div>
+                </div>
+                <br /><br /><br />
+
+                <button type="button" class="btn btn-primary" id="buildContHideButton">Complete</button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    @*-------------------------------- PREVIOUS INSURANCE: BUILDINGS MODAL --------------------------------------------------------------------------*@
+
+    <div id="buildPrevQuestions" style='display:none' class="popQuestionsSurvey">
+
+        <p class="header2">Previous Insurance: Buildings</p>
+
+
+        <div class="securityModal">
+            <br />
+
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        Insurer Name:
+                    </div>
+                    <div class="col-md-7 second2 displayFor" id="IN1">
+                        @Html.DisplayFor(modelItem => item.BuildInsName)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        IN Other:
+                    </div>
+                    <div class="col-md-7 second2 displayFor" id="IN2">
+                        @Html.DisplayFor(modelItem => item.Binsurername)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        Policy No:
+                    </div>
+                    <div class="col-md-7 second2 displayFor">
+                        @Html.DisplayFor(modelItem => item.Bpolicy_no)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        Date Lapsed:
+                    </div>
+                    <div class="col-md-12 second3 displayFor">
+                        @Html.DisplayFor(modelItem => item.Bdate_lapsed)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        Years NCB:
+                    </div>
+                    <div class="col-md-7 second displayFor ">
+                        @Html.DisplayFor(modelItem => item.Bncb_years)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper12">
+                    <div class="first4">
+                        NCB Proof?:
+                    </div>
+                    <div class="col-md-6 second2 displayFor" id="prelimQs">
+                        @Html.DisplayFor(modelItem => item.Bncb_proof)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        No.of Years Insured:
+                    </div>
+                    <div class="col-md-7 second displayFor">
+                        @Html.DisplayFor(modelItem => item.Byearsinsured)
+                    </div>
+                </div>
+            </div>
+
+            <p class="popOut" id="proposers3">WHERE PREVIOUS INSURER WITH BANK, BUILDING SOCIETY OR DIRECT INSURER:</p>
+
+            <br />
+            <div class="form-group">
+                <div class="wrapper12">
+                    <div class="first4">
+                        Transfer Fee Paid:
+                    </div>
+                    <div class="col-md-6 second2 displayFor" id="prelimQs">
+                        @Html.DisplayFor(modelItem => item.Bbstfeepaid)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper12">
+                    <div class="first4">
+                        Proof of Payment Received:
+                    </div>
+                    <div class="col-md-6 second2 displayFor" id="prelimQs">
+                        @Html.DisplayFor(modelItem => item.Btransfer_proof)
+                    </div>
+                </div>
+            </div>
+
+            <br /><br /><br />
+
+            <button type="button" class="btn btn-primary" id="buildPrevHideButton">Complete</button>
+        </div>
+
+    </div>
+
+    @*-------------------------------- PREVIOUS INSURANCE: CONTENTS MODAL--------------------------------------------------------------------------*@
+
+
+    <div id="contPrevQuestions" style='display:none' class="popQuestionsContents">
+
+        <p class="header2">Previous Insurance: Contents</p>
+
+
+        <div class="odModal">
+            <br />
+
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        Insurer Name:
+                    </div>
+                    <div class="col-md-7 second2 displayFor" id="CIN1">
+                        @Html.DisplayFor(modelItem => item.ContentInsName)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        IN Other:
+                    </div>
+                    <div class="col-md-7 second2 displayFor" id="CIN2">
+                        @Html.DisplayFor(modelItem => item.Cinsurername)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        Policy No:
+                    </div>
+                    <div class="col-md-7 second2 displayFor">
+                        @Html.DisplayFor(modelItem => item.Cpolicy_no)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        Date Lapsed:
+                    </div>
+                    <div class="col-md-12 second3 displayFor ">
+                        @Html.DisplayFor(modelItem => item.Cdate_lapsed)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        Years NCB:
+                    </div>
+                    <div class="col-md-7 second displayFor">
+                        @Html.DisplayFor(modelItem => item.Cncb_years)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper12">
+                    <div class="first4">
+                        NCB Proof:
+                    </div>
+                    <div class="col-md-6 second2 displayFor" id="prelimQs">
+                        @Html.DisplayFor(modelItem => item.Cncb_proof)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        No. of Years Insured
+                    </div>
+                    <div class="col-md-7 second displayFor">
+                        @Html.DisplayFor(modelItem => item.Cncb_years)
+                    </div>
+                </div>
+            </div>
+
+
+            <br /><br /><br />
+
+            <button type="button" class="btn btn-primary" id="contPrevHideButton">Complete</button>
+        </div>
+
+    </div>
+
+    @*-------------------------------- ALL RISKS MODAL --------------------------------------------------------------------------*@
+
+    <div id="allRisksQuestions2" style='display:none' class="popQuestions2">
+
+        <p class="header2">All Risks Cover</p>
+
+        <div id="allrisksTitle" class="wrapper8 extraPadding3">
+            <div class="form-group" style="float: left; width: 150px; ">
+                <p class=" = font-weight-bold popOut">Value</p>
+            </div>
+            <div class="form-group" style="float: left; width: 150px; ">
+                <p class=" = font-weight-bold popOut">1 Item</p>
+            </div>
+            <div class="form-group" style="float: left; width: 150px; ">
+                <p class=" = font-weight-bold popOut">Territory</p>
+            </div>
+
+
+
+        </div>
+
+        @*//////////////////////  UNSPEC EFFECTS ////////////////////////////////*@
+
+        <div class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        <p> Unspec.Effects:</p>
+                    </div>
+                    <div class="col-md-6 second4 displayFor" id="UE">
+                        @Html.DisplayFor(modelItem => item.Areffects)
+                        @Html.HiddenFor(modelItem => item.Areffects)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 150px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second4 displayFor">
+                        @Html.DisplayFor(modelItem => item.Areffectsitem)
+                        @Html.HiddenFor(modelItem => item.Areffectsitem)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second3 displayFor ">
+                        @Html.DisplayFor(modelItem => item.Areffectsterr)
+                        @Html.HiddenFor(modelItem => item.Areffectsterr)
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+        @*//////////////////////  VALUABLES UNSPEC ////////////////////////////////*@
+
+        <div class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        <p> Valuables US:</p>
+                    </div>
+                    <div class="col-md-6 second4 displayFor" id="VUS">
+                        @Html.DisplayFor(modelItem => item.Arvaluables)
+                        @Html.HiddenFor(modelItem => item.Arvaluables)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 150px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second4 displayFor ">
+                        @Html.DisplayFor(modelItem => item.Arvaluablesitem)
+                        @Html.HiddenFor(modelItem => item.Arvaluablesitem)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second3 displayFor ">
+                        @Html.DisplayFor(modelItem => item.Arvaluablesterr)
+                        @Html.HiddenFor(modelItem => item.Arvaluablesterr)
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+        @*//////////////////////  PHOTO UNSPEC ////////////////////////////////*@
+
+        <div class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        <p> Photo Unspec:</p>
+                    </div>
+                    <div class="col-md-6 second4 displayFor" id="PU">
+                        @Html.DisplayFor(modelItem => item.Arphoto)
+                        @Html.HiddenFor(modelItem => item.Arphoto)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 150px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second4 displayFor ">
+                        @Html.DisplayFor(modelItem => item.Arphotoitem)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second3 displayFor">
+                        @Html.DisplayFor(modelItem => item.Arphototerr)
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+        @*//////////////////////  SPORTS UNSPEC ////////////////////////////////*@
+
+        <div class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        <p> Sports Unspec:</p>
+                    </div>
+                    <div class="col-md-6 second4 displayFor" id="SU">
+                        @Html.DisplayFor(modelItem => item.Arsport)
+                        @Html.HiddenFor(modelItem => item.Arsport)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 150px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second4 displayFor">
+                        @Html.DisplayFor(modelItem => item.Arsportitem)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second3 displayFor">
+                        @Html.DisplayFor(modelItem => item.Arsportsterr)
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        @*//////////////////////  BICYCLES ////////////////////////////////*@
+
+        <div class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        <p class="popOut"> Bicycles ></p>
+                    </div>
+                    <div class="col-md-12 second4 ">
+                        <div class="buttonFirst"> <div id="BCText" class="buttonEntry pad"></div> </div>
+                        <div class="buttonSecond"> <button type="button" id="bicycles2" class="btn btn-primary btn-Entry"></button> </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        @*//////////////////////  MONEY ////////////////////////////////*@
+
+        <div class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        <p> Money:</p>
+                    </div>
+                    <div class="col-md-6 second4 displayFor" id="Money">
+                        @Html.DisplayFor(modelItem => item.C_Money)
+                        @Html.HiddenFor(modelItem => item.C_Money)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 150px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-12 second4 ">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second3 displayFor">
+                        @Html.DisplayFor(modelItem => item.Armoneyterr)
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+        @*//////////////////////  Credit Cards ////////////////////////////////*@
+
+        <div class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        <p> Credit Cards:</p>
+                    </div>
+                    <div class="col-md-6 second4 displayFor" id="CC">
+                        @Html.DisplayFor(modelItem => item.Creditcards)
+                        @Html.HiddenFor(modelItem => item.Creditcards)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 150px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-12 second4 ">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second3 displayFor">
+                        @Html.DisplayFor(modelItem => item.Creditcardsterr)
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+        @*////////////////////// FREEZER CONTENTS ////////////////////////////////*@
+
+
+        <div class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        <p> Freezer Conts:</p>
+                    </div>
+                    <div class="col-md-6 second4 displayFor" id="FC">
+                        @Html.DisplayFor(modelItem => item.Freezertotal)
+                        @Html.HiddenFor(modelItem => item.Freezertotal)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first50">
+                        <p> Age:</p>
+                    </div>
+                    <div class="col-md-4 second4 displayFor ">
+                        @Html.DisplayFor(modelItem => item.Freezerage)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <button type="button" class="btn btn-primary extraPadding" id="allRisksHideButton2">Complete</button>
+
+    </div>
+
+    @*////////////////////// BICYCLE MODAL ////////////////////////////////*@
+
+
+    <div id="bicycles2Questions" style='display:none' class="popQuestions3">
+
+        <p class="header2">Bicycle Details</p>
+
+        <div id="allrisksTitle4" class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 150px; ">
+                <p class=" = font-weight-bold popOut">Value</p>
+            </div>
+            <div class="form-group" style="float: left; width: 150px; ">
+                <p class=" = font-weight-bold popOut">Make</p>
+            </div>
+            <div class="form-group" style="float: left; width: 200px; ">
+                <p class=" = font-weight-bold popOut">Description</p>
+            </div>
+            <div class="form-group" style="float: left; width: 150px;">
+                <p class="font-weight-bold popOut">Territory</p>
+            </div>
+
+        </div>
+
+        @*/////////////////////////BICYCLE 1 //////////////////////////////////////*@
+
+        <div class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        <p> Bicycle 1:</p>
+                    </div>
+                    <div class="col-md-6 second4 displayFor" id="BC">
+                        @Html.DisplayFor(modelItem => item.Cycleval1)
+                        @Html.HiddenFor(modelItem => item.Cycleval1)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 150px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second4 displayFor">
+                        @Html.DisplayFor(modelItem => item.Cyclemake1)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second3 displayFor ">
+                        @Html.DisplayFor(modelItem => item.Cycledesc1)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second3 displayFor ">
+                        @Html.DisplayFor(modelItem => item.Cycle1territory)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        @*/////////////////////////BICYCLE 2 //////////////////////////////////////*@
+
+        <div class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        <p> Bicycle 2:</p>
+                    </div>
+                    <div class="col-md-6 second4 displayFor">
+                        @Html.DisplayFor(modelItem => item.Cycleval2)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 150px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second4 displayFor">
+                        @Html.DisplayFor(modelItem => item.Cyclemake2)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second3 displayFor ">
+                        @Html.DisplayFor(modelItem => item.Cycledesc2)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second3 displayFor ">
+                        @Html.DisplayFor(modelItem => item.Cycle2territory)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        @*/////////////////////////BICYCLE 3 //////////////////////////////////////*@
+
+        <div class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        <p> Bicycle 3:</p>
+                    </div>
+                    <div class="col-md-6 second4 displayFor">
+                        @Html.DisplayFor(modelItem => item.Cycleval3)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 150px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second4 displayFor">
+                        @Html.DisplayFor(modelItem => item.Cyclemake3)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second3 displayFor ">
+                        @Html.DisplayFor(modelItem => item.Cycledesc3)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second3 displayFor ">
+                        @Html.DisplayFor(modelItem => item.Cycle3territory)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        @*/////////////////////////BICYCLE 4 //////////////////////////////////////*@
+
+        <div class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        <p> Bicycle 4:</p>
+                    </div>
+                    <div class="col-md-6 second4 displayFor">
+                        @Html.DisplayFor(modelItem => item.Cycleval4)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 150px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second4 displayFor">
+                        @Html.DisplayFor(modelItem => item.Cyclemake4)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second3 displayFor ">
+                        @Html.DisplayFor(modelItem => item.Cycledesc4)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second3 displayFor ">
+                        @Html.DisplayFor(modelItem => item.Cycle4territory)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        @*/////////////////////////BICYCLE 5 //////////////////////////////////////*@
+
+        <div class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        <p> Bicycle 5:</p>
+                    </div>
+                    <div class="col-md-6 second4 displayFor">
+                        @Html.DisplayFor(modelItem => item.Cycleval5)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 150px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second4 displayFor">
+                        @Html.DisplayFor(modelItem => item.Cyclemake5)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second3 displayFor ">
+                        @Html.DisplayFor(modelItem => item.Cycledesc5)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second3 displayFor ">
+                        @Html.DisplayFor(modelItem => item.Cycle5territory)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        @*/////////////////////////BICYCLE 6 //////////////////////////////////////*@
+
+        <div class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        <p> Bicycle 6:</p>
+                    </div>
+                    <div class="col-md-6 second4 displayFor">
+                        @Html.DisplayFor(modelItem => item.Cycleval6)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 150px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second4 displayFor">
+                        @Html.DisplayFor(modelItem => item.Cyclemake6)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second3 displayFor ">
+                        @Html.DisplayFor(modelItem => item.Cycledesc6)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second3 displayFor ">
+                        @Html.DisplayFor(modelItem => item.Cycle6territory)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+        <button type="button" class="btn btn-primary   btn-pers" id="bicycles2HideButton" style="float: left; width: 150px; margin-right:30px ">Complete</button>
+    </div>
+
+    @*////////////////////// SPECIFIED ITEMS MODAL ////////////////////////////////*@
+
+
+    <div id="specifiedItemsQuestions2" style='display:none' class="popQuestionsClaims">
+
+        <p class="header2">Specified Item Cover</p>
+
+        @{string clientRef2 = ViewBag.Message; }
+
+        @*@Html.ActionLink("Show Spec Items", "UploadSpecifiedItemsRow", "Home", new { @class = "btn btn-primary", clientRef = clientRef2 }, null)*@
+
+      
+
+        <div id="SpecItemsDisplay">
+
+
+
+        </div>
+
+
+
+
+
+
+        <div class="wrapper8">
+            <button type="button" class=" btn btn-primary btn-pers" id="specifiedItems2HideButton" style="float: left; width: 150px; margin-right:30px ">Complete</button>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+
+    @*--------------------------------  EMPLOYMENT DETAILS MODAL--------------------------------------------------------------------------*@
+
+
+    <div id="EDQuestions1" style='display:none' class="popQuestionsED">
+
+        <p class="header2">Employment Details</p>
+
+
+        <div class="EDModal">
+            <br />
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4" id="ED">
+                        Occ 1:
+                    </div>
+                    <div class="col-md-7 second2 displayFor">
+                        @Html.DisplayFor(modelItem => item.OccType1)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        Business
+                    </div>
+                    <div class="col-md-7 second2 displayFor">
+                        @Html.DisplayFor(modelItem => item.BusType1)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        Status:
+                    </div>
+                    <div class="col-md-7 second2 displayFor">
+                        @Html.DisplayFor(modelItem => item.EmpStatus1)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        Full/Part:
+                    </div>
+                    <div class="col-md-7 second2 displayFor">
+                        @Html.DisplayFor(modelItem => item.Fullpart1)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        Occ 2:
+                    </div>
+                    <div class="col-md-7 second2 displayFor">
+                        @Html.DisplayFor(modelItem => item.OccType2)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        Business:
+                    </div>
+                    <div class="col-md-7 second2 displayFor">
+                        @Html.DisplayFor(modelItem => item.BusType2)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        Status:
+                    </div>
+                    <div class="col-md-7 second2 displayFor">
+                        @Html.DisplayFor(modelItem => item.EmpStatus2)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        Full/Part
+                    </div>
+                    <div class="col-md-7 second2 displayFor">
+                        @Html.DisplayFor(modelItem => item.Fullpart2)
+                    </div>
+                </div>
+            </div>
+
+
+            <br />
+
+            <button type="button" class="btn btn-primary" id="ED1HideButton">Complete</button>
+        </div>
+
+    </div>
+
+    @*-------------------------------- PERSONAL DETAILS MODAL--------------------------------------------------------------------------*@
+
+
+    <div id="PDQuestions1" style='display:none' class="popQuestionsED">
+
+        <p class="header2">Personal Details</p>
+
+
+        <div class="EDModal">
+            <br />
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4" id="PD">
+                        Title:
+                    </div>
+                    <div class="col-md-7 second2 displayFor">
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        Surname:
+                    </div>
+                    <div class="col-md-7 second2 displayFor">
+                        @Html.DisplayFor(modelItem => item.Propsurname)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        Forenames:
+                    </div>
+                    <div class="col-md-7 second2 displayFor">
+                        @Html.DisplayFor(modelItem => item.Propforenames)
+                    </div>
+                </div>
+            </div>
+
+
+            <br />
+
+            <button type="button" class="btn btn-primary" id="PD1HideButton">Complete</button>
+        </div>
+
+    </div>
+
+    @*-------------------------------- CONVICTIONS MODAL --------------------------------------------------------------------------*@
+
+    <div id="convictionsQuestions" style='display:none' class="popQuestions2">
+
+        <p class="header2">Conviction Details</p>
+
+        <div id="allrisksTitle3" class="wrapper8 extraPadding3">
+            <div class="form-group" style="float: left; width: 150px;">
+                <p class=" = font-weight-bold popOut">Date</p>
+            </div>
+            <div class="form-group" style="float: left; width: 150px; ">
+                <p class=" = font-weight-bold popOut">Pending</p>
+            </div>
+            <div class="form-group" style="float: left; width: 150px; ">
+                <p class=" = font-weight-bold popOut">Type</p>
+            </div>
+        </div>
+
+        @*/////////////////////////////////////////////////////*@
+
+        <div class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        <p>Conviction 1:</p>
+                    </div>
+                    <div class="col-md-6 second4 displayFor" id="UE">
+                        @Html.DisplayFor(modelItem => item.Convdate)
+                        @Html.HiddenFor(modelItem => item.Convdate)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 150px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second4 displayFor">
+                        @Html.DisplayFor(modelItem => item.Convpending)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second3 displayFor ">
+                        @Html.DisplayFor(modelItem => item.ConvType)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        @*/////////////////////////////////////////////////////*@
+
+        <div class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        <p>Conviction 2:</p>
+                    </div>
+                    <div class="col-md-6 second4 displayFor" id="UE">
+                        @Html.DisplayFor(modelItem => item.Convdate1)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 150px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second4 displayFor">
+                        @Html.DisplayFor(modelItem => item.Convpending1)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second3 displayFor ">
+                        @Html.DisplayFor(modelItem => item.ConvType1)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        @*/////////////////////////////////////////////////////*@
+
+        <div class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        <p>Conviction 3:</p>
+                    </div>
+                    <div class="col-md-6 second4 displayFor" id="UE">
+                        @Html.DisplayFor(modelItem => item.Convdate2)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 150px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second4 displayFor">
+                        @Html.DisplayFor(modelItem => item.Convpending2)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second3 displayFor ">
+                        @Html.DisplayFor(modelItem => item.ConvType2)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        @*/////////////////////////////////////////////////////*@
+
+        <div class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        <p>Conviction 4:</p>
+                    </div>
+                    <div class="col-md-6 second4 displayFor" id="UE">
+                        @Html.DisplayFor(modelItem => item.Convdate3)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 150px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second4 displayFor">
+                        @Html.DisplayFor(modelItem => item.Convpending3)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-8 second3 displayFor ">
+                        @Html.DisplayFor(modelItem => item.ConvType3)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <button type="button" class="btn btn-primary extraPadding" id="conviction1HideButton">Complete</button>
+
+    </div>
+
+
+    @*////////////////////// Claims/Losses Modal ////////////////////////////////*@
+
+
+    <div id="claimsLossQuestions" style='display:none' class="popQuestionsClaims">
+
+        <p class="header2">Claims/Loss History</p>
+
+        <button class="btn btn-outline-primary" id="showClaimsItems">Show Claims/Losses</button>
+
+        <br /><br />
+
+        <div id="claimsItemsDisplay">
+
+
+
+        </div>
+
+
+
+
+
+
+        <div class="wrapper8">
+            <button type="button" class=" btn btn-primary btn-pers" id="claimsHideButton" style="float: left; width: 150px; margin-right:30px ">Complete</button>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+
+}   @*END OF CREATE FORM*@
+
+
+
+
+@section Scripts
+{
+
+
+
+    <script>
+
+        $(window).on("load", function () {
+            var clientRef = "@ViewBag.Message";
+            var polNo = 1;
+           return $.ajax({
+            url: '@Url.Action("ProposerDetails")',
+            data: { 'clientRef': clientRef, 'polNo' : polNo},
+            type: 'GET',
+            success: function (data) {
+                //Fill div with results
+
+                $("#ProposersDisplay").html(data);
+            },
+            error: function (xhr, status, error) {
+                alert(xhr.responseText);
+            }
+
+            });
+        });
+
+
+
+
+
+
+
+  $(document).ready(function () {
+
+     
+
+
+    $("#showClaimsItems").click(function () {
+
+        var clientRef = "@ViewBag.Message";
+
+        return $.ajax({
+            url: '@Url.Action("UploadClaimsItemsRow")',
+            data: { 'clientRef': clientRef },
+            type: 'GET',
+            success: function (data) {
+                //Fill div with results
+
+                $("#claimsItemsDisplay").html(data);
+            },
+            error: function (xhr, status, error) {
+                alert(xhr.responseText);
+            }
+
+        });
+
+    });
+
+
+    $("#prelimQuestionsButton").click(function () {
+
+        $("#preliminaryQuestions").show();
+        $("#divOne").hide();
+        $("#divTwo").hide();
+        $("#divThree").hide();
+        $("#divFour").hide();
+        $(".prelimhide").hide();
+
+
+    });
+
+    $("#prelimHideButton").click(function () {
+
+        $("#preliminaryQuestions").hide();
+        $("#divOne").show();
+        $("#divTwo").show();
+        $("#divThree").show();
+        $("#divFour").show();
+        $(".prelimhide").show();
+
+      });
+
+      if ($.trim($("#InsRef").html()) == '') {
+          $("#preLim").text("No");
+      } else $("#preLim").text("Yes");
+
+
+
+
+
+    $("#useOccupancyButton").click(function () {
+
+        $("#useOccupancyQuestions").show();
+        $("#divOne").hide();
+        $("#divTwo").hide();
+        $("#divThree").hide();
+        $("#divFour").hide();
+        $(".prelimhide").hide();
+
+
+    });
+
+    $("#useOccupancyHideButton").click(function () {
+
+        $("#useOccupancyQuestions").hide();
+        $("#divOne").show();
+        $("#divTwo").show();
+        $("#divThree").show();
+        $("#divFour").show();
+        $(".prelimhide").show();
+
+    });
+
+      if ($.trim($("#occRef").html()) == '') {
+          $("#useOcc").text("No");
+      } else $("#useOcc").text("Yes");
+
+
+
+
+
+    $("#SecurityButton").click(function () {
+
+        $("#securityQuestions").show();
+        $("#divOne").hide();
+        $("#divTwo").hide();
+        $("#divThree").hide();
+        $("#divFour").hide();
+        $(".prelimhide").hide();
+
+    });
+
+    $("#SecHideButton").click(function () {
+
+        $("#securityQuestions").hide();
+        $("#divOne").show();
+        $("#divTwo").show();
+        $("#divThree").show();
+        $("#divFour").show();
+        $(".prelimhide").show();
+
+    });
+
+      if ($.trim($("#secRef").html()) == '') {
+          $("#Security").text("No");
+      } else $("#Security").text("Yes");
+
+
+
+
+    $("#SurveyReButton").click(function () {
+
+        $("#SurveyReQuestions").show();
+        $("#divOne").hide();
+        $("#divTwo").hide();
+        $("#divThree").hide();
+        $("#divFour").hide();
+        $(".prelimhide").hide();
+
+    });
+
+    $("#SurveyReQuestionsHideButton").click(function () {
+
+        $("#SurveyReQuestions").hide();
+        $("#divOne").show();
+        $("#divTwo").show();
+        $("#divThree").show();
+        $("#divFour").show();
+        $(".prelimhide").show();
+
+    });
+
+      if ($.trim($("#ricFSV").html()) == '') {
+          $("#SurveyRe").text("No");
+      } else $("#SurveyRe").text("Yes");
+
+
+
+
+
+
+    $("#othDetailsButton").click(function () {
+
+        $("#othDetailsQuestions").show();
+        $("#divOne").hide();
+        $("#divTwo").hide();
+        $("#divThree").hide();
+        $("#divFour").hide();
+        $(".prelimhide").hide();
+
+    });
+
+    $("#othDetailsHideButton").click(function () {
+
+        $("#othDetailsQuestions").hide();
+        $("#divOne").show();
+        $("#divTwo").show();
+        $("#divThree").show();
+        $("#divFour").show();
+        $(".prelimhide").show();
+
+    });
+
+
+      if ($.trim($("#NN").html()) == '') {
+          $("#othDetails").text("No");
+      } else $("#othDetails").text("Yes");
+
+
+
+    $("#buildContButton").click(function () {
+
+        $("#buildContsQuestions").show();
+        $("#divOne").hide();
+        $("#divTwo").hide();
+        $("#divThree").hide();
+        $("#divFour").hide();
+        $(".prelimhide").hide();
+
+    });
+
+    $("#buildContHideButton").click(function () {
+
+        $("#buildContsQuestions").hide();
+        $("#divOne").show();
+        $("#divTwo").show();
+        $("#divThree").show();
+        $("#divFour").show();
+        $(".prelimhide").show();
+
+    });
+
+    if ($("#BC").text().length > 0) {
+        $("#buildContDetails").text("Yes");
+      }
+
+
+      if ($.trim($("#BC").html()) == '') {
+          $("#buildContDetails").text("No");
+      } else $("#buildContDetails").text("Yes");
+
+
+    $("#buildPrevButton").click(function () {
+
+        $("#buildPrevQuestions").show();
+        $("#buildContsQuestions").hide();
+        $("#divOne").hide();
+        $("#divTwo").hide();
+        $("#divThree").hide();
+        $("#divFour").hide();
+        $(".prelimhide").hide();
+
+    });
+
+    $("#buildPrevHideButton").click(function () {
+
+        $("#buildPrevQuestions").hide();
+        $("#buildContsQuestions").show();
+
+
+    });
+
+      if ($.trim($("#IN1,#IN2").html()) == '') {
+          $("#buildPrev").text("No");
+      } else $("#buildPrev").text("Yes");
+
+
+    $("#contPrevButton").click(function () {
+
+        $("#contPrevQuestions").show();
+        $("#buildContsQuestions").hide();
+        $("#divOne").hide();
+        $("#divTwo").hide();
+        $("#divThree").hide();
+        $("#divFour").hide();
+        $(".prelimhide").hide();
+
+    });
+
+    $("#contPrevHideButton").click(function () {
+
+        $("#contPrevQuestions").hide();
+        $("#buildContsQuestions").show();
+
+
+    });
+
+
+
+      if ($.trim($("#CIN1,#CIN2").html()) == '') {
+          $("#contPrev").text("No");
+      } else $("#contPrev").text("Yes");
+
+
+    $("#allRisks2").click(function () {
+
+        $("#allRisksQuestions2").show();
+
+        $("#divOne").hide();
+        $("#divTwo").hide();
+        $("#divThree").hide();
+        $("#divFour").hide();
+        $(".prelimhide").hide();
+
+    });
+
+    $("#allRisksHideButton2").click(function () {
+
+        $("#allRisksQuestions2").hide();
+        $("#divOne").show();
+        $("#divTwo").show();
+        $("#divThree").show();
+        $("#divFour").show();
+        $(".prelimhide").show();
+
+    });
+
+
+      //if ($.trim($("#UE,#VUS,#PU,#SU,#Money,#CC,#FC").html()) == '') {
+      //    $("#ARPrev").text("No");
+      //} else $("#ARPrev").text("Yes");
+
+
+      //if ($("#item_Arvaluables,#item_Arphoto,#item_Arsport,#item_C_Money,#item_Creditcards,#item_Freezertotal,#item_Cycleval1").val() == "0") {
+
+      //    $("#ARPrev").text("No");
+      //}
+      //else $("#ARPrev").text("Yes");
+
+      if ($("#item_Areffects,#item_Arvaluables,#item_Arphoto,#item_Arsport,#item_C_Money,#item_Creditcards,#item_Freezertotal,#item_Cycleval1").val() == "0") {
+
+          $("#ARPrev").text("No");
+      }
+      else $("#ARPrev").text("Yes");
+
+
+
+    $("#bicycles2").click(function () {
+
+        $("#bicycles2Questions").show();
+
+        $("#allRisksQuestions2").hide();
+        $("#divOne").hide();
+        $("#divTwo").hide();
+        $("#divThree").hide();
+        $("#divFour").hide();
+        $(".prelimhide").hide();
+
+    });
+
+    $("#bicycles2HideButton").click(function () {
+
+        $("#bicycles2Questions").hide();
+        $("#allRisksQuestions2").show();
+
+    });
+
+     
+
+
+
+
+      if ($.trim($("#BC").html()) == '') {
+          $("#BCText").text("No");
+      } else $("#BCText").text("Yes");
+
+    $("#SIButton").click(function () {
+
+        $("#specifiedItemsQuestions2").show();
+        $("#allRisksQuestions2").hide();
+        $("#divOne").hide();
+        $("#divTwo").hide();
+        $("#divThree").hide();
+        $("#divFour").hide();
+        $(".prelimhide").hide();
+
+
+        var clientRef = "@ViewBag.Message";
+
+        return $.ajax({
+            url: '@Url.Action("UploadSpecifiedItemsRow")',
+            data: { 'clientRef': clientRef },
+            type: 'GET',
+            success: function (data) {
+                //Fill div with results
+
+                $("#SpecItemsDisplay").html(data);
+            },
+            error: function (xhr, status, error) {
+                alert(xhr.responseText);
+            }
+
+        });
+
+    });
+
+    $("#specifiedItems2HideButton").click(function () {
+
+        $("#specifiedItemsQuestions2").hide();
+        $("#divOne").show();
+        $("#divTwo").show();
+        $("#divThree").show();
+        $("#divFour").show();
+        $(".prelimhide").show();
+
+    });
+
+    $("#empDetButton").click(function () {
+
+        $("#EDQuestions1").show();
+
+        $("#divOne").hide();
+        $("#divTwo").hide();
+        $("#divThree").hide();
+        $("#divFour").hide();
+        $(".prelimhide").hide();
+
+    });
+
+    $("#ED1HideButton").click(function () {
+
+        $("#EDQuestions1").hide();
+        $("#divOne").show();
+        $("#divTwo").show();
+        $("#divThree").show();
+        $("#divFour").show();
+        $(".prelimhide").show();
+
+    });
+
+
+
+
+      if ($("#item_Cycleval1").val() == "0") {
+
+          $("#BCText").text("No");
+      }
+      else $("#BCText").text("Yes");
+
+    $("#persDetButton").click(function () {
+
+        $("#PDQuestions1").show();
+
+        $("#divOne").hide();
+        $("#divTwo").hide();
+        $("#divThree").hide();
+        $("#divFour").hide();
+        $(".prelimhide").hide();
+
+    });
+
+    $("#PD1HideButton").click(function () {
+
+        $("#PDQuestions1").hide();
+        $("#divOne").show();
+        $("#divTwo").show();
+        $("#divThree").show();
+        $("#divFour").show();
+        $(".prelimhide").show();
+
+    });
+
+
+      if ($.trim($("#PD").html()) == '') {
+          $("#persDetails").text("No");
+      } else $("#persDetails").text("Yes");
+
+
+    $("#convDetButton").click(function () {
+
+        $("#convictionsQuestions").show();
+
+        $("#divOne").hide();
+        $("#divTwo").hide();
+        $("#divThree").hide();
+        $("#divFour").hide();
+        $(".prelimhide").hide();
+
+    });
+
+    $("#conviction1HideButton").click(function () {
+
+        $("#convictionsQuestions").hide();
+        $("#divOne").show();
+        $("#divTwo").show();
+        $("#divThree").show();
+        $("#divFour").show();
+        $(".prelimhide").show();
+
+    });
+
+
+
+      if ($.trim($("#Conv").html()) == '') {
+          $("#convdetails").text("No");
+      } else $("#convdetails").text("Yes");
+
+
+    $("#CLButton").click(function () {
+
+        $("#claimsLossQuestions").show();
+
+
+        $("#divOne").hide();
+        $("#divTwo").hide();
+        $("#divThree").hide();
+        $("#divFour").hide();
+        $(".prelimhide").hide();
+
+    });
+
+    $("#claimsHideButton").click(function () {
+
+        $("#claimsLossQuestions").hide();
+        $("#divOne").show();
+        $("#divTwo").show();
+        $("#divThree").show();
+        $("#divFour").show();
+        $(".prelimhide").show();
+
+    });
+
+
+});
+    </script>
+
+
+}
+
+
+
+
+

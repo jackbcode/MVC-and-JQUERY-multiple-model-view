@@ -1,0 +1,1535 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PolicyCheckModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AOBoatDetails">
+          <Key>
+            <PropertyRef Name="BoatPolicyId" />
+          </Key>
+          <Property Name="BoatPolicyId" Type="int" Nullable="false" />
+          <Property Name="BoatId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BoatType" Type="varchar" MaxLength="50" />
+          <Property Name="BoatName" Type="varchar(max)" />
+          <Property Name="BoatSailNo" Type="varchar(max)" />
+          <Property Name="BoatClass" Type="varchar" MaxLength="50" />
+          <Property Name="BoatModel" Type="varchar" MaxLength="50" />
+          <Property Name="BoatManufactured" Type="datetime" />
+          <Property Name="BoatPurchased" Type="datetime" />
+          <Property Name="BoatMaximumSpeed" Type="int" />
+          <Property Name="BoatOver5m" Type="varchar" MaxLength="50" />
+          <Property Name="BoatUnusedAtMooring" Type="varchar" MaxLength="50" />
+          <Property Name="BoatEngineDetailsType" Type="varchar" MaxLength="50" />
+          <Property Name="BoatEngineDetailsMake" Type="varchar" MaxLength="50" />
+          <Property Name="BoatEngineDetailsSerNo" Type="varchar(max)" />
+          <Property Name="BoatEngineDetailsMade" Type="datetime" />
+          <Property Name="BoatEngineDetailsHP" Type="int" />
+          <Property Name="BoatCoverDetailsCraftGeneral" Type="int" />
+          <Property Name="BoatCoverDetailsOutboardMotor" Type="int" />
+          <Property Name="BoatCoverDetailsRoadTrailer" Type="int" />
+          <Property Name="BoatCoverDetailsLaunchingTrolley" Type="int" />
+        </EntityType>
+        <EntityType Name="AOCaravanDetails">
+          <Key>
+            <PropertyRef Name="CaravanPolicyId" />
+          </Key>
+          <Property Name="CaravanPolicyId" Type="int" Nullable="false" />
+          <Property Name="CaravanId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CaravanType" Type="varchar(max)" />
+          <Property Name="CaravanMake" Type="varchar(max)" />
+          <Property Name="caravanModel" Type="varchar(max)" />
+          <Property Name="caravanVIN" Type="varchar(max)" />
+          <Property Name="caravanSerialNumber" Type="varchar(max)" />
+          <Property Name="caravanManufactured" Type="datetime" />
+          <Property Name="caravanPurchased" Type="datetime" />
+          <Property Name="caravanPricePaid" Type="int" />
+          <Property Name="caravanLetHireReward" Type="varchar" MaxLength="50" />
+          <Property Name="caravanRiskUnused" Type="varchar" MaxLength="50" />
+          <Property Name="caravanKeptOnSite" Type="varchar" MaxLength="50" />
+          <Property Name="CaravanAndFittings" Type="int" />
+          <Property Name="caravanPersonalPossesions" Type="int" />
+          <Property Name="caravanHighestValueItem" Type="int" />
+        </EntityType>
+        <EntityType Name="CAllrisksBicycle">
+          <Key>
+            <PropertyRef Name="BicycleId" />
+          </Key>
+          <Property Name="BicycleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BicycleMake" Type="varchar(max)" />
+          <Property Name="BicycleModel" Type="varchar" MaxLength="50" />
+          <Property Name="BicycleValue" Type="int" />
+          <Property Name="BicycleTerritory" Type="varchar" MaxLength="50" />
+          <Property Name="AllrisksBicyclePolicyId" Type="int" />
+        </EntityType>
+        <EntityType Name="CBuildingsPrevInsurance">
+          <Key>
+            <PropertyRef Name="PrevInsPolicyId" />
+          </Key>
+          <Property Name="PrevInsPolicyId" Type="int" Nullable="false" />
+          <Property Name="PrevInsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InsurerName" Type="varchar(max)" />
+          <Property Name="InsurerNameOther" Type="varchar(max)" />
+          <Property Name="PolicyNo" Type="varchar(max)" />
+          <Property Name="DateLapsed" Type="datetime" />
+          <Property Name="YearsNCB" Type="int" />
+          <Property Name="ProofNCB" Type="varchar" MaxLength="50" />
+          <Property Name="NoOfYearsIns" Type="int" />
+          <Property Name="TransferFeePaid" Type="varchar" MaxLength="50" />
+          <Property Name="ProofOfPaymentRec" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CCContentsPrevInsurance">
+          <Key>
+            <PropertyRef Name="CPrevInsPolicyId" />
+          </Key>
+          <Property Name="CPrevInsPolicyId" Type="int" Nullable="false" />
+          <Property Name="CPrevInsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CinsurerName" Type="varchar(max)" />
+          <Property Name="CInsurerNameOther" Type="varchar(max)" />
+          <Property Name="CPolicyNo" Type="varchar(max)" />
+          <Property Name="CDateLapsed" Type="datetime" />
+          <Property Name="CYearsNCB" Type="int" />
+          <Property Name="CproofNCB" Type="varchar" MaxLength="50" />
+          <Property Name="CNoOfYearsIns" Type="int" />
+        </EntityType>
+        <EntityType Name="CSpecifiedItem">
+          <Key>
+            <PropertyRef Name="SpecifiedItemId" />
+          </Key>
+          <Property Name="SpecifiedItemPolicyId" Type="int" Nullable="false" />
+          <Property Name="SpecifiedItemId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SpecifiedItemItemCategory" Type="varchar(max)" />
+          <Property Name="SpecifiedItemItemDescription" Type="varchar(max)" />
+          <Property Name="SpecifiedItemItemValue" Type="int" />
+          <Property Name="SpecifiedItemCover" Type="varchar" MaxLength="50" />
+          <Property Name="SpecifiedItemDeleted" Type="varchar" MaxLength="50" />
+          <Property Name="SpecifiedItemValuationAmount" Type="int" />
+          <Property Name="SpecifiedItemDate" Type="datetime" />
+          <Property Name="SpecifiedItemTerritory" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MPClaimsLosses">
+          <Key>
+            <PropertyRef Name="ClaimId" />
+          </Key>
+          <Property Name="ClaimsLossesPolicyId" Type="int" Nullable="false" />
+          <Property Name="ClaimId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClaimsLossesClaimDate" Type="datetime" />
+          <Property Name="ClaimsLossesClaimType" Type="varchar(max)" />
+          <Property Name="ClaimsLossesValue" Type="int" />
+          <Property Name="ClaimsLossesSection" Type="varchar(max)" />
+          <Property Name="ClaimsLossesDescription" Type="varchar(max)" />
+          <Property Name="ClaimsLossesDeleted" Type="varchar" MaxLength="50" />
+          <Property Name="ClaimsLossesClaimSettled" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MPConvictions">
+          <Key>
+            <PropertyRef Name="ConvictionId" />
+          </Key>
+          <Property Name="ConvictionsPolicyId" Type="int" Nullable="false" />
+          <Property Name="ConvictionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ConvictionDate" Type="datetime" />
+          <Property Name="Pending" Type="varchar" MaxLength="50" />
+          <Property Name="ConvictionType" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="PolicyMain">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PPostCode" Type="varchar" MaxLength="50" />
+          <Property Name="PYearBuilt" Type="int" />
+          <Property Name="PTypeOfHouse" Type="varchar(max)" />
+          <Property Name="PWalls" Type="varchar(max)" />
+          <Property Name="PRoof" Type="varchar(max)" />
+          <Property Name="PFlatPercent" Type="int" />
+          <Property Name="PBedrooms" Type="int" />
+          <Property Name="PRooms" Type="int" />
+          <Property Name="PFloors" Type="int" />
+          <Property Name="PFlatFloor" Type="int" />
+          <Property Name="PBathrooms" Type="int" />
+          <Property Name="PExtended" Type="varchar" MaxLength="50" />
+          <Property Name="PYearExtended" Type="int" />
+          <Property Name="PHeatingPrimary" Type="varchar" MaxLength="50" />
+          <Property Name="PHeatingSecondary" Type="varchar" MaxLength="50" />
+          <Property Name="PPrelimQuestions" Type="varchar" MaxLength="50" />
+          <Property Name="PPqInsuranceDeclined" Type="varchar" MaxLength="50" />
+          <Property Name="PPqConvictions" Type="varchar" MaxLength="50" />
+          <Property Name="PPqBankrupt" Type="varchar" MaxLength="50" />
+          <Property Name="PPqStormFlood" Type="varchar" MaxLength="50" />
+          <Property Name="PPqSubsidence" Type="varchar" MaxLength="50" />
+          <Property Name="PPqLandslip" Type="varchar" MaxLength="50" />
+          <Property Name="PPqGroundHeave" Type="varchar" MaxLength="50" />
+          <Property Name="PPqInGoodRepair" Type="varchar" MaxLength="50" />
+          <Property Name="PPqNearRiverQuarry" Type="varchar" MaxLength="50" />
+          <Property Name="PPqNearRQDistance" Type="int" />
+          <Property Name="PPqBuildingListed" Type="varchar(max)" />
+          <Property Name="PPqRepairedMonitored" Type="varchar" MaxLength="50" />
+          <Property Name="PPqUnderpinned" Type="varchar" MaxLength="50" />
+          <Property Name="PUseOccupancy" Type="varchar" MaxLength="50" />
+          <Property Name="PuoAccomodation" Type="varchar(max)" />
+          <Property Name="PuoResidence" Type="varchar(max)" />
+          <Property Name="PuoUnnocupied" Type="varchar(max)" />
+          <Property Name="PuoBusinessUse" Type="varchar(max)" />
+          <Property Name="PuoStock" Type="int" />
+          <Property Name="PuoEquipment" Type="int" />
+          <Property Name="PuoHolidayHome" Type="varchar" MaxLength="50" />
+          <Property Name="PuoPayingGuests" Type="varchar" MaxLength="50" />
+          <Property Name="PuoPGNumber" Type="int" />
+          <Property Name="PuoSmokers" Type="varchar" MaxLength="50" />
+          <Property Name="PuoNooAdults" Type="int" />
+          <Property Name="PuoNooChildren" Type="int" />
+          <Property Name="PSecurity" Type="varchar" MaxLength="50" />
+          <Property Name="PsFinalExitDoors" Type="varchar" MaxLength="50" />
+          <Property Name="PsOtherDoors" Type="varchar" MaxLength="50" />
+          <Property Name="PsPatioDoors" Type="varchar" MaxLength="50" />
+          <Property Name="PsWindows" Type="varchar" MaxLength="50" />
+          <Property Name="PsNeighbourhoodWatch" Type="varchar" MaxLength="50" />
+          <Property Name="PsSmokeAlarm" Type="varchar" MaxLength="50" />
+          <Property Name="PsSelfContained" Type="varchar" MaxLength="50" />
+          <Property Name="PsIntruderAlarm" Type="varchar" MaxLength="50" />
+          <Property Name="PsAlarmType" Type="varchar(max)" />
+          <Property Name="PsAccredationDetailsOne" Type="varchar(max)" />
+          <Property Name="PsAccredationDetailsOneOther" Type="varchar(max)" />
+          <Property Name="PsSpecificationContract" Type="varchar" MaxLength="50" />
+          <Property Name="PsDateInstalled" Type="datetime" />
+          <Property Name="PsMaintainer" Type="varchar(max)" />
+          <Property Name="PsMaintainerTwo" Type="varchar(max)" />
+          <Property Name="PsAccreditationDetailsTwo" Type="varchar(max)" />
+          <Property Name="PsAccredationDetailsTwoOther" Type="varchar(max)" />
+          <Property Name="PsrSecurityReports" Type="varchar(max)" />
+          <Property Name="PsrRICSFSVASURVEY" Type="varchar" MaxLength="50" />
+          <Property Name="PsrRFSDate" Type="datetime" />
+          <Property Name="PsrRFSSurveyorsName" Type="varchar(max)" />
+          <Property Name="PsrRFSDateProofRec" Type="varchar" MaxLength="50" />
+          <Property Name="PsrStructuralER" Type="varchar" MaxLength="50" />
+          <Property Name="PsrStructuralERDate" Type="datetime" />
+          <Property Name="PsrStructuralEnginnersName" Type="varchar(max)" />
+          <Property Name="PsrNHBCguarantee" Type="varchar" MaxLength="50" />
+          <Property Name="PsrExpires" Type="datetime" />
+          <Property Name="POtherDetails" Type="varchar" MaxLength="50" />
+          <Property Name="MpSex" Type="varchar" MaxLength="50" />
+          <Property Name="MpDOB" Type="datetime" />
+          <Property Name="MpAge" Type="int" />
+          <Property Name="EmployDetails" Type="varchar" MaxLength="50" />
+          <Property Name="MpEDOccOne" Type="varchar(max)" />
+          <Property Name="MpEDOccOneBusiness" Type="varchar(max)" />
+          <Property Name="MpEDOccOneStatus" Type="varchar(max)" />
+          <Property Name="MpEDOccOneFullPart" Type="varchar(max)" />
+          <Property Name="MpEDOccTwo" Type="varchar(max)" />
+          <Property Name="MpEDOccTwoBusiness" Type="varchar(max)" />
+          <Property Name="MpEDOccTwoStatus" Type="varchar(max)" />
+          <Property Name="MpEDOccTwoFullPart" Type="varchar" MaxLength="50" />
+          <Property Name="MpPersonalDetails" Type="varchar" MaxLength="50" />
+          <Property Name="MpPersonalDetailsTitle" Type="varchar(max)" />
+          <Property Name="MpSurname" Type="varchar" MaxLength="50" />
+          <Property Name="MpForenames" Type="varchar" MaxLength="50" />
+          <Property Name="MpAtRiskAddress" Type="varchar" MaxLength="50" />
+          <Property Name="MpFirstTimeBuyer" Type="varchar" MaxLength="50" />
+          <Property Name="MpConvictions" Type="varchar" MaxLength="50" />
+          <Property Name="MpClaimsLosses" Type="varchar" MaxLength="50" />
+          <Property Name="CBuildingsAndContents" Type="varchar" MaxLength="50" />
+          <Property Name="CBCoverType" Type="varchar" MaxLength="50" />
+          <Property Name="CBSumInsured" Type="int" />
+          <Property Name="CBVolExcess" Type="int" />
+          <Property Name="CBXSBuyBack" Type="varchar" MaxLength="50" />
+          <Property Name="CBPrevInsurer" Type="varchar" MaxLength="50" />
+          <Property Name="CCCoverType" Type="varchar(max)" />
+          <Property Name="CCSumInsuredValue" Type="int" />
+          <Property Name="CCSumInsuredOneItem" Type="int" />
+          <Property Name="CCValuablesValue" Type="int" />
+          <Property Name="CCValuablesOneItem" Type="int" />
+          <Property Name="CCVolExcess" Type="int" />
+          <Property Name="CCXSBuyBack" Type="varchar" MaxLength="50" />
+          <Property Name="CCPrevInsurer" Type="varchar(max)" />
+          <Property Name="CBSummationBuildingCoverEnteredDetails" Type="int" />
+          <Property Name="CBBuildingsVolExcessEnteredDetails" Type="int" />
+          <Property Name="CCSummationContentsCoverEntered" Type="int" />
+          <Property Name="CCContentsVolExcessEnteredDetails" Type="nchar" MaxLength="10" />
+          <Property Name="CAllRisks" Type="varchar" MaxLength="50" />
+          <Property Name="CAllRiskUnspecEffectsValue" Type="int" />
+          <Property Name="CAllRiskUnspecEffectsOneItem" Type="int" />
+          <Property Name="CAllRiskUnspecEffectsTerritory" Type="varchar(max)" />
+          <Property Name="CAllRisksValuablesUnspecValue" Type="int" />
+          <Property Name="CAllRisksValuablesUnspecOneItem" Type="int" />
+          <Property Name="CAllRisksValuablesUnspecTerritory" Type="varchar(max)" />
+          <Property Name="CAllRisksPhotoUnspecValue" Type="int" />
+          <Property Name="CAllRisksPhotoUnspecOneItem" Type="int" />
+          <Property Name="CAllRisksPhotoUnspecTerritory" Type="varchar(max)" />
+          <Property Name="CAllRisksSportsUnspecValue" Type="int" />
+          <Property Name="CAllRisksSportsUnspecOneItem" Type="int" />
+          <Property Name="CAllRisksSportsUnspecTerritory" Type="varchar(max)" />
+          <Property Name="CAllRiskBicycles" Type="varchar" MaxLength="50" />
+          <Property Name="CAllRisksMoneyValue" Type="int" />
+          <Property Name="CAllRisksMoneyTerritory" Type="varchar(max)" />
+          <Property Name="CAllRisksCreditCardsValue" Type="int" />
+          <Property Name="CAllRiskCreditCardsTerritory" Type="varchar(max)" />
+          <Property Name="CAllRisksFreezerContentsValue" Type="int" />
+          <Property Name="CAllRisksFreezerContentsAge" Type="int" />
+          <Property Name="CSpecifiedItems" Type="varchar" MaxLength="50" />
+          <Property Name="AOLegalExpenses" Type="varchar" MaxLength="50" />
+          <Property Name="AOMotorPolicy" Type="varchar" MaxLength="50" />
+          <Property Name="AOCurrentMotorInsurer" Type="varchar(max)" />
+          <Property Name="AOCaravans" Type="varchar" MaxLength="50" />
+          <Property Name="AOSummationCaravansEnteredDetails" Type="int" />
+          <Property Name="AOBoats" Type="varchar" MaxLength="50" />
+          <Property Name="AOSummationBoatEnteredDetails" Type="int" />
+          <Property Name="AOSearchesConsent" Type="varchar" MaxLength="50" />
+          <Property Name="AOSchemeNo" Type="varchar" MaxLength="50" />
+          <Property Name="AOCoverDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PropertyODCommunicationAddress">
+          <Key>
+            <PropertyRef Name="CommunicationAddressPolicyId" />
+          </Key>
+          <Property Name="CommunicationAddressPolicyId" Type="int" Nullable="false" />
+          <Property Name="CANumberName" Type="varchar" MaxLength="50" />
+          <Property Name="CAStreet" Type="varchar" MaxLength="50" />
+          <Property Name="CATown" Type="varchar" MaxLength="50" />
+          <Property Name="CACounty" Type="varchar" MaxLength="50" />
+          <Property Name="CAPostCode" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PropertyODInterestedParty">
+          <Key>
+            <PropertyRef Name="InterestedPartyPolicyId" />
+          </Key>
+          <Property Name="InterestedPartyPolicyId" Type="int" Nullable="false" />
+          <Property Name="IPType" Type="varchar(max)" />
+          <Property Name="IPName" Type="varchar(max)" />
+          <Property Name="IPNameOther" Type="varchar(max)" />
+          <Property Name="IPNumberName" Type="varchar(max)" />
+          <Property Name="IPStreet" Type="varchar(max)" />
+          <Property Name="IPTown" Type="varchar(max)" />
+          <Property Name="IPCounty" Type="varchar(max)" />
+          <Property Name="IPPostCode" Type="varchar" MaxLength="50" />
+          <Property Name="IPRefMortgageNo" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="PropertyODRiskPropertyAddress">
+          <Key>
+            <PropertyRef Name="RiskPropertyAddressPolicyId" />
+          </Key>
+          <Property Name="RiskPropertyAddressPolicyId" Type="int" Nullable="false" />
+          <Property Name="RPNumberName" Type="varchar" MaxLength="50" />
+          <Property Name="RPStreet" Type="varchar" MaxLength="50" />
+          <Property Name="RPTown" Type="varchar" MaxLength="50" />
+          <Property Name="RPCounty" Type="varchar" MaxLength="50" />
+          <Property Name="RPPostCode" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ProposerDetails">
+          <Key>
+            <PropertyRef Name="ProposerId" />
+          </Key>
+          <Property Name="ProposerPolicyId" Type="int" Nullable="false" />
+          <Property Name="ProposerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProposerSex" Type="varchar" MaxLength="50" />
+          <Property Name="ProposerDOB" Type="datetime" />
+          <Property Name="ProposerAge" Type="varchar" MaxLength="50" />
+          <Property Name="ProposerEmployDetails" Type="varchar(max)" />
+          <Property Name="ProposerOccOne" Type="varchar(max)" />
+          <Property Name="ProposerOccBusinessOne" Type="varchar(max)" />
+          <Property Name="ProposerOccStatusOne" Type="varchar(max)" />
+          <Property Name="ProposerOccFullPartOne" Type="varchar(max)" />
+          <Property Name="ProposerOccTwo" Type="varchar(max)" />
+          <Property Name="ProposerOccBusinessTwo" Type="varchar(max)" />
+          <Property Name="ProposerOccStatusTwo" Type="varchar(max)" />
+          <Property Name="ProposerOccFullPartTwo" Type="varchar(max)" />
+          <Property Name="ProposerPersonalDetails" Type="varchar(max)" />
+          <Property Name="ProposerTitle" Type="varchar(max)" />
+          <Property Name="ProposerSurname" Type="varchar(max)" />
+          <Property Name="ProposerForenames" Type="varchar(max)" />
+          <Property Name="ProposerRelationship" Type="varchar(max)" />
+          <Property Name="ProposerAtRiskAddress" Type="varchar(max)" />
+          <Property Name="ProposerFirstTimeBuyer" Type="varchar(max)" />
+        </EntityType>
+        <Association Name="FK_POLICYID">
+          <End Role="PolicyMain" Type="Self.PolicyMain" Multiplicity="1" />
+          <End Role="AOBoatDetails" Type="Self.AOBoatDetails" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PolicyMain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="AOBoatDetails">
+              <PropertyRef Name="BoatPolicyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_POLICYID1">
+          <End Role="PolicyMain" Type="Self.PolicyMain" Multiplicity="1" />
+          <End Role="AOCaravanDetails" Type="Self.AOCaravanDetails" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PolicyMain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="AOCaravanDetails">
+              <PropertyRef Name="CaravanPolicyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_POLICYID10">
+          <End Role="PolicyMain" Type="Self.PolicyMain" Multiplicity="1" />
+          <End Role="CBuildingsPrevInsurance" Type="Self.CBuildingsPrevInsurance" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PolicyMain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CBuildingsPrevInsurance">
+              <PropertyRef Name="PrevInsPolicyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_POLICYID11">
+          <End Role="PolicyMain" Type="Self.PolicyMain" Multiplicity="1" />
+          <End Role="CCContentsPrevInsurance" Type="Self.CCContentsPrevInsurance" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PolicyMain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CCContentsPrevInsurance">
+              <PropertyRef Name="CPrevInsPolicyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_POLICYID20">
+          <End Role="PolicyMain" Type="Self.PolicyMain" Multiplicity="0..1" />
+          <End Role="CAllrisksBicycle" Type="Self.CAllrisksBicycle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PolicyMain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CAllrisksBicycle">
+              <PropertyRef Name="AllrisksBicyclePolicyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_POLICYID25">
+          <End Role="PolicyMain" Type="Self.PolicyMain" Multiplicity="1" />
+          <End Role="MPClaimsLosses" Type="Self.MPClaimsLosses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PolicyMain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="MPClaimsLosses">
+              <PropertyRef Name="ClaimsLossesPolicyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_POLICYID26">
+          <End Role="PolicyMain" Type="Self.PolicyMain" Multiplicity="1" />
+          <End Role="MPConvictions" Type="Self.MPConvictions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PolicyMain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="MPConvictions">
+              <PropertyRef Name="ConvictionsPolicyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_POLICYID33">
+          <End Role="PolicyMain" Type="Self.PolicyMain" Multiplicity="1" />
+          <End Role="CSpecifiedItem" Type="Self.CSpecifiedItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PolicyMain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CSpecifiedItem">
+              <PropertyRef Name="SpecifiedItemPolicyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_POLICYID55">
+          <End Role="PolicyMain" Type="Self.PolicyMain" Multiplicity="1" />
+          <End Role="ProposerDetails" Type="Self.ProposerDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PolicyMain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ProposerDetails">
+              <PropertyRef Name="ProposerPolicyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_POLICYID7">
+          <End Role="PolicyMain" Type="Self.PolicyMain" Multiplicity="1" />
+          <End Role="PropertyODCommunicationAddress" Type="Self.PropertyODCommunicationAddress" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PolicyMain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PropertyODCommunicationAddress">
+              <PropertyRef Name="CommunicationAddressPolicyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_POLICYID8">
+          <End Role="PolicyMain" Type="Self.PolicyMain" Multiplicity="1" />
+          <End Role="PropertyODInterestedParty" Type="Self.PropertyODInterestedParty" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PolicyMain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PropertyODInterestedParty">
+              <PropertyRef Name="InterestedPartyPolicyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_POLICYID9">
+          <End Role="PolicyMain" Type="Self.PolicyMain" Multiplicity="1" />
+          <End Role="PropertyODRiskPropertyAddress" Type="Self.PropertyODRiskPropertyAddress" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PolicyMain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PropertyODRiskPropertyAddress">
+              <PropertyRef Name="RiskPropertyAddressPolicyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PolicyMain_PolicyMain">
+          <End Role="PolicyMain" Type="Self.PolicyMain" Multiplicity="1" />
+          <End Role="PolicyMain1" Type="Self.PolicyMain" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PolicyMain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PolicyMain1">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PolicyCheckModelStoreContainer">
+          <EntitySet Name="AOBoatDetails" EntityType="Self.AOBoatDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AOCaravanDetails" EntityType="Self.AOCaravanDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CAllrisksBicycle" EntityType="Self.CAllrisksBicycle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CBuildingsPrevInsurance" EntityType="Self.CBuildingsPrevInsurance" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CCContentsPrevInsurance" EntityType="Self.CCContentsPrevInsurance" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CSpecifiedItem" EntityType="Self.CSpecifiedItem" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MPClaimsLosses" EntityType="Self.MPClaimsLosses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MPConvictions" EntityType="Self.MPConvictions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PolicyMain" EntityType="Self.PolicyMain" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PropertyODCommunicationAddress" EntityType="Self.PropertyODCommunicationAddress" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PropertyODInterestedParty" EntityType="Self.PropertyODInterestedParty" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PropertyODRiskPropertyAddress" EntityType="Self.PropertyODRiskPropertyAddress" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProposerDetails" EntityType="Self.ProposerDetails" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_POLICYID" Association="Self.FK_POLICYID">
+            <End Role="PolicyMain" EntitySet="PolicyMain" />
+            <End Role="AOBoatDetails" EntitySet="AOBoatDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_POLICYID1" Association="Self.FK_POLICYID1">
+            <End Role="PolicyMain" EntitySet="PolicyMain" />
+            <End Role="AOCaravanDetails" EntitySet="AOCaravanDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_POLICYID10" Association="Self.FK_POLICYID10">
+            <End Role="PolicyMain" EntitySet="PolicyMain" />
+            <End Role="CBuildingsPrevInsurance" EntitySet="CBuildingsPrevInsurance" />
+          </AssociationSet>
+          <AssociationSet Name="FK_POLICYID11" Association="Self.FK_POLICYID11">
+            <End Role="PolicyMain" EntitySet="PolicyMain" />
+            <End Role="CCContentsPrevInsurance" EntitySet="CCContentsPrevInsurance" />
+          </AssociationSet>
+          <AssociationSet Name="FK_POLICYID20" Association="Self.FK_POLICYID20">
+            <End Role="PolicyMain" EntitySet="PolicyMain" />
+            <End Role="CAllrisksBicycle" EntitySet="CAllrisksBicycle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_POLICYID25" Association="Self.FK_POLICYID25">
+            <End Role="PolicyMain" EntitySet="PolicyMain" />
+            <End Role="MPClaimsLosses" EntitySet="MPClaimsLosses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_POLICYID26" Association="Self.FK_POLICYID26">
+            <End Role="PolicyMain" EntitySet="PolicyMain" />
+            <End Role="MPConvictions" EntitySet="MPConvictions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_POLICYID33" Association="Self.FK_POLICYID33">
+            <End Role="PolicyMain" EntitySet="PolicyMain" />
+            <End Role="CSpecifiedItem" EntitySet="CSpecifiedItem" />
+          </AssociationSet>
+          <AssociationSet Name="FK_POLICYID55" Association="Self.FK_POLICYID55">
+            <End Role="PolicyMain" EntitySet="PolicyMain" />
+            <End Role="ProposerDetails" EntitySet="ProposerDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_POLICYID7" Association="Self.FK_POLICYID7">
+            <End Role="PolicyMain" EntitySet="PolicyMain" />
+            <End Role="PropertyODCommunicationAddress" EntitySet="PropertyODCommunicationAddress" />
+          </AssociationSet>
+          <AssociationSet Name="FK_POLICYID8" Association="Self.FK_POLICYID8">
+            <End Role="PolicyMain" EntitySet="PolicyMain" />
+            <End Role="PropertyODInterestedParty" EntitySet="PropertyODInterestedParty" />
+          </AssociationSet>
+          <AssociationSet Name="FK_POLICYID9" Association="Self.FK_POLICYID9">
+            <End Role="PolicyMain" EntitySet="PolicyMain" />
+            <End Role="PropertyODRiskPropertyAddress" EntitySet="PropertyODRiskPropertyAddress" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PolicyMain_PolicyMain" Association="Self.FK_PolicyMain_PolicyMain">
+            <End Role="PolicyMain" EntitySet="PolicyMain" />
+            <End Role="PolicyMain1" EntitySet="PolicyMain" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PolicyCheckModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AOBoatDetail">
+          <Key>
+            <PropertyRef Name="BoatPolicyId" />
+          </Key>
+          <Property Name="BoatPolicyId" Type="Int32" Nullable="false" />
+          <Property Name="BoatId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BoatType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BoatName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="BoatSailNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="BoatClass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BoatModel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BoatManufactured" Type="DateTime" Precision="3" />
+          <Property Name="BoatPurchased" Type="DateTime" Precision="3" />
+          <Property Name="BoatMaximumSpeed" Type="Int32" />
+          <Property Name="BoatOver5m" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BoatUnusedAtMooring" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BoatEngineDetailsType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BoatEngineDetailsMake" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BoatEngineDetailsSerNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="BoatEngineDetailsMade" Type="DateTime" Precision="3" />
+          <Property Name="BoatEngineDetailsHP" Type="Int32" />
+          <Property Name="BoatCoverDetailsCraftGeneral" Type="Int32" />
+          <Property Name="BoatCoverDetailsOutboardMotor" Type="Int32" />
+          <Property Name="BoatCoverDetailsRoadTrailer" Type="Int32" />
+          <Property Name="BoatCoverDetailsLaunchingTrolley" Type="Int32" />
+          <NavigationProperty Name="PolicyMain" Relationship="Self.FK_POLICYID" FromRole="AOBoatDetails" ToRole="PolicyMain" />
+        </EntityType>
+        <EntityType Name="AOCaravanDetail">
+          <Key>
+            <PropertyRef Name="CaravanPolicyId" />
+          </Key>
+          <Property Name="CaravanPolicyId" Type="Int32" Nullable="false" />
+          <Property Name="CaravanId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CaravanType" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CaravanMake" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="caravanModel" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="caravanVIN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="caravanSerialNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="caravanManufactured" Type="DateTime" Precision="3" />
+          <Property Name="caravanPurchased" Type="DateTime" Precision="3" />
+          <Property Name="caravanPricePaid" Type="Int32" />
+          <Property Name="caravanLetHireReward" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="caravanRiskUnused" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="caravanKeptOnSite" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CaravanAndFittings" Type="Int32" />
+          <Property Name="caravanPersonalPossesions" Type="Int32" />
+          <Property Name="caravanHighestValueItem" Type="Int32" />
+          <NavigationProperty Name="PolicyMain" Relationship="Self.FK_POLICYID1" FromRole="AOCaravanDetails" ToRole="PolicyMain" />
+        </EntityType>
+        <EntityType Name="CAllrisksBicycle">
+          <Key>
+            <PropertyRef Name="BicycleId" />
+          </Key>
+          <Property Name="BicycleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BicycleMake" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="BicycleModel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BicycleValue" Type="Int32" />
+          <Property Name="BicycleTerritory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AllrisksBicyclePolicyId" Type="Int32" />
+          <NavigationProperty Name="PolicyMain" Relationship="Self.FK_POLICYID20" FromRole="CAllrisksBicycle" ToRole="PolicyMain" />
+        </EntityType>
+        <EntityType Name="CBuildingsPrevInsurance">
+          <Key>
+            <PropertyRef Name="PrevInsPolicyId" />
+          </Key>
+          <Property Name="PrevInsPolicyId" Type="Int32" Nullable="false" />
+          <Property Name="PrevInsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InsurerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="InsurerNameOther" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PolicyNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="DateLapsed" Type="DateTime" Precision="3" />
+          <Property Name="YearsNCB" Type="Int32" />
+          <Property Name="ProofNCB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NoOfYearsIns" Type="Int32" />
+          <Property Name="TransferFeePaid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProofOfPaymentRec" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PolicyMain" Relationship="Self.FK_POLICYID10" FromRole="CBuildingsPrevInsurance" ToRole="PolicyMain" />
+        </EntityType>
+        <EntityType Name="CCContentsPrevInsurance">
+          <Key>
+            <PropertyRef Name="CPrevInsPolicyId" />
+          </Key>
+          <Property Name="CPrevInsPolicyId" Type="Int32" Nullable="false" />
+          <Property Name="CPrevInsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CinsurerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CInsurerNameOther" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CPolicyNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CDateLapsed" Type="DateTime" Precision="3" />
+          <Property Name="CYearsNCB" Type="Int32" />
+          <Property Name="CproofNCB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CNoOfYearsIns" Type="Int32" />
+          <NavigationProperty Name="PolicyMain" Relationship="Self.FK_POLICYID11" FromRole="CCContentsPrevInsurance" ToRole="PolicyMain" />
+        </EntityType>
+        <EntityType Name="CSpecifiedItem">
+          <Key>
+            <PropertyRef Name="SpecifiedItemId" />
+          </Key>
+          <Property Name="SpecifiedItemPolicyId" Type="Int32" Nullable="false" />
+          <Property Name="SpecifiedItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SpecifiedItemItemCategory" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="SpecifiedItemItemDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="SpecifiedItemItemValue" Type="Int32" />
+          <Property Name="SpecifiedItemCover" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SpecifiedItemDeleted" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SpecifiedItemValuationAmount" Type="Int32" />
+          <Property Name="SpecifiedItemDate" Type="DateTime" Precision="3" />
+          <Property Name="SpecifiedItemTerritory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PolicyMain" Relationship="Self.FK_POLICYID33" FromRole="CSpecifiedItem" ToRole="PolicyMain" />
+        </EntityType>
+        <EntityType Name="MPClaimsLoss">
+          <Key>
+            <PropertyRef Name="ClaimId" />
+          </Key>
+          <Property Name="ClaimsLossesPolicyId" Type="Int32" Nullable="false" />
+          <Property Name="ClaimId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClaimsLossesClaimDate" Type="DateTime" Precision="3" />
+          <Property Name="ClaimsLossesClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ClaimsLossesValue" Type="Int32" />
+          <Property Name="ClaimsLossesSection" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ClaimsLossesDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ClaimsLossesDeleted" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ClaimsLossesClaimSettled" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PolicyMain" Relationship="Self.FK_POLICYID25" FromRole="MPClaimsLosses" ToRole="PolicyMain" />
+        </EntityType>
+        <EntityType Name="MPConviction">
+          <Key>
+            <PropertyRef Name="ConvictionId" />
+          </Key>
+          <Property Name="ConvictionsPolicyId" Type="Int32" Nullable="false" />
+          <Property Name="ConvictionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ConvictionDate" Type="DateTime" Precision="3" />
+          <Property Name="Pending" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ConvictionType" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PolicyMain" Relationship="Self.FK_POLICYID26" FromRole="MPConvictions" ToRole="PolicyMain" />
+        </EntityType>
+        <EntityType Name="PolicyMain">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PPostCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PYearBuilt" Type="Int32" />
+          <Property Name="PTypeOfHouse" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PWalls" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PRoof" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PFlatPercent" Type="Int32" />
+          <Property Name="PBedrooms" Type="Int32" />
+          <Property Name="PRooms" Type="Int32" />
+          <Property Name="PFloors" Type="Int32" />
+          <Property Name="PFlatFloor" Type="Int32" />
+          <Property Name="PBathrooms" Type="Int32" />
+          <Property Name="PExtended" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PYearExtended" Type="Int32" />
+          <Property Name="PHeatingPrimary" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PHeatingSecondary" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PPrelimQuestions" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PPqInsuranceDeclined" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PPqConvictions" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PPqBankrupt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PPqStormFlood" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PPqSubsidence" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PPqLandslip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PPqGroundHeave" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PPqInGoodRepair" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PPqNearRiverQuarry" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PPqNearRQDistance" Type="Int32" />
+          <Property Name="PPqBuildingListed" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PPqRepairedMonitored" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PPqUnderpinned" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PUseOccupancy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PuoAccomodation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PuoResidence" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PuoUnnocupied" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PuoBusinessUse" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PuoStock" Type="Int32" />
+          <Property Name="PuoEquipment" Type="Int32" />
+          <Property Name="PuoHolidayHome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PuoPayingGuests" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PuoPGNumber" Type="Int32" />
+          <Property Name="PuoSmokers" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PuoNooAdults" Type="Int32" />
+          <Property Name="PuoNooChildren" Type="Int32" />
+          <Property Name="PSecurity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PsFinalExitDoors" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PsOtherDoors" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PsPatioDoors" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PsWindows" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PsNeighbourhoodWatch" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PsSmokeAlarm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PsSelfContained" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PsIntruderAlarm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PsAlarmType" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PsAccredationDetailsOne" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PsAccredationDetailsOneOther" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PsSpecificationContract" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PsDateInstalled" Type="DateTime" Precision="3" />
+          <Property Name="PsMaintainer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PsMaintainerTwo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PsAccreditationDetailsTwo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PsAccredationDetailsTwoOther" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PsrSecurityReports" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PsrRICSFSVASURVEY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PsrRFSDate" Type="DateTime" Precision="3" />
+          <Property Name="PsrRFSSurveyorsName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PsrRFSDateProofRec" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PsrStructuralER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PsrStructuralERDate" Type="DateTime" Precision="3" />
+          <Property Name="PsrStructuralEnginnersName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PsrNHBCguarantee" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PsrExpires" Type="DateTime" Precision="3" />
+          <Property Name="POtherDetails" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MpSex" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MpDOB" Type="DateTime" Precision="3" />
+          <Property Name="MpAge" Type="Int32" />
+          <Property Name="EmployDetails" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MpEDOccOne" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MpEDOccOneBusiness" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MpEDOccOneStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MpEDOccOneFullPart" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MpEDOccTwo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MpEDOccTwoBusiness" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MpEDOccTwoStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MpEDOccTwoFullPart" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MpPersonalDetails" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MpPersonalDetailsTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MpSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MpForenames" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MpAtRiskAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MpFirstTimeBuyer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MpConvictions" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MpClaimsLosses" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CBuildingsAndContents" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CBCoverType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CBSumInsured" Type="Int32" />
+          <Property Name="CBVolExcess" Type="Int32" />
+          <Property Name="CBXSBuyBack" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CBPrevInsurer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CCCoverType" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CCSumInsuredValue" Type="Int32" />
+          <Property Name="CCSumInsuredOneItem" Type="Int32" />
+          <Property Name="CCValuablesValue" Type="Int32" />
+          <Property Name="CCValuablesOneItem" Type="Int32" />
+          <Property Name="CCVolExcess" Type="Int32" />
+          <Property Name="CCXSBuyBack" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CCPrevInsurer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CBSummationBuildingCoverEnteredDetails" Type="Int32" />
+          <Property Name="CBBuildingsVolExcessEnteredDetails" Type="Int32" />
+          <Property Name="CCSummationContentsCoverEntered" Type="Int32" />
+          <Property Name="CCContentsVolExcessEnteredDetails" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="CAllRisks" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CAllRiskUnspecEffectsValue" Type="Int32" />
+          <Property Name="CAllRiskUnspecEffectsOneItem" Type="Int32" />
+          <Property Name="CAllRiskUnspecEffectsTerritory" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CAllRisksValuablesUnspecValue" Type="Int32" />
+          <Property Name="CAllRisksValuablesUnspecOneItem" Type="Int32" />
+          <Property Name="CAllRisksValuablesUnspecTerritory" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CAllRisksPhotoUnspecValue" Type="Int32" />
+          <Property Name="CAllRisksPhotoUnspecOneItem" Type="Int32" />
+          <Property Name="CAllRisksPhotoUnspecTerritory" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CAllRisksSportsUnspecValue" Type="Int32" />
+          <Property Name="CAllRisksSportsUnspecOneItem" Type="Int32" />
+          <Property Name="CAllRisksSportsUnspecTerritory" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CAllRiskBicycles" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CAllRisksMoneyValue" Type="Int32" />
+          <Property Name="CAllRisksMoneyTerritory" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CAllRisksCreditCardsValue" Type="Int32" />
+          <Property Name="CAllRiskCreditCardsTerritory" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CAllRisksFreezerContentsValue" Type="Int32" />
+          <Property Name="CAllRisksFreezerContentsAge" Type="Int32" />
+          <Property Name="CSpecifiedItems" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AOLegalExpenses" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AOMotorPolicy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AOCurrentMotorInsurer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="AOCaravans" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AOSummationCaravansEnteredDetails" Type="Int32" />
+          <Property Name="AOBoats" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AOSummationBoatEnteredDetails" Type="Int32" />
+          <Property Name="AOSearchesConsent" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AOSchemeNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AOCoverDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="AOBoatDetail" Relationship="Self.FK_POLICYID" FromRole="PolicyMain" ToRole="AOBoatDetails" />
+          <NavigationProperty Name="AOCaravanDetail" Relationship="Self.FK_POLICYID1" FromRole="PolicyMain" ToRole="AOCaravanDetails" />
+          <NavigationProperty Name="CAllrisksBicycles" Relationship="Self.FK_POLICYID20" FromRole="PolicyMain" ToRole="CAllrisksBicycle" />
+          <NavigationProperty Name="CBuildingsPrevInsurance" Relationship="Self.FK_POLICYID10" FromRole="PolicyMain" ToRole="CBuildingsPrevInsurance" />
+          <NavigationProperty Name="CCContentsPrevInsurance" Relationship="Self.FK_POLICYID11" FromRole="PolicyMain" ToRole="CCContentsPrevInsurance" />
+          <NavigationProperty Name="CSpecifiedItems1" Relationship="Self.FK_POLICYID33" FromRole="PolicyMain" ToRole="CSpecifiedItem" />
+          <NavigationProperty Name="MPClaimsLosses1" Relationship="Self.FK_POLICYID25" FromRole="PolicyMain" ToRole="MPClaimsLosses" />
+          <NavigationProperty Name="MPConvictions1" Relationship="Self.FK_POLICYID26" FromRole="PolicyMain" ToRole="MPConvictions" />
+          <NavigationProperty Name="ProposerDetails" Relationship="Self.FK_POLICYID55" FromRole="PolicyMain" ToRole="ProposerDetails" />
+          <NavigationProperty Name="PropertyODCommunicationAddress" Relationship="Self.FK_POLICYID7" FromRole="PolicyMain" ToRole="PropertyODCommunicationAddress" />
+          <NavigationProperty Name="PropertyODInterestedParty" Relationship="Self.FK_POLICYID8" FromRole="PolicyMain" ToRole="PropertyODInterestedParty" />
+          <NavigationProperty Name="PropertyODRiskPropertyAddress" Relationship="Self.FK_POLICYID9" FromRole="PolicyMain" ToRole="PropertyODRiskPropertyAddress" />
+          <NavigationProperty Name="PolicyMain1" Relationship="Self.FK_PolicyMain_PolicyMain" FromRole="PolicyMain" ToRole="PolicyMain1" />
+          <NavigationProperty Name="PolicyMain2" Relationship="Self.FK_PolicyMain_PolicyMain" FromRole="PolicyMain1" ToRole="PolicyMain" />
+        </EntityType>
+        <EntityType Name="PropertyODCommunicationAddress">
+          <Key>
+            <PropertyRef Name="CommunicationAddressPolicyId" />
+          </Key>
+          <Property Name="CommunicationAddressPolicyId" Type="Int32" Nullable="false" />
+          <Property Name="CANumberName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CAStreet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CATown" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CACounty" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CAPostCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PolicyMain" Relationship="Self.FK_POLICYID7" FromRole="PropertyODCommunicationAddress" ToRole="PolicyMain" />
+        </EntityType>
+        <EntityType Name="PropertyODInterestedParty">
+          <Key>
+            <PropertyRef Name="InterestedPartyPolicyId" />
+          </Key>
+          <Property Name="InterestedPartyPolicyId" Type="Int32" Nullable="false" />
+          <Property Name="IPType" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="IPName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="IPNameOther" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="IPNumberName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="IPStreet" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="IPTown" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="IPCounty" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="IPPostCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IPRefMortgageNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PolicyMain" Relationship="Self.FK_POLICYID8" FromRole="PropertyODInterestedParty" ToRole="PolicyMain" />
+        </EntityType>
+        <EntityType Name="PropertyODRiskPropertyAddress">
+          <Key>
+            <PropertyRef Name="RiskPropertyAddressPolicyId" />
+          </Key>
+          <Property Name="RiskPropertyAddressPolicyId" Type="Int32" Nullable="false" />
+          <Property Name="RPNumberName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RPStreet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RPTown" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RPCounty" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RPPostCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PolicyMain" Relationship="Self.FK_POLICYID9" FromRole="PropertyODRiskPropertyAddress" ToRole="PolicyMain" />
+        </EntityType>
+        <EntityType Name="ProposerDetail">
+          <Key>
+            <PropertyRef Name="ProposerId" />
+          </Key>
+          <Property Name="ProposerPolicyId" Type="Int32" Nullable="false" />
+          <Property Name="ProposerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProposerSex" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProposerDOB" Type="DateTime" Precision="3" />
+          <Property Name="ProposerAge" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProposerEmployDetails" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ProposerOccOne" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ProposerOccBusinessOne" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ProposerOccStatusOne" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ProposerOccFullPartOne" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ProposerOccTwo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ProposerOccBusinessTwo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ProposerOccStatusTwo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ProposerOccFullPartTwo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ProposerPersonalDetails" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ProposerTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ProposerSurname" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ProposerForenames" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ProposerRelationship" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ProposerAtRiskAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ProposerFirstTimeBuyer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PolicyMain" Relationship="Self.FK_POLICYID55" FromRole="ProposerDetails" ToRole="PolicyMain" />
+        </EntityType>
+        <Association Name="FK_POLICYID">
+          <End Role="PolicyMain" Type="Self.PolicyMain" Multiplicity="1" />
+          <End Role="AOBoatDetails" Type="Self.AOBoatDetail" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PolicyMain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="AOBoatDetails">
+              <PropertyRef Name="BoatPolicyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_POLICYID1">
+          <End Role="PolicyMain" Type="Self.PolicyMain" Multiplicity="1" />
+          <End Role="AOCaravanDetails" Type="Self.AOCaravanDetail" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PolicyMain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="AOCaravanDetails">
+              <PropertyRef Name="CaravanPolicyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_POLICYID20">
+          <End Role="PolicyMain" Type="Self.PolicyMain" Multiplicity="0..1" />
+          <End Role="CAllrisksBicycle" Type="Self.CAllrisksBicycle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PolicyMain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CAllrisksBicycle">
+              <PropertyRef Name="AllrisksBicyclePolicyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_POLICYID10">
+          <End Role="PolicyMain" Type="Self.PolicyMain" Multiplicity="1" />
+          <End Role="CBuildingsPrevInsurance" Type="Self.CBuildingsPrevInsurance" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PolicyMain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CBuildingsPrevInsurance">
+              <PropertyRef Name="PrevInsPolicyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_POLICYID11">
+          <End Role="PolicyMain" Type="Self.PolicyMain" Multiplicity="1" />
+          <End Role="CCContentsPrevInsurance" Type="Self.CCContentsPrevInsurance" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PolicyMain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CCContentsPrevInsurance">
+              <PropertyRef Name="CPrevInsPolicyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_POLICYID33">
+          <End Role="PolicyMain" Type="Self.PolicyMain" Multiplicity="1" />
+          <End Role="CSpecifiedItem" Type="Self.CSpecifiedItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PolicyMain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CSpecifiedItem">
+              <PropertyRef Name="SpecifiedItemPolicyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_POLICYID25">
+          <End Role="PolicyMain" Type="Self.PolicyMain" Multiplicity="1" />
+          <End Role="MPClaimsLosses" Type="Self.MPClaimsLoss" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PolicyMain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="MPClaimsLosses">
+              <PropertyRef Name="ClaimsLossesPolicyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_POLICYID26">
+          <End Role="PolicyMain" Type="Self.PolicyMain" Multiplicity="1" />
+          <End Role="MPConvictions" Type="Self.MPConviction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PolicyMain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="MPConvictions">
+              <PropertyRef Name="ConvictionsPolicyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_POLICYID55">
+          <End Role="PolicyMain" Type="Self.PolicyMain" Multiplicity="1" />
+          <End Role="ProposerDetails" Type="Self.ProposerDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PolicyMain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ProposerDetails">
+              <PropertyRef Name="ProposerPolicyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_POLICYID7">
+          <End Role="PolicyMain" Type="Self.PolicyMain" Multiplicity="1" />
+          <End Role="PropertyODCommunicationAddress" Type="Self.PropertyODCommunicationAddress" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PolicyMain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PropertyODCommunicationAddress">
+              <PropertyRef Name="CommunicationAddressPolicyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_POLICYID8">
+          <End Role="PolicyMain" Type="Self.PolicyMain" Multiplicity="1" />
+          <End Role="PropertyODInterestedParty" Type="Self.PropertyODInterestedParty" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PolicyMain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PropertyODInterestedParty">
+              <PropertyRef Name="InterestedPartyPolicyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_POLICYID9">
+          <End Role="PolicyMain" Type="Self.PolicyMain" Multiplicity="1" />
+          <End Role="PropertyODRiskPropertyAddress" Type="Self.PropertyODRiskPropertyAddress" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PolicyMain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PropertyODRiskPropertyAddress">
+              <PropertyRef Name="RiskPropertyAddressPolicyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PolicyMain_PolicyMain">
+          <End Role="PolicyMain" Type="Self.PolicyMain" Multiplicity="1" />
+          <End Role="PolicyMain1" Type="Self.PolicyMain" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PolicyMain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PolicyMain1">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PolicyCheckEntities53" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AOBoatDetails" EntityType="Self.AOBoatDetail" />
+          <EntitySet Name="AOCaravanDetails" EntityType="Self.AOCaravanDetail" />
+          <EntitySet Name="CAllrisksBicycles" EntityType="Self.CAllrisksBicycle" />
+          <EntitySet Name="CBuildingsPrevInsurances" EntityType="Self.CBuildingsPrevInsurance" />
+          <EntitySet Name="CCContentsPrevInsurances" EntityType="Self.CCContentsPrevInsurance" />
+          <EntitySet Name="CSpecifiedItems" EntityType="Self.CSpecifiedItem" />
+          <EntitySet Name="MPClaimsLosses" EntityType="Self.MPClaimsLoss" />
+          <EntitySet Name="MPConvictions" EntityType="Self.MPConviction" />
+          <EntitySet Name="PolicyMains" EntityType="Self.PolicyMain" />
+          <EntitySet Name="PropertyODCommunicationAddresses" EntityType="Self.PropertyODCommunicationAddress" />
+          <EntitySet Name="PropertyODInterestedParties" EntityType="Self.PropertyODInterestedParty" />
+          <EntitySet Name="PropertyODRiskPropertyAddresses" EntityType="Self.PropertyODRiskPropertyAddress" />
+          <EntitySet Name="ProposerDetails" EntityType="Self.ProposerDetail" />
+          <AssociationSet Name="FK_POLICYID" Association="Self.FK_POLICYID">
+            <End Role="PolicyMain" EntitySet="PolicyMains" />
+            <End Role="AOBoatDetails" EntitySet="AOBoatDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_POLICYID1" Association="Self.FK_POLICYID1">
+            <End Role="PolicyMain" EntitySet="PolicyMains" />
+            <End Role="AOCaravanDetails" EntitySet="AOCaravanDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_POLICYID20" Association="Self.FK_POLICYID20">
+            <End Role="PolicyMain" EntitySet="PolicyMains" />
+            <End Role="CAllrisksBicycle" EntitySet="CAllrisksBicycles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_POLICYID10" Association="Self.FK_POLICYID10">
+            <End Role="PolicyMain" EntitySet="PolicyMains" />
+            <End Role="CBuildingsPrevInsurance" EntitySet="CBuildingsPrevInsurances" />
+          </AssociationSet>
+          <AssociationSet Name="FK_POLICYID11" Association="Self.FK_POLICYID11">
+            <End Role="PolicyMain" EntitySet="PolicyMains" />
+            <End Role="CCContentsPrevInsurance" EntitySet="CCContentsPrevInsurances" />
+          </AssociationSet>
+          <AssociationSet Name="FK_POLICYID33" Association="Self.FK_POLICYID33">
+            <End Role="PolicyMain" EntitySet="PolicyMains" />
+            <End Role="CSpecifiedItem" EntitySet="CSpecifiedItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_POLICYID25" Association="Self.FK_POLICYID25">
+            <End Role="PolicyMain" EntitySet="PolicyMains" />
+            <End Role="MPClaimsLosses" EntitySet="MPClaimsLosses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_POLICYID26" Association="Self.FK_POLICYID26">
+            <End Role="PolicyMain" EntitySet="PolicyMains" />
+            <End Role="MPConvictions" EntitySet="MPConvictions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_POLICYID55" Association="Self.FK_POLICYID55">
+            <End Role="PolicyMain" EntitySet="PolicyMains" />
+            <End Role="ProposerDetails" EntitySet="ProposerDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_POLICYID7" Association="Self.FK_POLICYID7">
+            <End Role="PolicyMain" EntitySet="PolicyMains" />
+            <End Role="PropertyODCommunicationAddress" EntitySet="PropertyODCommunicationAddresses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_POLICYID8" Association="Self.FK_POLICYID8">
+            <End Role="PolicyMain" EntitySet="PolicyMains" />
+            <End Role="PropertyODInterestedParty" EntitySet="PropertyODInterestedParties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_POLICYID9" Association="Self.FK_POLICYID9">
+            <End Role="PolicyMain" EntitySet="PolicyMains" />
+            <End Role="PropertyODRiskPropertyAddress" EntitySet="PropertyODRiskPropertyAddresses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PolicyMain_PolicyMain" Association="Self.FK_PolicyMain_PolicyMain">
+            <End Role="PolicyMain" EntitySet="PolicyMains" />
+            <End Role="PolicyMain1" EntitySet="PolicyMains" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PolicyCheckModelStoreContainer" CdmEntityContainer="PolicyCheckEntities53">
+          <EntitySetMapping Name="AOBoatDetails">
+            <EntityTypeMapping TypeName="PolicyCheckModel.AOBoatDetail">
+              <MappingFragment StoreEntitySet="AOBoatDetails">
+                <ScalarProperty Name="BoatPolicyId" ColumnName="BoatPolicyId" />
+                <ScalarProperty Name="BoatId" ColumnName="BoatId" />
+                <ScalarProperty Name="BoatType" ColumnName="BoatType" />
+                <ScalarProperty Name="BoatName" ColumnName="BoatName" />
+                <ScalarProperty Name="BoatSailNo" ColumnName="BoatSailNo" />
+                <ScalarProperty Name="BoatClass" ColumnName="BoatClass" />
+                <ScalarProperty Name="BoatModel" ColumnName="BoatModel" />
+                <ScalarProperty Name="BoatManufactured" ColumnName="BoatManufactured" />
+                <ScalarProperty Name="BoatPurchased" ColumnName="BoatPurchased" />
+                <ScalarProperty Name="BoatMaximumSpeed" ColumnName="BoatMaximumSpeed" />
+                <ScalarProperty Name="BoatOver5m" ColumnName="BoatOver5m" />
+                <ScalarProperty Name="BoatUnusedAtMooring" ColumnName="BoatUnusedAtMooring" />
+                <ScalarProperty Name="BoatEngineDetailsType" ColumnName="BoatEngineDetailsType" />
+                <ScalarProperty Name="BoatEngineDetailsMake" ColumnName="BoatEngineDetailsMake" />
+                <ScalarProperty Name="BoatEngineDetailsSerNo" ColumnName="BoatEngineDetailsSerNo" />
+                <ScalarProperty Name="BoatEngineDetailsMade" ColumnName="BoatEngineDetailsMade" />
+                <ScalarProperty Name="BoatEngineDetailsHP" ColumnName="BoatEngineDetailsHP" />
+                <ScalarProperty Name="BoatCoverDetailsCraftGeneral" ColumnName="BoatCoverDetailsCraftGeneral" />
+                <ScalarProperty Name="BoatCoverDetailsOutboardMotor" ColumnName="BoatCoverDetailsOutboardMotor" />
+                <ScalarProperty Name="BoatCoverDetailsRoadTrailer" ColumnName="BoatCoverDetailsRoadTrailer" />
+                <ScalarProperty Name="BoatCoverDetailsLaunchingTrolley" ColumnName="BoatCoverDetailsLaunchingTrolley" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AOCaravanDetails">
+            <EntityTypeMapping TypeName="PolicyCheckModel.AOCaravanDetail">
+              <MappingFragment StoreEntitySet="AOCaravanDetails">
+                <ScalarProperty Name="CaravanPolicyId" ColumnName="CaravanPolicyId" />
+                <ScalarProperty Name="CaravanId" ColumnName="CaravanId" />
+                <ScalarProperty Name="CaravanType" ColumnName="CaravanType" />
+                <ScalarProperty Name="CaravanMake" ColumnName="CaravanMake" />
+                <ScalarProperty Name="caravanModel" ColumnName="caravanModel" />
+                <ScalarProperty Name="caravanVIN" ColumnName="caravanVIN" />
+                <ScalarProperty Name="caravanSerialNumber" ColumnName="caravanSerialNumber" />
+                <ScalarProperty Name="caravanManufactured" ColumnName="caravanManufactured" />
+                <ScalarProperty Name="caravanPurchased" ColumnName="caravanPurchased" />
+                <ScalarProperty Name="caravanPricePaid" ColumnName="caravanPricePaid" />
+                <ScalarProperty Name="caravanLetHireReward" ColumnName="caravanLetHireReward" />
+                <ScalarProperty Name="caravanRiskUnused" ColumnName="caravanRiskUnused" />
+                <ScalarProperty Name="caravanKeptOnSite" ColumnName="caravanKeptOnSite" />
+                <ScalarProperty Name="CaravanAndFittings" ColumnName="CaravanAndFittings" />
+                <ScalarProperty Name="caravanPersonalPossesions" ColumnName="caravanPersonalPossesions" />
+                <ScalarProperty Name="caravanHighestValueItem" ColumnName="caravanHighestValueItem" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CAllrisksBicycles">
+            <EntityTypeMapping TypeName="PolicyCheckModel.CAllrisksBicycle">
+              <MappingFragment StoreEntitySet="CAllrisksBicycle">
+                <ScalarProperty Name="BicycleId" ColumnName="BicycleId" />
+                <ScalarProperty Name="BicycleMake" ColumnName="BicycleMake" />
+                <ScalarProperty Name="BicycleModel" ColumnName="BicycleModel" />
+                <ScalarProperty Name="BicycleValue" ColumnName="BicycleValue" />
+                <ScalarProperty Name="BicycleTerritory" ColumnName="BicycleTerritory" />
+                <ScalarProperty Name="AllrisksBicyclePolicyId" ColumnName="AllrisksBicyclePolicyId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CBuildingsPrevInsurances">
+            <EntityTypeMapping TypeName="PolicyCheckModel.CBuildingsPrevInsurance">
+              <MappingFragment StoreEntitySet="CBuildingsPrevInsurance">
+                <ScalarProperty Name="PrevInsPolicyId" ColumnName="PrevInsPolicyId" />
+                <ScalarProperty Name="PrevInsId" ColumnName="PrevInsId" />
+                <ScalarProperty Name="InsurerName" ColumnName="InsurerName" />
+                <ScalarProperty Name="InsurerNameOther" ColumnName="InsurerNameOther" />
+                <ScalarProperty Name="PolicyNo" ColumnName="PolicyNo" />
+                <ScalarProperty Name="DateLapsed" ColumnName="DateLapsed" />
+                <ScalarProperty Name="YearsNCB" ColumnName="YearsNCB" />
+                <ScalarProperty Name="ProofNCB" ColumnName="ProofNCB" />
+                <ScalarProperty Name="NoOfYearsIns" ColumnName="NoOfYearsIns" />
+                <ScalarProperty Name="TransferFeePaid" ColumnName="TransferFeePaid" />
+                <ScalarProperty Name="ProofOfPaymentRec" ColumnName="ProofOfPaymentRec" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CCContentsPrevInsurances">
+            <EntityTypeMapping TypeName="PolicyCheckModel.CCContentsPrevInsurance">
+              <MappingFragment StoreEntitySet="CCContentsPrevInsurance">
+                <ScalarProperty Name="CPrevInsPolicyId" ColumnName="CPrevInsPolicyId" />
+                <ScalarProperty Name="CPrevInsId" ColumnName="CPrevInsId" />
+                <ScalarProperty Name="CinsurerName" ColumnName="CinsurerName" />
+                <ScalarProperty Name="CInsurerNameOther" ColumnName="CInsurerNameOther" />
+                <ScalarProperty Name="CPolicyNo" ColumnName="CPolicyNo" />
+                <ScalarProperty Name="CDateLapsed" ColumnName="CDateLapsed" />
+                <ScalarProperty Name="CYearsNCB" ColumnName="CYearsNCB" />
+                <ScalarProperty Name="CproofNCB" ColumnName="CproofNCB" />
+                <ScalarProperty Name="CNoOfYearsIns" ColumnName="CNoOfYearsIns" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CSpecifiedItems">
+            <EntityTypeMapping TypeName="PolicyCheckModel.CSpecifiedItem">
+              <MappingFragment StoreEntitySet="CSpecifiedItem">
+                <ScalarProperty Name="SpecifiedItemPolicyId" ColumnName="SpecifiedItemPolicyId" />
+                <ScalarProperty Name="SpecifiedItemId" ColumnName="SpecifiedItemId" />
+                <ScalarProperty Name="SpecifiedItemItemCategory" ColumnName="SpecifiedItemItemCategory" />
+                <ScalarProperty Name="SpecifiedItemItemDescription" ColumnName="SpecifiedItemItemDescription" />
+                <ScalarProperty Name="SpecifiedItemItemValue" ColumnName="SpecifiedItemItemValue" />
+                <ScalarProperty Name="SpecifiedItemCover" ColumnName="SpecifiedItemCover" />
+                <ScalarProperty Name="SpecifiedItemDeleted" ColumnName="SpecifiedItemDeleted" />
+                <ScalarProperty Name="SpecifiedItemValuationAmount" ColumnName="SpecifiedItemValuationAmount" />
+                <ScalarProperty Name="SpecifiedItemDate" ColumnName="SpecifiedItemDate" />
+                <ScalarProperty Name="SpecifiedItemTerritory" ColumnName="SpecifiedItemTerritory" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MPClaimsLosses">
+            <EntityTypeMapping TypeName="PolicyCheckModel.MPClaimsLoss">
+              <MappingFragment StoreEntitySet="MPClaimsLosses">
+                <ScalarProperty Name="ClaimsLossesPolicyId" ColumnName="ClaimsLossesPolicyId" />
+                <ScalarProperty Name="ClaimId" ColumnName="ClaimId" />
+                <ScalarProperty Name="ClaimsLossesClaimDate" ColumnName="ClaimsLossesClaimDate" />
+                <ScalarProperty Name="ClaimsLossesClaimType" ColumnName="ClaimsLossesClaimType" />
+                <ScalarProperty Name="ClaimsLossesValue" ColumnName="ClaimsLossesValue" />
+                <ScalarProperty Name="ClaimsLossesSection" ColumnName="ClaimsLossesSection" />
+                <ScalarProperty Name="ClaimsLossesDescription" ColumnName="ClaimsLossesDescription" />
+                <ScalarProperty Name="ClaimsLossesDeleted" ColumnName="ClaimsLossesDeleted" />
+                <ScalarProperty Name="ClaimsLossesClaimSettled" ColumnName="ClaimsLossesClaimSettled" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MPConvictions">
+            <EntityTypeMapping TypeName="PolicyCheckModel.MPConviction">
+              <MappingFragment StoreEntitySet="MPConvictions">
+                <ScalarProperty Name="ConvictionsPolicyId" ColumnName="ConvictionsPolicyId" />
+                <ScalarProperty Name="ConvictionId" ColumnName="ConvictionId" />
+                <ScalarProperty Name="ConvictionDate" ColumnName="ConvictionDate" />
+                <ScalarProperty Name="Pending" ColumnName="Pending" />
+                <ScalarProperty Name="ConvictionType" ColumnName="ConvictionType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PolicyMains">
+            <EntityTypeMapping TypeName="PolicyCheckModel.PolicyMain">
+              <MappingFragment StoreEntitySet="PolicyMain">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="PPostCode" ColumnName="PPostCode" />
+                <ScalarProperty Name="PYearBuilt" ColumnName="PYearBuilt" />
+                <ScalarProperty Name="PTypeOfHouse" ColumnName="PTypeOfHouse" />
+                <ScalarProperty Name="PWalls" ColumnName="PWalls" />
+                <ScalarProperty Name="PRoof" ColumnName="PRoof" />
+                <ScalarProperty Name="PFlatPercent" ColumnName="PFlatPercent" />
+                <ScalarProperty Name="PBedrooms" ColumnName="PBedrooms" />
+                <ScalarProperty Name="PRooms" ColumnName="PRooms" />
+                <ScalarProperty Name="PFloors" ColumnName="PFloors" />
+                <ScalarProperty Name="PFlatFloor" ColumnName="PFlatFloor" />
+                <ScalarProperty Name="PBathrooms" ColumnName="PBathrooms" />
+                <ScalarProperty Name="PExtended" ColumnName="PExtended" />
+                <ScalarProperty Name="PYearExtended" ColumnName="PYearExtended" />
+                <ScalarProperty Name="PHeatingPrimary" ColumnName="PHeatingPrimary" />
+                <ScalarProperty Name="PHeatingSecondary" ColumnName="PHeatingSecondary" />
+                <ScalarProperty Name="PPrelimQuestions" ColumnName="PPrelimQuestions" />
+                <ScalarProperty Name="PPqInsuranceDeclined" ColumnName="PPqInsuranceDeclined" />
+                <ScalarProperty Name="PPqConvictions" ColumnName="PPqConvictions" />
+                <ScalarProperty Name="PPqBankrupt" ColumnName="PPqBankrupt" />
+                <ScalarProperty Name="PPqStormFlood" ColumnName="PPqStormFlood" />
+                <ScalarProperty Name="PPqSubsidence" ColumnName="PPqSubsidence" />
+                <ScalarProperty Name="PPqLandslip" ColumnName="PPqLandslip" />
+                <ScalarProperty Name="PPqGroundHeave" ColumnName="PPqGroundHeave" />
+                <ScalarProperty Name="PPqInGoodRepair" ColumnName="PPqInGoodRepair" />
+                <ScalarProperty Name="PPqNearRiverQuarry" ColumnName="PPqNearRiverQuarry" />
+                <ScalarProperty Name="PPqNearRQDistance" ColumnName="PPqNearRQDistance" />
+                <ScalarProperty Name="PPqBuildingListed" ColumnName="PPqBuildingListed" />
+                <ScalarProperty Name="PPqRepairedMonitored" ColumnName="PPqRepairedMonitored" />
+                <ScalarProperty Name="PPqUnderpinned" ColumnName="PPqUnderpinned" />
+                <ScalarProperty Name="PUseOccupancy" ColumnName="PUseOccupancy" />
+                <ScalarProperty Name="PuoAccomodation" ColumnName="PuoAccomodation" />
+                <ScalarProperty Name="PuoResidence" ColumnName="PuoResidence" />
+                <ScalarProperty Name="PuoUnnocupied" ColumnName="PuoUnnocupied" />
+                <ScalarProperty Name="PuoBusinessUse" ColumnName="PuoBusinessUse" />
+                <ScalarProperty Name="PuoStock" ColumnName="PuoStock" />
+                <ScalarProperty Name="PuoEquipment" ColumnName="PuoEquipment" />
+                <ScalarProperty Name="PuoHolidayHome" ColumnName="PuoHolidayHome" />
+                <ScalarProperty Name="PuoPayingGuests" ColumnName="PuoPayingGuests" />
+                <ScalarProperty Name="PuoPGNumber" ColumnName="PuoPGNumber" />
+                <ScalarProperty Name="PuoSmokers" ColumnName="PuoSmokers" />
+                <ScalarProperty Name="PuoNooAdults" ColumnName="PuoNooAdults" />
+                <ScalarProperty Name="PuoNooChildren" ColumnName="PuoNooChildren" />
+                <ScalarProperty Name="PSecurity" ColumnName="PSecurity" />
+                <ScalarProperty Name="PsFinalExitDoors" ColumnName="PsFinalExitDoors" />
+                <ScalarProperty Name="PsOtherDoors" ColumnName="PsOtherDoors" />
+                <ScalarProperty Name="PsPatioDoors" ColumnName="PsPatioDoors" />
+                <ScalarProperty Name="PsWindows" ColumnName="PsWindows" />
+                <ScalarProperty Name="PsNeighbourhoodWatch" ColumnName="PsNeighbourhoodWatch" />
+                <ScalarProperty Name="PsSmokeAlarm" ColumnName="PsSmokeAlarm" />
+                <ScalarProperty Name="PsSelfContained" ColumnName="PsSelfContained" />
+                <ScalarProperty Name="PsIntruderAlarm" ColumnName="PsIntruderAlarm" />
+                <ScalarProperty Name="PsAlarmType" ColumnName="PsAlarmType" />
+                <ScalarProperty Name="PsAccredationDetailsOne" ColumnName="PsAccredationDetailsOne" />
+                <ScalarProperty Name="PsAccredationDetailsOneOther" ColumnName="PsAccredationDetailsOneOther" />
+                <ScalarProperty Name="PsSpecificationContract" ColumnName="PsSpecificationContract" />
+                <ScalarProperty Name="PsDateInstalled" ColumnName="PsDateInstalled" />
+                <ScalarProperty Name="PsMaintainer" ColumnName="PsMaintainer" />
+                <ScalarProperty Name="PsMaintainerTwo" ColumnName="PsMaintainerTwo" />
+                <ScalarProperty Name="PsAccreditationDetailsTwo" ColumnName="PsAccreditationDetailsTwo" />
+                <ScalarProperty Name="PsAccredationDetailsTwoOther" ColumnName="PsAccredationDetailsTwoOther" />
+                <ScalarProperty Name="PsrSecurityReports" ColumnName="PsrSecurityReports" />
+                <ScalarProperty Name="PsrRICSFSVASURVEY" ColumnName="PsrRICSFSVASURVEY" />
+                <ScalarProperty Name="PsrRFSDate" ColumnName="PsrRFSDate" />
+                <ScalarProperty Name="PsrRFSSurveyorsName" ColumnName="PsrRFSSurveyorsName" />
+                <ScalarProperty Name="PsrRFSDateProofRec" ColumnName="PsrRFSDateProofRec" />
+                <ScalarProperty Name="PsrStructuralER" ColumnName="PsrStructuralER" />
+                <ScalarProperty Name="PsrStructuralERDate" ColumnName="PsrStructuralERDate" />
+                <ScalarProperty Name="PsrStructuralEnginnersName" ColumnName="PsrStructuralEnginnersName" />
+                <ScalarProperty Name="PsrNHBCguarantee" ColumnName="PsrNHBCguarantee" />
+                <ScalarProperty Name="PsrExpires" ColumnName="PsrExpires" />
+                <ScalarProperty Name="POtherDetails" ColumnName="POtherDetails" />
+                <ScalarProperty Name="MpSex" ColumnName="MpSex" />
+                <ScalarProperty Name="MpDOB" ColumnName="MpDOB" />
+                <ScalarProperty Name="MpAge" ColumnName="MpAge" />
+                <ScalarProperty Name="EmployDetails" ColumnName="EmployDetails" />
+                <ScalarProperty Name="MpEDOccOne" ColumnName="MpEDOccOne" />
+                <ScalarProperty Name="MpEDOccOneBusiness" ColumnName="MpEDOccOneBusiness" />
+                <ScalarProperty Name="MpEDOccOneStatus" ColumnName="MpEDOccOneStatus" />
+                <ScalarProperty Name="MpEDOccOneFullPart" ColumnName="MpEDOccOneFullPart" />
+                <ScalarProperty Name="MpEDOccTwo" ColumnName="MpEDOccTwo" />
+                <ScalarProperty Name="MpEDOccTwoBusiness" ColumnName="MpEDOccTwoBusiness" />
+                <ScalarProperty Name="MpEDOccTwoStatus" ColumnName="MpEDOccTwoStatus" />
+                <ScalarProperty Name="MpEDOccTwoFullPart" ColumnName="MpEDOccTwoFullPart" />
+                <ScalarProperty Name="MpPersonalDetails" ColumnName="MpPersonalDetails" />
+                <ScalarProperty Name="MpPersonalDetailsTitle" ColumnName="MpPersonalDetailsTitle" />
+                <ScalarProperty Name="MpSurname" ColumnName="MpSurname" />
+                <ScalarProperty Name="MpForenames" ColumnName="MpForenames" />
+                <ScalarProperty Name="MpAtRiskAddress" ColumnName="MpAtRiskAddress" />
+                <ScalarProperty Name="MpFirstTimeBuyer" ColumnName="MpFirstTimeBuyer" />
+                <ScalarProperty Name="MpConvictions" ColumnName="MpConvictions" />
+                <ScalarProperty Name="MpClaimsLosses" ColumnName="MpClaimsLosses" />
+                <ScalarProperty Name="CBuildingsAndContents" ColumnName="CBuildingsAndContents" />
+                <ScalarProperty Name="CBCoverType" ColumnName="CBCoverType" />
+                <ScalarProperty Name="CBSumInsured" ColumnName="CBSumInsured" />
+                <ScalarProperty Name="CBVolExcess" ColumnName="CBVolExcess" />
+                <ScalarProperty Name="CBXSBuyBack" ColumnName="CBXSBuyBack" />
+                <ScalarProperty Name="CBPrevInsurer" ColumnName="CBPrevInsurer" />
+                <ScalarProperty Name="CCCoverType" ColumnName="CCCoverType" />
+                <ScalarProperty Name="CCSumInsuredValue" ColumnName="CCSumInsuredValue" />
+                <ScalarProperty Name="CCSumInsuredOneItem" ColumnName="CCSumInsuredOneItem" />
+                <ScalarProperty Name="CCValuablesValue" ColumnName="CCValuablesValue" />
+                <ScalarProperty Name="CCValuablesOneItem" ColumnName="CCValuablesOneItem" />
+                <ScalarProperty Name="CCVolExcess" ColumnName="CCVolExcess" />
+                <ScalarProperty Name="CCXSBuyBack" ColumnName="CCXSBuyBack" />
+                <ScalarProperty Name="CCPrevInsurer" ColumnName="CCPrevInsurer" />
+                <ScalarProperty Name="CBSummationBuildingCoverEnteredDetails" ColumnName="CBSummationBuildingCoverEnteredDetails" />
+                <ScalarProperty Name="CBBuildingsVolExcessEnteredDetails" ColumnName="CBBuildingsVolExcessEnteredDetails" />
+                <ScalarProperty Name="CCSummationContentsCoverEntered" ColumnName="CCSummationContentsCoverEntered" />
+                <ScalarProperty Name="CCContentsVolExcessEnteredDetails" ColumnName="CCContentsVolExcessEnteredDetails" />
+                <ScalarProperty Name="CAllRisks" ColumnName="CAllRisks" />
+                <ScalarProperty Name="CAllRiskUnspecEffectsValue" ColumnName="CAllRiskUnspecEffectsValue" />
+                <ScalarProperty Name="CAllRiskUnspecEffectsOneItem" ColumnName="CAllRiskUnspecEffectsOneItem" />
+                <ScalarProperty Name="CAllRiskUnspecEffectsTerritory" ColumnName="CAllRiskUnspecEffectsTerritory" />
+                <ScalarProperty Name="CAllRisksValuablesUnspecValue" ColumnName="CAllRisksValuablesUnspecValue" />
+                <ScalarProperty Name="CAllRisksValuablesUnspecOneItem" ColumnName="CAllRisksValuablesUnspecOneItem" />
+                <ScalarProperty Name="CAllRisksValuablesUnspecTerritory" ColumnName="CAllRisksValuablesUnspecTerritory" />
+                <ScalarProperty Name="CAllRisksPhotoUnspecValue" ColumnName="CAllRisksPhotoUnspecValue" />
+                <ScalarProperty Name="CAllRisksPhotoUnspecOneItem" ColumnName="CAllRisksPhotoUnspecOneItem" />
+                <ScalarProperty Name="CAllRisksPhotoUnspecTerritory" ColumnName="CAllRisksPhotoUnspecTerritory" />
+                <ScalarProperty Name="CAllRisksSportsUnspecValue" ColumnName="CAllRisksSportsUnspecValue" />
+                <ScalarProperty Name="CAllRisksSportsUnspecOneItem" ColumnName="CAllRisksSportsUnspecOneItem" />
+                <ScalarProperty Name="CAllRisksSportsUnspecTerritory" ColumnName="CAllRisksSportsUnspecTerritory" />
+                <ScalarProperty Name="CAllRiskBicycles" ColumnName="CAllRiskBicycles" />
+                <ScalarProperty Name="CAllRisksMoneyValue" ColumnName="CAllRisksMoneyValue" />
+                <ScalarProperty Name="CAllRisksMoneyTerritory" ColumnName="CAllRisksMoneyTerritory" />
+                <ScalarProperty Name="CAllRisksCreditCardsValue" ColumnName="CAllRisksCreditCardsValue" />
+                <ScalarProperty Name="CAllRiskCreditCardsTerritory" ColumnName="CAllRiskCreditCardsTerritory" />
+                <ScalarProperty Name="CAllRisksFreezerContentsValue" ColumnName="CAllRisksFreezerContentsValue" />
+                <ScalarProperty Name="CAllRisksFreezerContentsAge" ColumnName="CAllRisksFreezerContentsAge" />
+                <ScalarProperty Name="CSpecifiedItems" ColumnName="CSpecifiedItems" />
+                <ScalarProperty Name="AOLegalExpenses" ColumnName="AOLegalExpenses" />
+                <ScalarProperty Name="AOMotorPolicy" ColumnName="AOMotorPolicy" />
+                <ScalarProperty Name="AOCurrentMotorInsurer" ColumnName="AOCurrentMotorInsurer" />
+                <ScalarProperty Name="AOCaravans" ColumnName="AOCaravans" />
+                <ScalarProperty Name="AOSummationCaravansEnteredDetails" ColumnName="AOSummationCaravansEnteredDetails" />
+                <ScalarProperty Name="AOBoats" ColumnName="AOBoats" />
+                <ScalarProperty Name="AOSummationBoatEnteredDetails" ColumnName="AOSummationBoatEnteredDetails" />
+                <ScalarProperty Name="AOSearchesConsent" ColumnName="AOSearchesConsent" />
+                <ScalarProperty Name="AOSchemeNo" ColumnName="AOSchemeNo" />
+                <ScalarProperty Name="AOCoverDate" ColumnName="AOCoverDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PropertyODCommunicationAddresses">
+            <EntityTypeMapping TypeName="PolicyCheckModel.PropertyODCommunicationAddress">
+              <MappingFragment StoreEntitySet="PropertyODCommunicationAddress">
+                <ScalarProperty Name="CommunicationAddressPolicyId" ColumnName="CommunicationAddressPolicyId" />
+                <ScalarProperty Name="CANumberName" ColumnName="CANumberName" />
+                <ScalarProperty Name="CAStreet" ColumnName="CAStreet" />
+                <ScalarProperty Name="CATown" ColumnName="CATown" />
+                <ScalarProperty Name="CACounty" ColumnName="CACounty" />
+                <ScalarProperty Name="CAPostCode" ColumnName="CAPostCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PropertyODInterestedParties">
+            <EntityTypeMapping TypeName="PolicyCheckModel.PropertyODInterestedParty">
+              <MappingFragment StoreEntitySet="PropertyODInterestedParty">
+                <ScalarProperty Name="InterestedPartyPolicyId" ColumnName="InterestedPartyPolicyId" />
+                <ScalarProperty Name="IPType" ColumnName="IPType" />
+                <ScalarProperty Name="IPName" ColumnName="IPName" />
+                <ScalarProperty Name="IPNameOther" ColumnName="IPNameOther" />
+                <ScalarProperty Name="IPNumberName" ColumnName="IPNumberName" />
+                <ScalarProperty Name="IPStreet" ColumnName="IPStreet" />
+                <ScalarProperty Name="IPTown" ColumnName="IPTown" />
+                <ScalarProperty Name="IPCounty" ColumnName="IPCounty" />
+                <ScalarProperty Name="IPPostCode" ColumnName="IPPostCode" />
+                <ScalarProperty Name="IPRefMortgageNo" ColumnName="IPRefMortgageNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PropertyODRiskPropertyAddresses">
+            <EntityTypeMapping TypeName="PolicyCheckModel.PropertyODRiskPropertyAddress">
+              <MappingFragment StoreEntitySet="PropertyODRiskPropertyAddress">
+                <ScalarProperty Name="RiskPropertyAddressPolicyId" ColumnName="RiskPropertyAddressPolicyId" />
+                <ScalarProperty Name="RPNumberName" ColumnName="RPNumberName" />
+                <ScalarProperty Name="RPStreet" ColumnName="RPStreet" />
+                <ScalarProperty Name="RPTown" ColumnName="RPTown" />
+                <ScalarProperty Name="RPCounty" ColumnName="RPCounty" />
+                <ScalarProperty Name="RPPostCode" ColumnName="RPPostCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProposerDetails">
+            <EntityTypeMapping TypeName="PolicyCheckModel.ProposerDetail">
+              <MappingFragment StoreEntitySet="ProposerDetails">
+                <ScalarProperty Name="ProposerPolicyId" ColumnName="ProposerPolicyId" />
+                <ScalarProperty Name="ProposerId" ColumnName="ProposerId" />
+                <ScalarProperty Name="ProposerSex" ColumnName="ProposerSex" />
+                <ScalarProperty Name="ProposerDOB" ColumnName="ProposerDOB" />
+                <ScalarProperty Name="ProposerAge" ColumnName="ProposerAge" />
+                <ScalarProperty Name="ProposerEmployDetails" ColumnName="ProposerEmployDetails" />
+                <ScalarProperty Name="ProposerOccOne" ColumnName="ProposerOccOne" />
+                <ScalarProperty Name="ProposerOccBusinessOne" ColumnName="ProposerOccBusinessOne" />
+                <ScalarProperty Name="ProposerOccStatusOne" ColumnName="ProposerOccStatusOne" />
+                <ScalarProperty Name="ProposerOccFullPartOne" ColumnName="ProposerOccFullPartOne" />
+                <ScalarProperty Name="ProposerOccTwo" ColumnName="ProposerOccTwo" />
+                <ScalarProperty Name="ProposerOccBusinessTwo" ColumnName="ProposerOccBusinessTwo" />
+                <ScalarProperty Name="ProposerOccStatusTwo" ColumnName="ProposerOccStatusTwo" />
+                <ScalarProperty Name="ProposerOccFullPartTwo" ColumnName="ProposerOccFullPartTwo" />
+                <ScalarProperty Name="ProposerPersonalDetails" ColumnName="ProposerPersonalDetails" />
+                <ScalarProperty Name="ProposerTitle" ColumnName="ProposerTitle" />
+                <ScalarProperty Name="ProposerSurname" ColumnName="ProposerSurname" />
+                <ScalarProperty Name="ProposerForenames" ColumnName="ProposerForenames" />
+                <ScalarProperty Name="ProposerRelationship" ColumnName="ProposerRelationship" />
+                <ScalarProperty Name="ProposerAtRiskAddress" ColumnName="ProposerAtRiskAddress" />
+                <ScalarProperty Name="ProposerFirstTimeBuyer" ColumnName="ProposerFirstTimeBuyer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

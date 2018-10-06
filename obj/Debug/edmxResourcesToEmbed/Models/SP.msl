@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ThamesbankModelStoreContainer" CdmEntityContainer="StoredProcedures">
+    <FunctionImportMapping FunctionImportName="ClaimsUpload" FunctionName="ThamesbankModel.Store.ClaimsUpload">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ThamesbankModel.ClaimsUpload_Result">
+          <ScalarProperty Name="ClaimDate" ColumnName="ClaimDate" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="C_Value" ColumnName="#Value" />
+          <ScalarProperty Name="C_Section" ColumnName="#Section" />
+          <ScalarProperty Name="Desc1" ColumnName="Desc1" />
+          <ScalarProperty Name="Desc2" ColumnName="Desc2" />
+          <ScalarProperty Name="ClaimDeleted" ColumnName="ClaimDeleted" />
+          <ScalarProperty Name="Claimsettled" ColumnName="Claimsettled" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PolicyCheckUpload" FunctionName="ThamesbankModel.Store.PolicyCheckUpload">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ThamesbankModel.PolicyCheckUpload_Result">
+          <ScalarProperty Name="Year_blt" ColumnName="Year_blt" />
+          <ScalarProperty Name="HouseType" ColumnName="HouseType" />
+          <ScalarProperty Name="Walls" ColumnName="Walls" />
+          <ScalarProperty Name="Roof" ColumnName="Roof" />
+          <ScalarProperty Name="Flatroofpc" ColumnName="Flatroofpc" />
+          <ScalarProperty Name="Bedrooms" ColumnName="Bedrooms" />
+          <ScalarProperty Name="Rooms" ColumnName="Rooms" />
+          <ScalarProperty Name="Floors" ColumnName="Floors" />
+          <ScalarProperty Name="Floorno" ColumnName="Floorno" />
+          <ScalarProperty Name="Bathrooms" ColumnName="Bathrooms" />
+          <ScalarProperty Name="Extended" ColumnName="Extended" />
+          <ScalarProperty Name="Yearextended" ColumnName="Yearextended" />
+          <ScalarProperty Name="PrimaryHeating" ColumnName="PrimaryHeating" />
+          <ScalarProperty Name="SecondaryHeating" ColumnName="SecondaryHeating" />
+          <ScalarProperty Name="Refused" ColumnName="Refused" />
+          <ScalarProperty Name="Unspent_pending" ColumnName="Unspent_pending" />
+          <ScalarProperty Name="Bankrupt" ColumnName="Bankrupt" />
+          <ScalarProperty Name="Goodrepair" ColumnName="Goodrepair" />
+          <ScalarProperty Name="Riverquarry" ColumnName="Riverquarry" />
+          <ScalarProperty Name="Riverdistance" ColumnName="Riverdistance" />
+          <ScalarProperty Name="Storm" ColumnName="Storm" />
+          <ScalarProperty Name="BuildingListed" ColumnName="BuildingListed" />
+          <ScalarProperty Name="Subsidence" ColumnName="Subsidence" />
+          <ScalarProperty Name="Repaired" ColumnName="Repaired" />
+          <ScalarProperty Name="Landslip" ColumnName="Landslip" />
+          <ScalarProperty Name="Underpinned" ColumnName="Underpinned" />
+          <ScalarProperty Name="Groundheave" ColumnName="Groundheave" />
+          <ScalarProperty Name="OccupancyAccomodation" ColumnName="OccupancyAccomodation" />
+          <ScalarProperty Name="Residence" ColumnName="Residence" />
+          <ScalarProperty Name="OccupancyUnoccupied" ColumnName="OccupancyUnoccupied" />
+          <ScalarProperty Name="Businessuse" ColumnName="Businessuse" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="Holidayhome" ColumnName="Holidayhome" />
+          <ScalarProperty Name="Equipment" ColumnName="Equipment" />
+          <ScalarProperty Name="Paying_guests" ColumnName="Paying_guests" />
+          <ScalarProperty Name="Payingguestno" ColumnName="Payingguestno" />
+          <ScalarProperty Name="Smokers" ColumnName="Smokers" />
+          <ScalarProperty Name="Adults" ColumnName="Adults" />
+          <ScalarProperty Name="C_Children" ColumnName="#Children" />
+          <ScalarProperty Name="Main_door" ColumnName="Main_door" />
+          <ScalarProperty Name="Nhood_watch" ColumnName="Nhood_watch" />
+          <ScalarProperty Name="Other_door" ColumnName="Other_door" />
+          <ScalarProperty Name="Smokealarm" ColumnName="Smokealarm" />
+          <ScalarProperty Name="French_door" ColumnName="French_door" />
+          <ScalarProperty Name="Self_contained" ColumnName="Self_contained" />
+          <ScalarProperty Name="Windows" ColumnName="Windows" />
+          <ScalarProperty Name="Alarm" ColumnName="Alarm" />
+          <ScalarProperty Name="Alarm_type" ColumnName="Alarm_type" />
+          <ScalarProperty Name="AlarmAccredDetails1" ColumnName="AlarmAccredDetails1" />
+          <ScalarProperty Name="Ftx_accreddetails1" ColumnName="Ftx_accreddetails1" />
+          <ScalarProperty Name="Alarm_maint" ColumnName="Alarm_maint" />
+          <ScalarProperty Name="Alarm_install" ColumnName="Alarm_install" />
+          <ScalarProperty Name="AlarmMaintainceCompany" ColumnName="AlarmMaintainceCompany" />
+          <ScalarProperty Name="Alarmmaintnm" ColumnName="Alarmmaintnm" />
+          <ScalarProperty Name="AlarmAccredDetails2" ColumnName="AlarmAccredDetails2" />
+          <ScalarProperty Name="Ftx_accreddetails2" ColumnName="Ftx_accreddetails2" />
+          <ScalarProperty Name="Survey" ColumnName="Survey" />
+          <ScalarProperty Name="Survey_date" ColumnName="Survey_date" />
+          <ScalarProperty Name="Survey_name" ColumnName="Survey_name" />
+          <ScalarProperty Name="Survey_proof_date" ColumnName="Survey_proof_date" />
+          <ScalarProperty Name="Structural" ColumnName="Structural" />
+          <ScalarProperty Name="Structural_date" ColumnName="Structural_date" />
+          <ScalarProperty Name="Structural_name" ColumnName="Structural_name" />
+          <ScalarProperty Name="Nhbc_proof" ColumnName="Nhbc_proof" />
+          <ScalarProperty Name="Nhbc_proof_expires" ColumnName="Nhbc_proof_expires" />
+          <ScalarProperty Name="Riskaddr1" ColumnName="Riskaddr1" />
+          <ScalarProperty Name="Riskaddr2" ColumnName="Riskaddr2" />
+          <ScalarProperty Name="Riskaddr3" ColumnName="Riskaddr3" />
+          <ScalarProperty Name="Riskaddr4" ColumnName="Riskaddr4" />
+          <ScalarProperty Name="Riskpcode" ColumnName="Riskpcode" />
+          <ScalarProperty Name="Commaddr1" ColumnName="Commaddr1" />
+          <ScalarProperty Name="Commaddr2" ColumnName="Commaddr2" />
+          <ScalarProperty Name="Commaddr3" ColumnName="Commaddr3" />
+          <ScalarProperty Name="Commaddr4" ColumnName="Commaddr4" />
+          <ScalarProperty Name="Commpcode" ColumnName="Commpcode" />
+          <ScalarProperty Name="InterestedPartyType" ColumnName="InterestedPartyType" />
+          <ScalarProperty Name="InterestedPartyName" ColumnName="InterestedPartyName" />
+          <ScalarProperty Name="Interestaddr1" ColumnName="Interestaddr1" />
+          <ScalarProperty Name="Interestaddr2" ColumnName="Interestaddr2" />
+          <ScalarProperty Name="Interestaddr3" ColumnName="Interestaddr3" />
+          <ScalarProperty Name="Interestaddr4" ColumnName="Interestaddr4" />
+          <ScalarProperty Name="Interestpcode" ColumnName="Interestpcode" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="Buildingssi" ColumnName="Buildingssi" />
+          <ScalarProperty Name="Buildtotxs" ColumnName="Buildtotxs" />
+          <ScalarProperty Name="Contentssi" ColumnName="Contentssi" />
+          <ScalarProperty Name="Contstotxs" ColumnName="Contstotxs" />
+          <ScalarProperty Name="Allrisks" ColumnName="Allrisks" />
+          <ScalarProperty Name="Specitems" ColumnName="Specitems" />
+          <ScalarProperty Name="Areffects" ColumnName="Areffects" />
+          <ScalarProperty Name="Areffectsitem" ColumnName="Areffectsitem" />
+          <ScalarProperty Name="Areffectsterr" ColumnName="Areffectsterr" />
+          <ScalarProperty Name="Arvaluables" ColumnName="Arvaluables" />
+          <ScalarProperty Name="Arvaluablesitem" ColumnName="Arvaluablesitem" />
+          <ScalarProperty Name="Arvaluablesterr" ColumnName="Arvaluablesterr" />
+          <ScalarProperty Name="Arphoto" ColumnName="Arphoto" />
+          <ScalarProperty Name="Arphotoitem" ColumnName="Arphotoitem" />
+          <ScalarProperty Name="Arphototerr" ColumnName="Arphototerr" />
+          <ScalarProperty Name="Arsport" ColumnName="Arsport" />
+          <ScalarProperty Name="Arsportitem" ColumnName="Arsportitem" />
+          <ScalarProperty Name="Arsportsterr" ColumnName="Arsportsterr" />
+          <ScalarProperty Name="C_Money" ColumnName="#Money" />
+          <ScalarProperty Name="Armoneyterr" ColumnName="Armoneyterr" />
+          <ScalarProperty Name="Creditcards" ColumnName="Creditcards" />
+          <ScalarProperty Name="Creditcardsterr" ColumnName="Creditcardsterr" />
+          <ScalarProperty Name="Freezertotal" ColumnName="Freezertotal" />
+          <ScalarProperty Name="Freezerage" ColumnName="Freezerage" />
+          <ScalarProperty Name="Aranybicycles" ColumnName="Aranybicycles" />
+          <ScalarProperty Name="Cycleval1" ColumnName="Cycleval1" />
+          <ScalarProperty Name="Cyclemake1" ColumnName="Cyclemake1" />
+          <ScalarProperty Name="Cycledesc1" ColumnName="Cycledesc1" />
+          <ScalarProperty Name="Cycle1territory" ColumnName="Cycle1territory" />
+          <ScalarProperty Name="Cycleval2" ColumnName="Cycleval2" />
+          <ScalarProperty Name="Cyclemake2" ColumnName="Cyclemake2" />
+          <ScalarProperty Name="Cycledesc2" ColumnName="Cycledesc2" />
+          <ScalarProperty Name="Cycle2territory" ColumnName="Cycle2territory" />
+          <ScalarProperty Name="Cycleval3" ColumnName="Cycleval3" />
+          <ScalarProperty Name="Cyclemake3" ColumnName="Cyclemake3" />
+          <ScalarProperty Name="Cycledesc3" ColumnName="Cycledesc3" />
+          <ScalarProperty Name="Cycle3territory" ColumnName="Cycle3territory" />
+          <ScalarProperty Name="Cycleval4" ColumnName="Cycleval4" />
+          <ScalarProperty Name="Cyclemake4" ColumnName="Cyclemake4" />
+          <ScalarProperty Name="Cycledesc4" ColumnName="Cycledesc4" />
+          <ScalarProperty Name="Cycle4territory" ColumnName="Cycle4territory" />
+          <ScalarProperty Name="Cycleval5" ColumnName="Cycleval5" />
+          <ScalarProperty Name="Cyclemake5" ColumnName="Cyclemake5" />
+          <ScalarProperty Name="Cycledesc5" ColumnName="Cycledesc5" />
+          <ScalarProperty Name="Cycle5territory" ColumnName="Cycle5territory" />
+          <ScalarProperty Name="Cycleval6" ColumnName="Cycleval6" />
+          <ScalarProperty Name="Cyclemake6" ColumnName="Cyclemake6" />
+          <ScalarProperty Name="Cycledesc6" ColumnName="Cycledesc6" />
+          <ScalarProperty Name="Cycle6territory" ColumnName="Cycle6territory" />
+          <ScalarProperty Name="Buildingscover" ColumnName="Buildingscover" />
+          <ScalarProperty Name="Reqbuildcover" ColumnName="Reqbuildcover" />
+          <ScalarProperty Name="Buildvolxs" ColumnName="Buildvolxs" />
+          <ScalarProperty Name="Buildbuyback" ColumnName="Buildbuyback" />
+          <ScalarProperty Name="Buildings" ColumnName="Buildings" />
+          <ScalarProperty Name="BuildInsName" ColumnName="BuildInsName" />
+          <ScalarProperty Name="Binsurername" ColumnName="Binsurername" />
+          <ScalarProperty Name="Bpolicy_no" ColumnName="Bpolicy_no" />
+          <ScalarProperty Name="Bdate_lapsed" ColumnName="Bdate_lapsed" />
+          <ScalarProperty Name="Bncb_years" ColumnName="Bncb_years" />
+          <ScalarProperty Name="Bncb_proof" ColumnName="Bncb_proof" />
+          <ScalarProperty Name="Byearsinsured" ColumnName="Byearsinsured" />
+          <ScalarProperty Name="Bbstfeepaid" ColumnName="Bbstfeepaid" />
+          <ScalarProperty Name="Btransfer_proof" ColumnName="Btransfer_proof" />
+          <ScalarProperty Name="Contentscover" ColumnName="Contentscover" />
+          <ScalarProperty Name="Contsgoods" ColumnName="Contsgoods" />
+          <ScalarProperty Name="Contsgoodslimit" ColumnName="Contsgoodslimit" />
+          <ScalarProperty Name="Contsvals" ColumnName="Contsvals" />
+          <ScalarProperty Name="Contsvalslimit" ColumnName="Contsvalslimit" />
+          <ScalarProperty Name="Contsvolxs" ColumnName="Contsvolxs" />
+          <ScalarProperty Name="Contsbuyback" ColumnName="Contsbuyback" />
+          <ScalarProperty Name="Contents" ColumnName="Contents" />
+          <ScalarProperty Name="ContentInsName" ColumnName="ContentInsName" />
+          <ScalarProperty Name="Cinsurername" ColumnName="Cinsurername" />
+          <ScalarProperty Name="Cpolicy_no" ColumnName="Cpolicy_no" />
+          <ScalarProperty Name="Cdate_lapsed" ColumnName="Cdate_lapsed" />
+          <ScalarProperty Name="Cncb_years" ColumnName="Cncb_years" />
+          <ScalarProperty Name="Cncb_proof" ColumnName="Cncb_proof" />
+          <ScalarProperty Name="Cyearsinsured" ColumnName="Cyearsinsured" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Propdob" ColumnName="Propdob" />
+          <ScalarProperty Name="Propage" ColumnName="Propage" />
+          <ScalarProperty Name="Propatrisk" ColumnName="Propatrisk" />
+          <ScalarProperty Name="Firsttime" ColumnName="Firsttime" />
+          <ScalarProperty Name="OccType1" ColumnName="OccType1" />
+          <ScalarProperty Name="BusType1" ColumnName="BusType1" />
+          <ScalarProperty Name="EmpStatus1" ColumnName="EmpStatus1" />
+          <ScalarProperty Name="Fullpart1" ColumnName="Fullpart1" />
+          <ScalarProperty Name="OccType2" ColumnName="OccType2" />
+          <ScalarProperty Name="BusType2" ColumnName="BusType2" />
+          <ScalarProperty Name="EmpStatus2" ColumnName="EmpStatus2" />
+          <ScalarProperty Name="Fullpart2" ColumnName="Fullpart2" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Propsurname" ColumnName="Propsurname" />
+          <ScalarProperty Name="Propforenames" ColumnName="Propforenames" />
+          <ScalarProperty Name="Convdate" ColumnName="Convdate" />
+          <ScalarProperty Name="Convpending" ColumnName="Convpending" />
+          <ScalarProperty Name="ConvType" ColumnName="ConvType" />
+          <ScalarProperty Name="Convdate1" ColumnName="Convdate1" />
+          <ScalarProperty Name="Convpending1" ColumnName="Convpending1" />
+          <ScalarProperty Name="ConvType1" ColumnName="ConvType1" />
+          <ScalarProperty Name="Convdate2" ColumnName="Convdate2" />
+          <ScalarProperty Name="Convpending2" ColumnName="Convpending2" />
+          <ScalarProperty Name="ConvType2" ColumnName="ConvType2" />
+          <ScalarProperty Name="Convdate3" ColumnName="Convdate3" />
+          <ScalarProperty Name="Convpending3" ColumnName="Convpending3" />
+          <ScalarProperty Name="ConvType3" ColumnName="ConvType3" />
+          <ScalarProperty Name="Legalexpenses" ColumnName="Legalexpenses" />
+          <ScalarProperty Name="Currentmotorpolicy" ColumnName="Currentmotorpolicy" />
+          <ScalarProperty Name="MotorInsurer" ColumnName="MotorInsurer" />
+          <ScalarProperty Name="Caravans" ColumnName="Caravans" />
+          <ScalarProperty Name="Caravanssi" ColumnName="Caravanssi" />
+          <ScalarProperty Name="Boats" ColumnName="Boats" />
+          <ScalarProperty Name="Boatssi" ColumnName="Boatssi" />
+          <ScalarProperty Name="Consentforsearches" ColumnName="Consentforsearches" />
+          <ScalarProperty Name="Scheme" ColumnName="Scheme" />
+          <ScalarProperty Name="Coverdate" ColumnName="Coverdate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpecItemUpload" FunctionName="ThamesbankModel.Store.SpecItemUpload">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ThamesbankModel.SpecItemUpload_Result">
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Stated_value" ColumnName="Stated_value" />
+          <ScalarProperty Name="Covertype" ColumnName="Covertype" />
+          <ScalarProperty Name="Description1" ColumnName="Description1" />
+          <ScalarProperty Name="Description2" ColumnName="Description2" />
+          <ScalarProperty Name="SpecItemDeleted" ColumnName="SpecItemDeleted" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="SpecDate" ColumnName="SpecDate" />
+          <ScalarProperty Name="Territory" ColumnName="Territory" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

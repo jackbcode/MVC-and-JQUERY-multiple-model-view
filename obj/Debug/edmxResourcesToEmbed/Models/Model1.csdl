@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OpenGIABICodesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Alarm_AccredDetails2">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Alarm_MaintenanceCompany">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Alarm_Type">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Buildings_Insurer">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Claims_Sections">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Contents_Insurer">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Home_ClaimType">
+    <Key>
+      <PropertyRef Name="vtCode" />
+    </Key>
+    <Property Name="vtCode" Type="Int32" Nullable="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Home_InterestedPartyName">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Motor_AlarmSecurityFitted">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Motor_AlarmSecurityMake">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Motor_ClaimType">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Motor_ConvictionType">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Motor_IncidentType">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Motor_LicenseCountry">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Motor_LicenseType">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Motor_PermittedDrivers">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Motor_TrackerSecurityFitted">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Motor_TrackerSecurityMake">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Motor_VehicleCoverType">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Motor_VehicleKeeper">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Motor_VehicleModification">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Motor_VehicleOwner">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Motor_VehicleParking">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Person_BusinessType">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Person_ConvictionType">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Person_EmpStat">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Person_MaritalStatus">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Person_Occupation">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Person_RelationshipToProp">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Person_Title">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Policy_MotorPolicyInsurer">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Property_Accommodation">
+    <Key>
+      <PropertyRef Name="vtCode" />
+    </Key>
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Property_Construction">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Property_HouseType">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Property_Listed">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Property_PrimaryHeating">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Property_RoofType">
+    <Key>
+      <PropertyRef Name="abiCode" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Property_Unoccupancy">
+    <Key>
+      <PropertyRef Name="vtCode" />
+    </Key>
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Security_LockTypes">
+    <Key>
+      <PropertyRef Name="Description" />
+    </Key>
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OpenGIMapping" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Security_PatiosNFrenchDoors">
+    <Key>
+      <PropertyRef Name="Description" />
+    </Key>
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OpenGIMapping" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Security_WindowLockTypes">
+    <Key>
+      <PropertyRef Name="Description" />
+    </Key>
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OpenGIMapping" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="SpecifiedItem_Category">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Property_AccommodationABI">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="MisysCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MisysName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ABICode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ABIDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MappingField" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="OpenGIABICodesEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Alarm_AccredDetails2" EntityType="Self.Alarm_AccredDetails2" />
+    <EntitySet Name="Alarm_MaintenanceCompany" EntityType="Self.Alarm_MaintenanceCompany" />
+    <EntitySet Name="Alarm_Type" EntityType="Self.Alarm_Type" />
+    <EntitySet Name="Buildings_Insurer" EntityType="Self.Buildings_Insurer" />
+    <EntitySet Name="Claims_Sections" EntityType="Self.Claims_Sections" />
+    <EntitySet Name="Contents_Insurer" EntityType="Self.Contents_Insurer" />
+    <EntitySet Name="Home_ClaimType" EntityType="Self.Home_ClaimType" />
+    <EntitySet Name="Home_InterestedPartyName" EntityType="Self.Home_InterestedPartyName" />
+    <EntitySet Name="Motor_AlarmSecurityFitted" EntityType="Self.Motor_AlarmSecurityFitted" />
+    <EntitySet Name="Motor_AlarmSecurityMake" EntityType="Self.Motor_AlarmSecurityMake" />
+    <EntitySet Name="Motor_ClaimType" EntityType="Self.Motor_ClaimType" />
+    <EntitySet Name="Motor_ConvictionType" EntityType="Self.Motor_ConvictionType" />
+    <EntitySet Name="Motor_IncidentType" EntityType="Self.Motor_IncidentType" />
+    <EntitySet Name="Motor_LicenseCountry" EntityType="Self.Motor_LicenseCountry" />
+    <EntitySet Name="Motor_LicenseType" EntityType="Self.Motor_LicenseType" />
+    <EntitySet Name="Motor_PermittedDrivers" EntityType="Self.Motor_PermittedDrivers" />
+    <EntitySet Name="Motor_TrackerSecurityFitted" EntityType="Self.Motor_TrackerSecurityFitted" />
+    <EntitySet Name="Motor_TrackerSecurityMake" EntityType="Self.Motor_TrackerSecurityMake" />
+    <EntitySet Name="Motor_VehicleCoverType" EntityType="Self.Motor_VehicleCoverType" />
+    <EntitySet Name="Motor_VehicleKeeper" EntityType="Self.Motor_VehicleKeeper" />
+    <EntitySet Name="Motor_VehicleModification" EntityType="Self.Motor_VehicleModification" />
+    <EntitySet Name="Motor_VehicleOwner" EntityType="Self.Motor_VehicleOwner" />
+    <EntitySet Name="Motor_VehicleParking" EntityType="Self.Motor_VehicleParking" />
+    <EntitySet Name="Person_BusinessType" EntityType="Self.Person_BusinessType" />
+    <EntitySet Name="Person_ConvictionType" EntityType="Self.Person_ConvictionType" />
+    <EntitySet Name="Person_EmpStat" EntityType="Self.Person_EmpStat" />
+    <EntitySet Name="Person_MaritalStatus" EntityType="Self.Person_MaritalStatus" />
+    <EntitySet Name="Person_Occupation" EntityType="Self.Person_Occupation" />
+    <EntitySet Name="Person_RelationshipToProp" EntityType="Self.Person_RelationshipToProp" />
+    <EntitySet Name="Person_Title" EntityType="Self.Person_Title" />
+    <EntitySet Name="Policy_MotorPolicyInsurer" EntityType="Self.Policy_MotorPolicyInsurer" />
+    <EntitySet Name="Property_Accommodation" EntityType="Self.Property_Accommodation" />
+    <EntitySet Name="Property_Construction" EntityType="Self.Property_Construction" />
+    <EntitySet Name="Property_HouseType" EntityType="Self.Property_HouseType" />
+    <EntitySet Name="Property_Listed" EntityType="Self.Property_Listed" />
+    <EntitySet Name="Property_PrimaryHeating" EntityType="Self.Property_PrimaryHeating" />
+    <EntitySet Name="Property_RoofType" EntityType="Self.Property_RoofType" />
+    <EntitySet Name="Property_Unoccupancy" EntityType="Self.Property_Unoccupancy" />
+    <EntitySet Name="Security_LockTypes" EntityType="Self.Security_LockTypes" />
+    <EntitySet Name="Security_PatiosNFrenchDoors" EntityType="Self.Security_PatiosNFrenchDoors" />
+    <EntitySet Name="Security_WindowLockTypes" EntityType="Self.Security_WindowLockTypes" />
+    <EntitySet Name="SpecifiedItem_Category" EntityType="Self.SpecifiedItem_Category" />
+    <EntitySet Name="Property_AccommodationABI" EntityType="Self.Property_AccommodationABI" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,740 @@
+﻿@model IEnumerable<PolicyCheck.Models.PCProposersParagonNo_Result>
+
+<div id="propDetails">
+
+    @foreach (var item in Model)
+    {
+
+
+
+    <p class="header2">Proposer (@Html.DisplayFor(modelItem => item.Propno) of @ViewBag.NumberOfProposers)</p>
+
+    <div class="wrapper">
+        <div class="form-group  first">
+            <div class="wrapper4">
+                <div class="first2">
+                    Sex:
+                </div>
+                <div class="col-md-12 second3 displayFor">
+                    @Html.DisplayFor(modelItem => item.Sex)
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group second ">
+            <div class="wrapper5">
+
+                @if (ViewBag.NumberOfProposers > 1)
+                {
+
+                    if (ViewBag.NumberOfProposers != item.Propno)
+                    {
+                        <div class="buttonSecond"> <button type="button" id="propNext1Button"><ion-icon name="arrow-dropright-circle" id="rightarrow"></ion-icon></button> </div>
+
+                    }
+
+
+                    if (ViewBag.NumberOfProposers == item.Propno)
+                    {
+
+                        <div class="buttonSecond"> <button type="button" id="propBack1Button"><ion-icon name="arrow-dropleft-circle" id="rightarrow"></ion-icon></button> </div>
+
+                    }
+
+                }
+
+            </div>
+        </div>
+
+    </div>
+
+      
+      
+
+        @*------------------- DOB/Age - -------------------------------*@
+
+        <div class="wrapper">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <div class="first2">
+                        DOB:
+                    </div>
+                    <div class="col-md-12 second3 displayFor">
+                        @Html.DisplayFor(modelItem => item.Propdob)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first10 extraPadding4">
+                        Age:
+                    </div>
+                    <div class="col-md-5 second displayFor">
+                        @Html.DisplayFor(modelItem => item.Propage)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <br />
+
+        <div class="form-group">
+            <div class="wrapper3">
+                <div class="first11 popOut">
+                    Employ Details>
+                </div>
+                <div class="col-md-7 second2">
+                    <div class="buttonFirst"> <div id="empDetails" class="buttonEntry pad"></div> </div>
+                    <div class="buttonSecond"> <button type="button" id="empDetButton" class="btn btn-primary btn-Entry"></button> </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="wrapper3">
+                <div class="first11 popOut">
+                    Personal Details>
+                </div>
+                <div class="col-md-7 second2">
+                    <div class="buttonFirst"> <div id="persDetails" class="buttonEntry pad"></div> </div>
+                    <div class="buttonSecond"> <button type="button" id="persDetButton" class="btn btn-primary btn-Entry"></button> </div>
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="form-group">
+            <div class="wrapper3">
+                <div class="first11">
+                    Relationship
+                </div>
+                <div class="col-md-4 second2 displayFor">
+                    @Html.DisplayFor(modelItem => item.Relationship)
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="form-group">
+            <div class="wrapper3">
+                <div class="first11">
+                    At Risk Address?
+                </div>
+                <div class="col-md-7 second displayFor">
+                    @Html.DisplayFor(modelItem => item.Propatrisk)
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="wrapper3">
+                <div class="first11">
+                    First Time Buyer?
+                </div>
+                <div class="col-md-7 second displayFor">
+                    @Html.DisplayFor(modelItem => item.Firsttime)
+                </div>
+            </div>
+        </div>
+
+        <br />
+        <div class="form-group">
+            <div class="wrapper3">
+                <div class="first11 popOut">
+                    Convictions>
+                </div>
+                <div class="col-md-7 second2 ">
+                    <div class="buttonFirst"> <div id="convDetails" class="buttonEntry pad"></div> </div>
+                    <div class="buttonSecond"> <button type="button" id="convDetButton" class="btn btn-primary btn-Entry"></button> </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="wrapper3">
+                <div class="first11 popOut">
+                    Claims/Losses>
+                </div>
+                <div class="col-md-7 second2">
+                    <div class="buttonFirst"> <div id="CL" class="buttonEntry pad">CHK</div> </div>
+                    <div class="buttonSecond"> <button type="button" id="CLButton" class="btn btn-primary btn-Entry"></button> </div>
+                </div>
+            </div>
+        </div>
+
+    
+
+
+        @*--------------------------------  EMPLOYMENT DETAILS MODAL--------------------------------------------------------------------------*@
+
+
+        <div id="EDQuestions1" style='display:none' class="popQuestionsED2">
+
+            <p class="header2">Employment Details</p>
+
+
+            <div class="EDModal">
+                <br />
+
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4" id="ED">
+                            Occ 1:
+                        </div>
+                        <div class="col-md-7 second2 displayFor">
+                            @Html.DisplayFor(modelItem => item.OccType1)
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            Business
+                        </div>
+                        <div class="col-md-7 second2 displayFor">
+                            @Html.DisplayFor(modelItem => item.BusType1)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            Status:
+                        </div>
+                        <div class="col-md-7 second2 displayFor">
+                            @Html.DisplayFor(modelItem => item.EmpStatus1)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            Full/Part:
+                        </div>
+                        <div class="col-md-7 second2 displayFor">
+                            @Html.DisplayFor(modelItem => item.Fullpart1)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            Occ 2:
+                        </div>
+                        <div class="col-md-7 second2 displayFor">
+                            @Html.DisplayFor(modelItem => item.OccType2)
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            Business:
+                        </div>
+                        <div class="col-md-7 second2 displayFor">
+                            @Html.DisplayFor(modelItem => item.BusType2)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            Status:
+                        </div>
+                        <div class="col-md-7 second2 displayFor">
+                            @Html.DisplayFor(modelItem => item.EmpStatus2)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            Full/Part
+                        </div>
+                        <div class="col-md-7 second2 displayFor">
+                            @Html.DisplayFor(modelItem => item.Fullpart2)
+                        </div>
+                    </div>
+                </div>
+
+
+                <br />
+
+                <button type="button" class="btn btn-primary" id="ED1HideButton">Complete</button>
+            </div>
+
+        </div>
+
+        @*-------------------------------- PERSONAL DETAILS MODAL--------------------------------------------------------------------------*@
+
+
+        <div id="PDQuestions1" style='display:none' class="popQuestionsED2">
+
+            <p class="header2">Personal Details</p>
+
+
+            <div class="EDModal">
+                <br />
+
+                <div class="form-group">
+                    <div class="wrapperSec">
+                        <div class="first4" id="PD">
+                            Title:
+                        </div>
+                        <div class="col-md-7 second2 displayFor">
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="wrapperSec">
+                        <div class="first4">
+                            Surname:
+                        </div>
+                        <div class="col-md-7 second2 displayFor">
+                            @Html.DisplayFor(modelItem => item.Propsurname)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="wrapperSec">
+                        <div class="first4">
+                            Forenames:
+                        </div>
+                        <div class="col-md-7 second2 displayFor">
+                            @Html.DisplayFor(modelItem => item.Propforenames)
+                        </div>
+                    </div>
+                </div>
+
+
+                <br />
+
+                <button type="button" class="btn btn-primary" id="PD1HideButton">Complete</button>
+            </div>
+
+        </div>
+
+        @*-------------------------------- CONVICTIONS MODAL --------------------------------------------------------------------------*@
+
+        <div id="convictionsQuestions" style='display:none' class="popQuestionsED2">
+
+            <p class="header2">Conviction Details</p>
+
+            <div id="allrisksTitle3" class="wrapper8 extraPadding3">
+                <div class="form-group" style="float: left; width: 150px;">
+                    <p class=" = font-weight-bold popOut">Date</p>
+                </div>
+                <div class="form-group" style="float: left; width: 150px; ">
+                    <p class=" = font-weight-bold popOut">Pending</p>
+                </div>
+                <div class="form-group" style="float: left; width: 150px; ">
+                    <p class=" = font-weight-bold popOut">Type</p>
+                </div>
+            </div>
+
+            @*/////////////////////////////////////////////////////*@
+
+            <div class="wrapper8 extraPadding2">
+                <div class="form-group" style="float: left; width: 250px; ">
+                    <div class="wrapperRooms">
+                        <div class="first2">
+                            <p>Conviction 1:</p>
+                        </div>
+                        <div class="col-md-6 second4 displayFor" id="UE">
+                            @Html.DisplayFor(modelItem => item.Convdate)
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group" style="float: left; width: 150px; ">
+                    <div class="wrapperRooms">
+                        <div class="col-md-8 second4 displayFor">
+                            @Html.DisplayFor(modelItem => item.Convpending)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group " style="float: left; width: 200px; ">
+                    <div class="wrapperRooms">
+                        <div class="col-md-8 second3 displayFor ">
+                            @Html.DisplayFor(modelItem => item.ConvType)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            @*/////////////////////////////////////////////////////*@
+
+            <div class="wrapper8 extraPadding2">
+                <div class="form-group" style="float: left; width: 250px; ">
+                    <div class="wrapperRooms">
+                        <div class="first2">
+                            <p>Conviction 2:</p>
+                        </div>
+                        <div class="col-md-6 second4 displayFor" id="UE">
+                            @Html.DisplayFor(modelItem => item.Convdate1)
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group" style="float: left; width: 150px; ">
+                    <div class="wrapperRooms">
+                        <div class="col-md-8 second4 displayFor">
+                            @Html.DisplayFor(modelItem => item.Convpending1)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group " style="float: left; width: 200px; ">
+                    <div class="wrapperRooms">
+                        <div class="col-md-8 second3 displayFor ">
+                            @Html.DisplayFor(modelItem => item.ConvType1)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            @*/////////////////////////////////////////////////////*@
+
+            <div class="wrapper8 extraPadding2">
+                <div class="form-group" style="float: left; width: 250px; ">
+                    <div class="wrapperRooms">
+                        <div class="first2">
+                            <p>Conviction 3:</p>
+                        </div>
+                        <div class="col-md-6 second4 displayFor" id="UE">
+                            @Html.DisplayFor(modelItem => item.Convdate2)
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group" style="float: left; width: 150px; ">
+                    <div class="wrapperRooms">
+                        <div class="col-md-8 second4 displayFor">
+                            @Html.DisplayFor(modelItem => item.Convpending2)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group " style="float: left; width: 200px; ">
+                    <div class="wrapperRooms">
+                        <div class="col-md-8 second3 displayFor ">
+                            @Html.DisplayFor(modelItem => item.ConvType2)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            @*/////////////////////////////////////////////////////*@
+
+            <div class="wrapper8 extraPadding2">
+                <div class="form-group" style="float: left; width: 250px; ">
+                    <div class="wrapperRooms">
+                        <div class="first2">
+                            <p>Conviction 4:</p>
+                        </div>
+                        <div class="col-md-6 second4 displayFor" id="UE">
+                            @Html.DisplayFor(modelItem => item.Convdate3)
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group" style="float: left; width: 150px; ">
+                    <div class="wrapperRooms">
+                        <div class="col-md-8 second4 displayFor">
+                            @Html.DisplayFor(modelItem => item.Convpending3)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group " style="float: left; width: 200px; ">
+                    <div class="wrapperRooms">
+                        <div class="col-md-8 second3 displayFor ">
+                            @Html.DisplayFor(modelItem => item.ConvType3)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <button type="button" class="btn btn-primary extraPadding" id="conviction1HideButton">Complete</button>
+
+        </div>
+
+
+        @*////////////////////// Claims/Losses Modal ////////////////////////////////*@
+
+
+        <div id="claimsLossQuestions" style='display:none' class="popQuestionsED3">
+
+            <p class="header2">Claims/Loss History</p>
+
+
+            <div id="claimsItemsDisplay">
+
+
+
+            </div>
+
+
+
+
+
+
+            <div class="wrapper8">
+                <button type="button" class=" btn btn-primary btn-pers" id="claimsHideButton" style="float: left; width: 150px; margin-right:30px ">Complete</button>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+    }
+
+</div>
+
+
+
+
+
+<script>
+  $(document).ready(function () {
+
+
+    $("#empDetButton").click(function () {
+
+        $("#EDQuestions1").show();
+
+        $("#divOne").hide();
+
+        $("#divThree").hide();
+        $("#divFour").hide();
+        $(".prelimhide").hide();
+
+    });
+
+    $("#ED1HideButton").click(function () {
+
+        $("#EDQuestions1").hide();
+        $("#divOne").show();
+        $("#divTwo").show();
+        $("#divThree").show();
+        $("#divFour").show();
+        $(".prelimhide").show();
+
+    });
+
+
+
+      if ($.trim($("#ED").html()) == '') {
+          $("#BCText").text("No");
+      } else $("#empDetails").text("Yes");
+
+    $("#persDetButton").click(function () {
+
+        $("#PDQuestions1").show();
+
+        $("#divOne").hide();
+
+        $("#divThree").hide();
+        $("#divFour").hide();
+        $(".prelimhide").hide();
+
+    });
+
+    $("#PD1HideButton").click(function () {
+
+        $("#PDQuestions1").hide();
+        $("#divOne").show();
+        $("#divTwo").show();
+        $("#divThree").show();
+        $("#divFour").show();
+        $(".prelimhide").show();
+
+    });
+
+
+      if ($.trim($("#PD").html()) == '') {
+          $("#persDetails").text("No");
+      } else $("#persDetails").text("Yes");
+
+
+    $("#convDetButton").click(function () {
+
+        $("#convictionsQuestions").show();
+
+        $("#divOne").hide();
+
+        $("#divThree").hide();
+        $("#divFour").hide();
+        $(".prelimhide").hide();
+
+    });
+
+    $("#conviction1HideButton").click(function () {
+
+        $("#convictionsQuestions").hide();
+        $("#divOne").show();
+
+        $("#divThree").show();
+        $("#divFour").show();
+        $(".prelimhide").show();
+
+    });
+
+
+
+      //if ($.trim($("#Conv").html()) == '') {
+      //    $("#convdetails").text("No");
+      //} else $("#convdetails").text("Yes");
+
+
+      if ($.trim($("#UE").html()) == '') {
+          $("#convDetails").text("No");
+      } else $("#convDetails").text("Yes");
+
+
+    $("#CLButton").click(function () {
+
+        $("#claimsLossQuestions").show();
+        $("#divOne").hide();
+        $("#divThree").hide();
+        $("#divFour").hide();
+        $(".prelimhide").hide();
+
+         var clientRef = "@ViewBag.Message";
+
+
+        return $.ajax({
+            url: '@Url.Action("UploadClaimsItemsRow")',
+            data: { 'clientRef': clientRef },
+            type: 'GET',
+            success: function (data) {
+                //Fill div with results
+
+                $("#claimsItemsDisplay").html(data);
+            },
+            error: function (xhr, status, error) {
+                alert(xhr.responseText);
+            }
+
+        });
+
+
+
+
+    });
+
+    $("#claimsHideButton").click(function () {
+
+        $("#claimsLossQuestions").hide();
+        $("#divOne").show();
+        $("#divTwo").show();
+        $("#divThree").show();
+        $("#divFour").show();
+        $(".prelimhide").show();
+
+    });
+
+
+      $("#propNext1Button").click(function () {
+
+          $("#propDetails").hide();
+          $("#propDetails2").show();
+
+           var clientRef = "@ViewBag.Message";
+           var polNo = @Convert.ToInt32(@ViewBag.polNo) + 1;
+           return $.ajax({
+            url: '@Url.Action("ProposerDetails")',
+            data: { 'clientRef': clientRef, 'polNo' : polNo},
+            type: 'GET',
+            success: function (data) {
+                //Fill div with results
+
+                $("#ProposersDisplay").html(data);
+            },
+            error: function (xhr, status, error) {
+                alert(xhr.responseText);
+            }
+
+            });
+
+
+
+
+      });
+
+
+      $("#propBack1Button").click(function () {
+
+          $("#propDetails").hide();
+          $("#propDetails2").show();
+
+           var clientRef = "@ViewBag.Message";
+           var polNo = @Convert.ToInt32(@ViewBag.polNo) - 1;
+           return $.ajax({
+            url: '@Url.Action("ProposerDetails")',
+            data: { 'clientRef': clientRef, 'polNo' : polNo},
+            type: 'GET',
+            success: function (data) {
+                //Fill div with results
+
+                $("#ProposersDisplay").html(data);
+            },
+            error: function (xhr, status, error) {
+                alert(xhr.responseText);
+            }
+
+            });
+
+
+
+
+      });
+
+
+
+
+
+
+});
+</script>
+
+

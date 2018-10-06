@@ -1,0 +1,1469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="OpenGIABICodesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Alarm_AccredDetails2">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Alarm_MaintenanceCompany">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Alarm_Type">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Buildings_Insurer">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Claims_Sections">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Contents_Insurer">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Home_ClaimType">
+          <Key>
+            <PropertyRef Name="vtCode" />
+          </Key>
+          <Property Name="vtCode" Type="int" Nullable="false" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Home_InterestedPartyName">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Motor_AlarmSecurityFitted">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Motor_AlarmSecurityMake">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Motor_ClaimType">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Motor_ConvictionType">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Motor_IncidentType">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Motor_LicenseCountry">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Motor_LicenseType">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Motor_PermittedDrivers">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Motor_TrackerSecurityFitted">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Motor_TrackerSecurityMake">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Motor_VehicleCoverType">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Motor_VehicleKeeper">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Motor_VehicleModification">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Motor_VehicleOwner">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Motor_VehicleParking">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'OpenGIABICodes.dbo.NEmploymentStatus' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="NEmploymentStatus">
+          <Property Name="abiListName" Type="float" />
+          <Property Name="ogiListName" Type="nvarchar" MaxLength="255" />
+          <Property Name="abiCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="abiDescription" Type="nvarchar" MaxLength="255" />
+          <Property Name="vt" Type="float" />
+          <Property Name="vtCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="vtDescription" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'OpenGIABICodes.dbo.NEmpstat' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="NEmpstat">
+          <Property Name="abiListName" Type="float" />
+          <Property Name="ogiListName" Type="nvarchar" MaxLength="255" />
+          <Property Name="abiCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="abiDescription" Type="nvarchar" MaxLength="255" />
+          <Property Name="vt" Type="float" />
+          <Property Name="vtCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="vtDescription" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'OpenGIABICodes.dbo.NOccupations' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="NOccupations">
+          <Property Name="abiListName" Type="float" />
+          <Property Name="ogiListName" Type="nvarchar" MaxLength="255" />
+          <Property Name="abiCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="abiDescription" Type="nvarchar" MaxLength="255" />
+          <Property Name="vt" Type="float" />
+          <Property Name="vtCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="vtDescription" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <EntityType Name="Person_BusinessType">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Person_ConvictionType">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Person_EmpStat">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Person_MaritalStatus">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Person_Occupation">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Person_RelationshipToProp">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Person_Title">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Policy_MotorPolicyInsurer">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Property_Accommodation">
+          <Key>
+            <PropertyRef Name="vtCode" />
+          </Key>
+          <Property Name="vtCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'OpenGIABICodes.dbo.Property_AccommodationABI' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Property_AccommodationABI">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="MisysCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="MisysName" Type="nvarchar" MaxLength="255" />
+          <Property Name="ABICode" Type="nvarchar" MaxLength="255" />
+          <Property Name="ABIDescription" Type="nvarchar" MaxLength="255" />
+          <Property Name="MappingField" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Property_Construction">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Property_HouseType">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Property_Listed">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Property_PrimaryHeating">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Property_RoofType">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Property_Unoccupancy">
+          <Key>
+            <PropertyRef Name="vtCode" />
+          </Key>
+          <Property Name="vtCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Security_LockTypes">
+          <Key>
+            <PropertyRef Name="Description" />
+          </Key>
+          <Property Name="Description" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="OpenGIMapping" Type="bit" />
+        </EntityType>
+        <EntityType Name="Security_PatiosNFrenchDoors">
+          <Key>
+            <PropertyRef Name="Description" />
+          </Key>
+          <Property Name="Description" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="OpenGIMapping" Type="bit" />
+        </EntityType>
+        <EntityType Name="Security_WindowLockTypes">
+          <Key>
+            <PropertyRef Name="Description" />
+          </Key>
+          <Property Name="Description" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="OpenGIMapping" Type="bit" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'OpenGIABICodes.dbo.Sheet1$' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Sheet1$">
+          <Property Name="abiListName" Type="float" />
+          <Property Name="ogiListName" Type="nvarchar" MaxLength="255" />
+          <Property Name="abiCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="abiDescription" Type="nvarchar" MaxLength="255" />
+          <Property Name="vt" Type="float" />
+          <Property Name="vtCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="vtDescription" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <EntityType Name="SpecifiedItem_Category">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="abiCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="abiDescription" Type="varchar" MaxLength="500" />
+          <Property Name="vt" Type="char" MaxLength="10" />
+          <Property Name="vtCode" Type="char" MaxLength="10" />
+          <Property Name="vtDescription" Type="varchar" MaxLength="500" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="OpenGIABICodesModelStoreContainer">
+          <EntitySet Name="Alarm_AccredDetails2" EntityType="Self.Alarm_AccredDetails2" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Alarm_MaintenanceCompany" EntityType="Self.Alarm_MaintenanceCompany" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Alarm_Type" EntityType="Self.Alarm_Type" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Buildings_Insurer" EntityType="Self.Buildings_Insurer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Claims_Sections" EntityType="Self.Claims_Sections" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contents_Insurer" EntityType="Self.Contents_Insurer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Home_ClaimType" EntityType="Self.Home_ClaimType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Home_InterestedPartyName" EntityType="Self.Home_InterestedPartyName" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Motor_AlarmSecurityFitted" EntityType="Self.Motor_AlarmSecurityFitted" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Motor_AlarmSecurityMake" EntityType="Self.Motor_AlarmSecurityMake" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Motor_ClaimType" EntityType="Self.Motor_ClaimType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Motor_ConvictionType" EntityType="Self.Motor_ConvictionType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Motor_IncidentType" EntityType="Self.Motor_IncidentType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Motor_LicenseCountry" EntityType="Self.Motor_LicenseCountry" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Motor_LicenseType" EntityType="Self.Motor_LicenseType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Motor_PermittedDrivers" EntityType="Self.Motor_PermittedDrivers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Motor_TrackerSecurityFitted" EntityType="Self.Motor_TrackerSecurityFitted" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Motor_TrackerSecurityMake" EntityType="Self.Motor_TrackerSecurityMake" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Motor_VehicleCoverType" EntityType="Self.Motor_VehicleCoverType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Motor_VehicleKeeper" EntityType="Self.Motor_VehicleKeeper" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Motor_VehicleModification" EntityType="Self.Motor_VehicleModification" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Motor_VehicleOwner" EntityType="Self.Motor_VehicleOwner" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Motor_VehicleParking" EntityType="Self.Motor_VehicleParking" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Person_BusinessType" EntityType="Self.Person_BusinessType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Person_ConvictionType" EntityType="Self.Person_ConvictionType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Person_EmpStat" EntityType="Self.Person_EmpStat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Person_MaritalStatus" EntityType="Self.Person_MaritalStatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Person_Occupation" EntityType="Self.Person_Occupation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Person_RelationshipToProp" EntityType="Self.Person_RelationshipToProp" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Person_Title" EntityType="Self.Person_Title" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Policy_MotorPolicyInsurer" EntityType="Self.Policy_MotorPolicyInsurer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Property_Accommodation" EntityType="Self.Property_Accommodation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Property_Construction" EntityType="Self.Property_Construction" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Property_HouseType" EntityType="Self.Property_HouseType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Property_Listed" EntityType="Self.Property_Listed" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Property_PrimaryHeating" EntityType="Self.Property_PrimaryHeating" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Property_RoofType" EntityType="Self.Property_RoofType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Property_Unoccupancy" EntityType="Self.Property_Unoccupancy" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Security_LockTypes" EntityType="Self.Security_LockTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Security_PatiosNFrenchDoors" EntityType="Self.Security_PatiosNFrenchDoors" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Security_WindowLockTypes" EntityType="Self.Security_WindowLockTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SpecifiedItem_Category" EntityType="Self.SpecifiedItem_Category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Property_AccommodationABI" EntityType="Self.Property_AccommodationABI" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Property_AccommodationABI].[ID] AS [ID], 
+    [Property_AccommodationABI].[MisysCode] AS [MisysCode], 
+    [Property_AccommodationABI].[MisysName] AS [MisysName], 
+    [Property_AccommodationABI].[ABICode] AS [ABICode], 
+    [Property_AccommodationABI].[ABIDescription] AS [ABIDescription], 
+    [Property_AccommodationABI].[MappingField] AS [MappingField]
+    FROM [dbo].[Property_AccommodationABI] AS [Property_AccommodationABI]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OpenGIABICodesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Alarm_AccredDetails2">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Alarm_MaintenanceCompany">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Alarm_Type">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Buildings_Insurer">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Claims_Sections">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Contents_Insurer">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Home_ClaimType">
+          <Key>
+            <PropertyRef Name="vtCode" />
+          </Key>
+          <Property Name="vtCode" Type="Int32" Nullable="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Home_InterestedPartyName">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Motor_AlarmSecurityFitted">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Motor_AlarmSecurityMake">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Motor_ClaimType">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Motor_ConvictionType">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Motor_IncidentType">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Motor_LicenseCountry">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Motor_LicenseType">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Motor_PermittedDrivers">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Motor_TrackerSecurityFitted">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Motor_TrackerSecurityMake">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Motor_VehicleCoverType">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Motor_VehicleKeeper">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Motor_VehicleModification">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Motor_VehicleOwner">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Motor_VehicleParking">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Person_BusinessType">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Person_ConvictionType">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Person_EmpStat">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Person_MaritalStatus">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Person_Occupation">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Person_RelationshipToProp">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Person_Title">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Policy_MotorPolicyInsurer">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Property_Accommodation">
+          <Key>
+            <PropertyRef Name="vtCode" />
+          </Key>
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Property_Construction">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Property_HouseType">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Property_Listed">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Property_PrimaryHeating">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Property_RoofType">
+          <Key>
+            <PropertyRef Name="abiCode" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Property_Unoccupancy">
+          <Key>
+            <PropertyRef Name="vtCode" />
+          </Key>
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Security_LockTypes">
+          <Key>
+            <PropertyRef Name="Description" />
+          </Key>
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OpenGIMapping" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Security_PatiosNFrenchDoors">
+          <Key>
+            <PropertyRef Name="Description" />
+          </Key>
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OpenGIMapping" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Security_WindowLockTypes">
+          <Key>
+            <PropertyRef Name="Description" />
+          </Key>
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OpenGIMapping" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="SpecifiedItem_Category">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="abiCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="abiDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="vt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="vtDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Property_AccommodationABI">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="MisysCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MisysName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ABICode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ABIDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MappingField" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="OpenGIABICodesEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Alarm_AccredDetails2" EntityType="Self.Alarm_AccredDetails2" />
+          <EntitySet Name="Alarm_MaintenanceCompany" EntityType="Self.Alarm_MaintenanceCompany" />
+          <EntitySet Name="Alarm_Type" EntityType="Self.Alarm_Type" />
+          <EntitySet Name="Buildings_Insurer" EntityType="Self.Buildings_Insurer" />
+          <EntitySet Name="Claims_Sections" EntityType="Self.Claims_Sections" />
+          <EntitySet Name="Contents_Insurer" EntityType="Self.Contents_Insurer" />
+          <EntitySet Name="Home_ClaimType" EntityType="Self.Home_ClaimType" />
+          <EntitySet Name="Home_InterestedPartyName" EntityType="Self.Home_InterestedPartyName" />
+          <EntitySet Name="Motor_AlarmSecurityFitted" EntityType="Self.Motor_AlarmSecurityFitted" />
+          <EntitySet Name="Motor_AlarmSecurityMake" EntityType="Self.Motor_AlarmSecurityMake" />
+          <EntitySet Name="Motor_ClaimType" EntityType="Self.Motor_ClaimType" />
+          <EntitySet Name="Motor_ConvictionType" EntityType="Self.Motor_ConvictionType" />
+          <EntitySet Name="Motor_IncidentType" EntityType="Self.Motor_IncidentType" />
+          <EntitySet Name="Motor_LicenseCountry" EntityType="Self.Motor_LicenseCountry" />
+          <EntitySet Name="Motor_LicenseType" EntityType="Self.Motor_LicenseType" />
+          <EntitySet Name="Motor_PermittedDrivers" EntityType="Self.Motor_PermittedDrivers" />
+          <EntitySet Name="Motor_TrackerSecurityFitted" EntityType="Self.Motor_TrackerSecurityFitted" />
+          <EntitySet Name="Motor_TrackerSecurityMake" EntityType="Self.Motor_TrackerSecurityMake" />
+          <EntitySet Name="Motor_VehicleCoverType" EntityType="Self.Motor_VehicleCoverType" />
+          <EntitySet Name="Motor_VehicleKeeper" EntityType="Self.Motor_VehicleKeeper" />
+          <EntitySet Name="Motor_VehicleModification" EntityType="Self.Motor_VehicleModification" />
+          <EntitySet Name="Motor_VehicleOwner" EntityType="Self.Motor_VehicleOwner" />
+          <EntitySet Name="Motor_VehicleParking" EntityType="Self.Motor_VehicleParking" />
+          <EntitySet Name="Person_BusinessType" EntityType="Self.Person_BusinessType" />
+          <EntitySet Name="Person_ConvictionType" EntityType="Self.Person_ConvictionType" />
+          <EntitySet Name="Person_EmpStat" EntityType="Self.Person_EmpStat" />
+          <EntitySet Name="Person_MaritalStatus" EntityType="Self.Person_MaritalStatus" />
+          <EntitySet Name="Person_Occupation" EntityType="Self.Person_Occupation" />
+          <EntitySet Name="Person_RelationshipToProp" EntityType="Self.Person_RelationshipToProp" />
+          <EntitySet Name="Person_Title" EntityType="Self.Person_Title" />
+          <EntitySet Name="Policy_MotorPolicyInsurer" EntityType="Self.Policy_MotorPolicyInsurer" />
+          <EntitySet Name="Property_Accommodation" EntityType="Self.Property_Accommodation" />
+          <EntitySet Name="Property_Construction" EntityType="Self.Property_Construction" />
+          <EntitySet Name="Property_HouseType" EntityType="Self.Property_HouseType" />
+          <EntitySet Name="Property_Listed" EntityType="Self.Property_Listed" />
+          <EntitySet Name="Property_PrimaryHeating" EntityType="Self.Property_PrimaryHeating" />
+          <EntitySet Name="Property_RoofType" EntityType="Self.Property_RoofType" />
+          <EntitySet Name="Property_Unoccupancy" EntityType="Self.Property_Unoccupancy" />
+          <EntitySet Name="Security_LockTypes" EntityType="Self.Security_LockTypes" />
+          <EntitySet Name="Security_PatiosNFrenchDoors" EntityType="Self.Security_PatiosNFrenchDoors" />
+          <EntitySet Name="Security_WindowLockTypes" EntityType="Self.Security_WindowLockTypes" />
+          <EntitySet Name="SpecifiedItem_Category" EntityType="Self.SpecifiedItem_Category" />
+          <EntitySet Name="Property_AccommodationABI" EntityType="Self.Property_AccommodationABI" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OpenGIABICodesModelStoreContainer" CdmEntityContainer="OpenGIABICodesEntities1">
+          <EntitySetMapping Name="Alarm_AccredDetails2">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Alarm_AccredDetails2">
+              <MappingFragment StoreEntitySet="Alarm_AccredDetails2">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Alarm_MaintenanceCompany">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Alarm_MaintenanceCompany">
+              <MappingFragment StoreEntitySet="Alarm_MaintenanceCompany">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Alarm_Type">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Alarm_Type">
+              <MappingFragment StoreEntitySet="Alarm_Type">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Buildings_Insurer">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Buildings_Insurer">
+              <MappingFragment StoreEntitySet="Buildings_Insurer">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Claims_Sections">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Claims_Sections">
+              <MappingFragment StoreEntitySet="Claims_Sections">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contents_Insurer">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Contents_Insurer">
+              <MappingFragment StoreEntitySet="Contents_Insurer">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Home_ClaimType">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Home_ClaimType">
+              <MappingFragment StoreEntitySet="Home_ClaimType">
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Home_InterestedPartyName">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Home_InterestedPartyName">
+              <MappingFragment StoreEntitySet="Home_InterestedPartyName">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Motor_AlarmSecurityFitted">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_AlarmSecurityFitted">
+              <MappingFragment StoreEntitySet="Motor_AlarmSecurityFitted">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Motor_AlarmSecurityMake">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_AlarmSecurityMake">
+              <MappingFragment StoreEntitySet="Motor_AlarmSecurityMake">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Motor_ClaimType">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_ClaimType">
+              <MappingFragment StoreEntitySet="Motor_ClaimType">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Motor_ConvictionType">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_ConvictionType">
+              <MappingFragment StoreEntitySet="Motor_ConvictionType">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Motor_IncidentType">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_IncidentType">
+              <MappingFragment StoreEntitySet="Motor_IncidentType">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Motor_LicenseCountry">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_LicenseCountry">
+              <MappingFragment StoreEntitySet="Motor_LicenseCountry">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Motor_LicenseType">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_LicenseType">
+              <MappingFragment StoreEntitySet="Motor_LicenseType">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Motor_PermittedDrivers">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_PermittedDrivers">
+              <MappingFragment StoreEntitySet="Motor_PermittedDrivers">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Motor_TrackerSecurityFitted">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_TrackerSecurityFitted">
+              <MappingFragment StoreEntitySet="Motor_TrackerSecurityFitted">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Motor_TrackerSecurityMake">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_TrackerSecurityMake">
+              <MappingFragment StoreEntitySet="Motor_TrackerSecurityMake">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Motor_VehicleCoverType">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_VehicleCoverType">
+              <MappingFragment StoreEntitySet="Motor_VehicleCoverType">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Motor_VehicleKeeper">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_VehicleKeeper">
+              <MappingFragment StoreEntitySet="Motor_VehicleKeeper">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Motor_VehicleModification">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_VehicleModification">
+              <MappingFragment StoreEntitySet="Motor_VehicleModification">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Motor_VehicleOwner">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_VehicleOwner">
+              <MappingFragment StoreEntitySet="Motor_VehicleOwner">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Motor_VehicleParking">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_VehicleParking">
+              <MappingFragment StoreEntitySet="Motor_VehicleParking">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Person_BusinessType">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Person_BusinessType">
+              <MappingFragment StoreEntitySet="Person_BusinessType">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Person_ConvictionType">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Person_ConvictionType">
+              <MappingFragment StoreEntitySet="Person_ConvictionType">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Person_EmpStat">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Person_EmpStat">
+              <MappingFragment StoreEntitySet="Person_EmpStat">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Person_MaritalStatus">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Person_MaritalStatus">
+              <MappingFragment StoreEntitySet="Person_MaritalStatus">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Person_Occupation">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Person_Occupation">
+              <MappingFragment StoreEntitySet="Person_Occupation">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Person_RelationshipToProp">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Person_RelationshipToProp">
+              <MappingFragment StoreEntitySet="Person_RelationshipToProp">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Person_Title">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Person_Title">
+              <MappingFragment StoreEntitySet="Person_Title">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Policy_MotorPolicyInsurer">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Policy_MotorPolicyInsurer">
+              <MappingFragment StoreEntitySet="Policy_MotorPolicyInsurer">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Property_Accommodation">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Property_Accommodation">
+              <MappingFragment StoreEntitySet="Property_Accommodation">
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Property_Construction">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Property_Construction">
+              <MappingFragment StoreEntitySet="Property_Construction">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Property_HouseType">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Property_HouseType">
+              <MappingFragment StoreEntitySet="Property_HouseType">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Property_Listed">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Property_Listed">
+              <MappingFragment StoreEntitySet="Property_Listed">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Property_PrimaryHeating">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Property_PrimaryHeating">
+              <MappingFragment StoreEntitySet="Property_PrimaryHeating">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Property_RoofType">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Property_RoofType">
+              <MappingFragment StoreEntitySet="Property_RoofType">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Property_Unoccupancy">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Property_Unoccupancy">
+              <MappingFragment StoreEntitySet="Property_Unoccupancy">
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Security_LockTypes">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Security_LockTypes">
+              <MappingFragment StoreEntitySet="Security_LockTypes">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="OpenGIMapping" ColumnName="OpenGIMapping" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Security_PatiosNFrenchDoors">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Security_PatiosNFrenchDoors">
+              <MappingFragment StoreEntitySet="Security_PatiosNFrenchDoors">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="OpenGIMapping" ColumnName="OpenGIMapping" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Security_WindowLockTypes">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Security_WindowLockTypes">
+              <MappingFragment StoreEntitySet="Security_WindowLockTypes">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="OpenGIMapping" ColumnName="OpenGIMapping" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SpecifiedItem_Category">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.SpecifiedItem_Category">
+              <MappingFragment StoreEntitySet="SpecifiedItem_Category">
+                <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+                <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+                <ScalarProperty Name="vt" ColumnName="vt" />
+                <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+                <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Property_AccommodationABI">
+            <EntityTypeMapping TypeName="OpenGIABICodesModel.Property_AccommodationABI">
+              <MappingFragment StoreEntitySet="Property_AccommodationABI">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MisysCode" ColumnName="MisysCode" />
+                <ScalarProperty Name="MisysName" ColumnName="MisysName" />
+                <ScalarProperty Name="ABICode" ColumnName="ABICode" />
+                <ScalarProperty Name="ABIDescription" ColumnName="ABIDescription" />
+                <ScalarProperty Name="MappingField" ColumnName="MappingField" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

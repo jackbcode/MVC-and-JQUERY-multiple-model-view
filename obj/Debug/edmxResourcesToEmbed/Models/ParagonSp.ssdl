@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ParagonModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <Function Name="ClaimsUploadParagon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PolicyReference" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ClaimsUploadParagonBD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PolicyReference" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ClaimsUploadParagonNo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PolicyReference" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ProposerNo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PCProposersParagon1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PolicyReference" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="PCProposersParagonBD1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PolicyReference" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="PCProposersParagonBDNo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PolicyReference" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ProposerNo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PCProposersParagonNo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PolicyReference" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ProposerNo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PolicyCheckUploadParagon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PolicyReference" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="PolicyCheckUploadParagonBD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PolicyReference" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="PolicyCheckUploadParagonUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PolicyReference" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="SpecItemUploadParagon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PolicyReference" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="SpecItemUploadParagonBD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PolicyReference" Type="varchar(max)" Mode="In" />
+  </Function>
+  <EntityContainer Name="ParagonModelStoreContainer" />
+</Schema>

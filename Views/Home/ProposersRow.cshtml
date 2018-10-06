@@ -1,0 +1,364 @@
+﻿@model PolicyCheck.Models.ProposerDetail
+
+@using PolicyCheck.Helper
+
+
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+
+@using (Html.BeginCollectionItem("PropDetails"))
+{
+    <div class="form-group">
+        <div class="wrapper3">
+            <div class="first2">
+                @Html.LabelFor(x => x.ProposerSex, htmlAttributes: new { @class = "control-label col-md-6" })
+            </div>
+            <div class="col-md-4 second2">
+                @Html.DropDownListFor(x => x.ProposerSex, Model.Sex, "MS", new { @id = "houseType", @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.ProposerSex, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+
+    @*------------------- DOB/Age - -------------------------------*@
+
+    <div class="wrapper">
+        <div class="form-group  first">
+            <div class="wrapper4">
+                <div class="first2">
+                    @Html.LabelFor(x => x.ProposerDOB, htmlAttributes: new { @class = " control-label col-md-10" })
+                </div>
+                <div class="col-md-12 second3 ">
+                    @Html.EditorFor(x => x.ProposerDOB, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(x => x.ProposerDOB, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group second ">
+            <div class="wrapper5">
+                <div class="first10">
+                    @Html.LabelFor(x => x.ProposerAge, htmlAttributes: new { @class = " control-label col-md-2" })
+                </div>
+                <div class="col-md-5 second ">
+                    @Html.EditorFor(x => x.ProposerAge, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(x => x.ProposerAge, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <br />
+
+    <div class="form-group">
+        <div class="wrapper3">
+            <div class="first11">
+                @Html.LabelFor(x => x.ProposerEmployDetails, htmlAttributes: new { @class = "control-label col-md-12 popOut" })
+            </div>
+            <div class="col-md-7 second2">
+                @Html.DropDownListFor(x => x.ProposerEmployDetails, Model.YN, "Make Selection", new { @id = "empDetails", @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.ProposerEmployDetails, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="wrapper3">
+            <div class="first11">
+                @Html.LabelFor(x => x.ProposerPersonalDetails, htmlAttributes: new { @class = "control-label col-md-12 popOut" })
+            </div>
+            <div class="col-md-7 second2">
+                @Html.DropDownListFor(x => x.ProposerPersonalDetails, Model.YN, "Make Selection", new { @id = "perDetails", @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.ProposerPersonalDetails, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="wrapper3">
+            <div class="first11">
+                @Html.LabelFor(x => x.ProposerRelationship, htmlAttributes: new { @class = "control-label col-md-12" })
+            </div>
+            <div class="col-md-7 second2">
+                @Html.DropDownListFor(x => x.ProposerRelationship, Model.Relationship, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.ProposerRelationship, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="form-group">
+        <div class="wrapper3">
+            <div class="first11">
+                @Html.LabelFor(x => x.ProposerAtRiskAddress, htmlAttributes: new { @class = "control-label col-md-12" })
+            </div>
+            <div class="col-md-7 second2">
+                @Html.DropDownListFor(x => x.ProposerAtRiskAddress, Model.YN, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.ProposerAtRiskAddress, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="wrapper3">
+            <div class="first11">
+                @Html.LabelFor(x => x.ProposerFirstTimeBuyer, htmlAttributes: new { @class = "control-label col-md-12" })
+            </div>
+            <div class="col-md-7 second2">
+                @Html.DropDownListFor(x => x.ProposerFirstTimeBuyer, Model.YN, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.ProposerFirstTimeBuyer, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+
+
+
+    @*--------------------------------  EMPLOYMENT DETAILS MODAL--------------------------------------------------------------------------*@
+
+
+    <div id="EDQuestions" style='display:none' class="popQuestionsED">
+
+        <p class="header2">Employment Details</p>
+
+
+        <div class="EDModal">
+            <br />
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.ProposerOccOne, htmlAttributes: new { @class = "control-label col-md-6" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.DropDownListFor(model => model.ProposerOccOne, Model.Occupation, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ProposerOccOne, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.ProposerOccBusinessOne, htmlAttributes: new { @class = "control-label col-md-6" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.DropDownListFor(model => model.ProposerOccBusinessOne, Model.Business, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ProposerOccBusinessOne, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.ProposerOccStatusOne, htmlAttributes: new { @class = "control-label col-md-6" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.DropDownListFor(model => model.ProposerOccStatusOne, Model.Status, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ProposerOccStatusOne, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.ProposerOccFullPartOne, htmlAttributes: new { @class = "control-label col-md-6" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.DropDownListFor(model => model.ProposerOccFullPartOne, Model.Time, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ProposerOccFullPartOne, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.ProposerOccTwo, htmlAttributes: new { @class = "control-label col-md-6" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.DropDownListFor(model => model.ProposerOccTwo, Model.Occupation, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ProposerOccTwo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.ProposerOccBusinessTwo, htmlAttributes: new { @class = "control-label col-md-6" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.DropDownListFor(model => model.ProposerOccBusinessTwo, Model.Business, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ProposerOccBusinessTwo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.ProposerOccStatusTwo, htmlAttributes: new { @class = "control-label col-md-6" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.DropDownListFor(model => model.ProposerOccStatusTwo, Model.Status, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ProposerOccStatusTwo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.ProposerOccFullPartTwo, htmlAttributes: new { @class = "control-label col-md-6" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.DropDownListFor(model => model.ProposerOccFullPartTwo, Model.Time, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ProposerOccFullPartTwo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <br />
+
+            <button type="button" class="btn btn-primary" id="EDHideButton">Complete</button>
+        </div>
+
+    </div>
+
+    @*-------------------------------- PERSONAL DETAILS MODAL--------------------------------------------------------------------------*@
+
+
+    <div id="PDQuestions" style='display:none' class="popQuestionsED">
+
+        <p class="header2">Personal Details</p>
+
+
+        <div class="EDModal">
+            <br />
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.ProposerTitle, htmlAttributes: new { @class = "control-label col-md-12" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.DropDownListFor(model => model.ProposerTitle, Model.Title, "Make Selection", new { @id = "perDetails", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ProposerTitle, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.ProposerSurname, htmlAttributes: new { @class = "control-label col-md-12" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.EditorFor(model => model.ProposerSurname, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.ProposerSurname, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.ProposerForenames, htmlAttributes: new { @class = "control-label col-md-12" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.EditorFor(model => model.ProposerForenames, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.ProposerForenames, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <br />
+
+            <button type="button" class="btn btn-primary" id="PDHideButton">Complete</button>
+        </div>
+
+    </div>
+
+}
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+
+
+
+    <script>
+
+      
+
+            $('#empDetails').on('change', function () {
+
+                if (this.value == "Yes") {
+                    $("#EDQuestions").show();
+                    $("#divOne").hide();
+                    $("#CL").hide();
+                    $("#divThree").hide();
+                    $("#divFour").hide();
+                    $(".prelimhide").hide();
+                } else {
+                    $("#callDate").hide();
+                }
+            });
+
+            $("#EDHideButton").click(function () {
+
+                $("#EDQuestions").hide();
+                $("#divOne").show();
+                $("#CL").show();
+                $("#divTwo").show();
+                $("#divThree").show();
+                $("#divFour").show();
+                $(".prelimhide").show();
+
+            });
+
+            $('#perDetails').on('change', function () {
+
+                if (this.value == "Yes") {
+                    $("#PDQuestions").show();
+                    $("#divOne").hide();
+                    $("#CL").hide();
+                    $("#divThree").hide();
+                    $("#divFour").hide();
+                    $(".prelimhide").hide();
+                } else {
+                    $("#callDate").hide();
+                }
+            });
+
+            $("#PDHideButton").click(function () {
+
+                $("#PDQuestions").hide();
+                $("#divOne").show();
+                $("#CL").show();
+                $("#divTwo").show();
+                $("#divThree").show();
+                $("#divFour").show();
+                $(".prelimhide").show();
+
+            });
+
+        
+    </script>
+
+
+
+

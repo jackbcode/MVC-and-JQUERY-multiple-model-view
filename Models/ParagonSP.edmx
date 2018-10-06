@@ -1,0 +1,1801 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ParagonModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="ClaimsUploadParagon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PolicyReference" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="ClaimsUploadParagonBD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PolicyReference" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="ClaimsUploadParagonNo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PolicyReference" Type="varchar(max)" Mode="In" />
+          <Parameter Name="ProposerNo" Type="int" Mode="In" />
+        </Function>
+        <Function Name="PCProposersParagon1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PolicyReference" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="PCProposersParagonBD1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PolicyReference" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="PCProposersParagonBDNo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PolicyReference" Type="varchar(max)" Mode="In" />
+          <Parameter Name="ProposerNo" Type="int" Mode="In" />
+        </Function>
+        <Function Name="PCProposersParagonNo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PolicyReference" Type="varchar(max)" Mode="In" />
+          <Parameter Name="ProposerNo" Type="int" Mode="In" />
+        </Function>
+        <Function Name="PolicyCheckUploadParagon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PolicyReference" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="PolicyCheckUploadParagonBD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PolicyReference" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="PolicyCheckUploadParagonUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PolicyReference" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="SpecItemUploadParagon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PolicyReference" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="SpecItemUploadParagonBD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PolicyReference" Type="varchar(max)" Mode="In" />
+        </Function>
+        <EntityContainer Name="ParagonModelStoreContainer" />
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ParagonModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ParagonEntities15" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="ClaimsUploadParagon" ReturnType="Collection(ParagonModel.ClaimsUploadParagon_Result)">
+            <Parameter Name="PolicyReference" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="ClaimsUploadParagonBD" ReturnType="Collection(ParagonModel.ClaimsUploadParagonBD_Result)">
+            <Parameter Name="PolicyReference" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="ClaimsUploadParagonNo" ReturnType="Collection(ParagonModel.ClaimsUploadParagonNo_Result)">
+            <Parameter Name="PolicyReference" Mode="In" Type="String" />
+            <Parameter Name="ProposerNo" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="PCProposersParagon1" ReturnType="Collection(ParagonModel.PCProposersParagon1_Result)">
+            <Parameter Name="PolicyReference" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="PCProposersParagonBD1" ReturnType="Collection(ParagonModel.PCProposersParagonBD1_Result)">
+            <Parameter Name="PolicyReference" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="PCProposersParagonBDNo" ReturnType="Collection(ParagonModel.PCProposersParagonBDNo_Result)">
+            <Parameter Name="PolicyReference" Mode="In" Type="String" />
+            <Parameter Name="ProposerNo" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="PCProposersParagonNo" ReturnType="Collection(ParagonModel.PCProposersParagonNo_Result)">
+            <Parameter Name="PolicyReference" Mode="In" Type="String" />
+            <Parameter Name="ProposerNo" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="PolicyCheckUploadParagon" ReturnType="Collection(ParagonModel.PolicyCheckUploadParagon_Result)">
+            <Parameter Name="PolicyReference" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="PolicyCheckUploadParagonBD" ReturnType="Collection(ParagonModel.PolicyCheckUploadParagonBD_Result)">
+            <Parameter Name="PolicyReference" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="PolicyCheckUploadParagonUpdate" ReturnType="Collection(ParagonModel.PolicyCheckUploadParagonUpdate_Result)">
+            <Parameter Name="PolicyReference" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SpecItemUploadParagon" ReturnType="Collection(ParagonModel.SpecItemUploadParagon_Result)">
+            <Parameter Name="PolicyReference" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SpecItemUploadParagonBD" ReturnType="Collection(ParagonModel.SpecItemUploadParagonBD_Result)">
+            <Parameter Name="PolicyReference" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="ClaimsUploadParagon_Result">
+          <Property Type="DateTime" Name="ClaimDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="48" />
+          <Property Type="Int32" Name="C_Value" Nullable="true" />
+          <Property Type="String" Name="C_Section" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="Desc1" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="Desc2" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="ClaimDeleted" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Claimsettled" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="C_Number" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="ClaimsUploadParagonBD_Result">
+          <Property Type="DateTime" Name="ClaimDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="48" />
+          <Property Type="Int32" Name="C_Value" Nullable="true" />
+          <Property Type="String" Name="C_Section" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="Desc1" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="Desc2" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="ClaimDeleted" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Claimsettled" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="C_Number" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="ClaimsUploadParagonNo_Result">
+          <Property Type="Int32" Name="C_Number" Nullable="true" />
+          <Property Type="DateTime" Name="ClaimDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="48" />
+          <Property Type="Int32" Name="C_Value" Nullable="true" />
+          <Property Type="String" Name="C_Section" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="Desc1" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="Desc2" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="ClaimDeleted" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Claimsettled" Nullable="true" MaxLength="3" />
+        </ComplexType>
+        <ComplexType Name="PCProposersParagon1_Result">
+          <Property Type="String" Name="PolicyRef_" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Propno" Nullable="true" />
+          <Property Type="String" Name="Sex" Nullable="true" MaxLength="6" />
+          <Property Type="DateTime" Name="Propdob" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Propage" Nullable="true" />
+          <Property Type="String" Name="Propatrisk" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Firsttime" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="OccType1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="BusType1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="EmpStatus1" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="Fullpart1" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="OccType2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="BusType2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="EmpStatus2" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="Fullpart2" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="Title" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Propsurname" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Propforenames" Nullable="true" MaxLength="30" />
+          <Property Type="DateTime" Name="Convdate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="Convdate1" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending1" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType1" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="Convdate2" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending2" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType2" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="Convdate3" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending3" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType3" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="Relationship" Nullable="true" MaxLength="18" />
+          <Property Type="String" Name="Live_from_date" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Refused" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Riskaddr1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Riskaddr2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Riskaddr3" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Riskaddr4" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Riskpcode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Commaddr1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Commaddr2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Commaddr3" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Commaddr4" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Commpcode" Nullable="true" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="PCProposersParagonBD1_Result">
+          <Property Type="String" Name="PolicyRef_" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Propno" Nullable="true" />
+          <Property Type="String" Name="Sex" Nullable="true" MaxLength="6" />
+          <Property Type="DateTime" Name="Propdob" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Propage" Nullable="true" />
+          <Property Type="String" Name="Propatrisk" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Firsttime" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="OccType1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="BusType1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="EmpStatus1" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="Fullpart1" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="OccType2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="BusType2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="EmpStatus2" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="Fullpart2" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="Title" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Propsurname" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Propforenames" Nullable="true" MaxLength="30" />
+          <Property Type="DateTime" Name="Convdate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="Convdate1" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending1" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType1" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="Convdate2" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending2" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType2" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="Convdate3" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending3" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType3" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="Relationship" Nullable="true" MaxLength="18" />
+          <Property Type="String" Name="Live_from_date" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Refused" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Riskaddr1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Riskaddr2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Riskaddr3" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Riskaddr4" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Riskpcode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Commaddr1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Commaddr2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Commaddr3" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Commaddr4" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Commpcode" Nullable="true" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="PCProposersParagonBDNo_Result">
+          <Property Type="String" Name="PolicyRef_" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Propno" Nullable="true" />
+          <Property Type="String" Name="Sex" Nullable="true" MaxLength="6" />
+          <Property Type="DateTime" Name="Propdob" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Propage" Nullable="true" />
+          <Property Type="String" Name="Propatrisk" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Firsttime" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="OccType1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="BusType1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="EmpStatus1" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="Fullpart1" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="OccType2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="BusType2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="EmpStatus2" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="Fullpart2" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="Title" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Propsurname" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Propforenames" Nullable="true" MaxLength="30" />
+          <Property Type="DateTime" Name="Convdate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="Convdate1" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending1" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType1" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="Convdate2" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending2" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType2" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="Convdate3" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending3" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType3" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="Relationship" Nullable="true" MaxLength="18" />
+        </ComplexType>
+        <ComplexType Name="PCProposersParagonNo_Result">
+          <Property Type="String" Name="PolicyRef_" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Propno" Nullable="true" />
+          <Property Type="String" Name="Sex" Nullable="true" MaxLength="6" />
+          <Property Type="DateTime" Name="Propdob" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Propage" Nullable="true" />
+          <Property Type="String" Name="Propatrisk" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Firsttime" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="OccType1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="BusType1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="EmpStatus1" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="Fullpart1" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="OccType2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="BusType2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="EmpStatus2" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="Fullpart2" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="Title" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Propsurname" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Propforenames" Nullable="true" MaxLength="30" />
+          <Property Type="DateTime" Name="Convdate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="Convdate1" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending1" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType1" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="Convdate2" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending2" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType2" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="Convdate3" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending3" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType3" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="Relationship" Nullable="true" MaxLength="18" />
+        </ComplexType>
+        <ComplexType Name="PolicyCheckUploadParagon_Result">
+          <Property Type="Int32" Name="Year_blt" Nullable="true" />
+          <Property Type="String" Name="HouseType" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="Walls" Nullable="true" MaxLength="14" />
+          <Property Type="String" Name="Roof" Nullable="true" MaxLength="11" />
+          <Property Type="Int32" Name="Flatroofpc" Nullable="true" />
+          <Property Type="Int32" Name="Bedrooms" Nullable="true" />
+          <Property Type="Int32" Name="Rooms" Nullable="true" />
+          <Property Type="Int32" Name="Floors" Nullable="true" />
+          <Property Type="Int32" Name="Floorno" Nullable="true" />
+          <Property Type="Int32" Name="Bathrooms" Nullable="true" />
+          <Property Type="String" Name="Extended" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Yearextended" Nullable="true" />
+          <Property Type="String" Name="PrimaryHeating" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="SecondaryHeating" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Refused" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Unspent_pending" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Bankrupt" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Goodrepair" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Riverquarry" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Riverdistance" Nullable="true" />
+          <Property Type="String" Name="Storm" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="BuildingListed" Nullable="true" MaxLength="18" />
+          <Property Type="String" Name="Subsidence" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Repaired" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Landslip" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Underpinned" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Groundheave" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="OccupancyAccomodation" Nullable="true" MaxLength="39" />
+          <Property Type="String" Name="Residence" Nullable="true" MaxLength="19" />
+          <Property Type="String" Name="OccupancyUnoccupied" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Businessuse" Nullable="true" MaxLength="13" />
+          <Property Type="Int32" Name="Stock" Nullable="true" />
+          <Property Type="String" Name="Holidayhome" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Equipment" Nullable="true" />
+          <Property Type="String" Name="Paying_guests" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Payingguestno" Nullable="true" />
+          <Property Type="String" Name="Smokers" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Adults" Nullable="true" />
+          <Property Type="Int32" Name="C_Children" Nullable="true" />
+          <Property Type="String" Name="Main_door" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Nhood_watch" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Other_door" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Smokealarm" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="French_door" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Self_contained" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Windows" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Alarm" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Alarm_type" Nullable="true" MaxLength="31" />
+          <Property Type="String" Name="AlarmAccredDetails1" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="Ftx_accreddetails1" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="Alarm_maint" Nullable="true" MaxLength="3" />
+          <Property Type="DateTime" Name="Alarm_install" Nullable="true" Precision="23" />
+          <Property Type="String" Name="AlarmMaintainceCompany" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Alarmmaintnm" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="AlarmAccredDetails2" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="Ftx_accreddetails2" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="Survey" Nullable="true" MaxLength="3" />
+          <Property Type="DateTime" Name="Survey_date" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Survey_name" Nullable="true" MaxLength="30" />
+          <Property Type="DateTime" Name="Survey_proof_date" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Structural" Nullable="true" MaxLength="3" />
+          <Property Type="DateTime" Name="Structural_date" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Structural_name" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Nhbc_proof" Nullable="true" MaxLength="3" />
+          <Property Type="DateTime" Name="Nhbc_proof_expires" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Riskaddr1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Riskaddr2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Riskaddr3" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Riskaddr4" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Riskpcode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Commaddr1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Commaddr2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Commaddr3" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Commaddr4" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Commpcode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="InterestedPartyType" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="InterestedPartyName" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Interestunlist" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Interestaddr1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Interestaddr2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Interestaddr3" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Interestaddr4" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Interestpcode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Reference" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="Buildingssi" Nullable="true" />
+          <Property Type="Int32" Name="Buildtotxs" Nullable="true" />
+          <Property Type="Int32" Name="Contentssi" Nullable="true" />
+          <Property Type="Int32" Name="Contstotxs" Nullable="true" />
+          <Property Type="String" Name="Allrisks" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Specitems" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Areffects" Nullable="true" />
+          <Property Type="Int32" Name="Areffectsitem" Nullable="true" />
+          <Property Type="String" Name="Areffectsterr" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Arvaluables" Nullable="true" />
+          <Property Type="Int32" Name="Arvaluablesitem" Nullable="true" />
+          <Property Type="String" Name="Arvaluablesterr" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Arphoto" Nullable="true" />
+          <Property Type="Int32" Name="Arphotoitem" Nullable="true" />
+          <Property Type="String" Name="Arphototerr" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Arsport" Nullable="true" />
+          <Property Type="Int32" Name="Arsportitem" Nullable="true" />
+          <Property Type="String" Name="Arsportsterr" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="C_Money" Nullable="true" />
+          <Property Type="String" Name="Armoneyterr" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Creditcards" Nullable="true" />
+          <Property Type="String" Name="Creditcardsterr" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Freezertotal" Nullable="true" />
+          <Property Type="Int32" Name="Freezerage" Nullable="true" />
+          <Property Type="String" Name="Aranybicycles" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Cycleval1" Nullable="true" />
+          <Property Type="String" Name="Cyclemake1" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycledesc1" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycle1territory" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Cycleval2" Nullable="true" />
+          <Property Type="String" Name="Cyclemake2" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycledesc2" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycle2territory" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Cycleval3" Nullable="true" />
+          <Property Type="String" Name="Cyclemake3" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycledesc3" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycle3territory" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Cycleval4" Nullable="true" />
+          <Property Type="String" Name="Cyclemake4" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycledesc4" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycle4territory" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Cycleval5" Nullable="true" />
+          <Property Type="String" Name="Cyclemake5" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycledesc5" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycle5territory" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Cycleval6" Nullable="true" />
+          <Property Type="String" Name="Cyclemake6" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycledesc6" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycle6territory" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Buildingscover" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Reqbuildcover" Nullable="true" />
+          <Property Type="Int32" Name="Buildvolxs" Nullable="true" />
+          <Property Type="String" Name="Buildbuyback" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Buildings" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="BuildInsName" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Binsurername" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Bpolicy_no" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="Bdate_lapsed" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Bncb_years" Nullable="true" />
+          <Property Type="String" Name="Bncb_proof" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Byearsinsured" Nullable="true" />
+          <Property Type="String" Name="Bbstfeepaid" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Btransfer_proof" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Contentscover" Nullable="true" MaxLength="11" />
+          <Property Type="Int32" Name="Contsgoods" Nullable="true" />
+          <Property Type="Int32" Name="Contsgoodslimit" Nullable="true" />
+          <Property Type="Int32" Name="Contsvals" Nullable="true" />
+          <Property Type="Int32" Name="Contsvalslimit" Nullable="true" />
+          <Property Type="Int32" Name="Contsvolxs" Nullable="true" />
+          <Property Type="String" Name="Contsbuyback" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Contents" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ContentInsName" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Cinsurername" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Cpolicy_no" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="Cdate_lapsed" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Cncb_years" Nullable="true" />
+          <Property Type="String" Name="Cncb_proof" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Cyearsinsured" Nullable="true" />
+          <Property Type="String" Name="Sex" Nullable="true" MaxLength="6" />
+          <Property Type="DateTime" Name="Propdob" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Propage" Nullable="true" />
+          <Property Type="String" Name="Propatrisk" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Firsttime" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="OccType1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="BusType1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="EmpStatus1" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="Fullpart1" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="OccType2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="BusType2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="EmpStatus2" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="Fullpart2" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="Title" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Propsurname" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Propforenames" Nullable="true" MaxLength="30" />
+          <Property Type="DateTime" Name="Convdate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="Convdate1" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending1" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType1" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="Convdate2" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending2" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType2" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="Convdate3" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending3" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType3" Nullable="true" MaxLength="40" />
+          <Property Type="Int32" Name="Legalexpenses" Nullable="true" />
+          <Property Type="String" Name="Currentmotorpolicy" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="MotorInsurer" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Caravans" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Caravanssi" Nullable="true" />
+          <Property Type="String" Name="Boats" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Boatssi" Nullable="true" />
+          <Property Type="String" Name="Consentforsearches" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Scheme" Nullable="true" />
+          <Property Type="DateTime" Name="Coverdate" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="PolicyCheckUploadParagonBD_Result">
+          <Property Type="Int32" Name="Year_blt" Nullable="true" />
+          <Property Type="String" Name="HouseType" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="Walls" Nullable="true" MaxLength="14" />
+          <Property Type="String" Name="Roof" Nullable="true" MaxLength="11" />
+          <Property Type="Int32" Name="Flatroofpc" Nullable="true" />
+          <Property Type="Int32" Name="Bedrooms" Nullable="true" />
+          <Property Type="Int32" Name="Rooms" Nullable="true" />
+          <Property Type="Int32" Name="Floors" Nullable="true" />
+          <Property Type="Int32" Name="Floorno" Nullable="true" />
+          <Property Type="Int32" Name="Bathrooms" Nullable="true" />
+          <Property Type="String" Name="Extended" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Yearextended" Nullable="true" />
+          <Property Type="String" Name="PrimaryHeating" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="SecondaryHeating" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Refused" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Unspent_pending" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Bankrupt" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Goodrepair" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Riverquarry" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Riverdistance" Nullable="true" />
+          <Property Type="String" Name="Storm" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="BuildingListed" Nullable="true" MaxLength="18" />
+          <Property Type="String" Name="Subsidence" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Repaired" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Landslip" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Underpinned" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Groundheave" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="OccupancyAccomodation" Nullable="true" MaxLength="39" />
+          <Property Type="String" Name="Residence" Nullable="true" MaxLength="19" />
+          <Property Type="String" Name="OccupancyUnoccupied" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Businessuse" Nullable="true" MaxLength="13" />
+          <Property Type="Int32" Name="Stock" Nullable="true" />
+          <Property Type="String" Name="Holidayhome" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Equipment" Nullable="true" />
+          <Property Type="String" Name="Paying_guests" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Payingguestno" Nullable="true" />
+          <Property Type="String" Name="Smokers" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Adults" Nullable="true" />
+          <Property Type="Int32" Name="C_Children" Nullable="true" />
+          <Property Type="String" Name="Main_door" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Nhood_watch" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Other_door" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Smokealarm" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="French_door" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Self_contained" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Windows" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Alarm" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Alarm_type" Nullable="true" MaxLength="31" />
+          <Property Type="String" Name="AlarmAccredDetails1" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="Ftx_accreddetails1" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="Alarm_maint" Nullable="true" MaxLength="3" />
+          <Property Type="DateTime" Name="Alarm_install" Nullable="true" Precision="23" />
+          <Property Type="String" Name="AlarmMaintainceCompany" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Alarmmaintnm" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="AlarmAccredDetails2" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="Ftx_accreddetails2" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="Survey" Nullable="true" MaxLength="3" />
+          <Property Type="DateTime" Name="Survey_date" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Survey_name" Nullable="true" MaxLength="30" />
+          <Property Type="DateTime" Name="Survey_proof_date" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Structural" Nullable="true" MaxLength="3" />
+          <Property Type="DateTime" Name="Structural_date" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Structural_name" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Nhbc_proof" Nullable="true" MaxLength="3" />
+          <Property Type="DateTime" Name="Nhbc_proof_expires" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Riskaddr1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Riskaddr2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Riskaddr3" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Riskaddr4" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Riskpcode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Commaddr1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Commaddr2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Commaddr3" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Commaddr4" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Commpcode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="InterestedPartyType" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="InterestedPartyName" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Interestunlist" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Interestaddr1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Interestaddr2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Interestaddr3" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Interestaddr4" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Interestpcode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Reference" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="Buildingssi" Nullable="true" />
+          <Property Type="Int32" Name="Buildtotxs" Nullable="true" />
+          <Property Type="Int32" Name="Contentssi" Nullable="true" />
+          <Property Type="Int32" Name="Contstotxs" Nullable="true" />
+          <Property Type="String" Name="Allrisks" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Specitems" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Areffects" Nullable="true" />
+          <Property Type="Int32" Name="Areffectsitem" Nullable="true" />
+          <Property Type="String" Name="Areffectsterr" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Arvaluables" Nullable="true" />
+          <Property Type="Int32" Name="Arvaluablesitem" Nullable="true" />
+          <Property Type="String" Name="Arvaluablesterr" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Arphoto" Nullable="true" />
+          <Property Type="Int32" Name="Arphotoitem" Nullable="true" />
+          <Property Type="String" Name="Arphototerr" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Arsport" Nullable="true" />
+          <Property Type="Int32" Name="Arsportitem" Nullable="true" />
+          <Property Type="String" Name="Arsportsterr" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="C_Money" Nullable="true" />
+          <Property Type="String" Name="Armoneyterr" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Creditcards" Nullable="true" />
+          <Property Type="String" Name="Creditcardsterr" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Freezertotal" Nullable="true" />
+          <Property Type="Int32" Name="Freezerage" Nullable="true" />
+          <Property Type="String" Name="Aranybicycles" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Cycleval1" Nullable="true" />
+          <Property Type="String" Name="Cyclemake1" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycledesc1" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycle1territory" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Cycleval2" Nullable="true" />
+          <Property Type="String" Name="Cyclemake2" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycledesc2" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycle2territory" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Cycleval3" Nullable="true" />
+          <Property Type="String" Name="Cyclemake3" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycledesc3" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycle3territory" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Cycleval4" Nullable="true" />
+          <Property Type="String" Name="Cyclemake4" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycledesc4" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycle4territory" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Cycleval5" Nullable="true" />
+          <Property Type="String" Name="Cyclemake5" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycledesc5" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycle5territory" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Cycleval6" Nullable="true" />
+          <Property Type="String" Name="Cyclemake6" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycledesc6" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycle6territory" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Buildingscover" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Reqbuildcover" Nullable="true" />
+          <Property Type="Int32" Name="Buildvolxs" Nullable="true" />
+          <Property Type="String" Name="Buildbuyback" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Buildings" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="BuildInsName" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Binsurername" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Bpolicy_no" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="Bdate_lapsed" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Bncb_years" Nullable="true" />
+          <Property Type="String" Name="Bncb_proof" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Byearsinsured" Nullable="true" />
+          <Property Type="String" Name="Bbstfeepaid" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Btransfer_proof" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Contentscover" Nullable="true" MaxLength="11" />
+          <Property Type="Int32" Name="Contsgoods" Nullable="true" />
+          <Property Type="Int32" Name="Contsgoodslimit" Nullable="true" />
+          <Property Type="Int32" Name="Contsvals" Nullable="true" />
+          <Property Type="Int32" Name="Contsvalslimit" Nullable="true" />
+          <Property Type="Int32" Name="Contsvolxs" Nullable="true" />
+          <Property Type="String" Name="Contsbuyback" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Contents" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ContentInsName" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Cinsurername" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Cpolicy_no" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="Cdate_lapsed" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Cncb_years" Nullable="true" />
+          <Property Type="String" Name="Cncb_proof" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Cyearsinsured" Nullable="true" />
+          <Property Type="String" Name="Sex" Nullable="true" MaxLength="6" />
+          <Property Type="DateTime" Name="Propdob" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Propage" Nullable="true" />
+          <Property Type="String" Name="Propatrisk" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Firsttime" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="OccType1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="BusType1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="EmpStatus1" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="Fullpart1" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="OccType2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="BusType2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="EmpStatus2" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="Fullpart2" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="Title" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Propsurname" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Propforenames" Nullable="true" MaxLength="30" />
+          <Property Type="DateTime" Name="Convdate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="Convdate1" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending1" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType1" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="Convdate2" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending2" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType2" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="Convdate3" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending3" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType3" Nullable="true" MaxLength="40" />
+          <Property Type="Int32" Name="Legalexpenses" Nullable="true" />
+          <Property Type="String" Name="Currentmotorpolicy" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="MotorInsurer" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Caravans" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Caravanssi" Nullable="true" />
+          <Property Type="String" Name="Boats" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Boatssi" Nullable="true" />
+          <Property Type="String" Name="Consentforsearches" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Scheme" Nullable="true" />
+          <Property Type="DateTime" Name="Coverdate" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="PolicyCheckUploadParagonUpdate_Result">
+          <Property Type="Int32" Name="Year_blt" Nullable="true" />
+          <Property Type="String" Name="HouseType" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="Walls" Nullable="true" MaxLength="14" />
+          <Property Type="String" Name="Roof" Nullable="true" MaxLength="11" />
+          <Property Type="Int32" Name="Flatroofpc" Nullable="true" />
+          <Property Type="Int32" Name="Bedrooms" Nullable="true" />
+          <Property Type="Int32" Name="Rooms" Nullable="true" />
+          <Property Type="Int32" Name="Floors" Nullable="true" />
+          <Property Type="Int32" Name="Floorno" Nullable="true" />
+          <Property Type="Int32" Name="Bathrooms" Nullable="true" />
+          <Property Type="String" Name="Extended" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="PrimaryHeating" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="SecondaryHeating" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Refused" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Unspent_pending" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Bankrupt" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Goodrepair" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Riverquarry" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Riverdistance" Nullable="true" />
+          <Property Type="String" Name="Storm" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="BuildingListed" Nullable="true" MaxLength="18" />
+          <Property Type="String" Name="Subsidence" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Repaired" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Landslip" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Underpinned" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Groundheave" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="OccupancyAccomodation" Nullable="true" MaxLength="39" />
+          <Property Type="String" Name="Residence" Nullable="true" MaxLength="19" />
+          <Property Type="String" Name="OccupancyUnoccupied" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Businessuse" Nullable="true" MaxLength="13" />
+          <Property Type="Int32" Name="Stock" Nullable="true" />
+          <Property Type="String" Name="Holidayhome" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Equipment" Nullable="true" />
+          <Property Type="String" Name="Paying_guests" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Payingguestno" Nullable="true" />
+          <Property Type="String" Name="Smokers" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Adults" Nullable="true" />
+          <Property Type="Int32" Name="C_Children" Nullable="true" />
+          <Property Type="String" Name="Main_door" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Nhood_watch" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Other_door" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Smokealarm" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="French_door" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Self_contained" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Windows" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Alarm" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Alarm_type" Nullable="true" MaxLength="31" />
+          <Property Type="String" Name="AlarmAccredDetails1" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="Ftx_accreddetails1" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="Alarm_maint" Nullable="true" MaxLength="3" />
+          <Property Type="DateTime" Name="Alarm_install" Nullable="true" Precision="23" />
+          <Property Type="String" Name="AlarmMaintainceCompany" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Alarmmaintnm" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="AlarmAccredDetails2" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="Ftx_accreddetails2" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="Survey" Nullable="true" MaxLength="3" />
+          <Property Type="DateTime" Name="Survey_date" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Survey_name" Nullable="true" MaxLength="30" />
+          <Property Type="DateTime" Name="Survey_proof_date" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Structural" Nullable="true" MaxLength="3" />
+          <Property Type="DateTime" Name="Structural_date" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Structural_name" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Nhbc_proof" Nullable="true" MaxLength="3" />
+          <Property Type="DateTime" Name="Nhbc_proof_expires" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Riskaddr1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Riskaddr2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Riskaddr3" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Riskaddr4" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Riskpcode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Commaddr1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Commaddr2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Commaddr3" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Commaddr4" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Commpcode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="InterestedPartyType" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="InterestedPartyName" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Interestaddr1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Interestaddr2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Interestaddr3" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Interestaddr4" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Interestpcode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Reference" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="Buildingssi" Nullable="true" />
+          <Property Type="Int32" Name="Buildtotxs" Nullable="true" />
+          <Property Type="Int32" Name="Contentssi" Nullable="true" />
+          <Property Type="Int32" Name="Contstotxs" Nullable="true" />
+          <Property Type="String" Name="Allrisks" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Specitems" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Areffects" Nullable="true" />
+          <Property Type="Int32" Name="Areffectsitem" Nullable="true" />
+          <Property Type="String" Name="Areffectsterr" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Arvaluables" Nullable="true" />
+          <Property Type="Int32" Name="Arvaluablesitem" Nullable="true" />
+          <Property Type="String" Name="Arvaluablesterr" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Arphoto" Nullable="true" />
+          <Property Type="Int32" Name="Arphotoitem" Nullable="true" />
+          <Property Type="String" Name="Arphototerr" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Arsport" Nullable="true" />
+          <Property Type="Int32" Name="Arsportitem" Nullable="true" />
+          <Property Type="String" Name="Arsportsterr" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="C_Money" Nullable="true" />
+          <Property Type="String" Name="Armoneyterr" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Creditcards" Nullable="true" />
+          <Property Type="String" Name="Creditcardsterr" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Freezertotal" Nullable="true" />
+          <Property Type="Int32" Name="Freezerage" Nullable="true" />
+          <Property Type="String" Name="Aranybicycles" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Cycleval1" Nullable="true" />
+          <Property Type="String" Name="Cyclemake1" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycledesc1" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycle1territory" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Cycleval2" Nullable="true" />
+          <Property Type="String" Name="Cyclemake2" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycledesc2" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycle2territory" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Cycleval3" Nullable="true" />
+          <Property Type="String" Name="Cyclemake3" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycledesc3" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycle3territory" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Cycleval4" Nullable="true" />
+          <Property Type="String" Name="Cyclemake4" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycledesc4" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycle4territory" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Cycleval5" Nullable="true" />
+          <Property Type="String" Name="Cyclemake5" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycledesc5" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycle5territory" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Cycleval6" Nullable="true" />
+          <Property Type="String" Name="Cyclemake6" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycledesc6" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Cycle6territory" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Buildingscover" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Reqbuildcover" Nullable="true" />
+          <Property Type="Int32" Name="Buildvolxs" Nullable="true" />
+          <Property Type="String" Name="Buildbuyback" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Buildings" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="BuildInsName" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Binsurername" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Bpolicy_no" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="Bdate_lapsed" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Bncb_years" Nullable="true" />
+          <Property Type="String" Name="Bncb_proof" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Byearsinsured" Nullable="true" />
+          <Property Type="String" Name="Bbstfeepaid" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Btransfer_proof" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Contentscover" Nullable="true" MaxLength="11" />
+          <Property Type="Int32" Name="Contsgoods" Nullable="true" />
+          <Property Type="Int32" Name="Contsgoodslimit" Nullable="true" />
+          <Property Type="Int32" Name="Contsvals" Nullable="true" />
+          <Property Type="Int32" Name="Contsvalslimit" Nullable="true" />
+          <Property Type="Int32" Name="Contsvolxs" Nullable="true" />
+          <Property Type="String" Name="Contsbuyback" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Contents" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ContentInsName" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Cinsurername" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Cpolicy_no" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="Cdate_lapsed" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Cncb_years" Nullable="true" />
+          <Property Type="String" Name="Cncb_proof" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Cyearsinsured" Nullable="true" />
+          <Property Type="String" Name="Sex" Nullable="true" MaxLength="6" />
+          <Property Type="DateTime" Name="Propdob" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Propage" Nullable="true" />
+          <Property Type="String" Name="Propatrisk" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Firsttime" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="OccType1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="BusType1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="EmpStatus1" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="Fullpart1" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="OccType2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="BusType2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="EmpStatus2" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="Fullpart2" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="Title" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Propsurname" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Propforenames" Nullable="true" MaxLength="30" />
+          <Property Type="DateTime" Name="Convdate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="Convdate1" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending1" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType1" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="Convdate2" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending2" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType2" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="Convdate3" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Convpending3" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ConvType3" Nullable="true" MaxLength="40" />
+          <Property Type="Int32" Name="Legalexpenses" Nullable="true" />
+          <Property Type="String" Name="Currentmotorpolicy" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="MotorInsurer" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="Caravans" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Caravanssi" Nullable="true" />
+          <Property Type="String" Name="Boats" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Boatssi" Nullable="true" />
+          <Property Type="String" Name="Consentforsearches" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Scheme" Nullable="true" />
+          <Property Type="DateTime" Name="Coverdate" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="SpecItemUploadParagon_Result">
+          <Property Type="String" Name="Category" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Stated_value" Nullable="true" />
+          <Property Type="String" Name="Covertype" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Description1" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="Description2" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="SpecItemDeleted" Nullable="true" MaxLength="11" />
+          <Property Type="Int32" Name="amount" Nullable="true" />
+          <Property Type="DateTime" Name="SpecDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Territory" Nullable="true" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="SpecItemUploadParagonBD_Result">
+          <Property Type="String" Name="Category" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Stated_value" Nullable="true" />
+          <Property Type="String" Name="Covertype" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Description1" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="Description2" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="SpecItemDeleted" Nullable="true" MaxLength="11" />
+          <Property Type="Int32" Name="amount" Nullable="true" />
+          <Property Type="DateTime" Name="SpecDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Territory" Nullable="true" MaxLength="10" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ParagonModelStoreContainer" CdmEntityContainer="ParagonEntities15" >
+          <FunctionImportMapping FunctionImportName="ClaimsUploadParagon" FunctionName="ParagonModel.Store.ClaimsUploadParagon">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ParagonModel.ClaimsUploadParagon_Result">
+                <ScalarProperty Name="ClaimDate" ColumnName="ClaimDate" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="C_Value" ColumnName="#Value" />
+                <ScalarProperty Name="C_Section" ColumnName="#Section" />
+                <ScalarProperty Name="Desc1" ColumnName="Desc1" />
+                <ScalarProperty Name="Desc2" ColumnName="Desc2" />
+                <ScalarProperty Name="ClaimDeleted" ColumnName="ClaimDeleted" />
+                <ScalarProperty Name="Claimsettled" ColumnName="Claimsettled" />
+                <ScalarProperty Name="C_Number" ColumnName="#Number" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ClaimsUploadParagonBD" FunctionName="ParagonModel.Store.ClaimsUploadParagonBD">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ParagonModel.ClaimsUploadParagonBD_Result">
+                <ScalarProperty Name="ClaimDate" ColumnName="ClaimDate" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="C_Value" ColumnName="#Value" />
+                <ScalarProperty Name="C_Section" ColumnName="#Section" />
+                <ScalarProperty Name="Desc1" ColumnName="Desc1" />
+                <ScalarProperty Name="Desc2" ColumnName="Desc2" />
+                <ScalarProperty Name="ClaimDeleted" ColumnName="ClaimDeleted" />
+                <ScalarProperty Name="Claimsettled" ColumnName="Claimsettled" />
+                <ScalarProperty Name="C_Number" ColumnName="#Number" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ClaimsUploadParagonNo" FunctionName="ParagonModel.Store.ClaimsUploadParagonNo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ParagonModel.ClaimsUploadParagonNo_Result">
+                <ScalarProperty Name="C_Number" ColumnName="#Number" />
+                <ScalarProperty Name="ClaimDate" ColumnName="ClaimDate" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="C_Value" ColumnName="#Value" />
+                <ScalarProperty Name="C_Section" ColumnName="#Section" />
+                <ScalarProperty Name="Desc1" ColumnName="Desc1" />
+                <ScalarProperty Name="Desc2" ColumnName="Desc2" />
+                <ScalarProperty Name="ClaimDeleted" ColumnName="ClaimDeleted" />
+                <ScalarProperty Name="Claimsettled" ColumnName="Claimsettled" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PCProposersParagon1" FunctionName="ParagonModel.Store.PCProposersParagon1">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ParagonModel.PCProposersParagon1_Result">
+                <ScalarProperty Name="PolicyRef_" ColumnName="PolicyRef@" />
+                <ScalarProperty Name="Propno" ColumnName="Propno" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Propdob" ColumnName="Propdob" />
+                <ScalarProperty Name="Propage" ColumnName="Propage" />
+                <ScalarProperty Name="Propatrisk" ColumnName="Propatrisk" />
+                <ScalarProperty Name="Firsttime" ColumnName="Firsttime" />
+                <ScalarProperty Name="OccType1" ColumnName="OccType1" />
+                <ScalarProperty Name="BusType1" ColumnName="BusType1" />
+                <ScalarProperty Name="EmpStatus1" ColumnName="EmpStatus1" />
+                <ScalarProperty Name="Fullpart1" ColumnName="Fullpart1" />
+                <ScalarProperty Name="OccType2" ColumnName="OccType2" />
+                <ScalarProperty Name="BusType2" ColumnName="BusType2" />
+                <ScalarProperty Name="EmpStatus2" ColumnName="EmpStatus2" />
+                <ScalarProperty Name="Fullpart2" ColumnName="Fullpart2" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Propsurname" ColumnName="Propsurname" />
+                <ScalarProperty Name="Propforenames" ColumnName="Propforenames" />
+                <ScalarProperty Name="Convdate" ColumnName="Convdate" />
+                <ScalarProperty Name="Convpending" ColumnName="Convpending" />
+                <ScalarProperty Name="ConvType" ColumnName="ConvType" />
+                <ScalarProperty Name="Convdate1" ColumnName="Convdate1" />
+                <ScalarProperty Name="Convpending1" ColumnName="Convpending1" />
+                <ScalarProperty Name="ConvType1" ColumnName="ConvType1" />
+                <ScalarProperty Name="Convdate2" ColumnName="Convdate2" />
+                <ScalarProperty Name="Convpending2" ColumnName="Convpending2" />
+                <ScalarProperty Name="ConvType2" ColumnName="ConvType2" />
+                <ScalarProperty Name="Convdate3" ColumnName="Convdate3" />
+                <ScalarProperty Name="Convpending3" ColumnName="Convpending3" />
+                <ScalarProperty Name="ConvType3" ColumnName="ConvType3" />
+                <ScalarProperty Name="Relationship" ColumnName="Relationship" />
+                <ScalarProperty Name="Live_from_date" ColumnName="Live_from_date" />
+                <ScalarProperty Name="Refused" ColumnName="Refused" />
+                <ScalarProperty Name="Riskaddr1" ColumnName="Riskaddr1" />
+                <ScalarProperty Name="Riskaddr2" ColumnName="Riskaddr2" />
+                <ScalarProperty Name="Riskaddr3" ColumnName="Riskaddr3" />
+                <ScalarProperty Name="Riskaddr4" ColumnName="Riskaddr4" />
+                <ScalarProperty Name="Riskpcode" ColumnName="Riskpcode" />
+                <ScalarProperty Name="Commaddr1" ColumnName="Commaddr1" />
+                <ScalarProperty Name="Commaddr2" ColumnName="Commaddr2" />
+                <ScalarProperty Name="Commaddr3" ColumnName="Commaddr3" />
+                <ScalarProperty Name="Commaddr4" ColumnName="Commaddr4" />
+                <ScalarProperty Name="Commpcode" ColumnName="Commpcode" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PCProposersParagonBD1" FunctionName="ParagonModel.Store.PCProposersParagonBD1">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ParagonModel.PCProposersParagonBD1_Result">
+                <ScalarProperty Name="PolicyRef_" ColumnName="PolicyRef@" />
+                <ScalarProperty Name="Propno" ColumnName="Propno" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Propdob" ColumnName="Propdob" />
+                <ScalarProperty Name="Propage" ColumnName="Propage" />
+                <ScalarProperty Name="Propatrisk" ColumnName="Propatrisk" />
+                <ScalarProperty Name="Firsttime" ColumnName="Firsttime" />
+                <ScalarProperty Name="OccType1" ColumnName="OccType1" />
+                <ScalarProperty Name="BusType1" ColumnName="BusType1" />
+                <ScalarProperty Name="EmpStatus1" ColumnName="EmpStatus1" />
+                <ScalarProperty Name="Fullpart1" ColumnName="Fullpart1" />
+                <ScalarProperty Name="OccType2" ColumnName="OccType2" />
+                <ScalarProperty Name="BusType2" ColumnName="BusType2" />
+                <ScalarProperty Name="EmpStatus2" ColumnName="EmpStatus2" />
+                <ScalarProperty Name="Fullpart2" ColumnName="Fullpart2" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Propsurname" ColumnName="Propsurname" />
+                <ScalarProperty Name="Propforenames" ColumnName="Propforenames" />
+                <ScalarProperty Name="Convdate" ColumnName="Convdate" />
+                <ScalarProperty Name="Convpending" ColumnName="Convpending" />
+                <ScalarProperty Name="ConvType" ColumnName="ConvType" />
+                <ScalarProperty Name="Convdate1" ColumnName="Convdate1" />
+                <ScalarProperty Name="Convpending1" ColumnName="Convpending1" />
+                <ScalarProperty Name="ConvType1" ColumnName="ConvType1" />
+                <ScalarProperty Name="Convdate2" ColumnName="Convdate2" />
+                <ScalarProperty Name="Convpending2" ColumnName="Convpending2" />
+                <ScalarProperty Name="ConvType2" ColumnName="ConvType2" />
+                <ScalarProperty Name="Convdate3" ColumnName="Convdate3" />
+                <ScalarProperty Name="Convpending3" ColumnName="Convpending3" />
+                <ScalarProperty Name="ConvType3" ColumnName="ConvType3" />
+                <ScalarProperty Name="Relationship" ColumnName="Relationship" />
+                <ScalarProperty Name="Live_from_date" ColumnName="Live_from_date" />
+                <ScalarProperty Name="Refused" ColumnName="Refused" />
+                <ScalarProperty Name="Riskaddr1" ColumnName="Riskaddr1" />
+                <ScalarProperty Name="Riskaddr2" ColumnName="Riskaddr2" />
+                <ScalarProperty Name="Riskaddr3" ColumnName="Riskaddr3" />
+                <ScalarProperty Name="Riskaddr4" ColumnName="Riskaddr4" />
+                <ScalarProperty Name="Riskpcode" ColumnName="Riskpcode" />
+                <ScalarProperty Name="Commaddr1" ColumnName="Commaddr1" />
+                <ScalarProperty Name="Commaddr2" ColumnName="Commaddr2" />
+                <ScalarProperty Name="Commaddr3" ColumnName="Commaddr3" />
+                <ScalarProperty Name="Commaddr4" ColumnName="Commaddr4" />
+                <ScalarProperty Name="Commpcode" ColumnName="Commpcode" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PCProposersParagonBDNo" FunctionName="ParagonModel.Store.PCProposersParagonBDNo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ParagonModel.PCProposersParagonBDNo_Result">
+                <ScalarProperty Name="PolicyRef_" ColumnName="PolicyRef@" />
+                <ScalarProperty Name="Propno" ColumnName="Propno" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Propdob" ColumnName="Propdob" />
+                <ScalarProperty Name="Propage" ColumnName="Propage" />
+                <ScalarProperty Name="Propatrisk" ColumnName="Propatrisk" />
+                <ScalarProperty Name="Firsttime" ColumnName="Firsttime" />
+                <ScalarProperty Name="OccType1" ColumnName="OccType1" />
+                <ScalarProperty Name="BusType1" ColumnName="BusType1" />
+                <ScalarProperty Name="EmpStatus1" ColumnName="EmpStatus1" />
+                <ScalarProperty Name="Fullpart1" ColumnName="Fullpart1" />
+                <ScalarProperty Name="OccType2" ColumnName="OccType2" />
+                <ScalarProperty Name="BusType2" ColumnName="BusType2" />
+                <ScalarProperty Name="EmpStatus2" ColumnName="EmpStatus2" />
+                <ScalarProperty Name="Fullpart2" ColumnName="Fullpart2" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Propsurname" ColumnName="Propsurname" />
+                <ScalarProperty Name="Propforenames" ColumnName="Propforenames" />
+                <ScalarProperty Name="Convdate" ColumnName="Convdate" />
+                <ScalarProperty Name="Convpending" ColumnName="Convpending" />
+                <ScalarProperty Name="ConvType" ColumnName="ConvType" />
+                <ScalarProperty Name="Convdate1" ColumnName="Convdate1" />
+                <ScalarProperty Name="Convpending1" ColumnName="Convpending1" />
+                <ScalarProperty Name="ConvType1" ColumnName="ConvType1" />
+                <ScalarProperty Name="Convdate2" ColumnName="Convdate2" />
+                <ScalarProperty Name="Convpending2" ColumnName="Convpending2" />
+                <ScalarProperty Name="ConvType2" ColumnName="ConvType2" />
+                <ScalarProperty Name="Convdate3" ColumnName="Convdate3" />
+                <ScalarProperty Name="Convpending3" ColumnName="Convpending3" />
+                <ScalarProperty Name="ConvType3" ColumnName="ConvType3" />
+                <ScalarProperty Name="Relationship" ColumnName="Relationship" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PCProposersParagonNo" FunctionName="ParagonModel.Store.PCProposersParagonNo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ParagonModel.PCProposersParagonNo_Result">
+                <ScalarProperty Name="PolicyRef_" ColumnName="PolicyRef@" />
+                <ScalarProperty Name="Propno" ColumnName="Propno" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Propdob" ColumnName="Propdob" />
+                <ScalarProperty Name="Propage" ColumnName="Propage" />
+                <ScalarProperty Name="Propatrisk" ColumnName="Propatrisk" />
+                <ScalarProperty Name="Firsttime" ColumnName="Firsttime" />
+                <ScalarProperty Name="OccType1" ColumnName="OccType1" />
+                <ScalarProperty Name="BusType1" ColumnName="BusType1" />
+                <ScalarProperty Name="EmpStatus1" ColumnName="EmpStatus1" />
+                <ScalarProperty Name="Fullpart1" ColumnName="Fullpart1" />
+                <ScalarProperty Name="OccType2" ColumnName="OccType2" />
+                <ScalarProperty Name="BusType2" ColumnName="BusType2" />
+                <ScalarProperty Name="EmpStatus2" ColumnName="EmpStatus2" />
+                <ScalarProperty Name="Fullpart2" ColumnName="Fullpart2" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Propsurname" ColumnName="Propsurname" />
+                <ScalarProperty Name="Propforenames" ColumnName="Propforenames" />
+                <ScalarProperty Name="Convdate" ColumnName="Convdate" />
+                <ScalarProperty Name="Convpending" ColumnName="Convpending" />
+                <ScalarProperty Name="ConvType" ColumnName="ConvType" />
+                <ScalarProperty Name="Convdate1" ColumnName="Convdate1" />
+                <ScalarProperty Name="Convpending1" ColumnName="Convpending1" />
+                <ScalarProperty Name="ConvType1" ColumnName="ConvType1" />
+                <ScalarProperty Name="Convdate2" ColumnName="Convdate2" />
+                <ScalarProperty Name="Convpending2" ColumnName="Convpending2" />
+                <ScalarProperty Name="ConvType2" ColumnName="ConvType2" />
+                <ScalarProperty Name="Convdate3" ColumnName="Convdate3" />
+                <ScalarProperty Name="Convpending3" ColumnName="Convpending3" />
+                <ScalarProperty Name="ConvType3" ColumnName="ConvType3" />
+                <ScalarProperty Name="Relationship" ColumnName="Relationship" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PolicyCheckUploadParagon" FunctionName="ParagonModel.Store.PolicyCheckUploadParagon">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ParagonModel.PolicyCheckUploadParagon_Result">
+                <ScalarProperty Name="Year_blt" ColumnName="Year_blt" />
+                <ScalarProperty Name="HouseType" ColumnName="HouseType" />
+                <ScalarProperty Name="Walls" ColumnName="Walls" />
+                <ScalarProperty Name="Roof" ColumnName="Roof" />
+                <ScalarProperty Name="Flatroofpc" ColumnName="Flatroofpc" />
+                <ScalarProperty Name="Bedrooms" ColumnName="Bedrooms" />
+                <ScalarProperty Name="Rooms" ColumnName="Rooms" />
+                <ScalarProperty Name="Floors" ColumnName="Floors" />
+                <ScalarProperty Name="Floorno" ColumnName="Floorno" />
+                <ScalarProperty Name="Bathrooms" ColumnName="Bathrooms" />
+                <ScalarProperty Name="Extended" ColumnName="Extended" />
+                <ScalarProperty Name="Yearextended" ColumnName="Yearextended" />
+                <ScalarProperty Name="PrimaryHeating" ColumnName="PrimaryHeating" />
+                <ScalarProperty Name="SecondaryHeating" ColumnName="SecondaryHeating" />
+                <ScalarProperty Name="Refused" ColumnName="Refused" />
+                <ScalarProperty Name="Unspent_pending" ColumnName="Unspent_pending" />
+                <ScalarProperty Name="Bankrupt" ColumnName="Bankrupt" />
+                <ScalarProperty Name="Goodrepair" ColumnName="Goodrepair" />
+                <ScalarProperty Name="Riverquarry" ColumnName="Riverquarry" />
+                <ScalarProperty Name="Riverdistance" ColumnName="Riverdistance" />
+                <ScalarProperty Name="Storm" ColumnName="Storm" />
+                <ScalarProperty Name="BuildingListed" ColumnName="BuildingListed" />
+                <ScalarProperty Name="Subsidence" ColumnName="Subsidence" />
+                <ScalarProperty Name="Repaired" ColumnName="Repaired" />
+                <ScalarProperty Name="Landslip" ColumnName="Landslip" />
+                <ScalarProperty Name="Underpinned" ColumnName="Underpinned" />
+                <ScalarProperty Name="Groundheave" ColumnName="Groundheave" />
+                <ScalarProperty Name="OccupancyAccomodation" ColumnName="OccupancyAccomodation" />
+                <ScalarProperty Name="Residence" ColumnName="Residence" />
+                <ScalarProperty Name="OccupancyUnoccupied" ColumnName="OccupancyUnoccupied" />
+                <ScalarProperty Name="Businessuse" ColumnName="Businessuse" />
+                <ScalarProperty Name="Stock" ColumnName="Stock" />
+                <ScalarProperty Name="Holidayhome" ColumnName="Holidayhome" />
+                <ScalarProperty Name="Equipment" ColumnName="Equipment" />
+                <ScalarProperty Name="Paying_guests" ColumnName="Paying_guests" />
+                <ScalarProperty Name="Payingguestno" ColumnName="Payingguestno" />
+                <ScalarProperty Name="Smokers" ColumnName="Smokers" />
+                <ScalarProperty Name="Adults" ColumnName="Adults" />
+                <ScalarProperty Name="C_Children" ColumnName="#Children" />
+                <ScalarProperty Name="Main_door" ColumnName="Main_door" />
+                <ScalarProperty Name="Nhood_watch" ColumnName="Nhood_watch" />
+                <ScalarProperty Name="Other_door" ColumnName="Other_door" />
+                <ScalarProperty Name="Smokealarm" ColumnName="Smokealarm" />
+                <ScalarProperty Name="French_door" ColumnName="French_door" />
+                <ScalarProperty Name="Self_contained" ColumnName="Self_contained" />
+                <ScalarProperty Name="Windows" ColumnName="Windows" />
+                <ScalarProperty Name="Alarm" ColumnName="Alarm" />
+                <ScalarProperty Name="Alarm_type" ColumnName="Alarm_type" />
+                <ScalarProperty Name="AlarmAccredDetails1" ColumnName="AlarmAccredDetails1" />
+                <ScalarProperty Name="Ftx_accreddetails1" ColumnName="Ftx_accreddetails1" />
+                <ScalarProperty Name="Alarm_maint" ColumnName="Alarm_maint" />
+                <ScalarProperty Name="Alarm_install" ColumnName="Alarm_install" />
+                <ScalarProperty Name="AlarmMaintainceCompany" ColumnName="AlarmMaintainceCompany" />
+                <ScalarProperty Name="Alarmmaintnm" ColumnName="Alarmmaintnm" />
+                <ScalarProperty Name="AlarmAccredDetails2" ColumnName="AlarmAccredDetails2" />
+                <ScalarProperty Name="Ftx_accreddetails2" ColumnName="Ftx_accreddetails2" />
+                <ScalarProperty Name="Survey" ColumnName="Survey" />
+                <ScalarProperty Name="Survey_date" ColumnName="Survey_date" />
+                <ScalarProperty Name="Survey_name" ColumnName="Survey_name" />
+                <ScalarProperty Name="Survey_proof_date" ColumnName="Survey_proof_date" />
+                <ScalarProperty Name="Structural" ColumnName="Structural" />
+                <ScalarProperty Name="Structural_date" ColumnName="Structural_date" />
+                <ScalarProperty Name="Structural_name" ColumnName="Structural_name" />
+                <ScalarProperty Name="Nhbc_proof" ColumnName="Nhbc_proof" />
+                <ScalarProperty Name="Nhbc_proof_expires" ColumnName="Nhbc_proof_expires" />
+                <ScalarProperty Name="Riskaddr1" ColumnName="Riskaddr1" />
+                <ScalarProperty Name="Riskaddr2" ColumnName="Riskaddr2" />
+                <ScalarProperty Name="Riskaddr3" ColumnName="Riskaddr3" />
+                <ScalarProperty Name="Riskaddr4" ColumnName="Riskaddr4" />
+                <ScalarProperty Name="Riskpcode" ColumnName="Riskpcode" />
+                <ScalarProperty Name="Commaddr1" ColumnName="Commaddr1" />
+                <ScalarProperty Name="Commaddr2" ColumnName="Commaddr2" />
+                <ScalarProperty Name="Commaddr3" ColumnName="Commaddr3" />
+                <ScalarProperty Name="Commaddr4" ColumnName="Commaddr4" />
+                <ScalarProperty Name="Commpcode" ColumnName="Commpcode" />
+                <ScalarProperty Name="InterestedPartyType" ColumnName="InterestedPartyType" />
+                <ScalarProperty Name="InterestedPartyName" ColumnName="InterestedPartyName" />
+                <ScalarProperty Name="Interestunlist" ColumnName="Interestunlist" />
+                <ScalarProperty Name="Interestaddr1" ColumnName="Interestaddr1" />
+                <ScalarProperty Name="Interestaddr2" ColumnName="Interestaddr2" />
+                <ScalarProperty Name="Interestaddr3" ColumnName="Interestaddr3" />
+                <ScalarProperty Name="Interestaddr4" ColumnName="Interestaddr4" />
+                <ScalarProperty Name="Interestpcode" ColumnName="Interestpcode" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="Buildingssi" ColumnName="Buildingssi" />
+                <ScalarProperty Name="Buildtotxs" ColumnName="Buildtotxs" />
+                <ScalarProperty Name="Contentssi" ColumnName="Contentssi" />
+                <ScalarProperty Name="Contstotxs" ColumnName="Contstotxs" />
+                <ScalarProperty Name="Allrisks" ColumnName="Allrisks" />
+                <ScalarProperty Name="Specitems" ColumnName="Specitems" />
+                <ScalarProperty Name="Areffects" ColumnName="Areffects" />
+                <ScalarProperty Name="Areffectsitem" ColumnName="Areffectsitem" />
+                <ScalarProperty Name="Areffectsterr" ColumnName="Areffectsterr" />
+                <ScalarProperty Name="Arvaluables" ColumnName="Arvaluables" />
+                <ScalarProperty Name="Arvaluablesitem" ColumnName="Arvaluablesitem" />
+                <ScalarProperty Name="Arvaluablesterr" ColumnName="Arvaluablesterr" />
+                <ScalarProperty Name="Arphoto" ColumnName="Arphoto" />
+                <ScalarProperty Name="Arphotoitem" ColumnName="Arphotoitem" />
+                <ScalarProperty Name="Arphototerr" ColumnName="Arphototerr" />
+                <ScalarProperty Name="Arsport" ColumnName="Arsport" />
+                <ScalarProperty Name="Arsportitem" ColumnName="Arsportitem" />
+                <ScalarProperty Name="Arsportsterr" ColumnName="Arsportsterr" />
+                <ScalarProperty Name="C_Money" ColumnName="#Money" />
+                <ScalarProperty Name="Armoneyterr" ColumnName="Armoneyterr" />
+                <ScalarProperty Name="Creditcards" ColumnName="Creditcards" />
+                <ScalarProperty Name="Creditcardsterr" ColumnName="Creditcardsterr" />
+                <ScalarProperty Name="Freezertotal" ColumnName="Freezertotal" />
+                <ScalarProperty Name="Freezerage" ColumnName="Freezerage" />
+                <ScalarProperty Name="Aranybicycles" ColumnName="Aranybicycles" />
+                <ScalarProperty Name="Cycleval1" ColumnName="Cycleval1" />
+                <ScalarProperty Name="Cyclemake1" ColumnName="Cyclemake1" />
+                <ScalarProperty Name="Cycledesc1" ColumnName="Cycledesc1" />
+                <ScalarProperty Name="Cycle1territory" ColumnName="Cycle1territory" />
+                <ScalarProperty Name="Cycleval2" ColumnName="Cycleval2" />
+                <ScalarProperty Name="Cyclemake2" ColumnName="Cyclemake2" />
+                <ScalarProperty Name="Cycledesc2" ColumnName="Cycledesc2" />
+                <ScalarProperty Name="Cycle2territory" ColumnName="Cycle2territory" />
+                <ScalarProperty Name="Cycleval3" ColumnName="Cycleval3" />
+                <ScalarProperty Name="Cyclemake3" ColumnName="Cyclemake3" />
+                <ScalarProperty Name="Cycledesc3" ColumnName="Cycledesc3" />
+                <ScalarProperty Name="Cycle3territory" ColumnName="Cycle3territory" />
+                <ScalarProperty Name="Cycleval4" ColumnName="Cycleval4" />
+                <ScalarProperty Name="Cyclemake4" ColumnName="Cyclemake4" />
+                <ScalarProperty Name="Cycledesc4" ColumnName="Cycledesc4" />
+                <ScalarProperty Name="Cycle4territory" ColumnName="Cycle4territory" />
+                <ScalarProperty Name="Cycleval5" ColumnName="Cycleval5" />
+                <ScalarProperty Name="Cyclemake5" ColumnName="Cyclemake5" />
+                <ScalarProperty Name="Cycledesc5" ColumnName="Cycledesc5" />
+                <ScalarProperty Name="Cycle5territory" ColumnName="Cycle5territory" />
+                <ScalarProperty Name="Cycleval6" ColumnName="Cycleval6" />
+                <ScalarProperty Name="Cyclemake6" ColumnName="Cyclemake6" />
+                <ScalarProperty Name="Cycledesc6" ColumnName="Cycledesc6" />
+                <ScalarProperty Name="Cycle6territory" ColumnName="Cycle6territory" />
+                <ScalarProperty Name="Buildingscover" ColumnName="Buildingscover" />
+                <ScalarProperty Name="Reqbuildcover" ColumnName="Reqbuildcover" />
+                <ScalarProperty Name="Buildvolxs" ColumnName="Buildvolxs" />
+                <ScalarProperty Name="Buildbuyback" ColumnName="Buildbuyback" />
+                <ScalarProperty Name="Buildings" ColumnName="Buildings" />
+                <ScalarProperty Name="BuildInsName" ColumnName="BuildInsName" />
+                <ScalarProperty Name="Binsurername" ColumnName="Binsurername" />
+                <ScalarProperty Name="Bpolicy_no" ColumnName="Bpolicy_no" />
+                <ScalarProperty Name="Bdate_lapsed" ColumnName="Bdate_lapsed" />
+                <ScalarProperty Name="Bncb_years" ColumnName="Bncb_years" />
+                <ScalarProperty Name="Bncb_proof" ColumnName="Bncb_proof" />
+                <ScalarProperty Name="Byearsinsured" ColumnName="Byearsinsured" />
+                <ScalarProperty Name="Bbstfeepaid" ColumnName="Bbstfeepaid" />
+                <ScalarProperty Name="Btransfer_proof" ColumnName="Btransfer_proof" />
+                <ScalarProperty Name="Contentscover" ColumnName="Contentscover" />
+                <ScalarProperty Name="Contsgoods" ColumnName="Contsgoods" />
+                <ScalarProperty Name="Contsgoodslimit" ColumnName="Contsgoodslimit" />
+                <ScalarProperty Name="Contsvals" ColumnName="Contsvals" />
+                <ScalarProperty Name="Contsvalslimit" ColumnName="Contsvalslimit" />
+                <ScalarProperty Name="Contsvolxs" ColumnName="Contsvolxs" />
+                <ScalarProperty Name="Contsbuyback" ColumnName="Contsbuyback" />
+                <ScalarProperty Name="Contents" ColumnName="Contents" />
+                <ScalarProperty Name="ContentInsName" ColumnName="ContentInsName" />
+                <ScalarProperty Name="Cinsurername" ColumnName="Cinsurername" />
+                <ScalarProperty Name="Cpolicy_no" ColumnName="Cpolicy_no" />
+                <ScalarProperty Name="Cdate_lapsed" ColumnName="Cdate_lapsed" />
+                <ScalarProperty Name="Cncb_years" ColumnName="Cncb_years" />
+                <ScalarProperty Name="Cncb_proof" ColumnName="Cncb_proof" />
+                <ScalarProperty Name="Cyearsinsured" ColumnName="Cyearsinsured" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Propdob" ColumnName="Propdob" />
+                <ScalarProperty Name="Propage" ColumnName="Propage" />
+                <ScalarProperty Name="Propatrisk" ColumnName="Propatrisk" />
+                <ScalarProperty Name="Firsttime" ColumnName="Firsttime" />
+                <ScalarProperty Name="OccType1" ColumnName="OccType1" />
+                <ScalarProperty Name="BusType1" ColumnName="BusType1" />
+                <ScalarProperty Name="EmpStatus1" ColumnName="EmpStatus1" />
+                <ScalarProperty Name="Fullpart1" ColumnName="Fullpart1" />
+                <ScalarProperty Name="OccType2" ColumnName="OccType2" />
+                <ScalarProperty Name="BusType2" ColumnName="BusType2" />
+                <ScalarProperty Name="EmpStatus2" ColumnName="EmpStatus2" />
+                <ScalarProperty Name="Fullpart2" ColumnName="Fullpart2" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Propsurname" ColumnName="Propsurname" />
+                <ScalarProperty Name="Propforenames" ColumnName="Propforenames" />
+                <ScalarProperty Name="Convdate" ColumnName="Convdate" />
+                <ScalarProperty Name="Convpending" ColumnName="Convpending" />
+                <ScalarProperty Name="ConvType" ColumnName="ConvType" />
+                <ScalarProperty Name="Convdate1" ColumnName="Convdate1" />
+                <ScalarProperty Name="Convpending1" ColumnName="Convpending1" />
+                <ScalarProperty Name="ConvType1" ColumnName="ConvType1" />
+                <ScalarProperty Name="Convdate2" ColumnName="Convdate2" />
+                <ScalarProperty Name="Convpending2" ColumnName="Convpending2" />
+                <ScalarProperty Name="ConvType2" ColumnName="ConvType2" />
+                <ScalarProperty Name="Convdate3" ColumnName="Convdate3" />
+                <ScalarProperty Name="Convpending3" ColumnName="Convpending3" />
+                <ScalarProperty Name="ConvType3" ColumnName="ConvType3" />
+                <ScalarProperty Name="Legalexpenses" ColumnName="Legalexpenses" />
+                <ScalarProperty Name="Currentmotorpolicy" ColumnName="Currentmotorpolicy" />
+                <ScalarProperty Name="MotorInsurer" ColumnName="MotorInsurer" />
+                <ScalarProperty Name="Caravans" ColumnName="Caravans" />
+                <ScalarProperty Name="Caravanssi" ColumnName="Caravanssi" />
+                <ScalarProperty Name="Boats" ColumnName="Boats" />
+                <ScalarProperty Name="Boatssi" ColumnName="Boatssi" />
+                <ScalarProperty Name="Consentforsearches" ColumnName="Consentforsearches" />
+                <ScalarProperty Name="Scheme" ColumnName="Scheme" />
+                <ScalarProperty Name="Coverdate" ColumnName="Coverdate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PolicyCheckUploadParagonBD" FunctionName="ParagonModel.Store.PolicyCheckUploadParagonBD">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ParagonModel.PolicyCheckUploadParagonBD_Result">
+                <ScalarProperty Name="Year_blt" ColumnName="Year_blt" />
+                <ScalarProperty Name="HouseType" ColumnName="HouseType" />
+                <ScalarProperty Name="Walls" ColumnName="Walls" />
+                <ScalarProperty Name="Roof" ColumnName="Roof" />
+                <ScalarProperty Name="Flatroofpc" ColumnName="Flatroofpc" />
+                <ScalarProperty Name="Bedrooms" ColumnName="Bedrooms" />
+                <ScalarProperty Name="Rooms" ColumnName="Rooms" />
+                <ScalarProperty Name="Floors" ColumnName="Floors" />
+                <ScalarProperty Name="Floorno" ColumnName="Floorno" />
+                <ScalarProperty Name="Bathrooms" ColumnName="Bathrooms" />
+                <ScalarProperty Name="Extended" ColumnName="Extended" />
+                <ScalarProperty Name="Yearextended" ColumnName="Yearextended" />
+                <ScalarProperty Name="PrimaryHeating" ColumnName="PrimaryHeating" />
+                <ScalarProperty Name="SecondaryHeating" ColumnName="SecondaryHeating" />
+                <ScalarProperty Name="Refused" ColumnName="Refused" />
+                <ScalarProperty Name="Unspent_pending" ColumnName="Unspent_pending" />
+                <ScalarProperty Name="Bankrupt" ColumnName="Bankrupt" />
+                <ScalarProperty Name="Goodrepair" ColumnName="Goodrepair" />
+                <ScalarProperty Name="Riverquarry" ColumnName="Riverquarry" />
+                <ScalarProperty Name="Riverdistance" ColumnName="Riverdistance" />
+                <ScalarProperty Name="Storm" ColumnName="Storm" />
+                <ScalarProperty Name="BuildingListed" ColumnName="BuildingListed" />
+                <ScalarProperty Name="Subsidence" ColumnName="Subsidence" />
+                <ScalarProperty Name="Repaired" ColumnName="Repaired" />
+                <ScalarProperty Name="Landslip" ColumnName="Landslip" />
+                <ScalarProperty Name="Underpinned" ColumnName="Underpinned" />
+                <ScalarProperty Name="Groundheave" ColumnName="Groundheave" />
+                <ScalarProperty Name="OccupancyAccomodation" ColumnName="OccupancyAccomodation" />
+                <ScalarProperty Name="Residence" ColumnName="Residence" />
+                <ScalarProperty Name="OccupancyUnoccupied" ColumnName="OccupancyUnoccupied" />
+                <ScalarProperty Name="Businessuse" ColumnName="Businessuse" />
+                <ScalarProperty Name="Stock" ColumnName="Stock" />
+                <ScalarProperty Name="Holidayhome" ColumnName="Holidayhome" />
+                <ScalarProperty Name="Equipment" ColumnName="Equipment" />
+                <ScalarProperty Name="Paying_guests" ColumnName="Paying_guests" />
+                <ScalarProperty Name="Payingguestno" ColumnName="Payingguestno" />
+                <ScalarProperty Name="Smokers" ColumnName="Smokers" />
+                <ScalarProperty Name="Adults" ColumnName="Adults" />
+                <ScalarProperty Name="C_Children" ColumnName="#Children" />
+                <ScalarProperty Name="Main_door" ColumnName="Main_door" />
+                <ScalarProperty Name="Nhood_watch" ColumnName="Nhood_watch" />
+                <ScalarProperty Name="Other_door" ColumnName="Other_door" />
+                <ScalarProperty Name="Smokealarm" ColumnName="Smokealarm" />
+                <ScalarProperty Name="French_door" ColumnName="French_door" />
+                <ScalarProperty Name="Self_contained" ColumnName="Self_contained" />
+                <ScalarProperty Name="Windows" ColumnName="Windows" />
+                <ScalarProperty Name="Alarm" ColumnName="Alarm" />
+                <ScalarProperty Name="Alarm_type" ColumnName="Alarm_type" />
+                <ScalarProperty Name="AlarmAccredDetails1" ColumnName="AlarmAccredDetails1" />
+                <ScalarProperty Name="Ftx_accreddetails1" ColumnName="Ftx_accreddetails1" />
+                <ScalarProperty Name="Alarm_maint" ColumnName="Alarm_maint" />
+                <ScalarProperty Name="Alarm_install" ColumnName="Alarm_install" />
+                <ScalarProperty Name="AlarmMaintainceCompany" ColumnName="AlarmMaintainceCompany" />
+                <ScalarProperty Name="Alarmmaintnm" ColumnName="Alarmmaintnm" />
+                <ScalarProperty Name="AlarmAccredDetails2" ColumnName="AlarmAccredDetails2" />
+                <ScalarProperty Name="Ftx_accreddetails2" ColumnName="Ftx_accreddetails2" />
+                <ScalarProperty Name="Survey" ColumnName="Survey" />
+                <ScalarProperty Name="Survey_date" ColumnName="Survey_date" />
+                <ScalarProperty Name="Survey_name" ColumnName="Survey_name" />
+                <ScalarProperty Name="Survey_proof_date" ColumnName="Survey_proof_date" />
+                <ScalarProperty Name="Structural" ColumnName="Structural" />
+                <ScalarProperty Name="Structural_date" ColumnName="Structural_date" />
+                <ScalarProperty Name="Structural_name" ColumnName="Structural_name" />
+                <ScalarProperty Name="Nhbc_proof" ColumnName="Nhbc_proof" />
+                <ScalarProperty Name="Nhbc_proof_expires" ColumnName="Nhbc_proof_expires" />
+                <ScalarProperty Name="Riskaddr1" ColumnName="Riskaddr1" />
+                <ScalarProperty Name="Riskaddr2" ColumnName="Riskaddr2" />
+                <ScalarProperty Name="Riskaddr3" ColumnName="Riskaddr3" />
+                <ScalarProperty Name="Riskaddr4" ColumnName="Riskaddr4" />
+                <ScalarProperty Name="Riskpcode" ColumnName="Riskpcode" />
+                <ScalarProperty Name="Commaddr1" ColumnName="Commaddr1" />
+                <ScalarProperty Name="Commaddr2" ColumnName="Commaddr2" />
+                <ScalarProperty Name="Commaddr3" ColumnName="Commaddr3" />
+                <ScalarProperty Name="Commaddr4" ColumnName="Commaddr4" />
+                <ScalarProperty Name="Commpcode" ColumnName="Commpcode" />
+                <ScalarProperty Name="InterestedPartyType" ColumnName="InterestedPartyType" />
+                <ScalarProperty Name="InterestedPartyName" ColumnName="InterestedPartyName" />
+                <ScalarProperty Name="Interestunlist" ColumnName="Interestunlist" />
+                <ScalarProperty Name="Interestaddr1" ColumnName="Interestaddr1" />
+                <ScalarProperty Name="Interestaddr2" ColumnName="Interestaddr2" />
+                <ScalarProperty Name="Interestaddr3" ColumnName="Interestaddr3" />
+                <ScalarProperty Name="Interestaddr4" ColumnName="Interestaddr4" />
+                <ScalarProperty Name="Interestpcode" ColumnName="Interestpcode" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="Buildingssi" ColumnName="Buildingssi" />
+                <ScalarProperty Name="Buildtotxs" ColumnName="Buildtotxs" />
+                <ScalarProperty Name="Contentssi" ColumnName="Contentssi" />
+                <ScalarProperty Name="Contstotxs" ColumnName="Contstotxs" />
+                <ScalarProperty Name="Allrisks" ColumnName="Allrisks" />
+                <ScalarProperty Name="Specitems" ColumnName="Specitems" />
+                <ScalarProperty Name="Areffects" ColumnName="Areffects" />
+                <ScalarProperty Name="Areffectsitem" ColumnName="Areffectsitem" />
+                <ScalarProperty Name="Areffectsterr" ColumnName="Areffectsterr" />
+                <ScalarProperty Name="Arvaluables" ColumnName="Arvaluables" />
+                <ScalarProperty Name="Arvaluablesitem" ColumnName="Arvaluablesitem" />
+                <ScalarProperty Name="Arvaluablesterr" ColumnName="Arvaluablesterr" />
+                <ScalarProperty Name="Arphoto" ColumnName="Arphoto" />
+                <ScalarProperty Name="Arphotoitem" ColumnName="Arphotoitem" />
+                <ScalarProperty Name="Arphototerr" ColumnName="Arphototerr" />
+                <ScalarProperty Name="Arsport" ColumnName="Arsport" />
+                <ScalarProperty Name="Arsportitem" ColumnName="Arsportitem" />
+                <ScalarProperty Name="Arsportsterr" ColumnName="Arsportsterr" />
+                <ScalarProperty Name="C_Money" ColumnName="#Money" />
+                <ScalarProperty Name="Armoneyterr" ColumnName="Armoneyterr" />
+                <ScalarProperty Name="Creditcards" ColumnName="Creditcards" />
+                <ScalarProperty Name="Creditcardsterr" ColumnName="Creditcardsterr" />
+                <ScalarProperty Name="Freezertotal" ColumnName="Freezertotal" />
+                <ScalarProperty Name="Freezerage" ColumnName="Freezerage" />
+                <ScalarProperty Name="Aranybicycles" ColumnName="Aranybicycles" />
+                <ScalarProperty Name="Cycleval1" ColumnName="Cycleval1" />
+                <ScalarProperty Name="Cyclemake1" ColumnName="Cyclemake1" />
+                <ScalarProperty Name="Cycledesc1" ColumnName="Cycledesc1" />
+                <ScalarProperty Name="Cycle1territory" ColumnName="Cycle1territory" />
+                <ScalarProperty Name="Cycleval2" ColumnName="Cycleval2" />
+                <ScalarProperty Name="Cyclemake2" ColumnName="Cyclemake2" />
+                <ScalarProperty Name="Cycledesc2" ColumnName="Cycledesc2" />
+                <ScalarProperty Name="Cycle2territory" ColumnName="Cycle2territory" />
+                <ScalarProperty Name="Cycleval3" ColumnName="Cycleval3" />
+                <ScalarProperty Name="Cyclemake3" ColumnName="Cyclemake3" />
+                <ScalarProperty Name="Cycledesc3" ColumnName="Cycledesc3" />
+                <ScalarProperty Name="Cycle3territory" ColumnName="Cycle3territory" />
+                <ScalarProperty Name="Cycleval4" ColumnName="Cycleval4" />
+                <ScalarProperty Name="Cyclemake4" ColumnName="Cyclemake4" />
+                <ScalarProperty Name="Cycledesc4" ColumnName="Cycledesc4" />
+                <ScalarProperty Name="Cycle4territory" ColumnName="Cycle4territory" />
+                <ScalarProperty Name="Cycleval5" ColumnName="Cycleval5" />
+                <ScalarProperty Name="Cyclemake5" ColumnName="Cyclemake5" />
+                <ScalarProperty Name="Cycledesc5" ColumnName="Cycledesc5" />
+                <ScalarProperty Name="Cycle5territory" ColumnName="Cycle5territory" />
+                <ScalarProperty Name="Cycleval6" ColumnName="Cycleval6" />
+                <ScalarProperty Name="Cyclemake6" ColumnName="Cyclemake6" />
+                <ScalarProperty Name="Cycledesc6" ColumnName="Cycledesc6" />
+                <ScalarProperty Name="Cycle6territory" ColumnName="Cycle6territory" />
+                <ScalarProperty Name="Buildingscover" ColumnName="Buildingscover" />
+                <ScalarProperty Name="Reqbuildcover" ColumnName="Reqbuildcover" />
+                <ScalarProperty Name="Buildvolxs" ColumnName="Buildvolxs" />
+                <ScalarProperty Name="Buildbuyback" ColumnName="Buildbuyback" />
+                <ScalarProperty Name="Buildings" ColumnName="Buildings" />
+                <ScalarProperty Name="BuildInsName" ColumnName="BuildInsName" />
+                <ScalarProperty Name="Binsurername" ColumnName="Binsurername" />
+                <ScalarProperty Name="Bpolicy_no" ColumnName="Bpolicy_no" />
+                <ScalarProperty Name="Bdate_lapsed" ColumnName="Bdate_lapsed" />
+                <ScalarProperty Name="Bncb_years" ColumnName="Bncb_years" />
+                <ScalarProperty Name="Bncb_proof" ColumnName="Bncb_proof" />
+                <ScalarProperty Name="Byearsinsured" ColumnName="Byearsinsured" />
+                <ScalarProperty Name="Bbstfeepaid" ColumnName="Bbstfeepaid" />
+                <ScalarProperty Name="Btransfer_proof" ColumnName="Btransfer_proof" />
+                <ScalarProperty Name="Contentscover" ColumnName="Contentscover" />
+                <ScalarProperty Name="Contsgoods" ColumnName="Contsgoods" />
+                <ScalarProperty Name="Contsgoodslimit" ColumnName="Contsgoodslimit" />
+                <ScalarProperty Name="Contsvals" ColumnName="Contsvals" />
+                <ScalarProperty Name="Contsvalslimit" ColumnName="Contsvalslimit" />
+                <ScalarProperty Name="Contsvolxs" ColumnName="Contsvolxs" />
+                <ScalarProperty Name="Contsbuyback" ColumnName="Contsbuyback" />
+                <ScalarProperty Name="Contents" ColumnName="Contents" />
+                <ScalarProperty Name="ContentInsName" ColumnName="ContentInsName" />
+                <ScalarProperty Name="Cinsurername" ColumnName="Cinsurername" />
+                <ScalarProperty Name="Cpolicy_no" ColumnName="Cpolicy_no" />
+                <ScalarProperty Name="Cdate_lapsed" ColumnName="Cdate_lapsed" />
+                <ScalarProperty Name="Cncb_years" ColumnName="Cncb_years" />
+                <ScalarProperty Name="Cncb_proof" ColumnName="Cncb_proof" />
+                <ScalarProperty Name="Cyearsinsured" ColumnName="Cyearsinsured" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Propdob" ColumnName="Propdob" />
+                <ScalarProperty Name="Propage" ColumnName="Propage" />
+                <ScalarProperty Name="Propatrisk" ColumnName="Propatrisk" />
+                <ScalarProperty Name="Firsttime" ColumnName="Firsttime" />
+                <ScalarProperty Name="OccType1" ColumnName="OccType1" />
+                <ScalarProperty Name="BusType1" ColumnName="BusType1" />
+                <ScalarProperty Name="EmpStatus1" ColumnName="EmpStatus1" />
+                <ScalarProperty Name="Fullpart1" ColumnName="Fullpart1" />
+                <ScalarProperty Name="OccType2" ColumnName="OccType2" />
+                <ScalarProperty Name="BusType2" ColumnName="BusType2" />
+                <ScalarProperty Name="EmpStatus2" ColumnName="EmpStatus2" />
+                <ScalarProperty Name="Fullpart2" ColumnName="Fullpart2" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Propsurname" ColumnName="Propsurname" />
+                <ScalarProperty Name="Propforenames" ColumnName="Propforenames" />
+                <ScalarProperty Name="Convdate" ColumnName="Convdate" />
+                <ScalarProperty Name="Convpending" ColumnName="Convpending" />
+                <ScalarProperty Name="ConvType" ColumnName="ConvType" />
+                <ScalarProperty Name="Convdate1" ColumnName="Convdate1" />
+                <ScalarProperty Name="Convpending1" ColumnName="Convpending1" />
+                <ScalarProperty Name="ConvType1" ColumnName="ConvType1" />
+                <ScalarProperty Name="Convdate2" ColumnName="Convdate2" />
+                <ScalarProperty Name="Convpending2" ColumnName="Convpending2" />
+                <ScalarProperty Name="ConvType2" ColumnName="ConvType2" />
+                <ScalarProperty Name="Convdate3" ColumnName="Convdate3" />
+                <ScalarProperty Name="Convpending3" ColumnName="Convpending3" />
+                <ScalarProperty Name="ConvType3" ColumnName="ConvType3" />
+                <ScalarProperty Name="Legalexpenses" ColumnName="Legalexpenses" />
+                <ScalarProperty Name="Currentmotorpolicy" ColumnName="Currentmotorpolicy" />
+                <ScalarProperty Name="MotorInsurer" ColumnName="MotorInsurer" />
+                <ScalarProperty Name="Caravans" ColumnName="Caravans" />
+                <ScalarProperty Name="Caravanssi" ColumnName="Caravanssi" />
+                <ScalarProperty Name="Boats" ColumnName="Boats" />
+                <ScalarProperty Name="Boatssi" ColumnName="Boatssi" />
+                <ScalarProperty Name="Consentforsearches" ColumnName="Consentforsearches" />
+                <ScalarProperty Name="Scheme" ColumnName="Scheme" />
+                <ScalarProperty Name="Coverdate" ColumnName="Coverdate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PolicyCheckUploadParagonUpdate" FunctionName="ParagonModel.Store.PolicyCheckUploadParagonUpdate">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ParagonModel.PolicyCheckUploadParagonUpdate_Result">
+                <ScalarProperty Name="Year_blt" ColumnName="Year_blt" />
+                <ScalarProperty Name="HouseType" ColumnName="HouseType" />
+                <ScalarProperty Name="Walls" ColumnName="Walls" />
+                <ScalarProperty Name="Roof" ColumnName="Roof" />
+                <ScalarProperty Name="Flatroofpc" ColumnName="Flatroofpc" />
+                <ScalarProperty Name="Bedrooms" ColumnName="Bedrooms" />
+                <ScalarProperty Name="Rooms" ColumnName="Rooms" />
+                <ScalarProperty Name="Floors" ColumnName="Floors" />
+                <ScalarProperty Name="Floorno" ColumnName="Floorno" />
+                <ScalarProperty Name="Bathrooms" ColumnName="Bathrooms" />
+                <ScalarProperty Name="Extended" ColumnName="Extended" />
+                <ScalarProperty Name="PrimaryHeating" ColumnName="PrimaryHeating" />
+                <ScalarProperty Name="SecondaryHeating" ColumnName="SecondaryHeating" />
+                <ScalarProperty Name="Refused" ColumnName="Refused" />
+                <ScalarProperty Name="Unspent_pending" ColumnName="Unspent_pending" />
+                <ScalarProperty Name="Bankrupt" ColumnName="Bankrupt" />
+                <ScalarProperty Name="Goodrepair" ColumnName="Goodrepair" />
+                <ScalarProperty Name="Riverquarry" ColumnName="Riverquarry" />
+                <ScalarProperty Name="Riverdistance" ColumnName="Riverdistance" />
+                <ScalarProperty Name="Storm" ColumnName="Storm" />
+                <ScalarProperty Name="BuildingListed" ColumnName="BuildingListed" />
+                <ScalarProperty Name="Subsidence" ColumnName="Subsidence" />
+                <ScalarProperty Name="Repaired" ColumnName="Repaired" />
+                <ScalarProperty Name="Landslip" ColumnName="Landslip" />
+                <ScalarProperty Name="Underpinned" ColumnName="Underpinned" />
+                <ScalarProperty Name="Groundheave" ColumnName="Groundheave" />
+                <ScalarProperty Name="OccupancyAccomodation" ColumnName="OccupancyAccomodation" />
+                <ScalarProperty Name="Residence" ColumnName="Residence" />
+                <ScalarProperty Name="OccupancyUnoccupied" ColumnName="OccupancyUnoccupied" />
+                <ScalarProperty Name="Businessuse" ColumnName="Businessuse" />
+                <ScalarProperty Name="Stock" ColumnName="Stock" />
+                <ScalarProperty Name="Holidayhome" ColumnName="Holidayhome" />
+                <ScalarProperty Name="Equipment" ColumnName="Equipment" />
+                <ScalarProperty Name="Paying_guests" ColumnName="Paying_guests" />
+                <ScalarProperty Name="Payingguestno" ColumnName="Payingguestno" />
+                <ScalarProperty Name="Smokers" ColumnName="Smokers" />
+                <ScalarProperty Name="Adults" ColumnName="Adults" />
+                <ScalarProperty Name="C_Children" ColumnName="#Children" />
+                <ScalarProperty Name="Main_door" ColumnName="Main_door" />
+                <ScalarProperty Name="Nhood_watch" ColumnName="Nhood_watch" />
+                <ScalarProperty Name="Other_door" ColumnName="Other_door" />
+                <ScalarProperty Name="Smokealarm" ColumnName="Smokealarm" />
+                <ScalarProperty Name="French_door" ColumnName="French_door" />
+                <ScalarProperty Name="Self_contained" ColumnName="Self_contained" />
+                <ScalarProperty Name="Windows" ColumnName="Windows" />
+                <ScalarProperty Name="Alarm" ColumnName="Alarm" />
+                <ScalarProperty Name="Alarm_type" ColumnName="Alarm_type" />
+                <ScalarProperty Name="AlarmAccredDetails1" ColumnName="AlarmAccredDetails1" />
+                <ScalarProperty Name="Ftx_accreddetails1" ColumnName="Ftx_accreddetails1" />
+                <ScalarProperty Name="Alarm_maint" ColumnName="Alarm_maint" />
+                <ScalarProperty Name="Alarm_install" ColumnName="Alarm_install" />
+                <ScalarProperty Name="AlarmMaintainceCompany" ColumnName="AlarmMaintainceCompany" />
+                <ScalarProperty Name="Alarmmaintnm" ColumnName="Alarmmaintnm" />
+                <ScalarProperty Name="AlarmAccredDetails2" ColumnName="AlarmAccredDetails2" />
+                <ScalarProperty Name="Ftx_accreddetails2" ColumnName="Ftx_accreddetails2" />
+                <ScalarProperty Name="Survey" ColumnName="Survey" />
+                <ScalarProperty Name="Survey_date" ColumnName="Survey_date" />
+                <ScalarProperty Name="Survey_name" ColumnName="Survey_name" />
+                <ScalarProperty Name="Survey_proof_date" ColumnName="Survey_proof_date" />
+                <ScalarProperty Name="Structural" ColumnName="Structural" />
+                <ScalarProperty Name="Structural_date" ColumnName="Structural_date" />
+                <ScalarProperty Name="Structural_name" ColumnName="Structural_name" />
+                <ScalarProperty Name="Nhbc_proof" ColumnName="Nhbc_proof" />
+                <ScalarProperty Name="Nhbc_proof_expires" ColumnName="Nhbc_proof_expires" />
+                <ScalarProperty Name="Riskaddr1" ColumnName="Riskaddr1" />
+                <ScalarProperty Name="Riskaddr2" ColumnName="Riskaddr2" />
+                <ScalarProperty Name="Riskaddr3" ColumnName="Riskaddr3" />
+                <ScalarProperty Name="Riskaddr4" ColumnName="Riskaddr4" />
+                <ScalarProperty Name="Riskpcode" ColumnName="Riskpcode" />
+                <ScalarProperty Name="Commaddr1" ColumnName="Commaddr1" />
+                <ScalarProperty Name="Commaddr2" ColumnName="Commaddr2" />
+                <ScalarProperty Name="Commaddr3" ColumnName="Commaddr3" />
+                <ScalarProperty Name="Commaddr4" ColumnName="Commaddr4" />
+                <ScalarProperty Name="Commpcode" ColumnName="Commpcode" />
+                <ScalarProperty Name="InterestedPartyType" ColumnName="InterestedPartyType" />
+                <ScalarProperty Name="InterestedPartyName" ColumnName="InterestedPartyName" />
+                <ScalarProperty Name="Interestaddr1" ColumnName="Interestaddr1" />
+                <ScalarProperty Name="Interestaddr2" ColumnName="Interestaddr2" />
+                <ScalarProperty Name="Interestaddr3" ColumnName="Interestaddr3" />
+                <ScalarProperty Name="Interestaddr4" ColumnName="Interestaddr4" />
+                <ScalarProperty Name="Interestpcode" ColumnName="Interestpcode" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="Buildingssi" ColumnName="Buildingssi" />
+                <ScalarProperty Name="Buildtotxs" ColumnName="Buildtotxs" />
+                <ScalarProperty Name="Contentssi" ColumnName="Contentssi" />
+                <ScalarProperty Name="Contstotxs" ColumnName="Contstotxs" />
+                <ScalarProperty Name="Allrisks" ColumnName="Allrisks" />
+                <ScalarProperty Name="Specitems" ColumnName="Specitems" />
+                <ScalarProperty Name="Areffects" ColumnName="Areffects" />
+                <ScalarProperty Name="Areffectsitem" ColumnName="Areffectsitem" />
+                <ScalarProperty Name="Areffectsterr" ColumnName="Areffectsterr" />
+                <ScalarProperty Name="Arvaluables" ColumnName="Arvaluables" />
+                <ScalarProperty Name="Arvaluablesitem" ColumnName="Arvaluablesitem" />
+                <ScalarProperty Name="Arvaluablesterr" ColumnName="Arvaluablesterr" />
+                <ScalarProperty Name="Arphoto" ColumnName="Arphoto" />
+                <ScalarProperty Name="Arphotoitem" ColumnName="Arphotoitem" />
+                <ScalarProperty Name="Arphototerr" ColumnName="Arphototerr" />
+                <ScalarProperty Name="Arsport" ColumnName="Arsport" />
+                <ScalarProperty Name="Arsportitem" ColumnName="Arsportitem" />
+                <ScalarProperty Name="Arsportsterr" ColumnName="Arsportsterr" />
+                <ScalarProperty Name="C_Money" ColumnName="#Money" />
+                <ScalarProperty Name="Armoneyterr" ColumnName="Armoneyterr" />
+                <ScalarProperty Name="Creditcards" ColumnName="Creditcards" />
+                <ScalarProperty Name="Creditcardsterr" ColumnName="Creditcardsterr" />
+                <ScalarProperty Name="Freezertotal" ColumnName="Freezertotal" />
+                <ScalarProperty Name="Freezerage" ColumnName="Freezerage" />
+                <ScalarProperty Name="Aranybicycles" ColumnName="Aranybicycles" />
+                <ScalarProperty Name="Cycleval1" ColumnName="Cycleval1" />
+                <ScalarProperty Name="Cyclemake1" ColumnName="Cyclemake1" />
+                <ScalarProperty Name="Cycledesc1" ColumnName="Cycledesc1" />
+                <ScalarProperty Name="Cycle1territory" ColumnName="Cycle1territory" />
+                <ScalarProperty Name="Cycleval2" ColumnName="Cycleval2" />
+                <ScalarProperty Name="Cyclemake2" ColumnName="Cyclemake2" />
+                <ScalarProperty Name="Cycledesc2" ColumnName="Cycledesc2" />
+                <ScalarProperty Name="Cycle2territory" ColumnName="Cycle2territory" />
+                <ScalarProperty Name="Cycleval3" ColumnName="Cycleval3" />
+                <ScalarProperty Name="Cyclemake3" ColumnName="Cyclemake3" />
+                <ScalarProperty Name="Cycledesc3" ColumnName="Cycledesc3" />
+                <ScalarProperty Name="Cycle3territory" ColumnName="Cycle3territory" />
+                <ScalarProperty Name="Cycleval4" ColumnName="Cycleval4" />
+                <ScalarProperty Name="Cyclemake4" ColumnName="Cyclemake4" />
+                <ScalarProperty Name="Cycledesc4" ColumnName="Cycledesc4" />
+                <ScalarProperty Name="Cycle4territory" ColumnName="Cycle4territory" />
+                <ScalarProperty Name="Cycleval5" ColumnName="Cycleval5" />
+                <ScalarProperty Name="Cyclemake5" ColumnName="Cyclemake5" />
+                <ScalarProperty Name="Cycledesc5" ColumnName="Cycledesc5" />
+                <ScalarProperty Name="Cycle5territory" ColumnName="Cycle5territory" />
+                <ScalarProperty Name="Cycleval6" ColumnName="Cycleval6" />
+                <ScalarProperty Name="Cyclemake6" ColumnName="Cyclemake6" />
+                <ScalarProperty Name="Cycledesc6" ColumnName="Cycledesc6" />
+                <ScalarProperty Name="Cycle6territory" ColumnName="Cycle6territory" />
+                <ScalarProperty Name="Buildingscover" ColumnName="Buildingscover" />
+                <ScalarProperty Name="Reqbuildcover" ColumnName="Reqbuildcover" />
+                <ScalarProperty Name="Buildvolxs" ColumnName="Buildvolxs" />
+                <ScalarProperty Name="Buildbuyback" ColumnName="Buildbuyback" />
+                <ScalarProperty Name="Buildings" ColumnName="Buildings" />
+                <ScalarProperty Name="BuildInsName" ColumnName="BuildInsName" />
+                <ScalarProperty Name="Binsurername" ColumnName="Binsurername" />
+                <ScalarProperty Name="Bpolicy_no" ColumnName="Bpolicy_no" />
+                <ScalarProperty Name="Bdate_lapsed" ColumnName="Bdate_lapsed" />
+                <ScalarProperty Name="Bncb_years" ColumnName="Bncb_years" />
+                <ScalarProperty Name="Bncb_proof" ColumnName="Bncb_proof" />
+                <ScalarProperty Name="Byearsinsured" ColumnName="Byearsinsured" />
+                <ScalarProperty Name="Bbstfeepaid" ColumnName="Bbstfeepaid" />
+                <ScalarProperty Name="Btransfer_proof" ColumnName="Btransfer_proof" />
+                <ScalarProperty Name="Contentscover" ColumnName="Contentscover" />
+                <ScalarProperty Name="Contsgoods" ColumnName="Contsgoods" />
+                <ScalarProperty Name="Contsgoodslimit" ColumnName="Contsgoodslimit" />
+                <ScalarProperty Name="Contsvals" ColumnName="Contsvals" />
+                <ScalarProperty Name="Contsvalslimit" ColumnName="Contsvalslimit" />
+                <ScalarProperty Name="Contsvolxs" ColumnName="Contsvolxs" />
+                <ScalarProperty Name="Contsbuyback" ColumnName="Contsbuyback" />
+                <ScalarProperty Name="Contents" ColumnName="Contents" />
+                <ScalarProperty Name="ContentInsName" ColumnName="ContentInsName" />
+                <ScalarProperty Name="Cinsurername" ColumnName="Cinsurername" />
+                <ScalarProperty Name="Cpolicy_no" ColumnName="Cpolicy_no" />
+                <ScalarProperty Name="Cdate_lapsed" ColumnName="Cdate_lapsed" />
+                <ScalarProperty Name="Cncb_years" ColumnName="Cncb_years" />
+                <ScalarProperty Name="Cncb_proof" ColumnName="Cncb_proof" />
+                <ScalarProperty Name="Cyearsinsured" ColumnName="Cyearsinsured" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Propdob" ColumnName="Propdob" />
+                <ScalarProperty Name="Propage" ColumnName="Propage" />
+                <ScalarProperty Name="Propatrisk" ColumnName="Propatrisk" />
+                <ScalarProperty Name="Firsttime" ColumnName="Firsttime" />
+                <ScalarProperty Name="OccType1" ColumnName="OccType1" />
+                <ScalarProperty Name="BusType1" ColumnName="BusType1" />
+                <ScalarProperty Name="EmpStatus1" ColumnName="EmpStatus1" />
+                <ScalarProperty Name="Fullpart1" ColumnName="Fullpart1" />
+                <ScalarProperty Name="OccType2" ColumnName="OccType2" />
+                <ScalarProperty Name="BusType2" ColumnName="BusType2" />
+                <ScalarProperty Name="EmpStatus2" ColumnName="EmpStatus2" />
+                <ScalarProperty Name="Fullpart2" ColumnName="Fullpart2" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Propsurname" ColumnName="Propsurname" />
+                <ScalarProperty Name="Propforenames" ColumnName="Propforenames" />
+                <ScalarProperty Name="Convdate" ColumnName="Convdate" />
+                <ScalarProperty Name="Convpending" ColumnName="Convpending" />
+                <ScalarProperty Name="ConvType" ColumnName="ConvType" />
+                <ScalarProperty Name="Convdate1" ColumnName="Convdate1" />
+                <ScalarProperty Name="Convpending1" ColumnName="Convpending1" />
+                <ScalarProperty Name="ConvType1" ColumnName="ConvType1" />
+                <ScalarProperty Name="Convdate2" ColumnName="Convdate2" />
+                <ScalarProperty Name="Convpending2" ColumnName="Convpending2" />
+                <ScalarProperty Name="ConvType2" ColumnName="ConvType2" />
+                <ScalarProperty Name="Convdate3" ColumnName="Convdate3" />
+                <ScalarProperty Name="Convpending3" ColumnName="Convpending3" />
+                <ScalarProperty Name="ConvType3" ColumnName="ConvType3" />
+                <ScalarProperty Name="Legalexpenses" ColumnName="Legalexpenses" />
+                <ScalarProperty Name="Currentmotorpolicy" ColumnName="Currentmotorpolicy" />
+                <ScalarProperty Name="MotorInsurer" ColumnName="MotorInsurer" />
+                <ScalarProperty Name="Caravans" ColumnName="Caravans" />
+                <ScalarProperty Name="Caravanssi" ColumnName="Caravanssi" />
+                <ScalarProperty Name="Boats" ColumnName="Boats" />
+                <ScalarProperty Name="Boatssi" ColumnName="Boatssi" />
+                <ScalarProperty Name="Consentforsearches" ColumnName="Consentforsearches" />
+                <ScalarProperty Name="Scheme" ColumnName="Scheme" />
+                <ScalarProperty Name="Coverdate" ColumnName="Coverdate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SpecItemUploadParagon" FunctionName="ParagonModel.Store.SpecItemUploadParagon">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ParagonModel.SpecItemUploadParagon_Result">
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Stated_value" ColumnName="Stated_value" />
+                <ScalarProperty Name="Covertype" ColumnName="Covertype" />
+                <ScalarProperty Name="Description1" ColumnName="Description1" />
+                <ScalarProperty Name="Description2" ColumnName="Description2" />
+                <ScalarProperty Name="SpecItemDeleted" ColumnName="SpecItemDeleted" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="SpecDate" ColumnName="SpecDate" />
+                <ScalarProperty Name="Territory" ColumnName="Territory" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SpecItemUploadParagonBD" FunctionName="ParagonModel.Store.SpecItemUploadParagonBD">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ParagonModel.SpecItemUploadParagonBD_Result">
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Stated_value" ColumnName="Stated_value" />
+                <ScalarProperty Name="Covertype" ColumnName="Covertype" />
+                <ScalarProperty Name="Description1" ColumnName="Description1" />
+                <ScalarProperty Name="Description2" ColumnName="Description2" />
+                <ScalarProperty Name="SpecItemDeleted" ColumnName="SpecItemDeleted" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="SpecDate" ColumnName="SpecDate" />
+                <ScalarProperty Name="Territory" ColumnName="Territory" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

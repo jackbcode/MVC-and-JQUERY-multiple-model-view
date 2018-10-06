@@ -1,0 +1,83 @@
+﻿@model IEnumerable<PolicyCheck.Models.ClaimsUploadParagonBD_Result>
+
+
+
+
+@foreach (var item in Model)
+{
+
+    <div class="form-group whiteDiv">
+
+        <div id="allrisksTitle2" class="wrapper8">
+            <div class="form-group" style="float: left; width: 150px; margin-right:30px">
+                <p class=" = font-weight-bold popOut">Date/Desc.</p>
+            </div>
+            <div class="form-group" style="float: left; width: 240px; margin-right:30px ">
+                <p class=" = font-weight-bold popOut">Claim Type</p>
+            </div>
+            <div class="form-group" style="float: left; width: 140px; margin-right:30px">
+                <p class=" = font-weight-bold popOut">Value</p>
+            </div>
+
+            <div class="form-group" style="float: left; width: 140px; margin-right:25px ">
+                <p class=" = font-weight-bold popOut">Section</p>
+            </div>
+
+
+        </div>
+        <div id="allrisksTitle2" class="wrapper8">
+            <div class="form-group displayFor" style="float: left; width: 150px; margin-right:30px; ">
+                @Html.DisplayFor(modelItem => item.ClaimDate)
+            </div>
+
+            <div class="form-group displayFor" style="float: left; width: 250px; margin-right:30px ">
+                @Html.DisplayFor(modelItem => item.Type)
+            </div>
+
+            <div class="form-group displayFor" style="float: left; width: 150px; margin-right:30px ">
+                @Html.DisplayFor(modelItem => item.C_Value)
+            </div>
+            <div class="form-group displayFor" style="float: left; width: 150px; margin-right:30px ">
+                @Html.DisplayFor(modelItem => item.C_Section)
+            </div>
+
+            <br /><br />
+
+            <div class="form-group displayFor" style="float: left; width: 800px; margin-right:30px ">
+                @Html.DisplayFor(modelItem => item.Desc1)
+            </div>
+            <div class="form-group displayFor" style="float: left; width: 800px; margin-right:30px ">
+                @Html.DisplayFor(modelItem => item.Desc2)
+            </div>
+
+            <br /><br />
+
+            <div id="claimsLosses" class="wrapper8" style="padding-top: 10px;">
+                <div class="form-group" style="float: left; width: 75px; margin-right:30px">
+                    <p class=" = font-weight-bold popOut">Deleted?</p>
+                </div>
+                <div class="form-group" style="float: left; width: 100px; margin-right:30px ">
+                    <p class=" = font-weight-bold popOut">Claim Settled?</p>
+                </div>
+            </div>
+
+            <div class="form-group displayFor" style="float: left; width: 100px; margin-right:10px ">
+                @Html.DisplayFor(modelItem => item.ClaimDeleted)
+            </div>
+
+            <div class="form-group displayFor" style="float: left; width: 100px; margin-right:10px ">
+                @Html.DisplayFor(modelItem => item.Claimsettled)
+            </div>
+
+        </div>
+    </div>
+
+    <br />
+
+
+
+
+
+
+
+}

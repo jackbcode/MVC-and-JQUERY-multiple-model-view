@@ -1,0 +1,3122 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@model PolicyCheck.Models.PolicyMain
+
+@{
+    ViewBag.Title = "Add Policy";
+}
+
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(model => model.id)
+
+
+
+    @*-------------------------------------------------DIV ONE ------------------------------------------------*@
+
+
+    <div class="divSquare" id="divOne">
+
+        <p class="header2">Property    </p>
+
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="wrapper">
+            <div class="form-group  first">
+                <div class="wrapper2">
+                    <div class="first2">
+                        @Html.LabelFor(model => model.PPostCode, htmlAttributes: new { @class = " control-label col-md-12" })
+                    </div>
+                    <div class="col-md-7 second2 ">
+                        @Html.EditorFor(model => model.PPostCode, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PPostCode, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper2">
+                    <div class="first3">
+                        @Html.LabelFor(model => model.PYearBuilt, htmlAttributes: new { @class = " control-label col-md-2" })
+                    </div>
+                    <div class="col-md-6 second2 ">
+                        @Html.EditorFor(model => model.PYearBuilt, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PYearBuilt, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        @*------------------- TYPE OF HOUSE - -------------------------------*@
+
+
+        <div class="form-group">
+            <div class="wrapper3">
+                <div class="first2">
+                    @Html.LabelFor(model => model.PTypeOfHouse, htmlAttributes: new { @class = "control-label col-md-6" })
+                </div>
+                <div class="col-md-7 second2">
+                    @Html.DropDownListFor(model => model.PTypeOfHouse, Model.HouseType, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.PTypeOfHouse, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        @*------------------- walls - -------------------------------*@
+        <div class="form-group">
+            <div class="wrapper3">
+                <div class="first2">
+                    @Html.LabelFor(model => model.PWalls, htmlAttributes: new { @class = "control-label col-md-6" })
+                </div>
+                <div class="col-md-7 second2">
+                    @Html.DropDownListFor(model => model.PWalls, Model.Walls, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.PWalls, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        @*------------------- Roof/flat% - -------------------------------*@
+
+        <div class="wrapper">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <div class="first2">
+                        @Html.LabelFor(model => model.PRoof, htmlAttributes: new { @class = " control-label col-md-2" })
+                    </div>
+                    <div class="col-md-12 second3 ">
+                        @Html.DropDownListFor(model => model.PRoof, Model.Roof, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PRoof, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first6">
+                        @Html.LabelFor(model => model.PFlatPercent, htmlAttributes: new { @class = " control-label col-md-2 extraPadding" })
+                    </div>
+                    <div class="col-md-5 second ">
+                        @Html.EditorFor(model => model.PFlatPercent, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PFlatPercent, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        @*------------------- rooms - -------------------------------*@
+
+
+        <div class="wrapper">
+            <div class="form-group" style="float: left; width: 190px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        @Html.LabelFor(model => model.PBedrooms, htmlAttributes: new { @class = " control-label col-md-6" })
+                    </div>
+                    <div class="col-md-5 second ">
+                        @Html.EditorFor(model => model.PBedrooms, new { htmlAttributes = new { @class = "form-control lp" } })
+                        @Html.ValidationMessageFor(model => model.PBedrooms, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 150px; ">
+                <div class="wrapperRooms">
+                    <div class="first3">
+                        @Html.LabelFor(model => model.PRooms, htmlAttributes: new { @class = " control-label col-md-2" })
+                    </div>
+                    <div class="col-md-5 second ">
+                        @Html.EditorFor(model => model.PRooms, new { htmlAttributes = new { @class = "form-control lp" } })
+                        @Html.ValidationMessageFor(model => model.PRooms, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 150px; ">
+                <div class="wrapperRooms">
+                    <div class="first3">
+                        @Html.LabelFor(model => model.PFloors, htmlAttributes: new { @class = " control-label col-md-2" })
+                    </div>
+                    <div class="col-md-5 second ">
+                        @Html.EditorFor(model => model.PFloors, new { htmlAttributes = new { @class = "form-control lp" } })
+                        @Html.ValidationMessageFor(model => model.PFloors, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 65px; ">
+                <div class="wrapperRooms">
+                    <div class="second col-md-12">
+                        @Html.EditorFor(model => model.PFlatFloor, new { htmlAttributes = new { @class = "form-control lp" } })
+                        @Html.ValidationMessageFor(model => model.PFlatFloor, "", new { @class = "text-danger" })
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+        @*------------------- Prelim Qs/Bathrooms - -------------------------------*@
+
+        <div class="wrapper prelimhide">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.PPrelimQuestions, htmlAttributes: new { @class = " control-label col-md-10 popOut" })
+                    </div>
+                    <div class="col-md-5 second" id="prelimQs">
+                        @*<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#prelimQuestions">Select</button>*@
+                        @Html.DropDownListFor(model => model.PPrelimQuestions, Model.yesNo, "MS", new { @id = "prelimQuestions", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PPrelimQuestions, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-group second prelimhide ">
+                <div class="wrapper5">
+                    <div class="first6">
+                        @Html.LabelFor(model => model.PBathrooms, htmlAttributes: new { @class = " control-label col-md-2" })
+                    </div>
+                    <div class="col-md-4 second ">
+                        @Html.EditorFor(model => model.PBathrooms, new { htmlAttributes = new { @class = "form-control bathroom" } })
+                        @Html.ValidationMessageFor(model => model.PBathrooms, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+        @*------------------- Use/Occupancy - -------------------------------*@
+
+        <div class="wrapper prelimhide ">
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.PUseOccupancy, htmlAttributes: new { @class = "control-label col-md-6 popOut" })
+                    </div>
+                    <div class="col-md-3 second2">
+                        @Html.DropDownListFor(model => model.PUseOccupancy, Model.yesNo, "MS", new { @id = "useOccupancy", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PTypeOfHouse, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @*------------------- Security/Extended - -------------------------------*@
+
+        <div class="wrapper prelimhide ">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.PSecurity, htmlAttributes: new { @class = " control-label col-md-10 popOut" })
+                    </div>
+                    <div class="col-md-5 second" id="prelimQs">
+                        @Html.DropDownListFor(model => model.PSecurity, Model.yesNo, "MS", new { @id = "Security", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PSecurity, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first6">
+                        @Html.LabelFor(model => model.PExtended, htmlAttributes: new { @class = " control-label col-md-2" })
+                    </div>
+                    <div class="col-md-5 second ">
+                        @Html.DropDownListFor(model => model.PExtended, Model.yesNo, "MS", new { @id = "houseType", @class = "form-control extended" })
+                        @Html.ValidationMessageFor(model => model.PExtended, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        @*------------------- Survey/Report & Yr Extended - -------------------------------*@
+
+        <div class="wrapper prelimhide ">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.PsrSecurityReports, htmlAttributes: new { @class = " control-label col-md-10 popOut" })
+                    </div>
+                    <div class="col-md-5 second" id="prelimQs">
+                        @Html.DropDownListFor(model => model.PsrSecurityReports, Model.yesNo, "MS", new { @id = "Survey", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PsrSecurityReports, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first7">
+                        @Html.LabelFor(model => model.PYearExtended, htmlAttributes: new { @class = " control-label col-md-12" })
+                    </div>
+                    <div class="col-md-5 second ">
+                        @Html.EditorFor(model => model.PYearExtended, new { htmlAttributes = new { @class = "form-control " } })
+                        @Html.ValidationMessageFor(model => model.PYearExtended, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        @*------------------- Other Details/Heating - -------------------------------*@
+
+
+        <div class="wrapper prelimhide ">
+            <div class="form-group OD" style="float: left; width: 190px; ">
+                <div class="wrapper6">
+                    <div class="first2">
+                        @Html.LabelFor(model => model.POtherDetails, htmlAttributes: new { @class = " control-label col-md-12 triple popOut" })
+                    </div>
+                    <div class="col-md-5 second triple2 ">
+                        @Html.DropDownListFor(model => model.POtherDetails, Model.yesNo, "MS", new { @id = "od", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.POtherDetails, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 190px; ">
+                <div class="wrapper6">
+                    <div class="first8">
+                        @Html.LabelFor(model => model.PHeatingPrimary, htmlAttributes: new { @class = " control-label col-md-12 triple2" })
+                    </div>
+                    <div class="col-md-5 second triple2 ">
+                        @Html.DropDownListFor(model => model.PHeatingPrimary, Model.Heating, "MS", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PHeatingPrimary, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 190px; ">
+                <div class="wrapper6">
+                    <div class="first8">
+                        @Html.LabelFor(model => model.PHeatingSecondary, htmlAttributes: new { @class = " control-label col-md-12 triple2" })
+                    </div>
+                    <div class="col-md-5 second triple2 ">
+                        @Html.DropDownListFor(model => model.PHeatingSecondary, Model.Heating, "MS", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PHeatingSecondary, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+        @*-------------------------------------------------DIV TWO ------------------------------------------------*@
+
+    </div>
+
+    @*-------------------------------------------------DIV TWO ------------------------------------------------*@
+
+    <div class="divSquare" id="divTwo">
+        <p class="header2">Main Proposer</p>
+        <div id="uploadPolicyDiv">
+
+            @*@Html.Partial("UploadPolicyDB");*@
+
+        </div>
+
+        <div id="CL">
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first11">
+                        @Html.LabelFor(model => model.MpConvictions, htmlAttributes: new { @class = "control-label col-md-12 popOut" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.DropDownListFor(model => model.MpConvictions, Model.yesNo, "Make Selection", new { @id = "conviction", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.MpConvictions, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first11">
+                        @Html.LabelFor(model => model.MpClaimsLosses, htmlAttributes: new { @class = "control-label col-md-12 popOut" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.DropDownListFor(model => model.MpClaimsLosses, Model.yesNo, "Make Selection", new { @id = "claims", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.MpClaimsLosses, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div style='clear:both'></div>
+
+
+    @*-------------------------------------------------DIV THREE ------------------------------------------------*@
+
+    <div class="divSquare2" id="divThree">
+        <p class="header2">Cover</p>
+
+        @*------------------- Buildings & Contents - -------------------------------*@
+
+
+        <div class="form-group">
+            <div class="wrapper2">
+                <div class="firstCover">
+                    @Html.LabelFor(model => model.CBuildingsAndContents, htmlAttributes: new { @class = "control-label col-md-10 popOut" })
+                </div>
+                <div class="col-md-7 second">
+                    @Html.DropDownListFor(model => model.CBuildingsAndContents, Model.yesNo, "MS", new { @id = "buildingsContent", @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.CBuildingsAndContents, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="form-group  first">
+                <div class="wrapper2">
+                    <div class="firstCover">
+                        @Html.LabelFor(model => model.CBSummationBuildingCoverEnteredDetails, htmlAttributes: new { @class = " control-label col-md-12" })
+                    </div>
+                    <div class="col-md-7 second ">
+                        @Html.EditorFor(model => model.CBSummationBuildingCoverEnteredDetails, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CBSummationBuildingCoverEnteredDetails, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper2">
+                    <div class="firstCover">
+                        @Html.LabelFor(model => model.CBBuildingsVolExcessEnteredDetails, htmlAttributes: new { @class = " control-label col-md-12 extraPadding2" })
+                    </div>
+                    <div class="col-md-6 second ">
+                        @Html.EditorFor(model => model.CBBuildingsVolExcessEnteredDetails, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CBBuildingsVolExcessEnteredDetails, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="wrapper">
+            <div class="form-group  first">
+                <div class="wrapper2">
+                    <div class="firstCover">
+                        @Html.LabelFor(model => model.CCSummationContentsCoverEntered, htmlAttributes: new { @class = " control-label col-md-12" })
+                    </div>
+                    <div class="col-md-7 second ">
+                        @Html.EditorFor(model => model.CCSummationContentsCoverEntered, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CCSummationContentsCoverEntered, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper2">
+                    <div class="firstCover">
+                        @Html.LabelFor(model => model.CCContentsVolExcessEnteredDetails, htmlAttributes: new { @class = " control-label col-md-12 extraPadding2" })
+                    </div>
+                    <div class="col-md-6 second ">
+                        @Html.EditorFor(model => model.CCContentsVolExcessEnteredDetails, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CCContentsVolExcessEnteredDetails, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        @*------------------- All Risks/Spec Items - -------------------------------*@
+
+
+        <div class="wrapper">
+            <div class="form-group  first">
+                <div class="wrapper2">
+                    <div class="firstCover">
+                        @Html.LabelFor(model => model.CAllRisks, htmlAttributes: new { @class = " control-label col-md-12 popOut" })
+                    </div>
+                    <div class="col-md-5 second" id="prelimQs">
+                        @Html.DropDownListFor(model => model.CAllRisks, Model.yesNo, "MS", new { @id = "allRisks", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.CAllRisks, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="firstCover">
+                        @Html.LabelFor(model => model.CSpecifiedItems, htmlAttributes: new { @class = " control-label col-md-12 extraPadding2 popOut" })
+                    </div>
+                    <div class="col-md-5 second ">
+                        @Html.DropDownListFor(model => model.CSpecifiedItems, Model.yesNo, "MS", new { @id = "specifiedItems", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.CSpecifiedItems, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    @*-------------------------------------------------DIV FOUR ------------------------------------------------*@
+
+    <div class="divSquare2" id="divFour">
+        <p class="header2">Add Ons/Other</p>
+
+        <div class="wrapper">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.AOLegalExpenses, htmlAttributes: new { @class = " control-label col-md-12" })
+                    </div>
+                    <div class="col-md-5 second" id="prelimQs">
+                        @Html.DropDownListFor(model => model.AOLegalExpenses, Model.yesNo, "MS", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.AOLegalExpenses, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.AOMotorPolicy, htmlAttributes: new { @class = " control-label col-md-12 extraPadding" })
+                    </div>
+                    <div class="col-md-5 second ">
+                        @Html.DropDownListFor(model => model.AOMotorPolicy, Model.yesNo, "MS", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.AOMotorPolicy, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="wrapper">
+            <div class="form-group  first">
+                <div class="wrapper3">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.AOCurrentMotorInsurer, htmlAttributes: new { @class = " control-label col-md-12" })
+                    </div>
+                    <div class="col-md-12 second3 ">
+                        @Html.EditorFor(model => model.AOCurrentMotorInsurer, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.AOCurrentMotorInsurer, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="wrapper prelimhide">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.AOCaravans, htmlAttributes: new { @class = " control-label col-md-10 popOut" })
+                    </div>
+                    <div class="col-md-5 second" id="prelimQs">
+                        @*<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#prelimQuestions">Select</button>*@
+                        @Html.DropDownListFor(model => model.AOCaravans, Model.yesNo, "MS", new { @id = "caravan", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.AOCaravans, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-group second prelimhide ">
+                <div class="wrapper5">
+                    <div class="first7">
+                        @Html.LabelFor(model => model.AOSummationCaravansEnteredDetails, htmlAttributes: new { @class = " control-label col-md-12" })
+                    </div>
+                    <div class="col-md-4 second ">
+                        @Html.EditorFor(model => model.AOSummationCaravansEnteredDetails, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.AOSummationCaravansEnteredDetails, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="wrapper prelimhide">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.AOBoats, htmlAttributes: new { @class = " control-label col-md-10 popOut" })
+                    </div>
+                    <div class="col-md-5 second" id="prelimQs">
+                        @*<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#prelimQuestions">Select</button>*@
+                        @Html.DropDownListFor(model => model.AOBoats, Model.yesNo, "MS", new { @id = "boat", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.AOBoats, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-group second prelimhide ">
+                <div class="wrapper5">
+                    <div class="first7">
+                        @Html.LabelFor(model => model.AOSummationBoatEnteredDetails, htmlAttributes: new { @class = " control-label col-md-12" })
+                    </div>
+                    <div class="col-md-4 second ">
+                        @Html.EditorFor(model => model.AOSummationBoatEnteredDetails, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.AOSummationBoatEnteredDetails, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+        <div class="wrapper">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.AOSearchesConsent, htmlAttributes: new { @class = " control-label col-md-12" })
+                    </div>
+                    <div class="col-md-5 second ">
+                        @Html.DropDownListFor(model => model.AOSearchesConsent, Model.yesNo, "MS", new { @id = "houseType", @class = "form-control " })
+                        @Html.ValidationMessageFor(model => model.AOSearchesConsent, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first7 ">
+                        @Html.LabelFor(model => model.AOSchemeNo, htmlAttributes: new { @class = " control-label col-md-12" })
+                    </div>
+                    <div class="col-md-4  second ">
+                        @Html.EditorFor(model => model.AOSchemeNo, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.AOSchemeNo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="wrapper">
+            <div class="form-group  first">
+                <div class="wrapper3">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.AOCoverDate, htmlAttributes: new { @class = " control-label col-md-12" })
+                    </div>
+                    <div class="col-md-8 second3 ">
+                        @Html.EditorFor(model => model.AOCoverDate, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.AOCoverDate, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper3" id="coverDate">
+
+
+
+                    <input type="submit" value="Add Policy" class="btn btn-primary btn-lg" id="CreateButton" />
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    @*-------------------------------PRELIM QUESTIONS MODAL ----------------------------------------*@
+
+    <div id="preliminaryQuestions" style='display:none' class="popQuestions">
+
+        <p class="header2">Preliminary Questions</p>
+
+        <p id="proposers" class="popOut">FOR THE PROPOSER(S), THEIR FAMILY OR ANYONE NORMALLY LIVING WITH THEM:</p>
+
+
+        <div class="wrapper">
+            <div class="form-group">
+                <div class="wrapper9">
+                    <div class="first12">
+                        @Html.LabelFor(model => model.PPqInsuranceDeclined, htmlAttributes: new { @class = "control-label col-md-12" })
+                    </div>
+                    <div class="col-md-3 second2">
+                        @Html.DropDownListFor(model => model.PPqInsuranceDeclined, Model.yesNo, "MS", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PPqInsuranceDeclined, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="form-group">
+                <div class="wrapper9">
+                    <div class="first12">
+                        @Html.LabelFor(model => model.PPqConvictions, htmlAttributes: new { @class = "control-label col-md-12" })
+                    </div>
+                    <div class="col-md-3 second2">
+                        @Html.DropDownListFor(model => model.PPqConvictions, Model.yesNo, "MS", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PPqConvictions, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="form-group">
+                <div class="wrapper9">
+                    <div class="first12">
+                        @Html.LabelFor(model => model.PPqBankrupt, htmlAttributes: new { @class = "control-label col-md-12" })
+                    </div>
+                    <div class="col-md-3 second2">
+                        @Html.DropDownListFor(model => model.PPqBankrupt, Model.yesNo, "MS", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PPqBankrupt, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <p id="proposers" class="popOut">FOR THE RISK PROPERTY TO BE COVERED:</p>
+
+
+        <div class="wrapper10">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <p id="freeFrom" class="popOut"> Is It Free From: </p>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first7">
+                        @Html.LabelFor(model => model.PPqInGoodRepair, htmlAttributes: new { @class = " control-label col-md-12" })
+                    </div>
+                    <div class="col-md-5 second ">
+                        @Html.DropDownListFor(model => model.PPqInGoodRepair, Model.yesNo, "MS", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PPqInGoodRepair, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        @*-------------------------NEARQUARRY----------------------------*@
+
+        <div class="wrapper10">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.PPqNearRiverQuarry, htmlAttributes: new { @class = " control-label col-md-10" })
+                    </div>
+                    <div class="col-md-5 second" id="prelimQs">
+                        @Html.DropDownListFor(model => model.PPqNearRiverQuarry, Model.yesNo, "MS", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PPqNearRiverQuarry, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first7">
+                        @Html.LabelFor(model => model.PPqNearRQDistance, htmlAttributes: new { @class = " control-label col-md-12" })
+                    </div>
+                    <div class="col-md-5 second ">
+                        @Html.EditorFor(model => model.PPqNearRQDistance, new { htmlAttributes = new { @class = "form-control " } })
+                        @Html.ValidationMessageFor(model => model.PPqNearRQDistance, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        @*-------------------------STORMFLOOD/Building Listed----------------------------*@
+
+
+        <div class="wrapper10">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.PPqStormFlood, htmlAttributes: new { @class = " control-label col-md-10" })
+                    </div>
+                    <div class="col-md-5 second" id="prelimQs">
+                        @Html.DropDownListFor(model => model.PPqStormFlood, Model.yesNo, "MS", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PPqStormFlood, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first7">
+                        @Html.LabelFor(model => model.PPqBuildingListed, htmlAttributes: new { @class = " control-label col-md-12" })
+                    </div>
+                    <div class="col-md-5 second ">
+                        @Html.DropDownListFor(model => model.PPqBuildingListed, Model.BuildingListed, "MS", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PPqBuildingListed, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        @*------------------- subsidence/building listed - -------------------------------*@
+
+        <div class="wrapper10 ">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.PPqSubsidence, htmlAttributes: new { @class = " control-label col-md-10" })
+                    </div>
+                    <div class="col-md-5 second" id="prelimQs">
+                        @Html.DropDownListFor(model => model.PPqSubsidence, Model.yesNo, "MS", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PPqSubsidence, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first6">
+                        @Html.LabelFor(model => model.PPqRepairedMonitored, htmlAttributes: new { @class = " control-label col-md-2" })
+                    </div>
+                    <div class="col-md-5 second ">
+                        @Html.DropDownListFor(model => model.PPqRepairedMonitored, Model.yesNo, "MS", new { @id = "houseType", @class = "form-control extended" })
+                        @Html.ValidationMessageFor(model => model.PPqRepairedMonitored, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        @*------------------- Landslip/Underpinned --------------------------------*@
+
+        <div class="wrapper10 ">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.PPqLandslip, htmlAttributes: new { @class = " control-label col-md-10" })
+                    </div>
+                    <div class="col-md-5 second" id="prelimQs">
+                        @Html.DropDownListFor(model => model.PPqLandslip, Model.yesNo, "MS", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PPqLandslip, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first6">
+                        @Html.LabelFor(model => model.PPqUnderpinned, htmlAttributes: new { @class = " control-label col-md-2" })
+                    </div>
+                    <div class="col-md-5 second ">
+                        @Html.DropDownListFor(model => model.PPqUnderpinned, Model.yesNo, "MS", new { @id = "houseType", @class = "form-control extended" })
+                        @Html.ValidationMessageFor(model => model.PPqUnderpinned, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        @*------------------- Ground Heave --------------------------------*@
+
+        <div class="wrapper10 ">
+            <div class="form-group  first">
+                <div class="wrapper4">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.PPqGroundHeave, htmlAttributes: new { @class = " control-label col-md-10" })
+                    </div>
+                    <div class="col-md-5 second" id="prelimQs">
+                        @Html.DropDownListFor(model => model.PPqGroundHeave, Model.yesNo, "MS", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PPqGroundHeave, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button type="button" class="btn btn-primary" id="prelimHideButton">Complete</button>
+
+    </div>
+
+    @*-------------------------------Use/Occupancy MODAL ----------------------------------------*@
+
+    <div id="useOccupancyQuestions" style='display:none' class="popQuestions">
+
+        <p class="header2">Property Use / Occupancy</p>
+
+        <br />
+
+        @*-------------------------Accomodation----------------------------*@
+
+
+        <div class="form-group">
+            <div class="wrapper10">
+                <div class="first4">
+                    @Html.LabelFor(model => model.PuoAccomodation, htmlAttributes: new { @class = "control-label col-md-6" })
+                </div>
+                <div class="col-md-7 second2">
+                    @Html.DropDownListFor(model => model.PuoAccomodation, Model.Accomodation, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.PuoAccomodation, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        @*------------------- Residence- -------------------------------*@
+        <div class="form-group">
+            <div class="wrapper10">
+                <div class="first4">
+                    @Html.LabelFor(model => model.PuoResidence, htmlAttributes: new { @class = "control-label col-md-6" })
+                </div>
+                <div class="col-md-7 second2">
+                    @Html.DropDownListFor(model => model.PuoResidence, Model.Residence, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.PuoResidence, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        @*------------------- Unnoccupied- -------------------------------*@
+        <div class="form-group">
+            <div class="wrapper10">
+                <div class="first4">
+                    @Html.LabelFor(model => model.PuoUnnocupied, htmlAttributes: new { @class = "control-label col-md-6" })
+                </div>
+                <div class="col-md-7 second2">
+                    @Html.DropDownListFor(model => model.PuoUnnocupied, Model.Unoccupied, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.PuoUnnocupied, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        @*------------------- Business Use/Stock- -------------------------------*@
+
+        <div class="wrapper10">
+            <div class="form-group  first">
+                <div class="wrapper12">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.PuoBusinessUse, htmlAttributes: new { @class = " control-label col-md-10" })
+                    </div>
+                    <div class="col-md-6 second2" id="prelimQs">
+                        @Html.DropDownListFor(model => model.PuoBusinessUse, Model.BusinessUse, "MS", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PuoBusinessUse, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first7">
+                        @Html.LabelFor(model => model.PuoStock, htmlAttributes: new { @class = " control-label col-md-12 stock" })
+                    </div>
+                    <div class="col-md-8 second ">
+                        @Html.EditorFor(model => model.PuoStock, new { htmlAttributes = new { @class = "form-control " } })
+                        @Html.ValidationMessageFor(model => model.PuoStock, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        @*------------------- HolidayHome/Equipment- -------------------------------*@
+
+        <div class="wrapper10">
+            <div class="form-group  first">
+                <div class="wrapper12">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.PuoHolidayHome, htmlAttributes: new { @class = " control-label col-md-10" })
+                    </div>
+                    <div class="col-md-6 second2" id="prelimQs">
+                        @Html.DropDownListFor(model => model.PuoHolidayHome, Model.yesNo, "MS", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PuoHolidayHome, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first7">
+                        @Html.LabelFor(model => model.PuoEquipment, htmlAttributes: new { @class = " control-label col-md-12 stock" })
+                    </div>
+                    <div class="col-md-8 second ">
+                        @Html.EditorFor(model => model.PuoEquipment, new { htmlAttributes = new { @class = "form-control " } })
+                        @Html.ValidationMessageFor(model => model.PuoEquipment, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        @*------------------- Paying Guests- -------------------------------*@
+
+        <div class="wrapper10">
+            <div class="form-group  first">
+                <div class="wrapper12">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.PuoPayingGuests, htmlAttributes: new { @class = " control-label col-md-10" })
+                    </div>
+                    <div class="col-md-6 second2" id="prelimQs">
+                        @Html.DropDownListFor(model => model.PuoPayingGuests, Model.yesNo, "MS", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PuoPayingGuests, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group second ">
+                <div class="wrapper5">
+                    <div class="first7">
+                        @Html.LabelFor(model => model.PuoPGNumber, htmlAttributes: new { @class = " control-label col-md-12 stock" })
+                    </div>
+                    <div class="col-md-8 second ">
+                        @Html.EditorFor(model => model.PuoPGNumber, new { htmlAttributes = new { @class = "form-control " } })
+                        @Html.ValidationMessageFor(model => model.PuoPGNumber, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        @*-------------------------Smokers----------------------------*@
+
+
+        <div class="wrapper10">
+            <div class="form-group  first">
+                <div class="wrapper12">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.PuoSmokers, htmlAttributes: new { @class = " control-label col-md-10" })
+                    </div>
+                    <div class="col-md-6 second2" id="prelimQs">
+                        @Html.DropDownListFor(model => model.PuoSmokers, Model.yesNo, "MS", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PuoSmokers, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <p id="proposers" class="popOut">Number Of Occupants:</p>
+
+        <div class="wrapper10">
+            <div class="form-group  first">
+                <div class="wrapper2">
+                    <div class="first2">
+                        @Html.LabelFor(model => model.PuoNooAdults, htmlAttributes: new { @class = " control-label col-md-6" })
+                    </div>
+                    <div class="col-md-7 second ">
+                        @Html.EditorFor(model => model.PuoNooAdults, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PuoNooAdults, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="wrapper10">
+            <div class="form-group  first">
+                <div class="wrapper2">
+                    <div class="first2">
+                        @Html.LabelFor(model => model.PuoNooChildren, htmlAttributes: new { @class = " control-label col-md-6" })
+                    </div>
+                    <div class="col-md-7 second ">
+                        @Html.EditorFor(model => model.PuoNooChildren, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PuoNooChildren, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button type="button" class="btn btn-primary btn-padding" id="useOccupancyHideButton">Complete</button>
+    </div>
+
+    @*-------------------------------Security QUESTIONS MODAL ----------------------------------------*@
+
+    <div id="securityQuestions" style='display:none' class="popQuestionsSecurity">
+
+        <p class="header2">Property Security</p>
+
+
+        <div class="securityModal">
+            <br />
+
+            @*------------------- Exit doors/Neighbourhood watch - -------------------------------*@
+
+            <div class="wrapperSec  ">
+                <div class="form-group  first">
+                    <div class="wrapper4">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.PsFinalExitDoors, htmlAttributes: new { @class = " control-label col-md-12" })
+                        </div>
+                        <div class="col-md-5 second" id="prelimQs">
+                            @Html.DropDownListFor(model => model.PsFinalExitDoors, Model.yesNo, "MS", new { @id = "Security", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.PsFinalExitDoors, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group second ">
+                    <div class="wrapper5">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.PsNeighbourhoodWatch, htmlAttributes: new { @class = " control-label col-md-12" })
+                        </div>
+                        <div class="col-md-5 second ">
+                            @Html.DropDownListFor(model => model.PsNeighbourhoodWatch, Model.yesNo, "MS", new { @id = "houseType", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.PsNeighbourhoodWatch, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            @*------------------- other doors/smokealarm - -------------------------------*@
+
+            <div class="wrapperSec ">
+                <div class="form-group  first">
+                    <div class="wrapper4">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.PsOtherDoors, htmlAttributes: new { @class = " control-label col-md-10" })
+                        </div>
+                        <div class="col-md-5 second" id="prelimQs">
+                            @Html.DropDownListFor(model => model.PsOtherDoors, Model.yesNo, "MS", new { @id = "Security", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.PsOtherDoors, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group second ">
+                    <div class="wrapper5">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.PsSmokeAlarm, htmlAttributes: new { @class = " control-label col-md-12" })
+                        </div>
+                        <div class="col-md-5 second ">
+                            @Html.DropDownListFor(model => model.PsSmokeAlarm, Model.yesNo, "MS", new { @id = "houseType", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.PsSmokeAlarm, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            @*------------------- other doors/smokealarm - -------------------------------*@
+
+            <div class="wrapper ">
+                <div class="form-group  first">
+                    <div class="wrapper4">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.PsPatioDoors, htmlAttributes: new { @class = " control-label col-md-10" })
+                        </div>
+                        <div class="col-md-5 second" id="prelimQs">
+                            @Html.DropDownListFor(model => model.PsPatioDoors, Model.yesNo, "MS", new { @id = "Security", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.PsPatioDoors, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group second ">
+                    <div class="wrapper5">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.PsSelfContained, htmlAttributes: new { @class = " control-label col-md-12" })
+                        </div>
+                        <div class="col-md-5 second ">
+                            @Html.DropDownListFor(model => model.PsSelfContained, Model.yesNo, "MS", new { @id = "houseType", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.PsSelfContained, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            @*------------------- Windows - -------------------------------*@
+
+            <div class="wrapper">
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.PsWindows, htmlAttributes: new { @class = "control-label col-md-6" })
+                        </div>
+                        <div class="col-md-3 second2">
+                            @Html.DropDownListFor(model => model.PsWindows, Model.yesNo, "MS", new { @id = "useOccupancy", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.PsWindows, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*------------------- Intruder alram/ Alarm type - -------------------------------*@
+
+            <div class="wrapperSec">
+                <div class="form-group  first">
+                    <div class="wrapper4">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.PsIntruderAlarm, htmlAttributes: new { @class = " control-label col-md-12" })
+                        </div>
+                        <div class="col-md-5 second" id="prelimQs">
+                            @Html.DropDownListFor(model => model.PsIntruderAlarm, Model.yesNo, "MS", new { @id = "Security", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.PsIntruderAlarm, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group second2 ">
+                    <div class="wrapperContained">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.PsAlarmType, htmlAttributes: new { @class = " control-label col-md-12" })
+                        </div>
+                        <div class="col-md-6 second2 ">
+                            @Html.DropDownListFor(model => model.PsAlarmType, Model.AlarmType, "MS", new { @id = "houseType", @class = "form-control " })
+                            @Html.ValidationMessageFor(model => model.PsAlarmType, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            @*------------------- Accreditation 1 - -------------------------------*@
+
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.PsAccredationDetailsOne, htmlAttributes: new { @class = "control-label col-md-12" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.DropDownListFor(model => model.PsAccredationDetailsOne, Model.AccredDetails, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PsAccredationDetailsOne, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.PsAccredationDetailsOneOther, htmlAttributes: new { @class = "control-label col-md-12" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.EditorFor(model => model.PsAccredationDetailsOneOther, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PsAccredationDetailsOneOther, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrapperSec">
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.PsSpecificationContract, htmlAttributes: new { @class = "control-label col-md-12 " })
+                        </div>
+                        <div class="col-md-3 second2">
+                            @Html.DropDownListFor(model => model.PsSpecificationContract, Model.yesNo, "MS", new { @id = "useOccupancy", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.PsSpecificationContract, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="wrapper">
+                <div class="form-group  first">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.PsDateInstalled, htmlAttributes: new { @class = " control-label col-md-12" })
+                        </div>
+                        <div class="col-md-12 second3 ">
+                            @Html.EditorFor(model => model.PsDateInstalled, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.PsDateInstalled, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.PsMaintainer, htmlAttributes: new { @class = "control-label col-md-6" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.DropDownListFor(model => model.PsMaintainer, Model.MaintainerCompany, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PsMaintainer, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="wrapper">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.PsMaintainerTwo, htmlAttributes: new { @class = "control-label col-md-12" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.EditorFor(model => model.PsMaintainerTwo, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PsMaintainerTwo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            @*------------------- Accreditation 2 - -------------------------------*@
+
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.PsAccreditationDetailsTwo, htmlAttributes: new { @class = "control-label col-md-12" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.DropDownListFor(model => model.PsAccreditationDetailsTwo, Model.AccredDetails, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PsAccreditationDetailsTwo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.PsAccredationDetailsTwoOther, htmlAttributes: new { @class = "control-label col-md-12" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.EditorFor(model => model.PsAccredationDetailsTwoOther, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PsAccredationDetailsTwoOther, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <button type="button" class="btn btn-primary btn-padding" id="securityHideButton">Complete</button>
+
+        </div>
+
+    </div>
+
+    @*-------------------------------SURVEY QUESTIONS MODAL ----------------------------------------*@
+
+    <div id="surveyQuestions" style='display:none' class="popQuestionsSurvey">
+
+        <p class="header2">Survey/Report Details</p>
+
+
+        <div class="securityModal">
+            <br />
+
+            @*------------------- RICS/FSVA SURVEY -------------------------------*@
+
+            <div class="wrapperSec">
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.PsrRICSFSVASURVEY, htmlAttributes: new { @class = "control-label col-md-12 " })
+                        </div>
+                        <div class="col-md-3 second2">
+                            @Html.DropDownListFor(model => model.PsrRICSFSVASURVEY, Model.yesNo, "MS", new { @id = "useOccupancy", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.PsrRICSFSVASURVEY, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*------------------- RICS/FSVA SURVEY DATE -------------------------------*@
+
+            <div class="wrapper">
+                <div class="form-group  first">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.PsrRFSDate, htmlAttributes: new { @class = " control-label col-md-12" })
+                        </div>
+                        <div class="col-md-12 second3 ">
+                            @Html.EditorFor(model => model.PsrRFSDate, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.PsrRFSDate, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*------------------- RICS/FSVA SURVEYORS namse -------------------------------*@
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.PsrRFSSurveyorsName, htmlAttributes: new { @class = "control-label col-md-12" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.EditorFor(model => model.PsrRFSSurveyorsName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PsrRFSSurveyorsName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+
+            @*------------------- RICS/FSVA Date Proof Rec -------------------------------*@
+
+            <div class="wrapper">
+                <div class="form-group  first">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.PsrRFSDateProofRec, htmlAttributes: new { @class = " control-label col-md-12" })
+                        </div>
+                        <div class="col-md-12 second3 ">
+                            @Html.EditorFor(model => model.PsrRFSDateProofRec, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.PsrRFSDateProofRec, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*------------------- STRUCTURAL ENGINEERING REPORT -------------------------------*@
+
+            <div class="wrapperSec">
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.PsrStructuralER, htmlAttributes: new { @class = "control-label col-md-12 " })
+                        </div>
+                        <div class="col-md-3 second2">
+                            @Html.DropDownListFor(model => model.PsrStructuralER, Model.yesNo, "MS", new { @id = "useOccupancy", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.PsrStructuralER, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*-------------------STRUCTURAL ENGINEERING REPORT DATE -------------------------------*@
+
+            <div class="wrapper">
+                <div class="form-group  first">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.PsrStructuralERDate, htmlAttributes: new { @class = " control-label col-md-12" })
+                        </div>
+                        <div class="col-md-12 second3 ">
+                            @Html.EditorFor(model => model.PsrStructuralERDate, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.PsrStructuralERDate, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*------------------- STRUCTURAL ENGINEERING REPORT NAME -------------------------------*@
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.PsrStructuralEnginnersName, htmlAttributes: new { @class = "control-label col-md-12" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.EditorFor(model => model.PsrStructuralEnginnersName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PsrStructuralEnginnersName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            @*------------------- NHBC GUARANTEE -------------------------------*@
+
+            <div class="wrapperSec">
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.PsrNHBCguarantee, htmlAttributes: new { @class = "control-label col-md-12 " })
+                        </div>
+                        <div class="col-md-3 second2">
+                            @Html.DropDownListFor(model => model.PsrNHBCguarantee, Model.yesNo, "MS", new { @id = "useOccupancy", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.PsrNHBCguarantee, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*------------------- RICS/FSVA SURVEY DATE -------------------------------*@
+
+            <div class="wrapper">
+                <div class="form-group  first">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.PsrExpires, htmlAttributes: new { @class = " control-label col-md-12" })
+                        </div>
+                        <div class="col-md-12 second3 ">
+                            @Html.EditorFor(model => model.PsrExpires, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.PsrExpires, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <button type="button" class="btn btn-primary btn-padding" id="surveyHideButton">Complete</button>
+
+        </div>
+
+    </div>
+
+
+    @*-------------------------------- OTHER DETAILS MODAL --------------------------------------------------------------------------*@
+
+    <div id="odQuestions" style='display:none' class="popQuestionsOD">
+
+        <p class="header2">Other Details</p>
+
+
+        <div class="odModal">
+            <br />
+
+            @*------------------- RISK PROPERTY ADDRESS-------------------------------*@
+
+            <div class="threeDivs">
+                <h5 class="popOut">RISK PROPERTY ADDRESS</h5>
+
+
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PropertyODRiskPropertyAddress.RPNumberName, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.PropertyODRiskPropertyAddress.RPNumberName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PropertyODRiskPropertyAddress.RPNumberName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PropertyODRiskPropertyAddress.RPStreet, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.PropertyODRiskPropertyAddress.RPStreet, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PropertyODRiskPropertyAddress.RPStreet, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PropertyODRiskPropertyAddress.RPTown, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.PropertyODRiskPropertyAddress.RPTown, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PropertyODRiskPropertyAddress.RPTown, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PropertyODRiskPropertyAddress.RPCounty, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.PropertyODRiskPropertyAddress.RPCounty, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PropertyODRiskPropertyAddress.RPCounty, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PropertyODRiskPropertyAddress.RPPostCode, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.PropertyODRiskPropertyAddress.RPPostCode, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PropertyODRiskPropertyAddress.RPPostCode, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="threeDivs">
+                <h5 class="popOut">COMMUNICATION ADDRESS</h5>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PropertyODCommunicationAddress.CANumberName, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.PropertyODCommunicationAddress.CANumberName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PropertyODCommunicationAddress.CANumberName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PropertyODCommunicationAddress.CAStreet, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.PropertyODCommunicationAddress.CAStreet, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PropertyODCommunicationAddress.CAStreet, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PropertyODCommunicationAddress.CATown, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.PropertyODCommunicationAddress.CATown, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PropertyODCommunicationAddress.CATown, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PropertyODCommunicationAddress.CACounty, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.PropertyODCommunicationAddress.CACounty, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PropertyODCommunicationAddress.CACounty, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PropertyODCommunicationAddress.CAPostCode, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.PropertyODCommunicationAddress.CAPostCode, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PropertyODCommunicationAddress.CAPostCode, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="threeDivs">
+                <h5 class="popOut">INTERESTED PARTY</h5>
+
+
+
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PropertyODInterestedParty.IPType, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(model => model.PropertyODInterestedParty.IPType, Model.InterestedPartyType, "MS", new { @id = "useOccupancy", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PropertyODInterestedParty.IPType, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PropertyODInterestedParty.IPName, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(model => model.PropertyODInterestedParty.IPName, Model.InterestedParty, "MS", new { @id = "useOccupancy", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PropertyODInterestedParty.IPName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PropertyODInterestedParty.IPNameOther, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.PropertyODInterestedParty.IPNameOther, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PropertyODInterestedParty.IPNameOther, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PropertyODInterestedParty.IPNumberName, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.PropertyODInterestedParty.IPNumberName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PropertyODInterestedParty.IPNumberName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PropertyODInterestedParty.IPStreet, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.PropertyODInterestedParty.IPStreet, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PropertyODInterestedParty.IPStreet, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PropertyODInterestedParty.IPTown, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.PropertyODInterestedParty.IPTown, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PropertyODInterestedParty.IPTown, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PropertyODInterestedParty.IPCounty, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.PropertyODInterestedParty.IPCounty, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PropertyODInterestedParty.IPCounty, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PropertyODInterestedParty.IPPostCode, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.PropertyODInterestedParty.IPPostCode, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PropertyODInterestedParty.IPPostCode, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PropertyODInterestedParty.IPRefMortgageNo, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.PropertyODInterestedParty.IPRefMortgageNo, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PropertyODInterestedParty.IPRefMortgageNo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <br />
+
+                <button type="button" class="btn btn-primary" id="odHideButton">Complete</button>
+
+            </div>
+
+        </div>
+    </div>
+
+    @*-------------------------------- BUILDINGS AND CONTENTS MODAL --------------------------------------------------------------------------*@
+
+    <div id="bcQuestions" style='display:none' class="popQuestionsBC">
+
+        <p class="header2">Buildings / Content Cover</p>
+
+
+        <div class="odModal">
+            <br />
+
+
+            <div class="twodivs">
+
+                <p class="font-weight-bold buildings popOut"> BUILDINGS</p>
+
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.CBCoverType, htmlAttributes: new { @class = "control-label col-md-6" })
+                        </div>
+                        <div class="col-md-7 second2">
+                            @Html.DropDownListFor(model => model.CBCoverType, Model.BuildingsCoverType, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.CBCoverType, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group ">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.CBSumInsured, htmlAttributes: new { @class = " control-label col-md-12" })
+                        </div>
+                        <div class="col-md-12 second3 ">
+                            @Html.EditorFor(model => model.CBSumInsured, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.CBSumInsured, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group ">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.CBVolExcess, htmlAttributes: new { @class = " control-label col-md-12" })
+                        </div>
+                        <div class="col-md-12 second3 ">
+                            @Html.EditorFor(model => model.CBVolExcess, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.CBVolExcess, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.CBXSBuyBack, htmlAttributes: new { @class = "control-label col-md-6" })
+                        </div>
+                        <div class="col-md-3 second2">
+                            @Html.DropDownListFor(model => model.CBXSBuyBack, Model.yesNo, "MS", new { @id = "useOccupancy", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.CBXSBuyBack, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group second ">
+                    <div class="wrapper2">
+                        <div class="firstCover">
+                            @Html.LabelFor(model => model.CBPrevInsurer, htmlAttributes: new { @class = " control-label col-md-12 popOut" })
+                        </div>
+                        <div class="col-md-6 second ">
+                            @Html.DropDownListFor(model => model.CBPrevInsurer, Model.yesNo, "MS", new { @id = "CBprevIns", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.CBPrevInsurer, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="twodivs">
+
+                <p class="font-weight-bold buildings popOut"> CONTENTS</p>
+
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.CCCoverType, htmlAttributes: new { @class = "control-label col-md-6" })
+                        </div>
+                        <div class="col-md-7 second2">
+                            @Html.DropDownListFor(model => model.CCCoverType, Model.ContentsCoverType, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.CCCoverType, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group ">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.CCSumInsuredValue, htmlAttributes: new { @class = " control-label col-md-12" })
+                        </div>
+                        <div class="col-md-12 second3 ">
+                            @Html.EditorFor(model => model.CCSumInsuredValue, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.CCSumInsuredValue, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.CCSumInsuredOneItem, htmlAttributes: new { @class = " control-label col-md-12" })
+                        </div>
+                        <div class="col-md-12 second3 ">
+                            @Html.EditorFor(model => model.CCSumInsuredOneItem, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.CCSumInsuredOneItem, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.CCValuablesValue, htmlAttributes: new { @class = " control-label col-md-12" })
+                        </div>
+                        <div class="col-md-12 second3 ">
+                            @Html.EditorFor(model => model.CCValuablesValue, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.CCValuablesValue, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.CCValuablesOneItem, htmlAttributes: new { @class = " control-label col-md-12" })
+                        </div>
+                        <div class="col-md-12 second3 ">
+                            @Html.EditorFor(model => model.CCValuablesOneItem, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.CCValuablesOneItem, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group ">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.CCVolExcess, htmlAttributes: new { @class = " control-label col-md-12" })
+                        </div>
+                        <div class="col-md-12 second3 ">
+                            @Html.EditorFor(model => model.CCVolExcess, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.CCVolExcess, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.CCXSBuyBack, htmlAttributes: new { @class = "control-label col-md-6" })
+                        </div>
+                        <div class="col-md-3 second2">
+                            @Html.DropDownListFor(model => model.CCXSBuyBack, Model.yesNo, "MS", new { @id = "useOccupancy", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.CCXSBuyBack, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group second ">
+                    <div class="wrapper2">
+                        <div class="firstCover">
+                            @Html.LabelFor(model => model.CCPrevInsurer, htmlAttributes: new { @class = " control-label col-md-12 popOut" })
+                        </div>
+                        <div class="col-md-6 second ">
+                            @Html.DropDownListFor(model => model.CCPrevInsurer, Model.yesNo, "MS", new { @id = "CCprevIns", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.CCPrevInsurer, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <br /><br /><br />
+
+                <button type="button" class="btn btn-primary" id="bcHideButton">Complete</button>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+    @*-------------------------------- PREVIOUS INSURANCE: BUILDINGS MODAL --------------------------------------------------------------------------*@
+
+    <div id="BPIQuestions" style='display:none' class="popQuestionsSurvey">
+
+        <p class="header2">Previous Insurance: Buildings</p>
+
+
+        <div class="securityModal">
+            <br />
+
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.CBuildingsPrevInsurance.InsurerName, htmlAttributes: new { @class = "control-label col-md-12" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.DropDownListFor(model => model.CBuildingsPrevInsurance.InsurerName, Model.PreviousInsurer, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.CBuildingsPrevInsurance.InsurerName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.CBuildingsPrevInsurance.InsurerNameOther, htmlAttributes: new { @class = "control-label col-md-12" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.EditorFor(model => model.CBuildingsPrevInsurance.InsurerNameOther, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CBuildingsPrevInsurance.InsurerNameOther, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.CBuildingsPrevInsurance.PolicyNo, htmlAttributes: new { @class = "control-label col-md-12" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.EditorFor(model => model.CBuildingsPrevInsurance.PolicyNo, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CBuildingsPrevInsurance.PolicyNo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.CBuildingsPrevInsurance.DateLapsed, htmlAttributes: new { @class = " control-label col-md-12" })
+                    </div>
+                    <div class="col-md-12 second3 ">
+                        @Html.EditorFor(model => model.CBuildingsPrevInsurance.DateLapsed, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CBuildingsPrevInsurance.DateLapsed, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.CBuildingsPrevInsurance.YearsNCB, htmlAttributes: new { @class = " control-label col-md-6" })
+                    </div>
+                    <div class="col-md-7 second ">
+                        @Html.EditorFor(model => model.CBuildingsPrevInsurance.YearsNCB, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CBuildingsPrevInsurance.YearsNCB, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper12">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.CBuildingsPrevInsurance.ProofNCB, htmlAttributes: new { @class = " control-label col-md-10" })
+                    </div>
+                    <div class="col-md-6 second2" id="prelimQs">
+                        @Html.DropDownListFor(model => model.CBuildingsPrevInsurance.ProofNCB, Model.yesNo, "MS", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.CBuildingsPrevInsurance.ProofNCB, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.CBuildingsPrevInsurance.NoOfYearsIns, htmlAttributes: new { @class = " control-label col-md-6" })
+                    </div>
+                    <div class="col-md-7 second ">
+                        @Html.EditorFor(model => model.CBuildingsPrevInsurance.NoOfYearsIns, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CBuildingsPrevInsurance.NoOfYearsIns, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <p id="proposers3" class="popOut">WHERE PREVIOUS INSURER WITH BANK, BUILDING SOCIETY OR DIRECT INSURER:</p>
+
+            <br />
+            <div class="form-group">
+                <div class="wrapper12">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.CBuildingsPrevInsurance.TransferFeePaid, htmlAttributes: new { @class = " control-label col-md-10" })
+                    </div>
+                    <div class="col-md-6 second2" id="prelimQs">
+                        @Html.DropDownListFor(model => model.CBuildingsPrevInsurance.TransferFeePaid, Model.yesNo, "MS", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.CBuildingsPrevInsurance.TransferFeePaid, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper12">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.CBuildingsPrevInsurance.ProofOfPaymentRec, htmlAttributes: new { @class = " control-label col-md-10" })
+                    </div>
+                    <div class="col-md-6 second2" id="prelimQs">
+                        @Html.DropDownListFor(model => model.CBuildingsPrevInsurance.ProofOfPaymentRec, Model.ProofOfInsurerPayment, "MS", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.CBuildingsPrevInsurance.ProofOfPaymentRec, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <br /><br /><br />
+
+            <button type="button" class="btn btn-primary" id="bpiHideButton">Complete</button>
+        </div>
+
+    </div>
+
+    @*-------------------------------- PREVIOUS INSURANCE: CONTENTS MODAL--------------------------------------------------------------------------*@
+
+
+    <div id="CPIQuestions" style='display:none' class="popQuestionsContents">
+
+        <p class="header2">Previous Insurance: Contents</p>
+
+
+        <div class="odModal">
+            <br />
+
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.CCContentsPrevInsurance.CinsurerName, htmlAttributes: new { @class = "control-label col-md-12" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.DropDownListFor(model => model.CCContentsPrevInsurance.CinsurerName, Model.PreviousInsurer, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.CCContentsPrevInsurance.CinsurerName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.CCContentsPrevInsurance.CInsurerNameOther, htmlAttributes: new { @class = "control-label col-md-12" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.EditorFor(model => model.CCContentsPrevInsurance.CInsurerNameOther, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CCContentsPrevInsurance.CInsurerNameOther, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapperSec">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.CCContentsPrevInsurance.CPolicyNo, htmlAttributes: new { @class = "control-label col-md-12" })
+                    </div>
+                    <div class="col-md-7 second2">
+                        @Html.EditorFor(model => model.CCContentsPrevInsurance.CPolicyNo, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CCContentsPrevInsurance.CPolicyNo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.CCContentsPrevInsurance.CDateLapsed, htmlAttributes: new { @class = " control-label col-md-12" })
+                    </div>
+                    <div class="col-md-12 second3 ">
+                        @Html.EditorFor(model => model.CCContentsPrevInsurance.CDateLapsed, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CCContentsPrevInsurance.CDateLapsed, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.CCContentsPrevInsurance.CYearsNCB, htmlAttributes: new { @class = " control-label col-md-6" })
+                    </div>
+                    <div class="col-md-7 second ">
+                        @Html.EditorFor(model => model.CCContentsPrevInsurance.CYearsNCB, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CCContentsPrevInsurance.CYearsNCB, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="wrapper12">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.CCContentsPrevInsurance.CproofNCB, htmlAttributes: new { @class = " control-label col-md-10" })
+                    </div>
+                    <div class="col-md-6 second2" id="prelimQs">
+                        @Html.DropDownListFor(model => model.CCContentsPrevInsurance.CproofNCB, Model.yesNo, "MS", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.CCContentsPrevInsurance.CproofNCB, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="wrapper3">
+                    <div class="first4">
+                        @Html.LabelFor(model => model.CCContentsPrevInsurance.CNoOfYearsIns, htmlAttributes: new { @class = " control-label col-md-6" })
+                    </div>
+                    <div class="col-md-7 second ">
+                        @Html.EditorFor(model => model.CCContentsPrevInsurance.CNoOfYearsIns, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CCContentsPrevInsurance.CNoOfYearsIns, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <br /><br /><br />
+
+            <button type="button" class="btn btn-primary" id="cpiHideButton">Complete</button>
+        </div>
+
+    </div>
+
+   
+
+    @*-------------------------------- CARAVAN MODAL --------------------------------------------------------------------------*@
+
+    <div id="caravanQuestions" style='display:none' class="popQuestionsOD">
+
+        <p class="header2">Caravan Details</p>
+
+
+        <div class="odModal">
+            <br />
+
+            <div class="odModal">
+                <br />
+
+
+                <div class="twodivs">
+
+                    <div class="form-group">
+                        <div class="wrapper3">
+                            <div class="first4">
+                                @Html.LabelFor(model => model.AOCaravanDetail.CaravanType, htmlAttributes: new { @class = "control-label col-md-6" })
+                            </div>
+                            <div class="col-md-7 second2">
+                                @Html.DropDownListFor(model => model.AOCaravanDetail.CaravanType, Model.CaravanType, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.AOCaravanDetail.CaravanType, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="wrapper3">
+                            <div class="first4">
+                                @Html.LabelFor(model => model.AOCaravanDetail.CaravanMake, htmlAttributes: new { @class = "control-label col-md-6" })
+                            </div>
+                            <div class="col-md-7 second2">
+                                @Html.EditorFor(model => model.AOCaravanDetail.CaravanMake, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.AOCaravanDetail.CaravanMake, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="wrapper3">
+                            <div class="first4">
+                                @Html.LabelFor(model => model.AOCaravanDetail.caravanModel, htmlAttributes: new { @class = "control-label col-md-6" })
+                            </div>
+                            <div class="col-md-7 second2">
+                                @Html.EditorFor(model => model.AOCaravanDetail.caravanModel, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.AOCaravanDetail.caravanModel, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="wrapper3">
+                            <div class="first4">
+                                @Html.LabelFor(model => model.AOCaravanDetail.caravanVIN, htmlAttributes: new { @class = "control-label col-md-6" })
+                            </div>
+                            <div class="col-md-7 second2">
+                                @Html.EditorFor(model => model.AOCaravanDetail.caravanVIN, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.AOCaravanDetail.caravanVIN, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <br />
+                    <p class="locDet popOut"> USAGE / LOCATION DETAILS</p>
+                    <br />
+
+                    <div class="form-group">
+                        <div class="wrapper3">
+                            <div class="first13">
+                                @Html.LabelFor(model => model.AOCaravanDetail.caravanLetHireReward, htmlAttributes: new { @class = "control-label col-md-12" })
+                            </div>
+                            <div class="col-md-3 second2">
+                                @Html.DropDownListFor(model => model.AOCaravanDetail.caravanLetHireReward, Model.yesNo, "MS", new { @id = "useOccupancy", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.AOCaravanDetail.caravanLetHireReward, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="wrapper3">
+                            <div class="first13">
+                                @Html.LabelFor(model => model.AOCaravanDetail.caravanRiskUnused, htmlAttributes: new { @class = "control-label col-md-12" })
+                            </div>
+                            <div class="col-md-3 second2">
+                                @Html.DropDownListFor(model => model.AOCaravanDetail.caravanRiskUnused, Model.yesNo, "MS", new { @id = "useOccupancy", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.AOCaravanDetail.caravanRiskUnused, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="wrapper3">
+                            <div class="first13">
+                                @Html.LabelFor(model => model.AOCaravanDetail.caravanKeptOnSite, htmlAttributes: new { @class = "control-label col-md-12" })
+                            </div>
+                            <div class="col-md-3 second2">
+                                @Html.DropDownListFor(model => model.AOCaravanDetail.caravanKeptOnSite, Model.yesNo, "MS", new { @id = "useOccupancy", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.AOCaravanDetail.caravanKeptOnSite, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+                <div class="twodivs">
+
+
+
+                    <div class="form-group">
+                        <div class="wrapper3">
+                            <div class="first4">
+                                @Html.LabelFor(model => model.AOCaravanDetail.caravanSerialNumber, htmlAttributes: new { @class = "control-label col-md-12" })
+                            </div>
+                            <div class="col-md-7 second2">
+                                @Html.EditorFor(model => model.AOCaravanDetail.caravanSerialNumber, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.AOCaravanDetail.caravanSerialNumber, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group ">
+                        <div class="wrapper3">
+                            <div class="first4">
+                                @Html.LabelFor(model => model.AOCaravanDetail.caravanManufactured, htmlAttributes: new { @class = " control-label col-md-12" })
+                            </div>
+                            <div class="col-md-12 second3 ">
+                                @Html.EditorFor(model => model.AOCaravanDetail.caravanManufactured, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.AOCaravanDetail.caravanManufactured, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <div class="wrapper3">
+                            <div class="first4">
+                                @Html.LabelFor(model => model.AOCaravanDetail.caravanPurchased, htmlAttributes: new { @class = " control-label col-md-12" })
+                            </div>
+                            <div class="col-md-12 second3 ">
+                                @Html.EditorFor(model => model.AOCaravanDetail.caravanPurchased, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.AOCaravanDetail.caravanPurchased, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <div class="wrapper3">
+                            <div class="first4">
+                                @Html.LabelFor(model => model.AOCaravanDetail.caravanPricePaid, htmlAttributes: new { @class = " control-label col-md-12" })
+                            </div>
+                            <div class="col-md-12 second3 ">
+                                @Html.EditorFor(model => model.AOCaravanDetail.caravanPricePaid, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.AOCaravanDetail.caravanPricePaid, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <br />
+
+                    <p class="locDet popOut"> COVER DETAILS</p>
+
+                    <br />
+
+                    <div class="form-group ">
+                        <div class="wrapper3">
+                            <div class="first12">
+                                @Html.LabelFor(model => model.AOCaravanDetail.CaravanAndFittings, htmlAttributes: new { @class = " control-label col-md-12" })
+                            </div>
+                            <div class="col-md-12 second3 ">
+                                @Html.EditorFor(model => model.AOCaravanDetail.CaravanAndFittings, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.AOCaravanDetail.CaravanAndFittings, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group ">
+                        <div class="wrapper3">
+                            <div class="first12">
+                                @Html.LabelFor(model => model.AOCaravanDetail.caravanPersonalPossesions, htmlAttributes: new { @class = " control-label col-md-12" })
+                            </div>
+                            <div class="col-md-12 second3 ">
+                                @Html.EditorFor(model => model.AOCaravanDetail.caravanPersonalPossesions, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.AOCaravanDetail.caravanPersonalPossesions, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <div class="wrapper3">
+                            <div class="first12">
+                                @Html.LabelFor(model => model.AOCaravanDetail.caravanHighestValueItem, htmlAttributes: new { @class = " control-label col-md-12" })
+                            </div>
+                            <div class="col-md-12 second3 ">
+                                @Html.EditorFor(model => model.AOCaravanDetail.caravanHighestValueItem, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.AOCaravanDetail.caravanHighestValueItem, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <br /><br /><br />
+
+                    <button type="button" class="btn btn-primary" id="caravanHideButton">Complete</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    @*-------------------------------- BOAT MODAL --------------------------------------------------------------------------*@
+
+    <div id="boatQuestions" style='display:none' class="popQuestionsOD">
+
+        <p class="header2">Boat / Small Craft Details</p>
+
+
+        <div class="odModal">
+            <br />
+
+
+            <div class="twodivs">
+
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.AOBoatDetail.BoatType, htmlAttributes: new { @class = "control-label col-md-6" })
+                        </div>
+                        <div class="col-md-7 second2">
+                            @Html.EditorFor(model => model.AOBoatDetail.BoatType, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.AOBoatDetail.BoatType, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.AOBoatDetail.BoatName, htmlAttributes: new { @class = "control-label col-md-6" })
+                        </div>
+                        <div class="col-md-7 second2">
+                            @Html.EditorFor(model => model.AOBoatDetail.BoatName, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.AOBoatDetail.BoatName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.AOBoatDetail.BoatSailNo, htmlAttributes: new { @class = "control-label col-md-10" })
+                        </div>
+                        <div class="col-md-7 second2">
+                            @Html.EditorFor(model => model.AOBoatDetail.BoatSailNo, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.AOBoatDetail.BoatSailNo, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.AOBoatDetail.BoatClass, htmlAttributes: new { @class = "control-label col-md-6" })
+                        </div>
+                        <div class="col-md-7 second2">
+                            @Html.DropDownListFor(model => model.AOBoatDetail.BoatClass, Model.BoatClass, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.AOBoatDetail.BoatClass, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.AOBoatDetail.BoatModel, htmlAttributes: new { @class = "control-label col-md-6" })
+                        </div>
+                        <div class="col-md-7 second2">
+                            @Html.EditorFor(model => model.AOBoatDetail.BoatModel, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.AOBoatDetail.BoatModel, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <br />
+                <p class="locDet popOut"> ENGINE DETAILS</p>
+                <br />
+
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.AOBoatDetail.BoatEngineDetailsType, htmlAttributes: new { @class = "control-label col-md-6" })
+                        </div>
+                        <div class="col-md-7 second2">
+                            @Html.DropDownListFor(model => model.AOBoatDetail.BoatEngineDetailsType, Model.EngineType, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.AOBoatDetail.BoatEngineDetailsType, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.AOBoatDetail.BoatEngineDetailsMake, htmlAttributes: new { @class = "control-label col-md-6" })
+                        </div>
+                        <div class="col-md-7 second2">
+                            @Html.EditorFor(model => model.AOBoatDetail.BoatEngineDetailsMake, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.AOBoatDetail.BoatEngineDetailsMake, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.AOBoatDetail.BoatEngineDetailsSerNo, htmlAttributes: new { @class = "control-label col-md-10" })
+                        </div>
+                        <div class="col-md-7 second2">
+                            @Html.EditorFor(model => model.AOBoatDetail.BoatEngineDetailsSerNo, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.AOBoatDetail.BoatEngineDetailsSerNo, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.AOBoatDetail.BoatEngineDetailsMade, htmlAttributes: new { @class = "control-label col-md-6" })
+                        </div>
+                        <div class="col-md-7 second2">
+                            @Html.EditorFor(model => model.AOBoatDetail.BoatEngineDetailsMade, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.AOBoatDetail.BoatEngineDetailsMade, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group ">
+                    <div class="wrapper3">
+                        <div class="first4">
+                            @Html.LabelFor(model => model.AOBoatDetail.BoatEngineDetailsHP, htmlAttributes: new { @class = " control-label col-md-6" })
+                        </div>
+                        <div class="col-md-12 second3 ">
+                            @Html.EditorFor(model => model.AOBoatDetail.BoatEngineDetailsHP, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.AOBoatDetail.BoatEngineDetailsHP, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="twodivs">
+
+
+
+
+                <div class="form-group ">
+                    <div class="wrapper3">
+                        <div class="first12">
+                            @Html.LabelFor(model => model.AOBoatDetail.BoatManufactured, htmlAttributes: new { @class = " control-label col-md-12" })
+                        </div>
+                        <div class="col-md-12 second3 ">
+                            @Html.EditorFor(model => model.AOBoatDetail.BoatManufactured, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.AOBoatDetail.BoatManufactured, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <div class="wrapper3">
+                        <div class="first12">
+                            @Html.LabelFor(model => model.AOBoatDetail.BoatPurchased, htmlAttributes: new { @class = " control-label col-md-12" })
+                        </div>
+                        <div class="col-md-12 second3 ">
+                            @Html.EditorFor(model => model.AOBoatDetail.BoatPurchased, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.AOBoatDetail.BoatPurchased, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <div class="wrapper3">
+                        <div class="first12">
+                            @Html.LabelFor(model => model.AOBoatDetail.BoatMaximumSpeed, htmlAttributes: new { @class = " control-label col-md-12" })
+                        </div>
+                        <div class="col-md-12 second3 ">
+                            @Html.EditorFor(model => model.AOBoatDetail.BoatMaximumSpeed, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.AOBoatDetail.BoatMaximumSpeed, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first12">
+                            @Html.LabelFor(model => model.AOBoatDetail.BoatOver5m, htmlAttributes: new { @class = "control-label col-md-12" })
+                        </div>
+                        <div class="col-md-3 second2">
+                            @Html.DropDownListFor(model => model.AOBoatDetail.BoatOver5m, Model.yesNo, "MS", new { @id = "useOccupancy", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.AOBoatDetail.BoatOver5m, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="wrapper3">
+                        <div class="first12">
+                            @Html.LabelFor(model => model.AOBoatDetail.BoatUnusedAtMooring, htmlAttributes: new { @class = "control-label col-md-12" })
+                        </div>
+                        <div class="col-md-3 second2">
+                            @Html.DropDownListFor(model => model.AOBoatDetail.BoatUnusedAtMooring, Model.yesNo, "MS", new { @id = "useOccupancy", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.AOBoatDetail.BoatUnusedAtMooring, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+
+                <p class="locDet popOut"> COVER DETAILS</p>
+
+                <br />
+
+                <div class="form-group ">
+                    <div class="wrapper3">
+                        <div class="first12">
+                            @Html.LabelFor(model => model.AOBoatDetail.BoatCoverDetailsCraftGeneral, htmlAttributes: new { @class = " control-label col-md-12" })
+                        </div>
+                        <div class="col-md-12 second3 ">
+                            @Html.EditorFor(model => model.AOBoatDetail.BoatCoverDetailsCraftGeneral, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.AOBoatDetail.BoatCoverDetailsCraftGeneral, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <div class="wrapper3">
+                        <div class="first12">
+                            @Html.LabelFor(model => model.AOBoatDetail.BoatCoverDetailsOutboardMotor, htmlAttributes: new { @class = " control-label col-md-12" })
+                        </div>
+                        <div class="col-md-12 second3 ">
+                            @Html.EditorFor(model => model.AOBoatDetail.BoatCoverDetailsOutboardMotor, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.AOBoatDetail.BoatCoverDetailsOutboardMotor, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <div class="wrapper3">
+                        <div class="first12">
+                            @Html.LabelFor(model => model.AOBoatDetail.BoatCoverDetailsRoadTrailer, htmlAttributes: new { @class = " control-label col-md-12" })
+                        </div>
+                        <div class="col-md-12 second3 ">
+                            @Html.EditorFor(model => model.AOBoatDetail.BoatCoverDetailsRoadTrailer, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.AOBoatDetail.BoatCoverDetailsRoadTrailer, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <div class="wrapper3">
+                        <div class="first12">
+                            @Html.LabelFor(model => model.AOBoatDetail.BoatCoverDetailsLaunchingTrolley, htmlAttributes: new { @class = " control-label col-md-12" })
+                        </div>
+                        <div class="col-md-12 second3 ">
+                            @Html.EditorFor(model => model.AOBoatDetail.BoatCoverDetailsLaunchingTrolley, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.AOBoatDetail.BoatCoverDetailsLaunchingTrolley, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <br /><br /><br />
+
+                <button type="button" class="btn btn-primary" id="boatHideButton">Complete</button>
+
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+    @*-------------------------------- ALL RISKS MODAL --------------------------------------------------------------------------*@
+
+    <div id="allRisksQuestions" style='display:none' class="popQuestions2">
+
+        <p class="header2">All Risks Cover</p>
+
+        <div id="allrisksTitle" class="wrapper8 extraPadding3">
+            <div class="form-group" style="float: left; width: 150px; ">
+                <p class=" = font-weight-bold popOut">Value</p>
+            </div>
+            <div class="form-group" style="float: left; width: 150px; ">
+                <p class=" = font-weight-bold popOut">1 Item</p>
+            </div>
+            <div class="form-group" style="float: left; width: 150px; ">
+                <p class=" = font-weight-bold popOut">Territory</p>
+            </div>
+
+
+
+        </div>
+
+        @*//////////////////////  UNSPEC EFFECTS ////////////////////////////////*@
+
+        <div class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        <p> Unspec.Effects:</p>
+                    </div>
+                    <div class="col-md-12 second4 ">
+                        @Html.EditorFor(model => model.CAllRiskUnspecEffectsValue, new { htmlAttributes = new { @class = "form-control lp" } })
+                        @Html.ValidationMessageFor(model => model.CAllRiskUnspecEffectsValue, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 150px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-12 second4 ">
+                        @Html.EditorFor(model => model.CAllRiskUnspecEffectsOneItem, new { htmlAttributes = new { @class = "form-control lp" } })
+                        @Html.ValidationMessageFor(model => model.CAllRiskUnspecEffectsOneItem, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-12 second3 ">
+                        @Html.DropDownListFor(model => model.CAllRiskUnspecEffectsTerritory, Model.Territory, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.CAllRiskUnspecEffectsTerritory, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+        @*//////////////////////  VALUABLES UNSPEC ////////////////////////////////*@
+
+        <div class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        <p> Valuables US:</p>
+                    </div>
+                    <div class="col-md-12 second4 ">
+                        @Html.EditorFor(model => model.CAllRisksValuablesUnspecValue, new { htmlAttributes = new { @class = "form-control lp" } })
+                        @Html.ValidationMessageFor(model => model.CAllRisksValuablesUnspecValue, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 150px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-12 second4 ">
+                        @Html.EditorFor(model => model.CAllRisksValuablesUnspecOneItem, new { htmlAttributes = new { @class = "form-control lp" } })
+                        @Html.ValidationMessageFor(model => model.CAllRisksValuablesUnspecOneItem, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-12 second3 ">
+                        @Html.DropDownListFor(model => model.CAllRisksValuablesUnspecTerritory, Model.Territory, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.CAllRisksValuablesUnspecTerritory, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+        @*//////////////////////  PHOTO UNSPEC ////////////////////////////////*@
+
+        <div class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        <p> Photo Unspec:</p>
+                    </div>
+                    <div class="col-md-12 second4 ">
+                        @Html.EditorFor(model => model.CAllRisksPhotoUnspecValue, new { htmlAttributes = new { @class = "form-control lp" } })
+                        @Html.ValidationMessageFor(model => model.CAllRisksPhotoUnspecValue, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 150px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-12 second4 ">
+                        @Html.EditorFor(model => model.CAllRisksPhotoUnspecOneItem, new { htmlAttributes = new { @class = "form-control lp" } })
+                        @Html.ValidationMessageFor(model => model.CAllRisksPhotoUnspecOneItem, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-12 second3 ">
+                        @Html.DropDownListFor(model => model.CAllRisksPhotoUnspecTerritory, Model.Territory, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.CAllRisksPhotoUnspecTerritory, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+        @*//////////////////////  SPORTS UNSPEC ////////////////////////////////*@
+
+        <div class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        <p> Sports Unspec:</p>
+                    </div>
+                    <div class="col-md-12 second4 ">
+                        @Html.EditorFor(model => model.CAllRisksSportsUnspecValue, new { htmlAttributes = new { @class = "form-control lp" } })
+                        @Html.ValidationMessageFor(model => model.CAllRisksSportsUnspecValue, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 150px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-12 second4 ">
+                        @Html.EditorFor(model => model.CAllRisksSportsUnspecOneItem, new { htmlAttributes = new { @class = "form-control lp" } })
+                        @Html.ValidationMessageFor(model => model.CAllRisksSportsUnspecOneItem, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-12 second3 ">
+                        @Html.DropDownListFor(model => model.CAllRisksSportsUnspecTerritory, Model.Territory, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.CAllRisksSportsUnspecTerritory, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        @*//////////////////////  BICYCLES ////////////////////////////////*@
+
+        <div class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        <p class="popOut"> Bicycles ></p>
+                    </div>
+                    <div class="col-md-12 second4 ">
+                        @Html.DropDownListFor(model => model.CAllRiskBicycles, Model.yesNo, "MS", new { @id = "Bicycle", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.CAllRiskBicycles, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        @*//////////////////////  MONEY ////////////////////////////////*@
+
+        <div class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        <p> Money:</p>
+                    </div>
+                    <div class="col-md-12 second4 ">
+                        @Html.EditorFor(model => model.CAllRisksMoneyValue, new { htmlAttributes = new { @class = "form-control lp" } })
+                        @Html.ValidationMessageFor(model => model.CAllRisksMoneyValue, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 150px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-12 second4 ">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-12 second3 ">
+                        @Html.DropDownListFor(model => model.CAllRisksMoneyTerritory, Model.Territory, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.CAllRisksMoneyTerritory, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+        @*//////////////////////  Credit Cards ////////////////////////////////*@
+
+        <div class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        <p> Credit Cards:</p>
+                    </div>
+                    <div class="col-md-12 second4 ">
+                        @Html.EditorFor(model => model.CAllRisksCreditCardsValue, new { htmlAttributes = new { @class = "form-control lp" } })
+                        @Html.ValidationMessageFor(model => model.CAllRisksCreditCardsValue, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 150px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-12 second4 ">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group " style="float: left; width: 200px; ">
+                <div class="wrapperRooms">
+                    <div class="col-md-12 second3 ">
+                        @Html.DropDownListFor(model => model.CAllRiskCreditCardsTerritory, Model.Territory, "Make Selection", new { @id = "houseType", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.CAllRiskCreditCardsTerritory, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+        @*////////////////////// FREEZER CONTENTS ////////////////////////////////*@
+
+
+        <div class="wrapper8 extraPadding2">
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first2">
+                        <p> Freezer Conts:</p>
+                    </div>
+                    <div class="col-md-12 second4 ">
+                        @Html.EditorFor(model => model.CAllRisksFreezerContentsValue, new { htmlAttributes = new { @class = "form-control lp" } })
+                        @Html.ValidationMessageFor(model => model.CAllRisksFreezerContentsValue, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="float: left; width: 250px; ">
+                <div class="wrapperRooms">
+                    <div class="first50">
+                        <p> Age:</p>
+                    </div>
+                    <div class="col-md-4 second4 ">
+                        @Html.EditorFor(model => model.CAllRisksFreezerContentsAge, new { htmlAttributes = new { @class = "form-control lp" } })
+                        @Html.ValidationMessageFor(model => model.CAllRisksFreezerContentsAge, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <button type="button" class="btn btn-primary" id="allRisksHideButton">Complete</button>
+
+    </div>
+
+    @*////////////////////// BICYCLE MODAL ////////////////////////////////*@
+
+
+    <div id="bicycleQuestions" style='display:none' class="popQuestionsBicycles">
+
+        <p class="header2">Bicycle Details</p>
+
+
+
+        <div id="editorRows">
+            @foreach (var item in Model.Bicycles)
+            {
+                @Html.Partial("EditorRow", item);
+            }
+        </div>
+
+        <div class="wrapper8">
+            <div style="float: left; width: 150px; margin-right:30px">
+                <div id="addAnother">@Html.ActionLink("Add Another Item", "BlankEditorRow", null, new { id = "addItem", @class = "btn btn-outline-primary" })</div>
+            </div>
+
+            <button type="button" class="btn btn-primary   btn-pers" id="bicycleHideButton" style="float: left; width: 150px; margin-right:30px ">Complete</button>
+
+
+        </div>
+
+
+    </div>
+
+
+    @*////////////////////// Conviction MODAL ////////////////////////////////*@
+
+
+    <div id="convictionQuestions" style='display:none' class="popQuestionsConvictions">
+
+        <p class="header2">Conviction Details</p>
+
+        <div id="convictionRows">
+            @foreach (var item in Model.Convictions)
+            {
+                @Html.Partial("ConvictionsRow", item);
+            }
+        </div>
+
+
+        <div class="wrapper8">
+            <div style="float: left; width: 150px; margin-right:30px">
+                <div id="addAnother">@Html.ActionLink("Add Another Item", "ConvictionsRow", null, new { id = "addconvItem", @class = "btn btn-outline-primary" })</div>
+            </div>
+
+            <button type="button" class="btn btn-primary btn-pers" id="convictionHideButton" style="float: left; width: 150px; margin-right:30px ">Complete</button>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    @*////////////////////// CLAIMS/LOSSES MODAL ////////////////////////////////*@
+
+
+    <div id="claimsQuestions" style='display:none' class="popQuestionsClaims">
+
+        <p class="header2">Claims / Loss History</p>
+
+
+
+        <div id="claimsRow">
+            @foreach (var item in Model.ClaimsLosses)
+            {
+                @Html.Partial("ClaimsRow", item);
+            }
+        </div>
+
+        <div class="wrapper8">
+            <div style="float: left; width: 150px; margin-right:30px">
+                <div id="addAnother">@Html.ActionLink("Add Another Item", "ClaimsRow", null, new { id = "addclaimsItem", @class = "btn btn-outline-primary" })</div>
+            </div>
+
+            <button type="button" class=" btn btn-primary btn-per" id="claimsHideButton" style="float: left; width: 150px; margin-right:30px ">Complete</button>
+
+
+        </div>
+
+
+      
+
+    </div>
+
+    @*////////////////////// SPECIFIED ITEMS MODAL ////////////////////////////////*@
+
+
+    <div id="specifiedItemsQuestions" style='display:none' class="popQuestionsClaims">
+
+        <p class="header2">Specified Item Cover</p>
+
+
+
+        <div id="SpecifiedItemsRow">
+            @foreach (var item in Model.SpecifiedItems)
+            {
+                @Html.Partial("SpecifiedItemsRow", item);
+            }
+        </div>
+
+        <div class="wrapper8">
+            <div style="float: left; width: 150px; margin-right:30px">
+                <div id="addAnother">@Html.ActionLink("Add Another Item", "SpecifiedItemsRow", null, new { id = "addSpecifiedItemsItem", @class = "btn btn-outline-primary" })</div>
+            </div>
+
+            <button type="button" class=" btn btn-primary btn-pers" id="specifiedItemsHideButton" style="float: left; width: 150px; margin-right:30px ">Complete</button>
+
+
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+}  @*END OF FORM*@
+
+
+
+@section Scripts
+{
+    <script>
+
+        $(window).on("load", function () {
+
+            return $.ajax({
+                url: '@Url.Content("~/Home/ProposersRow")',
+                //data: { 'clientRef': clientRef, 'polNo': polNo },
+                type: 'GET',
+                success: function (data) {
+                    //Fill div with results
+
+                    $("#uploadPolicyDiv").html(data);
+                },
+                error: function (xhr, status, error) {
+                    alert(xhr.responseText);
+                }
+
+            });
+        });
+
+
+
+    </script>
+
+
+
+    <script src="~/Scripts/AddPolicy.js"></script>
+}

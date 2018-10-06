@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OpenGIABICodesModelStoreContainer" CdmEntityContainer="OpenGIABICodesEntities1">
+    <EntitySetMapping Name="Alarm_AccredDetails2">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Alarm_AccredDetails2">
+        <MappingFragment StoreEntitySet="Alarm_AccredDetails2">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Alarm_MaintenanceCompany">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Alarm_MaintenanceCompany">
+        <MappingFragment StoreEntitySet="Alarm_MaintenanceCompany">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Alarm_Type">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Alarm_Type">
+        <MappingFragment StoreEntitySet="Alarm_Type">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Buildings_Insurer">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Buildings_Insurer">
+        <MappingFragment StoreEntitySet="Buildings_Insurer">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Claims_Sections">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Claims_Sections">
+        <MappingFragment StoreEntitySet="Claims_Sections">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contents_Insurer">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Contents_Insurer">
+        <MappingFragment StoreEntitySet="Contents_Insurer">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Home_ClaimType">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Home_ClaimType">
+        <MappingFragment StoreEntitySet="Home_ClaimType">
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Home_InterestedPartyName">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Home_InterestedPartyName">
+        <MappingFragment StoreEntitySet="Home_InterestedPartyName">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Motor_AlarmSecurityFitted">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_AlarmSecurityFitted">
+        <MappingFragment StoreEntitySet="Motor_AlarmSecurityFitted">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Motor_AlarmSecurityMake">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_AlarmSecurityMake">
+        <MappingFragment StoreEntitySet="Motor_AlarmSecurityMake">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Motor_ClaimType">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_ClaimType">
+        <MappingFragment StoreEntitySet="Motor_ClaimType">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Motor_ConvictionType">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_ConvictionType">
+        <MappingFragment StoreEntitySet="Motor_ConvictionType">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Motor_IncidentType">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_IncidentType">
+        <MappingFragment StoreEntitySet="Motor_IncidentType">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Motor_LicenseCountry">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_LicenseCountry">
+        <MappingFragment StoreEntitySet="Motor_LicenseCountry">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Motor_LicenseType">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_LicenseType">
+        <MappingFragment StoreEntitySet="Motor_LicenseType">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Motor_PermittedDrivers">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_PermittedDrivers">
+        <MappingFragment StoreEntitySet="Motor_PermittedDrivers">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Motor_TrackerSecurityFitted">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_TrackerSecurityFitted">
+        <MappingFragment StoreEntitySet="Motor_TrackerSecurityFitted">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Motor_TrackerSecurityMake">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_TrackerSecurityMake">
+        <MappingFragment StoreEntitySet="Motor_TrackerSecurityMake">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Motor_VehicleCoverType">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_VehicleCoverType">
+        <MappingFragment StoreEntitySet="Motor_VehicleCoverType">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Motor_VehicleKeeper">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_VehicleKeeper">
+        <MappingFragment StoreEntitySet="Motor_VehicleKeeper">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Motor_VehicleModification">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_VehicleModification">
+        <MappingFragment StoreEntitySet="Motor_VehicleModification">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Motor_VehicleOwner">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_VehicleOwner">
+        <MappingFragment StoreEntitySet="Motor_VehicleOwner">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Motor_VehicleParking">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Motor_VehicleParking">
+        <MappingFragment StoreEntitySet="Motor_VehicleParking">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Person_BusinessType">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Person_BusinessType">
+        <MappingFragment StoreEntitySet="Person_BusinessType">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Person_ConvictionType">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Person_ConvictionType">
+        <MappingFragment StoreEntitySet="Person_ConvictionType">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Person_EmpStat">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Person_EmpStat">
+        <MappingFragment StoreEntitySet="Person_EmpStat">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Person_MaritalStatus">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Person_MaritalStatus">
+        <MappingFragment StoreEntitySet="Person_MaritalStatus">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Person_Occupation">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Person_Occupation">
+        <MappingFragment StoreEntitySet="Person_Occupation">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Person_RelationshipToProp">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Person_RelationshipToProp">
+        <MappingFragment StoreEntitySet="Person_RelationshipToProp">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Person_Title">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Person_Title">
+        <MappingFragment StoreEntitySet="Person_Title">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Policy_MotorPolicyInsurer">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Policy_MotorPolicyInsurer">
+        <MappingFragment StoreEntitySet="Policy_MotorPolicyInsurer">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Property_Accommodation">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Property_Accommodation">
+        <MappingFragment StoreEntitySet="Property_Accommodation">
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Property_Construction">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Property_Construction">
+        <MappingFragment StoreEntitySet="Property_Construction">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Property_HouseType">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Property_HouseType">
+        <MappingFragment StoreEntitySet="Property_HouseType">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Property_Listed">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Property_Listed">
+        <MappingFragment StoreEntitySet="Property_Listed">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Property_PrimaryHeating">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Property_PrimaryHeating">
+        <MappingFragment StoreEntitySet="Property_PrimaryHeating">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Property_RoofType">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Property_RoofType">
+        <MappingFragment StoreEntitySet="Property_RoofType">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Property_Unoccupancy">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Property_Unoccupancy">
+        <MappingFragment StoreEntitySet="Property_Unoccupancy">
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Security_LockTypes">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Security_LockTypes">
+        <MappingFragment StoreEntitySet="Security_LockTypes">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="OpenGIMapping" ColumnName="OpenGIMapping" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Security_PatiosNFrenchDoors">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Security_PatiosNFrenchDoors">
+        <MappingFragment StoreEntitySet="Security_PatiosNFrenchDoors">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="OpenGIMapping" ColumnName="OpenGIMapping" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Security_WindowLockTypes">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Security_WindowLockTypes">
+        <MappingFragment StoreEntitySet="Security_WindowLockTypes">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="OpenGIMapping" ColumnName="OpenGIMapping" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SpecifiedItem_Category">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.SpecifiedItem_Category">
+        <MappingFragment StoreEntitySet="SpecifiedItem_Category">
+          <ScalarProperty Name="abiCode" ColumnName="abiCode" />
+          <ScalarProperty Name="abiDescription" ColumnName="abiDescription" />
+          <ScalarProperty Name="vt" ColumnName="vt" />
+          <ScalarProperty Name="vtCode" ColumnName="vtCode" />
+          <ScalarProperty Name="vtDescription" ColumnName="vtDescription" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Property_AccommodationABI">
+      <EntityTypeMapping TypeName="OpenGIABICodesModel.Property_AccommodationABI">
+        <MappingFragment StoreEntitySet="Property_AccommodationABI">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MisysCode" ColumnName="MisysCode" />
+          <ScalarProperty Name="MisysName" ColumnName="MisysName" />
+          <ScalarProperty Name="ABICode" ColumnName="ABICode" />
+          <ScalarProperty Name="ABIDescription" ColumnName="ABIDescription" />
+          <ScalarProperty Name="MappingField" ColumnName="MappingField" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

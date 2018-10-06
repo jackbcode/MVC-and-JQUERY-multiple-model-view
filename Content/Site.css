@@ -1,0 +1,985 @@
+﻿body {
+    /*padding-top: 50px;*/
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.buildings{
+    margin-left:15px;
+}
+
+#register{
+    margin-right:10px !important;
+}
+
+.navWhite {
+    color: white !important;
+    text-decoration: wavy;
+    font-weight: bold;
+}
+
+    .navWhite:hover {
+        color: #c2185b !important;
+    }
+
+.UQ {
+    margin-left: 15px;
+    font-size: 18PX;
+    font-weight: bolder;
+    color: #880e4f;
+}
+
+
+
+
+.btn-padding{
+
+    margin-left:550px;
+}
+
+    .navWhite a:hover {
+    }
+
+    #divOne{
+        margin-left:15px;
+
+    }
+
+#divThree {
+    margin-left: 15px !important;
+}
+
+.navLogin a {
+    color:white !important;
+    text-decoration: none;
+    font-weight:bold;
+}
+
+.navLogin a:hover {
+        text-decoration-line: underline !important;
+}
+
+.extraPadding{
+
+    margin-left:20px !important;
+}
+
+
+
+#rightarrow {
+    height: 30px;
+    width: 30px;
+    color: #880e4f;
+}
+
+.divSquare {
+    width: 48%;
+    height: 460px;
+    margin: 10px;
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 0px;
+    border: 1px solid #880e4f;
+    float: left;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: #fff;
+}
+
+
+.divSquare2 {
+    width: 48%;
+    height: 310px;
+    margin: 10px;
+    border: 1px solid #880e4f;
+    float: left;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.divSquare3 {
+    width: 48%;
+    height: 310px;
+    margin: 10px;
+    border: 1px solid #007bff;
+    float: left;
+    border-bottom-left-radius: 25px;
+    background-color: #fff;
+}
+
+.header {
+    font-size: 25px;
+    font-weight: bolder;
+    /*background-color:  #880e4f ;*/
+    color: #880e4f;
+    margin-bottom: 10px;
+    padding-left: 3px;
+    padding-top: 3px;
+    border-bottom: groove 10px #c2185b;
+    /*background: linear-gradient(to right,  #880e4f  30%, #5499C7 60%);*/
+    width: 550px;
+    font-family: 'Harlow Solid';
+    text-shadow: -1px 0 #c2185b, 0 1px #c2185b, 1px 0 #c2185b, 0 -1px #c2185b;
+}
+
+.header2 {
+    font-size: 16px;
+    font-weight: bolder;
+    background-color:  #880e4f ;
+    color: white;
+    margin-bottom: 3px;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #880e4f 30%, #a0305c 60%);
+    /*border-top-right-radius: 25px;*/
+    border-bottom-right-radius: 25px;
+    /*border-top-left-radius: 25px;*/
+    border-bottom-left-radius: 25px;
+    padding-left: 30px !important;
+}
+
+.pad{
+    padding-left:5px !important;
+}
+
+.title{
+    padding-left:40px;
+    padding-right: 30px;
+    font-weight: bolder;
+}
+
+.wrapper {
+    width: 580px;
+    height:45px;
+   
+    overflow: hidden; /* add this to contain floated children */
+}
+
+
+.wrapperButton {
+    width: 70px;
+    overflow: hidden; /* add this to contain floated children */
+}
+
+.buttonFirst {
+    width: 50px;
+    height:30px;
+    float: left;
+}
+
+.buttonSecond {
+    width: 20px;
+    float: left;
+    height: 30px;
+    
+}
+
+#nextButton{
+    margin-left:50px;
+}
+
+.first {
+    width: 250px;
+    float: left;
+   
+}
+
+.first10 {
+    width: 100px;
+    float: left;
+    padding-top: 5px;
+    padding-left: 10px;
+    margin-left: 30px;
+}
+
+.second {
+    
+    float: left; /* add this */
+}
+
+.wrapper2 {
+    width: 250px;
+    overflow: hidden; /* add this to contain floated children */
+}
+
+.first2 {
+    width: 100px;
+    float: left;
+    padding-top:5px;
+   
+}
+
+.first50 {
+    width: 50px;
+    float: left;
+    padding-top: 5px;
+}
+
+.firstCover {
+    width: 140px;
+    float: left;
+    float: left;
+    padding-top: 5px;
+    padding-right: 10px;
+    /*padding-left: 10px;*/
+    margin-right: 5px;
+}
+
+
+.blue {
+    color:  #880e4f  !important;
+    font-size: 18px !important;
+    font-weight: bold;
+}
+
+.buttonEntry {
+    width: 50px !important;
+    border: solid 2px #880e4f !important;
+    border-radius: 10px;
+    height: 30px !important;
+}
+
+.btn-Entry {
+    height: 30px !important;
+    width: 20px !important;
+    padding:0px!important
+}
+
+.popOut {
+    font-weight: bold;
+    color: #880e4f;
+}
+.second {
+  
+    float: left; /* add this */
+    width:100px;
+}
+
+.second2 {
+    float: left; /* add this */
+    
+}
+
+.second4{
+    float:left;
+    width:150px;
+}
+
+.second3 {
+    float: left; /* add this */
+    width: 190px;
+}
+
+.wrapper3 {
+    width: 500px;
+    overflow: hidden; /* add this to contain floated children */
+}
+
+.first3{
+    width: 75px;
+    float: left;
+    padding-top: 5px;
+    padding-right:10px;
+    padding-left:10px;
+    margin-right:5px;
+
+}
+
+.first4 {
+    width: 150px;
+    float: left;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+.first12 {
+    width: 200px;
+    float: left;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+.wrapper4 {
+    width: 300px;
+    overflow: hidden; /* add this to contain floated children */
+    margin-right:20px !important;
+}
+
+.wrapper5 {
+    width: 300px;
+    overflow: hidden; /* add this to contain floated children */
+}
+
+.first5 {
+    width: 75px;
+    float: left;
+    padding-top: 5px;
+}
+
+.wrapper6 {
+    width: 190px;
+    overflow: hidden; /* add this to contain floated children */
+}
+
+.wrapper7 {
+    width: 300px;
+    overflow: hidden; /* add this to contain floated children */
+}
+
+.wrapper8 {
+    width: 900px;
+    overflow: hidden; /* add this to contain floated children */
+}
+
+.wrapper12 {
+    width: 900px;
+    overflow: hidden; /* add this to contain floated children */
+}
+
+
+
+
+.wrapper9 {
+    width: 600px;
+    overflow: hidden; /* add this to contain floated children */
+    margin-left:225px;
+}
+
+.wrapperContained {
+    width: 500px;
+    overflow: hidden; /* add this to contain floated children */
+
+}
+
+.wrapper10 {
+    width: 700px;
+    overflow: hidden; /* add this to contain floated children */
+    margin-left: 120px;
+}
+
+.wrapperSec {
+    width: 750px;
+    overflow: hidden; /* add this to contain floated children */
+
+}
+
+.wrapper11 {
+    width: 900px;
+    height: 45px;
+    overflow: hidden;
+    margin-left: 20px; /* add this to contain floated children */
+}
+
+.wrapper12 {
+    width: 350px;
+    overflow: hidden; /* add this to contain floated children */
+    margin-right: 20px !important;
+}
+
+
+    .lp{
+
+    padding-left:2px !important;
+    padding-right:2px !important;
+}
+
+.first6 {
+    width: 100px;
+    float: left;
+    padding-top: 5px;
+    padding-left: 10px;
+    margin-left:15px;
+}
+
+.extraPadding2 {
+    margin-left: 20px !important;
+}
+
+.extraPadding3 {
+    margin-left: 100px !important;
+}
+
+.extraPadding4 {
+    margin-left: 40px !important;
+}
+
+
+.wrapper180 {
+    width: 180px;
+    overflow: hidden; /* add this to contain floated children */
+}
+
+.first180 {
+    width: 180px;
+    float: left;
+    padding-top: 5px;
+    padding-right: 10px;
+    /*padding-left: 10px;*/
+    margin-right: 5px;
+}
+
+
+
+
+
+
+
+.first7 {
+    width: 150px;
+    float: left;
+    padding-top: 5px;
+    padding-left: 10px;
+    margin-left: 15px;
+    padding-top: 5px;
+}
+#prelimQs{
+   
+}
+
+.bathroom{
+    margin-left:20px;
+}
+
+.extended{
+    margin-left:50px;
+}
+
+.extended2 {
+    margin-left: 15px;
+}
+
+.triple{
+    padding-right: 10px !important;
+}
+
+
+.triple2 {
+    padding-right: 2px !important;
+    padding-left: 2px !important;
+    width: 75px;
+}
+
+.first8 {
+    width: 75px;
+    float: left;
+    padding-top: 5px;
+}
+
+
+.first9 {
+    width: 125px;
+    float: left;
+    padding-top: 5px;
+}
+
+.OD{
+    margin-right:10px;
+}
+
+.first13 {
+    width: 300px;
+    float: left;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+.first16 {
+    width: 250px;
+    float: left;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+
+.first11 {
+    width: 200px;
+    float: left;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+/*.preliminaryQuestions {
+   
+    border-width: 3px;
+    border-color: #007bff;
+    border-style: solid;
+}*/
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.popQuestions {
+    height: 80%;
+    width: 900px;
+    position: absolute;
+    margin: 2%;
+    border-width: 1px;
+    border-color:  #880e4f ;
+    border-style: solid;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: #fff;
+}
+
+.popQuestionsConvictions {
+    height: 98%;
+    width: 700px;
+    position: absolute;
+    margin: 2%;
+    /*border-width: 1px;
+    border-color:  #880e4f ;
+    border-style: solid;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: #fff;*/
+    margin-left: 20em;
+}
+
+.whiteDiv {
+    border-width: 1px;
+    border-color:  #880e4f ;
+    border-style: solid;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: #fff;
+    padding:10px;
+}
+.whiteDiv2 {
+    border-width: 1px;
+    border-color: #880e4f;
+    border-style: solid;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: #fff;
+    padding: 10px;
+    margin:20px;
+}
+
+
+
+
+
+.popQuestionsBicycles {
+    height: 98%;
+    width: 800px;
+    position: absolute;
+    margin: 2%;
+    /*border-width: 1px;
+    border-color:  #880e4f ;
+    border-style: solid;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: #fff;*/
+    margin-left: 20em;
+}
+
+.popQuestionsSecurity {
+    height: 80%;
+    width: 900px;
+    position: absolute;
+    margin: 2%;
+    border-width: 1px;
+    border-color:  #880e4f ;
+    border-style: solid;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: #fff;
+}
+
+.popQuestionsClaims {
+    height: 100%;
+    width: 900px;
+    position: absolute;
+    margin: 2%;
+    /*border-width: 1px;
+    border-color:  #880e4f ;
+    border-style: solid;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;*/
+    /*background-color: #fff;*/
+    margin-left: 15em;
+}
+
+
+.popQuestionsSurvey {
+    height: 80%;
+    width: 900px;
+    position: absolute;
+    margin: 2%;
+    border-width: 1px;
+    border-color:  #880e4f ;
+    border-style: solid;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: #fff;
+}
+
+.popQuestionsContents {
+    height: 80%;
+    width: 700px;
+    position: absolute;
+    margin: 2%;
+    border-width: 1px;
+    border-color: #880e4f;
+    border-style: solid;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: #fff;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.popQuestionsOD {
+    height: 80%;
+    width: 1200px;
+    position: absolute;
+    margin: 2%;
+    border-width: 1px;
+    border-color:  #880e4f ;
+    border-style: solid;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: #fff;
+}
+
+.popQuestionsBC {
+    height: 70%;
+    width: 1200px;
+    position: absolute;
+    margin: 2%;
+    border-width: 1px;
+    border-color:  #880e4f ;
+    border-style: solid;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: #fff;
+    margin-left:2em !important;
+}
+
+
+.popQuestionsED {
+    height: 60%;
+    width: 800px;
+    top:50px;
+    left:10px;
+    margin-left:0px !important;
+    position: absolute;
+    margin: 2%;
+    border-width: 1px;
+    border-color:  #880e4f ;
+    border-style: solid;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: #fff;
+}
+
+.popQuestionsED2 {
+    height: 80%;
+    width: 70%;
+    top: 6%;
+    left: 0.7%;
+    margin-left: 0px !important;
+    position: absolute;
+    margin: 2%;
+    border-width: 1px;
+    border-color: #880e4f;
+    border-style: solid;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: #fff;
+}
+
+.popQuestionsED3 {
+    height: 100%;
+    width: 80%;
+    top: 6%;
+    left: 0.7%;
+    margin-left: 0px !important;
+    position: absolute;
+    margin: 2%;
+    border-width: 1px;
+    border-color: #880e4f;
+    border-style: solid;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: #fff;
+}
+
+#propNext1Button {
+    margin-left: 200px;
+    margin-bottom: 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+#propBack1Button {
+    margin-left: 150px;
+    margin-bottom: 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+    .popQuestions2 {
+    height: 60%;
+    width: 700px;
+    position: absolute;
+    margin: 2%;
+    border-width: 1px;
+    border-color: #880e4f;
+    border-style: solid;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: #fff;
+    margin-left: 20em;
+}
+
+.popQuestions3 {
+    height: 60%;
+    width: 900px;
+    position: absolute;
+    margin: 2%;
+    border-width: 1px;
+    border-color:  #880e4f ;
+    border-style: solid;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: #fff;
+    margin-left: 15em;
+}
+
+
+.securityModal {
+    padding-left: 150px;
+}
+
+.EDModal {
+    padding-left: 80px;
+}
+
+#claimsHideButton{
+    margin-left:50px !important;
+    margin-top:10PX;
+    margin-bottom
+}
+
+.odModal {
+    padding-left: 20px;
+}
+#proposers {
+    padding-left: 120px;
+    font-weight: bold;
+    padding-top:10px;
+}
+
+#proposers3 {
+  
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+#freeFrom {
+    
+    font-weight: bold;
+}
+
+.stock{
+    margin-left:40px !important;
+}
+#useOccupancyHideButton{
+    
+}
+
+#specifiedItems2HideButton{
+    margin-bottom:30px !important;
+}
+
+#prelimHideButton {
+    margin-left: 550px !important
+}
+
+#claimsHideButton {
+    margin-left: 50px 
+}
+
+#allRisksHideButton {
+    margin-left: 550px !important
+}
+
+#checkpolicybutton{
+
+    margin-top:20px !important;
+    margin-left:400px !important;
+}
+
+#CreateButton {
+    margin-left: 180px !important;
+}
+
+.coverDate{
+    margin-right:50px !important;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: !important none;
+    margin: !important 0;
+}
+
+.threeDivs{
+
+    float:left;
+    width:350px;
+}
+
+.twodivs {
+    float: left;
+    width: 500px;
+    margin-right:75px;
+}
+
+.twodivs2 {
+    float: left;
+    width: 500px;
+    margin-right: 50px;
+}
+
+#odHideButton{
+
+    margin-left:200px !important;
+}
+
+#bpiHideButton {
+    margin-left: 200px !important;
+}
+
+#policyCheck {
+    font-size: 40px;
+    color: #880e4f;
+    font-weight: bolder;
+    margin-left:30px;
+    font-family: 'Harlow Solid';
+    text-shadow: -1px 0 #c2185b, 0 1px #c2185b, 1px 0 #c2185b, 0 -1px #c2185b;
+    border-bottom: groove 10px #c2185b;
+    width:60%;
+}
+
+#searchBox{
+   margin-bottom:5px !important;
+}
+
+#policyCheckUnderline {
+    border-bottom: solid 3px #1D94C4;
+    margin-left: 30px;
+    width: 900px;
+}
+
+#policyCheckUnderline2 {
+    border-bottom: #c2185b solid 3px;
+    margin-left: 30px;
+    width: 900px;
+}
+
+.navbar-brand {
+    font-family: 'Harlow Solid' !important;
+    font-size: 1.6rem;
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+}
+
+.CD{
+    padding-left:40px;
+}
+
+.locDet{
+    font-weight:bolder;
+    padding-left:15px;
+}
+
+#caravanHideButton {
+    margin-left:300px;
+}
+
+#bicycleHideButton {
+    margin-left: 650px;
+}
+
+#convictionHideButton {
+    margin-left: 550px;
+}
+
+#allrisksTitle{
+
+margin-left:160px !important;
+}
+
+#claimsLosses {
+    margin-left: 20px !important;
+}
+
+.displayFor {
+    background-color: #faeef3;
+    border: 1px solid #c2185b;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    padding-left: 10px;
+    height:25px;
+}
+
+.displayText {
+    color: #01579B;
+}
+
+#allrisksTitle2 {
+    margin-left: 35px !important;
+}
+
+#allrisksTitle3 {
+    margin-left: 120px !important;
+}
+
+#allrisksTitle4 {
+    margin-left: 120px !important;
+}
+
+#addAnother {
+    margin-left: 45px !important;s
+}
+
+.btn-pers{
+    margin-left:50px !important;
+}
+
+.addFC input{
+
+}

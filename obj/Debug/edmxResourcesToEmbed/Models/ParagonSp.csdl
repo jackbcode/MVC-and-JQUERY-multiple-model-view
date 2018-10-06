@@ -1,0 +1,859 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ParagonModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ParagonEntities15" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="ClaimsUploadParagon" ReturnType="Collection(ParagonModel.ClaimsUploadParagon_Result)">
+      <Parameter Name="PolicyReference" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ClaimsUploadParagonBD" ReturnType="Collection(ParagonModel.ClaimsUploadParagonBD_Result)">
+      <Parameter Name="PolicyReference" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ClaimsUploadParagonNo" ReturnType="Collection(ParagonModel.ClaimsUploadParagonNo_Result)">
+      <Parameter Name="PolicyReference" Mode="In" Type="String" />
+      <Parameter Name="ProposerNo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PCProposersParagon1" ReturnType="Collection(ParagonModel.PCProposersParagon1_Result)">
+      <Parameter Name="PolicyReference" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PCProposersParagonBD1" ReturnType="Collection(ParagonModel.PCProposersParagonBD1_Result)">
+      <Parameter Name="PolicyReference" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PCProposersParagonBDNo" ReturnType="Collection(ParagonModel.PCProposersParagonBDNo_Result)">
+      <Parameter Name="PolicyReference" Mode="In" Type="String" />
+      <Parameter Name="ProposerNo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PCProposersParagonNo" ReturnType="Collection(ParagonModel.PCProposersParagonNo_Result)">
+      <Parameter Name="PolicyReference" Mode="In" Type="String" />
+      <Parameter Name="ProposerNo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PolicyCheckUploadParagon" ReturnType="Collection(ParagonModel.PolicyCheckUploadParagon_Result)">
+      <Parameter Name="PolicyReference" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PolicyCheckUploadParagonBD" ReturnType="Collection(ParagonModel.PolicyCheckUploadParagonBD_Result)">
+      <Parameter Name="PolicyReference" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PolicyCheckUploadParagonUpdate" ReturnType="Collection(ParagonModel.PolicyCheckUploadParagonUpdate_Result)">
+      <Parameter Name="PolicyReference" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SpecItemUploadParagon" ReturnType="Collection(ParagonModel.SpecItemUploadParagon_Result)">
+      <Parameter Name="PolicyReference" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SpecItemUploadParagonBD" ReturnType="Collection(ParagonModel.SpecItemUploadParagonBD_Result)">
+      <Parameter Name="PolicyReference" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="ClaimsUploadParagon_Result">
+    <Property Type="DateTime" Name="ClaimDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Type" Nullable="true" MaxLength="48" />
+    <Property Type="Int32" Name="C_Value" Nullable="true" />
+    <Property Type="String" Name="C_Section" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="Desc1" Nullable="true" MaxLength="70" />
+    <Property Type="String" Name="Desc2" Nullable="true" MaxLength="70" />
+    <Property Type="String" Name="ClaimDeleted" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Claimsettled" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="C_Number" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ClaimsUploadParagonBD_Result">
+    <Property Type="DateTime" Name="ClaimDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Type" Nullable="true" MaxLength="48" />
+    <Property Type="Int32" Name="C_Value" Nullable="true" />
+    <Property Type="String" Name="C_Section" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="Desc1" Nullable="true" MaxLength="70" />
+    <Property Type="String" Name="Desc2" Nullable="true" MaxLength="70" />
+    <Property Type="String" Name="ClaimDeleted" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Claimsettled" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="C_Number" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ClaimsUploadParagonNo_Result">
+    <Property Type="Int32" Name="C_Number" Nullable="true" />
+    <Property Type="DateTime" Name="ClaimDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Type" Nullable="true" MaxLength="48" />
+    <Property Type="Int32" Name="C_Value" Nullable="true" />
+    <Property Type="String" Name="C_Section" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="Desc1" Nullable="true" MaxLength="70" />
+    <Property Type="String" Name="Desc2" Nullable="true" MaxLength="70" />
+    <Property Type="String" Name="ClaimDeleted" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Claimsettled" Nullable="true" MaxLength="3" />
+  </ComplexType>
+  <ComplexType Name="PCProposersParagon1_Result">
+    <Property Type="String" Name="PolicyRef_" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Propno" Nullable="true" />
+    <Property Type="String" Name="Sex" Nullable="true" MaxLength="6" />
+    <Property Type="DateTime" Name="Propdob" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="Propage" Nullable="true" />
+    <Property Type="String" Name="Propatrisk" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Firsttime" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="OccType1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="BusType1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="EmpStatus1" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="Fullpart1" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="OccType2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="BusType2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="EmpStatus2" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="Fullpart2" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="Title" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Propsurname" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Propforenames" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="Convdate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType" Nullable="true" MaxLength="40" />
+    <Property Type="DateTime" Name="Convdate1" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending1" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType1" Nullable="true" MaxLength="40" />
+    <Property Type="DateTime" Name="Convdate2" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending2" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType2" Nullable="true" MaxLength="40" />
+    <Property Type="DateTime" Name="Convdate3" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending3" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType3" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="Relationship" Nullable="true" MaxLength="18" />
+    <Property Type="String" Name="Live_from_date" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Refused" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Riskaddr1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Riskaddr2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Riskaddr3" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Riskaddr4" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Riskpcode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Commaddr1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Commaddr2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Commaddr3" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Commaddr4" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Commpcode" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="PCProposersParagonBD1_Result">
+    <Property Type="String" Name="PolicyRef_" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Propno" Nullable="true" />
+    <Property Type="String" Name="Sex" Nullable="true" MaxLength="6" />
+    <Property Type="DateTime" Name="Propdob" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="Propage" Nullable="true" />
+    <Property Type="String" Name="Propatrisk" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Firsttime" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="OccType1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="BusType1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="EmpStatus1" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="Fullpart1" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="OccType2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="BusType2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="EmpStatus2" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="Fullpart2" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="Title" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Propsurname" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Propforenames" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="Convdate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType" Nullable="true" MaxLength="40" />
+    <Property Type="DateTime" Name="Convdate1" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending1" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType1" Nullable="true" MaxLength="40" />
+    <Property Type="DateTime" Name="Convdate2" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending2" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType2" Nullable="true" MaxLength="40" />
+    <Property Type="DateTime" Name="Convdate3" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending3" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType3" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="Relationship" Nullable="true" MaxLength="18" />
+    <Property Type="String" Name="Live_from_date" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Refused" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Riskaddr1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Riskaddr2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Riskaddr3" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Riskaddr4" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Riskpcode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Commaddr1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Commaddr2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Commaddr3" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Commaddr4" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Commpcode" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="PCProposersParagonBDNo_Result">
+    <Property Type="String" Name="PolicyRef_" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Propno" Nullable="true" />
+    <Property Type="String" Name="Sex" Nullable="true" MaxLength="6" />
+    <Property Type="DateTime" Name="Propdob" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="Propage" Nullable="true" />
+    <Property Type="String" Name="Propatrisk" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Firsttime" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="OccType1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="BusType1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="EmpStatus1" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="Fullpart1" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="OccType2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="BusType2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="EmpStatus2" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="Fullpart2" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="Title" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Propsurname" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Propforenames" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="Convdate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType" Nullable="true" MaxLength="40" />
+    <Property Type="DateTime" Name="Convdate1" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending1" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType1" Nullable="true" MaxLength="40" />
+    <Property Type="DateTime" Name="Convdate2" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending2" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType2" Nullable="true" MaxLength="40" />
+    <Property Type="DateTime" Name="Convdate3" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending3" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType3" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="Relationship" Nullable="true" MaxLength="18" />
+  </ComplexType>
+  <ComplexType Name="PCProposersParagonNo_Result">
+    <Property Type="String" Name="PolicyRef_" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Propno" Nullable="true" />
+    <Property Type="String" Name="Sex" Nullable="true" MaxLength="6" />
+    <Property Type="DateTime" Name="Propdob" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="Propage" Nullable="true" />
+    <Property Type="String" Name="Propatrisk" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Firsttime" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="OccType1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="BusType1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="EmpStatus1" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="Fullpart1" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="OccType2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="BusType2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="EmpStatus2" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="Fullpart2" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="Title" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Propsurname" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Propforenames" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="Convdate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType" Nullable="true" MaxLength="40" />
+    <Property Type="DateTime" Name="Convdate1" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending1" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType1" Nullable="true" MaxLength="40" />
+    <Property Type="DateTime" Name="Convdate2" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending2" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType2" Nullable="true" MaxLength="40" />
+    <Property Type="DateTime" Name="Convdate3" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending3" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType3" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="Relationship" Nullable="true" MaxLength="18" />
+  </ComplexType>
+  <ComplexType Name="PolicyCheckUploadParagon_Result">
+    <Property Type="Int32" Name="Year_blt" Nullable="true" />
+    <Property Type="String" Name="HouseType" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="Walls" Nullable="true" MaxLength="14" />
+    <Property Type="String" Name="Roof" Nullable="true" MaxLength="11" />
+    <Property Type="Int32" Name="Flatroofpc" Nullable="true" />
+    <Property Type="Int32" Name="Bedrooms" Nullable="true" />
+    <Property Type="Int32" Name="Rooms" Nullable="true" />
+    <Property Type="Int32" Name="Floors" Nullable="true" />
+    <Property Type="Int32" Name="Floorno" Nullable="true" />
+    <Property Type="Int32" Name="Bathrooms" Nullable="true" />
+    <Property Type="String" Name="Extended" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Yearextended" Nullable="true" />
+    <Property Type="String" Name="PrimaryHeating" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SecondaryHeating" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Refused" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Unspent_pending" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Bankrupt" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Goodrepair" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Riverquarry" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Riverdistance" Nullable="true" />
+    <Property Type="String" Name="Storm" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="BuildingListed" Nullable="true" MaxLength="18" />
+    <Property Type="String" Name="Subsidence" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Repaired" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Landslip" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Underpinned" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Groundheave" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="OccupancyAccomodation" Nullable="true" MaxLength="39" />
+    <Property Type="String" Name="Residence" Nullable="true" MaxLength="19" />
+    <Property Type="String" Name="OccupancyUnoccupied" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Businessuse" Nullable="true" MaxLength="13" />
+    <Property Type="Int32" Name="Stock" Nullable="true" />
+    <Property Type="String" Name="Holidayhome" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Equipment" Nullable="true" />
+    <Property Type="String" Name="Paying_guests" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Payingguestno" Nullable="true" />
+    <Property Type="String" Name="Smokers" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Adults" Nullable="true" />
+    <Property Type="Int32" Name="C_Children" Nullable="true" />
+    <Property Type="String" Name="Main_door" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Nhood_watch" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Other_door" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Smokealarm" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="French_door" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Self_contained" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Windows" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Alarm" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Alarm_type" Nullable="true" MaxLength="31" />
+    <Property Type="String" Name="AlarmAccredDetails1" Nullable="true" MaxLength="70" />
+    <Property Type="String" Name="Ftx_accreddetails1" Nullable="true" MaxLength="70" />
+    <Property Type="String" Name="Alarm_maint" Nullable="true" MaxLength="3" />
+    <Property Type="DateTime" Name="Alarm_install" Nullable="true" Precision="23" />
+    <Property Type="String" Name="AlarmMaintainceCompany" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="Alarmmaintnm" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="AlarmAccredDetails2" Nullable="true" MaxLength="70" />
+    <Property Type="String" Name="Ftx_accreddetails2" Nullable="true" MaxLength="70" />
+    <Property Type="String" Name="Survey" Nullable="true" MaxLength="3" />
+    <Property Type="DateTime" Name="Survey_date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Survey_name" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="Survey_proof_date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Structural" Nullable="true" MaxLength="3" />
+    <Property Type="DateTime" Name="Structural_date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Structural_name" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Nhbc_proof" Nullable="true" MaxLength="3" />
+    <Property Type="DateTime" Name="Nhbc_proof_expires" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Riskaddr1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Riskaddr2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Riskaddr3" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Riskaddr4" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Riskpcode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Commaddr1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Commaddr2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Commaddr3" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Commaddr4" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Commpcode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="InterestedPartyType" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="InterestedPartyName" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="Interestunlist" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="Interestaddr1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Interestaddr2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Interestaddr3" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Interestaddr4" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Interestpcode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Reference" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="Buildingssi" Nullable="true" />
+    <Property Type="Int32" Name="Buildtotxs" Nullable="true" />
+    <Property Type="Int32" Name="Contentssi" Nullable="true" />
+    <Property Type="Int32" Name="Contstotxs" Nullable="true" />
+    <Property Type="String" Name="Allrisks" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Specitems" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Areffects" Nullable="true" />
+    <Property Type="Int32" Name="Areffectsitem" Nullable="true" />
+    <Property Type="String" Name="Areffectsterr" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Arvaluables" Nullable="true" />
+    <Property Type="Int32" Name="Arvaluablesitem" Nullable="true" />
+    <Property Type="String" Name="Arvaluablesterr" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Arphoto" Nullable="true" />
+    <Property Type="Int32" Name="Arphotoitem" Nullable="true" />
+    <Property Type="String" Name="Arphototerr" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Arsport" Nullable="true" />
+    <Property Type="Int32" Name="Arsportitem" Nullable="true" />
+    <Property Type="String" Name="Arsportsterr" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="C_Money" Nullable="true" />
+    <Property Type="String" Name="Armoneyterr" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Creditcards" Nullable="true" />
+    <Property Type="String" Name="Creditcardsterr" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Freezertotal" Nullable="true" />
+    <Property Type="Int32" Name="Freezerage" Nullable="true" />
+    <Property Type="String" Name="Aranybicycles" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Cycleval1" Nullable="true" />
+    <Property Type="String" Name="Cyclemake1" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycledesc1" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycle1territory" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Cycleval2" Nullable="true" />
+    <Property Type="String" Name="Cyclemake2" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycledesc2" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycle2territory" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Cycleval3" Nullable="true" />
+    <Property Type="String" Name="Cyclemake3" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycledesc3" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycle3territory" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Cycleval4" Nullable="true" />
+    <Property Type="String" Name="Cyclemake4" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycledesc4" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycle4territory" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Cycleval5" Nullable="true" />
+    <Property Type="String" Name="Cyclemake5" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycledesc5" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycle5territory" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Cycleval6" Nullable="true" />
+    <Property Type="String" Name="Cyclemake6" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycledesc6" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycle6territory" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Buildingscover" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Reqbuildcover" Nullable="true" />
+    <Property Type="Int32" Name="Buildvolxs" Nullable="true" />
+    <Property Type="String" Name="Buildbuyback" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Buildings" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="BuildInsName" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="Binsurername" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="Bpolicy_no" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="Bdate_lapsed" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="Bncb_years" Nullable="true" />
+    <Property Type="String" Name="Bncb_proof" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Byearsinsured" Nullable="true" />
+    <Property Type="String" Name="Bbstfeepaid" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Btransfer_proof" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Contentscover" Nullable="true" MaxLength="11" />
+    <Property Type="Int32" Name="Contsgoods" Nullable="true" />
+    <Property Type="Int32" Name="Contsgoodslimit" Nullable="true" />
+    <Property Type="Int32" Name="Contsvals" Nullable="true" />
+    <Property Type="Int32" Name="Contsvalslimit" Nullable="true" />
+    <Property Type="Int32" Name="Contsvolxs" Nullable="true" />
+    <Property Type="String" Name="Contsbuyback" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Contents" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ContentInsName" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="Cinsurername" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="Cpolicy_no" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="Cdate_lapsed" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="Cncb_years" Nullable="true" />
+    <Property Type="String" Name="Cncb_proof" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Cyearsinsured" Nullable="true" />
+    <Property Type="String" Name="Sex" Nullable="true" MaxLength="6" />
+    <Property Type="DateTime" Name="Propdob" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="Propage" Nullable="true" />
+    <Property Type="String" Name="Propatrisk" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Firsttime" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="OccType1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="BusType1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="EmpStatus1" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="Fullpart1" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="OccType2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="BusType2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="EmpStatus2" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="Fullpart2" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="Title" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Propsurname" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Propforenames" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="Convdate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType" Nullable="true" MaxLength="40" />
+    <Property Type="DateTime" Name="Convdate1" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending1" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType1" Nullable="true" MaxLength="40" />
+    <Property Type="DateTime" Name="Convdate2" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending2" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType2" Nullable="true" MaxLength="40" />
+    <Property Type="DateTime" Name="Convdate3" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending3" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType3" Nullable="true" MaxLength="40" />
+    <Property Type="Int32" Name="Legalexpenses" Nullable="true" />
+    <Property Type="String" Name="Currentmotorpolicy" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="MotorInsurer" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="Caravans" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Caravanssi" Nullable="true" />
+    <Property Type="String" Name="Boats" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Boatssi" Nullable="true" />
+    <Property Type="String" Name="Consentforsearches" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Scheme" Nullable="true" />
+    <Property Type="DateTime" Name="Coverdate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="PolicyCheckUploadParagonBD_Result">
+    <Property Type="Int32" Name="Year_blt" Nullable="true" />
+    <Property Type="String" Name="HouseType" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="Walls" Nullable="true" MaxLength="14" />
+    <Property Type="String" Name="Roof" Nullable="true" MaxLength="11" />
+    <Property Type="Int32" Name="Flatroofpc" Nullable="true" />
+    <Property Type="Int32" Name="Bedrooms" Nullable="true" />
+    <Property Type="Int32" Name="Rooms" Nullable="true" />
+    <Property Type="Int32" Name="Floors" Nullable="true" />
+    <Property Type="Int32" Name="Floorno" Nullable="true" />
+    <Property Type="Int32" Name="Bathrooms" Nullable="true" />
+    <Property Type="String" Name="Extended" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Yearextended" Nullable="true" />
+    <Property Type="String" Name="PrimaryHeating" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SecondaryHeating" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Refused" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Unspent_pending" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Bankrupt" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Goodrepair" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Riverquarry" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Riverdistance" Nullable="true" />
+    <Property Type="String" Name="Storm" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="BuildingListed" Nullable="true" MaxLength="18" />
+    <Property Type="String" Name="Subsidence" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Repaired" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Landslip" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Underpinned" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Groundheave" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="OccupancyAccomodation" Nullable="true" MaxLength="39" />
+    <Property Type="String" Name="Residence" Nullable="true" MaxLength="19" />
+    <Property Type="String" Name="OccupancyUnoccupied" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Businessuse" Nullable="true" MaxLength="13" />
+    <Property Type="Int32" Name="Stock" Nullable="true" />
+    <Property Type="String" Name="Holidayhome" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Equipment" Nullable="true" />
+    <Property Type="String" Name="Paying_guests" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Payingguestno" Nullable="true" />
+    <Property Type="String" Name="Smokers" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Adults" Nullable="true" />
+    <Property Type="Int32" Name="C_Children" Nullable="true" />
+    <Property Type="String" Name="Main_door" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Nhood_watch" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Other_door" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Smokealarm" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="French_door" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Self_contained" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Windows" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Alarm" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Alarm_type" Nullable="true" MaxLength="31" />
+    <Property Type="String" Name="AlarmAccredDetails1" Nullable="true" MaxLength="70" />
+    <Property Type="String" Name="Ftx_accreddetails1" Nullable="true" MaxLength="70" />
+    <Property Type="String" Name="Alarm_maint" Nullable="true" MaxLength="3" />
+    <Property Type="DateTime" Name="Alarm_install" Nullable="true" Precision="23" />
+    <Property Type="String" Name="AlarmMaintainceCompany" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="Alarmmaintnm" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="AlarmAccredDetails2" Nullable="true" MaxLength="70" />
+    <Property Type="String" Name="Ftx_accreddetails2" Nullable="true" MaxLength="70" />
+    <Property Type="String" Name="Survey" Nullable="true" MaxLength="3" />
+    <Property Type="DateTime" Name="Survey_date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Survey_name" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="Survey_proof_date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Structural" Nullable="true" MaxLength="3" />
+    <Property Type="DateTime" Name="Structural_date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Structural_name" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Nhbc_proof" Nullable="true" MaxLength="3" />
+    <Property Type="DateTime" Name="Nhbc_proof_expires" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Riskaddr1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Riskaddr2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Riskaddr3" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Riskaddr4" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Riskpcode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Commaddr1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Commaddr2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Commaddr3" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Commaddr4" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Commpcode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="InterestedPartyType" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="InterestedPartyName" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="Interestunlist" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="Interestaddr1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Interestaddr2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Interestaddr3" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Interestaddr4" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Interestpcode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Reference" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="Buildingssi" Nullable="true" />
+    <Property Type="Int32" Name="Buildtotxs" Nullable="true" />
+    <Property Type="Int32" Name="Contentssi" Nullable="true" />
+    <Property Type="Int32" Name="Contstotxs" Nullable="true" />
+    <Property Type="String" Name="Allrisks" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Specitems" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Areffects" Nullable="true" />
+    <Property Type="Int32" Name="Areffectsitem" Nullable="true" />
+    <Property Type="String" Name="Areffectsterr" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Arvaluables" Nullable="true" />
+    <Property Type="Int32" Name="Arvaluablesitem" Nullable="true" />
+    <Property Type="String" Name="Arvaluablesterr" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Arphoto" Nullable="true" />
+    <Property Type="Int32" Name="Arphotoitem" Nullable="true" />
+    <Property Type="String" Name="Arphototerr" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Arsport" Nullable="true" />
+    <Property Type="Int32" Name="Arsportitem" Nullable="true" />
+    <Property Type="String" Name="Arsportsterr" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="C_Money" Nullable="true" />
+    <Property Type="String" Name="Armoneyterr" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Creditcards" Nullable="true" />
+    <Property Type="String" Name="Creditcardsterr" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Freezertotal" Nullable="true" />
+    <Property Type="Int32" Name="Freezerage" Nullable="true" />
+    <Property Type="String" Name="Aranybicycles" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Cycleval1" Nullable="true" />
+    <Property Type="String" Name="Cyclemake1" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycledesc1" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycle1territory" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Cycleval2" Nullable="true" />
+    <Property Type="String" Name="Cyclemake2" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycledesc2" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycle2territory" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Cycleval3" Nullable="true" />
+    <Property Type="String" Name="Cyclemake3" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycledesc3" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycle3territory" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Cycleval4" Nullable="true" />
+    <Property Type="String" Name="Cyclemake4" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycledesc4" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycle4territory" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Cycleval5" Nullable="true" />
+    <Property Type="String" Name="Cyclemake5" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycledesc5" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycle5territory" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Cycleval6" Nullable="true" />
+    <Property Type="String" Name="Cyclemake6" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycledesc6" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycle6territory" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Buildingscover" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Reqbuildcover" Nullable="true" />
+    <Property Type="Int32" Name="Buildvolxs" Nullable="true" />
+    <Property Type="String" Name="Buildbuyback" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Buildings" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="BuildInsName" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="Binsurername" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="Bpolicy_no" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="Bdate_lapsed" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="Bncb_years" Nullable="true" />
+    <Property Type="String" Name="Bncb_proof" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Byearsinsured" Nullable="true" />
+    <Property Type="String" Name="Bbstfeepaid" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Btransfer_proof" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Contentscover" Nullable="true" MaxLength="11" />
+    <Property Type="Int32" Name="Contsgoods" Nullable="true" />
+    <Property Type="Int32" Name="Contsgoodslimit" Nullable="true" />
+    <Property Type="Int32" Name="Contsvals" Nullable="true" />
+    <Property Type="Int32" Name="Contsvalslimit" Nullable="true" />
+    <Property Type="Int32" Name="Contsvolxs" Nullable="true" />
+    <Property Type="String" Name="Contsbuyback" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Contents" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ContentInsName" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="Cinsurername" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="Cpolicy_no" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="Cdate_lapsed" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="Cncb_years" Nullable="true" />
+    <Property Type="String" Name="Cncb_proof" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Cyearsinsured" Nullable="true" />
+    <Property Type="String" Name="Sex" Nullable="true" MaxLength="6" />
+    <Property Type="DateTime" Name="Propdob" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="Propage" Nullable="true" />
+    <Property Type="String" Name="Propatrisk" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Firsttime" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="OccType1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="BusType1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="EmpStatus1" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="Fullpart1" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="OccType2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="BusType2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="EmpStatus2" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="Fullpart2" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="Title" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Propsurname" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Propforenames" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="Convdate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType" Nullable="true" MaxLength="40" />
+    <Property Type="DateTime" Name="Convdate1" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending1" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType1" Nullable="true" MaxLength="40" />
+    <Property Type="DateTime" Name="Convdate2" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending2" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType2" Nullable="true" MaxLength="40" />
+    <Property Type="DateTime" Name="Convdate3" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending3" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType3" Nullable="true" MaxLength="40" />
+    <Property Type="Int32" Name="Legalexpenses" Nullable="true" />
+    <Property Type="String" Name="Currentmotorpolicy" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="MotorInsurer" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="Caravans" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Caravanssi" Nullable="true" />
+    <Property Type="String" Name="Boats" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Boatssi" Nullable="true" />
+    <Property Type="String" Name="Consentforsearches" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Scheme" Nullable="true" />
+    <Property Type="DateTime" Name="Coverdate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="PolicyCheckUploadParagonUpdate_Result">
+    <Property Type="Int32" Name="Year_blt" Nullable="true" />
+    <Property Type="String" Name="HouseType" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="Walls" Nullable="true" MaxLength="14" />
+    <Property Type="String" Name="Roof" Nullable="true" MaxLength="11" />
+    <Property Type="Int32" Name="Flatroofpc" Nullable="true" />
+    <Property Type="Int32" Name="Bedrooms" Nullable="true" />
+    <Property Type="Int32" Name="Rooms" Nullable="true" />
+    <Property Type="Int32" Name="Floors" Nullable="true" />
+    <Property Type="Int32" Name="Floorno" Nullable="true" />
+    <Property Type="Int32" Name="Bathrooms" Nullable="true" />
+    <Property Type="String" Name="Extended" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="PrimaryHeating" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SecondaryHeating" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Refused" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Unspent_pending" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Bankrupt" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Goodrepair" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Riverquarry" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Riverdistance" Nullable="true" />
+    <Property Type="String" Name="Storm" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="BuildingListed" Nullable="true" MaxLength="18" />
+    <Property Type="String" Name="Subsidence" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Repaired" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Landslip" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Underpinned" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Groundheave" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="OccupancyAccomodation" Nullable="true" MaxLength="39" />
+    <Property Type="String" Name="Residence" Nullable="true" MaxLength="19" />
+    <Property Type="String" Name="OccupancyUnoccupied" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Businessuse" Nullable="true" MaxLength="13" />
+    <Property Type="Int32" Name="Stock" Nullable="true" />
+    <Property Type="String" Name="Holidayhome" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Equipment" Nullable="true" />
+    <Property Type="String" Name="Paying_guests" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Payingguestno" Nullable="true" />
+    <Property Type="String" Name="Smokers" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Adults" Nullable="true" />
+    <Property Type="Int32" Name="C_Children" Nullable="true" />
+    <Property Type="String" Name="Main_door" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Nhood_watch" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Other_door" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Smokealarm" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="French_door" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Self_contained" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Windows" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Alarm" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Alarm_type" Nullable="true" MaxLength="31" />
+    <Property Type="String" Name="AlarmAccredDetails1" Nullable="true" MaxLength="70" />
+    <Property Type="String" Name="Ftx_accreddetails1" Nullable="true" MaxLength="70" />
+    <Property Type="String" Name="Alarm_maint" Nullable="true" MaxLength="3" />
+    <Property Type="DateTime" Name="Alarm_install" Nullable="true" Precision="23" />
+    <Property Type="String" Name="AlarmMaintainceCompany" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="Alarmmaintnm" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="AlarmAccredDetails2" Nullable="true" MaxLength="70" />
+    <Property Type="String" Name="Ftx_accreddetails2" Nullable="true" MaxLength="70" />
+    <Property Type="String" Name="Survey" Nullable="true" MaxLength="3" />
+    <Property Type="DateTime" Name="Survey_date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Survey_name" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="Survey_proof_date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Structural" Nullable="true" MaxLength="3" />
+    <Property Type="DateTime" Name="Structural_date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Structural_name" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Nhbc_proof" Nullable="true" MaxLength="3" />
+    <Property Type="DateTime" Name="Nhbc_proof_expires" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Riskaddr1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Riskaddr2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Riskaddr3" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Riskaddr4" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Riskpcode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Commaddr1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Commaddr2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Commaddr3" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Commaddr4" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Commpcode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="InterestedPartyType" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="InterestedPartyName" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="Interestaddr1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Interestaddr2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Interestaddr3" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Interestaddr4" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Interestpcode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Reference" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="Buildingssi" Nullable="true" />
+    <Property Type="Int32" Name="Buildtotxs" Nullable="true" />
+    <Property Type="Int32" Name="Contentssi" Nullable="true" />
+    <Property Type="Int32" Name="Contstotxs" Nullable="true" />
+    <Property Type="String" Name="Allrisks" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Specitems" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Areffects" Nullable="true" />
+    <Property Type="Int32" Name="Areffectsitem" Nullable="true" />
+    <Property Type="String" Name="Areffectsterr" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Arvaluables" Nullable="true" />
+    <Property Type="Int32" Name="Arvaluablesitem" Nullable="true" />
+    <Property Type="String" Name="Arvaluablesterr" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Arphoto" Nullable="true" />
+    <Property Type="Int32" Name="Arphotoitem" Nullable="true" />
+    <Property Type="String" Name="Arphototerr" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Arsport" Nullable="true" />
+    <Property Type="Int32" Name="Arsportitem" Nullable="true" />
+    <Property Type="String" Name="Arsportsterr" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="C_Money" Nullable="true" />
+    <Property Type="String" Name="Armoneyterr" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Creditcards" Nullable="true" />
+    <Property Type="String" Name="Creditcardsterr" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Freezertotal" Nullable="true" />
+    <Property Type="Int32" Name="Freezerage" Nullable="true" />
+    <Property Type="String" Name="Aranybicycles" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Cycleval1" Nullable="true" />
+    <Property Type="String" Name="Cyclemake1" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycledesc1" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycle1territory" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Cycleval2" Nullable="true" />
+    <Property Type="String" Name="Cyclemake2" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycledesc2" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycle2territory" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Cycleval3" Nullable="true" />
+    <Property Type="String" Name="Cyclemake3" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycledesc3" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycle3territory" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Cycleval4" Nullable="true" />
+    <Property Type="String" Name="Cyclemake4" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycledesc4" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycle4territory" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Cycleval5" Nullable="true" />
+    <Property Type="String" Name="Cyclemake5" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycledesc5" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycle5territory" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Cycleval6" Nullable="true" />
+    <Property Type="String" Name="Cyclemake6" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycledesc6" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Cycle6territory" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Buildingscover" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Reqbuildcover" Nullable="true" />
+    <Property Type="Int32" Name="Buildvolxs" Nullable="true" />
+    <Property Type="String" Name="Buildbuyback" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Buildings" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="BuildInsName" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="Binsurername" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="Bpolicy_no" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="Bdate_lapsed" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="Bncb_years" Nullable="true" />
+    <Property Type="String" Name="Bncb_proof" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Byearsinsured" Nullable="true" />
+    <Property Type="String" Name="Bbstfeepaid" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Btransfer_proof" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Contentscover" Nullable="true" MaxLength="11" />
+    <Property Type="Int32" Name="Contsgoods" Nullable="true" />
+    <Property Type="Int32" Name="Contsgoodslimit" Nullable="true" />
+    <Property Type="Int32" Name="Contsvals" Nullable="true" />
+    <Property Type="Int32" Name="Contsvalslimit" Nullable="true" />
+    <Property Type="Int32" Name="Contsvolxs" Nullable="true" />
+    <Property Type="String" Name="Contsbuyback" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Contents" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ContentInsName" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="Cinsurername" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="Cpolicy_no" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="Cdate_lapsed" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="Cncb_years" Nullable="true" />
+    <Property Type="String" Name="Cncb_proof" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Cyearsinsured" Nullable="true" />
+    <Property Type="String" Name="Sex" Nullable="true" MaxLength="6" />
+    <Property Type="DateTime" Name="Propdob" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="Propage" Nullable="true" />
+    <Property Type="String" Name="Propatrisk" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Firsttime" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="OccType1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="BusType1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="EmpStatus1" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="Fullpart1" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="OccType2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="BusType2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="EmpStatus2" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="Fullpart2" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="Title" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Propsurname" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Propforenames" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="Convdate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType" Nullable="true" MaxLength="40" />
+    <Property Type="DateTime" Name="Convdate1" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending1" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType1" Nullable="true" MaxLength="40" />
+    <Property Type="DateTime" Name="Convdate2" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending2" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType2" Nullable="true" MaxLength="40" />
+    <Property Type="DateTime" Name="Convdate3" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Convpending3" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ConvType3" Nullable="true" MaxLength="40" />
+    <Property Type="Int32" Name="Legalexpenses" Nullable="true" />
+    <Property Type="String" Name="Currentmotorpolicy" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="MotorInsurer" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="Caravans" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Caravanssi" Nullable="true" />
+    <Property Type="String" Name="Boats" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Boatssi" Nullable="true" />
+    <Property Type="String" Name="Consentforsearches" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="Scheme" Nullable="true" />
+    <Property Type="DateTime" Name="Coverdate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="SpecItemUploadParagon_Result">
+    <Property Type="String" Name="Category" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Stated_value" Nullable="true" />
+    <Property Type="String" Name="Covertype" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Description1" Nullable="true" MaxLength="70" />
+    <Property Type="String" Name="Description2" Nullable="true" MaxLength="70" />
+    <Property Type="String" Name="SpecItemDeleted" Nullable="true" MaxLength="11" />
+    <Property Type="Int32" Name="amount" Nullable="true" />
+    <Property Type="DateTime" Name="SpecDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Territory" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="SpecItemUploadParagonBD_Result">
+    <Property Type="String" Name="Category" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Stated_value" Nullable="true" />
+    <Property Type="String" Name="Covertype" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Description1" Nullable="true" MaxLength="70" />
+    <Property Type="String" Name="Description2" Nullable="true" MaxLength="70" />
+    <Property Type="String" Name="SpecItemDeleted" Nullable="true" MaxLength="11" />
+    <Property Type="Int32" Name="amount" Nullable="true" />
+    <Property Type="DateTime" Name="SpecDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Territory" Nullable="true" MaxLength="10" />
+  </ComplexType>
+</Schema>

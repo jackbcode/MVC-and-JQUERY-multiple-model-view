@@ -1,0 +1,121 @@
+﻿@model PolicyCheck.Models.MPClaimsLoss
+@using PolicyCheck.Helper
+
+
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+
+<div class="ClaimsRow">
+
+    @using (Html.BeginCollectionItem("ClaimsLosses"))
+    {
+    <div class="form-group whiteDiv">
+
+        <div id="allrisksTitle2" class="wrapper8">
+            <div class="form-group" style="float: left; width: 150px; margin-right:30px">
+                <p class=" = font-weight-bold popOut">Date/Desc.</p>
+            </div>
+            <div class="form-group" style="float: left; width: 240px; margin-right:30px ">
+                <p class=" = font-weight-bold popOut ">Claim Type</p>
+            </div>
+            <div class="form-group" style="float: left; width: 140px; margin-right:30px">
+                <p class=" = font-weight-bold popOut">Value</p>
+            </div>
+
+            <div class="form-group" style="float: left; width: 140px; margin-right:25px ">
+                <p class=" = font-weight-bold popOut ">Section</p>
+            </div>
+
+
+        </div>
+        <div id="allrisksTitle2" class="wrapper8">
+            <div class="form-group" style="float: left; width: 150px; margin-right:30px; ">
+                @Html.EditorFor(x => x.ClaimsLossesClaimDate, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+
+            <div class="form-group" style="float: left; width: 250px; margin-right:30px ">
+                @Html.DropDownListFor(x => x.ClaimsLossesClaimType, Model.ClaimsL, "MS", new { @id = "buildingsContent", @class = "form-control" })
+            </div>
+
+            <div class="form-group" style="float: left; width: 150px; margin-right:30px ">
+                @Html.EditorFor(x => x.ClaimsLossesValue, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+            <div class="form-group" style="float: left; width: 150px; margin-right:30px ">
+                @Html.DropDownListFor(x => x.ClaimsLossesSection, Model.CS, "MS", new { @id = "buildingsContent", @class = "form-control" })
+            </div>
+
+            <br /><br />
+
+            <div class="form-group" style="float: left; width: 800px; margin-right:30px ">
+                @Html.TextAreaFor(x => x.ClaimsLossesDescription, 3, 20, htmlAttributes: new { @class = "form-control", style = "width: 100%; max-width: 100%;" })
+            </div>
+
+            <br /><br />
+
+            <div id="claimsLosses" class="wrapper8" style="padding-top: 10px;">
+                <div class="form-group" style="float: left; width: 75px; margin-right:30px">
+                    <p class=" = font-weight-bold popOut">Deleted?</p>
+                </div>
+                <div class="form-group" style="float: left; width: 100px; margin-right:30px ">
+                    <p class=" = font-weight-bold popOut">Claim Settled?</p>
+                </div>
+            </div>
+
+            <div class="form-group" style="float: left; width: 100px; margin-right:10px ">
+                @Html.DropDownListFor(x => x.ClaimsLossesDeleted, Model.YN, "MS", new { @id = "buildingsContent", @class = "form-control" })
+            </div>
+
+            <div class="form-group" style="float: left; width: 100px; margin-right:10px ">
+                @Html.DropDownListFor(x => x.ClaimsLossesClaimSettled, Model.YN, "MS", new { @id = "buildingsContent", @class = "form-control" })
+            </div>
+
+        </div>
+    </div>
+
+        <br />
+
+
+
+
+        @*<a href="#" class="deleteRow btn btn-primary">delete</a>*@
+    }
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+
+@section Scripts
+{
+
+
+
+    <script>
+
+        $('#addItem').click(function () {
+            $.ajax({
+                url: this.href,
+                cache: false,
+                success: function (html) {
+                    $('#ClaimsRows').append(html);
+                }
+            });
+            return false;
+        });
+
+        $('#addclaimsItem').click(function () {
+            $.ajax({
+                url: this.href,
+                cache: false,
+                success: function (html) {
+                    $('#claimsRow').append(html);
+                }
+            });
+            return false;
+        });
+
+
+
+    </script>
+
+}
+

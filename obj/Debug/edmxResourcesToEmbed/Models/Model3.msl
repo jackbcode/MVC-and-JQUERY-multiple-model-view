@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PolicyCheckModelStoreContainer" CdmEntityContainer="PCEnewUpdated3">
+    <EntitySetMapping Name="AOBoatDetails">
+      <EntityTypeMapping TypeName="PolicyCheckModel.AOBoatDetail">
+        <MappingFragment StoreEntitySet="AOBoatDetails">
+          <ScalarProperty Name="BoatPolicyId" ColumnName="BoatPolicyId" />
+          <ScalarProperty Name="BoatId" ColumnName="BoatId" />
+          <ScalarProperty Name="BoatType" ColumnName="BoatType" />
+          <ScalarProperty Name="BoatName" ColumnName="BoatName" />
+          <ScalarProperty Name="BoatSailNo" ColumnName="BoatSailNo" />
+          <ScalarProperty Name="BoatClass" ColumnName="BoatClass" />
+          <ScalarProperty Name="BoatModel" ColumnName="BoatModel" />
+          <ScalarProperty Name="BoatManufactured" ColumnName="BoatManufactured" />
+          <ScalarProperty Name="BoatPurchased" ColumnName="BoatPurchased" />
+          <ScalarProperty Name="BoatMaximumSpeed" ColumnName="BoatMaximumSpeed" />
+          <ScalarProperty Name="BoatOver5m" ColumnName="BoatOver5m" />
+          <ScalarProperty Name="BoatUnusedAtMooring" ColumnName="BoatUnusedAtMooring" />
+          <ScalarProperty Name="BoatEngineDetailsType" ColumnName="BoatEngineDetailsType" />
+          <ScalarProperty Name="BoatEngineDetailsMake" ColumnName="BoatEngineDetailsMake" />
+          <ScalarProperty Name="BoatEngineDetailsSerNo" ColumnName="BoatEngineDetailsSerNo" />
+          <ScalarProperty Name="BoatEngineDetailsMade" ColumnName="BoatEngineDetailsMade" />
+          <ScalarProperty Name="BoatEngineDetailsHP" ColumnName="BoatEngineDetailsHP" />
+          <ScalarProperty Name="BoatCoverDetailsCraftGeneral" ColumnName="BoatCoverDetailsCraftGeneral" />
+          <ScalarProperty Name="BoatCoverDetailsOutboardMotor" ColumnName="BoatCoverDetailsOutboardMotor" />
+          <ScalarProperty Name="BoatCoverDetailsRoadTrailer" ColumnName="BoatCoverDetailsRoadTrailer" />
+          <ScalarProperty Name="BoatCoverDetailsLaunchingTrolley" ColumnName="BoatCoverDetailsLaunchingTrolley" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AOCaravanDetails">
+      <EntityTypeMapping TypeName="PolicyCheckModel.AOCaravanDetail">
+        <MappingFragment StoreEntitySet="AOCaravanDetails">
+          <ScalarProperty Name="CaravanPolicyId" ColumnName="CaravanPolicyId" />
+          <ScalarProperty Name="CaravanId" ColumnName="CaravanId" />
+          <ScalarProperty Name="CaravanType" ColumnName="CaravanType" />
+          <ScalarProperty Name="CaravanMake" ColumnName="CaravanMake" />
+          <ScalarProperty Name="caravanModel" ColumnName="caravanModel" />
+          <ScalarProperty Name="caravanVIN" ColumnName="caravanVIN" />
+          <ScalarProperty Name="caravanSerialNumber" ColumnName="caravanSerialNumber" />
+          <ScalarProperty Name="caravanManufactured" ColumnName="caravanManufactured" />
+          <ScalarProperty Name="caravanPurchased" ColumnName="caravanPurchased" />
+          <ScalarProperty Name="caravanPricePaid" ColumnName="caravanPricePaid" />
+          <ScalarProperty Name="caravanLetHireReward" ColumnName="caravanLetHireReward" />
+          <ScalarProperty Name="caravanRiskUnused" ColumnName="caravanRiskUnused" />
+          <ScalarProperty Name="caravanKeptOnSite" ColumnName="caravanKeptOnSite" />
+          <ScalarProperty Name="CaravanAndFittings" ColumnName="CaravanAndFittings" />
+          <ScalarProperty Name="caravanPersonalPossesions" ColumnName="caravanPersonalPossesions" />
+          <ScalarProperty Name="caravanHighestValueItem" ColumnName="caravanHighestValueItem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAllrisksBicycles">
+      <EntityTypeMapping TypeName="PolicyCheckModel.CAllrisksBicycle">
+        <MappingFragment StoreEntitySet="CAllrisksBicycle">
+          <ScalarProperty Name="AllrisksBicyclePolicyId" ColumnName="AllrisksBicyclePolicyId" />
+          <ScalarProperty Name="BicycleId" ColumnName="BicycleId" />
+          <ScalarProperty Name="BicycleMake" ColumnName="BicycleMake" />
+          <ScalarProperty Name="BicycleModel" ColumnName="BicycleModel" />
+          <ScalarProperty Name="BicycleValue" ColumnName="BicycleValue" />
+          <ScalarProperty Name="BicycleTerritory" ColumnName="BicycleTerritory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CBuildingsPrevInsurances">
+      <EntityTypeMapping TypeName="PolicyCheckModel.CBuildingsPrevInsurance">
+        <MappingFragment StoreEntitySet="CBuildingsPrevInsurance">
+          <ScalarProperty Name="PrevInsPolicyId" ColumnName="PrevInsPolicyId" />
+          <ScalarProperty Name="PrevInsId" ColumnName="PrevInsId" />
+          <ScalarProperty Name="InsurerName" ColumnName="InsurerName" />
+          <ScalarProperty Name="InsurerNameOther" ColumnName="InsurerNameOther" />
+          <ScalarProperty Name="PolicyNo" ColumnName="PolicyNo" />
+          <ScalarProperty Name="DateLapsed" ColumnName="DateLapsed" />
+          <ScalarProperty Name="ProofNCB" ColumnName="ProofNCB" />
+          <ScalarProperty Name="NoOfYearsIns" ColumnName="NoOfYearsIns" />
+          <ScalarProperty Name="TransferFeePaid" ColumnName="TransferFeePaid" />
+          <ScalarProperty Name="ProofOfPaymentRec" ColumnName="ProofOfPaymentRec" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CCContentsPrevInsurances">
+      <EntityTypeMapping TypeName="PolicyCheckModel.CCContentsPrevInsurance">
+        <MappingFragment StoreEntitySet="CCContentsPrevInsurance">
+          <ScalarProperty Name="CPrevInsPolicyId" ColumnName="CPrevInsPolicyId" />
+          <ScalarProperty Name="CPrevInsId" ColumnName="CPrevInsId" />
+          <ScalarProperty Name="CinsurerName" ColumnName="CinsurerName" />
+          <ScalarProperty Name="CInsurerNameOther" ColumnName="CInsurerNameOther" />
+          <ScalarProperty Name="CPolicyNo" ColumnName="CPolicyNo" />
+          <ScalarProperty Name="CDateLapsed" ColumnName="CDateLapsed" />
+          <ScalarProperty Name="CYearsNCB" ColumnName="CYearsNCB" />
+          <ScalarProperty Name="CproofNCB" ColumnName="CproofNCB" />
+          <ScalarProperty Name="CNoOfYearsIns" ColumnName="CNoOfYearsIns" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CSpecifiedItems">
+      <EntityTypeMapping TypeName="PolicyCheckModel.CSpecifiedItem">
+        <MappingFragment StoreEntitySet="CSpecifiedItem">
+          <ScalarProperty Name="SpecifiedItemPolicyId" ColumnName="SpecifiedItemPolicyId" />
+          <ScalarProperty Name="SpecifiedItemId" ColumnName="SpecifiedItemId" />
+          <ScalarProperty Name="SpecifiedItemItemCategory" ColumnName="SpecifiedItemItemCategory" />
+          <ScalarProperty Name="SpecifiedItemItemDescription" ColumnName="SpecifiedItemItemDescription" />
+          <ScalarProperty Name="SpecifiedItemItemValue" ColumnName="SpecifiedItemItemValue" />
+          <ScalarProperty Name="SpecifiedItemCover" ColumnName="SpecifiedItemCover" />
+          <ScalarProperty Name="SpecifiedItemDeleted" ColumnName="SpecifiedItemDeleted" />
+          <ScalarProperty Name="SpecifiedItemValuationAmount" ColumnName="SpecifiedItemValuationAmount" />
+          <ScalarProperty Name="SpecifiedItemDate" ColumnName="SpecifiedItemDate" />
+          <ScalarProperty Name="SpecifiedItemTerritory" ColumnName="SpecifiedItemTerritory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MPClaimsLosses">
+      <EntityTypeMapping TypeName="PolicyCheckModel.MPClaimsLoss">
+        <MappingFragment StoreEntitySet="MPClaimsLosses">
+          <ScalarProperty Name="ClaimsLossesPolicyId" ColumnName="ClaimsLossesPolicyId" />
+          <ScalarProperty Name="ClaimId" ColumnName="ClaimId" />
+          <ScalarProperty Name="ClaimsLossesClaimDate" ColumnName="ClaimsLossesClaimDate" />
+          <ScalarProperty Name="ClaimsLossesClaimType" ColumnName="ClaimsLossesClaimType" />
+          <ScalarProperty Name="ClaimsLossesValue" ColumnName="ClaimsLossesValue" />
+          <ScalarProperty Name="ClaimsLossesSection" ColumnName="ClaimsLossesSection" />
+          <ScalarProperty Name="ClaimsLossesDescription" ColumnName="ClaimsLossesDescription" />
+          <ScalarProperty Name="ClaimsLossesDeleted" ColumnName="ClaimsLossesDeleted" />
+          <ScalarProperty Name="ClaimsLossesClaimSettled" ColumnName="ClaimsLossesClaimSettled" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MPConvictions">
+      <EntityTypeMapping TypeName="PolicyCheckModel.MPConviction">
+        <MappingFragment StoreEntitySet="MPConvictions">
+          <ScalarProperty Name="ConvictionsPolicyId" ColumnName="ConvictionsPolicyId" />
+          <ScalarProperty Name="ConvictionId" ColumnName="ConvictionId" />
+          <ScalarProperty Name="ConvictionDate" ColumnName="ConvictionDate" />
+          <ScalarProperty Name="Pending" ColumnName="Pending" />
+          <ScalarProperty Name="ConvictionType" ColumnName="ConvictionType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PolicyMains">
+      <EntityTypeMapping TypeName="PolicyCheckModel.PolicyMain">
+        <MappingFragment StoreEntitySet="PolicyMain">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="PPostCode" ColumnName="PPostCode" />
+          <ScalarProperty Name="PYearBuilt" ColumnName="PYearBuilt" />
+          <ScalarProperty Name="PTypeOfHouse" ColumnName="PTypeOfHouse" />
+          <ScalarProperty Name="PWalls" ColumnName="PWalls" />
+          <ScalarProperty Name="PRoof" ColumnName="PRoof" />
+          <ScalarProperty Name="PFlatPercent" ColumnName="PFlatPercent" />
+          <ScalarProperty Name="PBedrooms" ColumnName="PBedrooms" />
+          <ScalarProperty Name="PRooms" ColumnName="PRooms" />
+          <ScalarProperty Name="PFloors" ColumnName="PFloors" />
+          <ScalarProperty Name="PFlatFloor" ColumnName="PFlatFloor" />
+          <ScalarProperty Name="PBathrooms" ColumnName="PBathrooms" />
+          <ScalarProperty Name="PExtended" ColumnName="PExtended" />
+          <ScalarProperty Name="PYearExtended" ColumnName="PYearExtended" />
+          <ScalarProperty Name="PHeatingPrimary" ColumnName="PHeatingPrimary" />
+          <ScalarProperty Name="PHeatingSecondary" ColumnName="PHeatingSecondary" />
+          <ScalarProperty Name="PPrelimQuestions" ColumnName="PPrelimQuestions" />
+          <ScalarProperty Name="PPqInsuranceDeclined" ColumnName="PPqInsuranceDeclined" />
+          <ScalarProperty Name="PPqConvictions" ColumnName="PPqConvictions" />
+          <ScalarProperty Name="PPqBankrupt" ColumnName="PPqBankrupt" />
+          <ScalarProperty Name="PPqStormFlood" ColumnName="PPqStormFlood" />
+          <ScalarProperty Name="PPqSubsidence" ColumnName="PPqSubsidence" />
+          <ScalarProperty Name="PPqLandslip" ColumnName="PPqLandslip" />
+          <ScalarProperty Name="PPqGroundHeave" ColumnName="PPqGroundHeave" />
+          <ScalarProperty Name="PPqInGoodRepair" ColumnName="PPqInGoodRepair" />
+          <ScalarProperty Name="PPqNearRiverQuarry" ColumnName="PPqNearRiverQuarry" />
+          <ScalarProperty Name="PPqNearRQDistance" ColumnName="PPqNearRQDistance" />
+          <ScalarProperty Name="PPqBuildingListed" ColumnName="PPqBuildingListed" />
+          <ScalarProperty Name="PPqRepairedMonitored" ColumnName="PPqRepairedMonitored" />
+          <ScalarProperty Name="PPqUnderpinned" ColumnName="PPqUnderpinned" />
+          <ScalarProperty Name="PUseOccupancy" ColumnName="PUseOccupancy" />
+          <ScalarProperty Name="PuoAccomodation" ColumnName="PuoAccomodation" />
+          <ScalarProperty Name="PuoResidence" ColumnName="PuoResidence" />
+          <ScalarProperty Name="PuoUnnocupied" ColumnName="PuoUnnocupied" />
+          <ScalarProperty Name="PuoBusinessUse" ColumnName="PuoBusinessUse" />
+          <ScalarProperty Name="PuoStock" ColumnName="PuoStock" />
+          <ScalarProperty Name="PuoEquipment" ColumnName="PuoEquipment" />
+          <ScalarProperty Name="PuoHolidayHome" ColumnName="PuoHolidayHome" />
+          <ScalarProperty Name="PuoPayingGuests" ColumnName="PuoPayingGuests" />
+          <ScalarProperty Name="PuoPGNumber" ColumnName="PuoPGNumber" />
+          <ScalarProperty Name="PuoSmokers" ColumnName="PuoSmokers" />
+          <ScalarProperty Name="PuoNooAdults" ColumnName="PuoNooAdults" />
+          <ScalarProperty Name="PuoNooChildren" ColumnName="PuoNooChildren" />
+          <ScalarProperty Name="PSecurity" ColumnName="PSecurity" />
+          <ScalarProperty Name="PsFinalExitDoors" ColumnName="PsFinalExitDoors" />
+          <ScalarProperty Name="PsOtherDoors" ColumnName="PsOtherDoors" />
+          <ScalarProperty Name="PsPatioDoors" ColumnName="PsPatioDoors" />
+          <ScalarProperty Name="PsWindows" ColumnName="PsWindows" />
+          <ScalarProperty Name="PsNeighbourhoodWatch" ColumnName="PsNeighbourhoodWatch" />
+          <ScalarProperty Name="PsSmokeAlarm" ColumnName="PsSmokeAlarm" />
+          <ScalarProperty Name="PsSelfContained" ColumnName="PsSelfContained" />
+          <ScalarProperty Name="PsIntruderAlarm" ColumnName="PsIntruderAlarm" />
+          <ScalarProperty Name="PsAlarmType" ColumnName="PsAlarmType" />
+          <ScalarProperty Name="PsAccredationDetailsOne" ColumnName="PsAccredationDetailsOne" />
+          <ScalarProperty Name="PsAccredationDetailsOneOther" ColumnName="PsAccredationDetailsOneOther" />
+          <ScalarProperty Name="PsSpecificationContract" ColumnName="PsSpecificationContract" />
+          <ScalarProperty Name="PsDateInstalled" ColumnName="PsDateInstalled" />
+          <ScalarProperty Name="PsMaintainer" ColumnName="PsMaintainer" />
+          <ScalarProperty Name="PsMaintainerTwo" ColumnName="PsMaintainerTwo" />
+          <ScalarProperty Name="PsAccreditationDetailsTwo" ColumnName="PsAccreditationDetailsTwo" />
+          <ScalarProperty Name="PsAccredationDetailsTwoOther" ColumnName="PsAccredationDetailsTwoOther" />
+          <ScalarProperty Name="PsrSecurityReports" ColumnName="PsrSecurityReports" />
+          <ScalarProperty Name="PsrRICSFSVASURVEY" ColumnName="PsrRICSFSVASURVEY" />
+          <ScalarProperty Name="PsrRFSDate" ColumnName="PsrRFSDate" />
+          <ScalarProperty Name="PsrRFSSurveyorsName" ColumnName="PsrRFSSurveyorsName" />
+          <ScalarProperty Name="PsrRFSDateProofRec" ColumnName="PsrRFSDateProofRec" />
+          <ScalarProperty Name="PsrStructuralER" ColumnName="PsrStructuralER" />
+          <ScalarProperty Name="PsrStructuralERDate" ColumnName="PsrStructuralERDate" />
+          <ScalarProperty Name="PsrStructuralEnginnersName" ColumnName="PsrStructuralEnginnersName" />
+          <ScalarProperty Name="PsrNHBCguarantee" ColumnName="PsrNHBCguarantee" />
+          <ScalarProperty Name="PsrExpires" ColumnName="PsrExpires" />
+          <ScalarProperty Name="POtherDetails" ColumnName="POtherDetails" />
+          <ScalarProperty Name="MpSex" ColumnName="MpSex" />
+          <ScalarProperty Name="MpDOB" ColumnName="MpDOB" />
+          <ScalarProperty Name="MpAge" ColumnName="MpAge" />
+          <ScalarProperty Name="EmployDetails" ColumnName="EmployDetails" />
+          <ScalarProperty Name="MpEDOccOne" ColumnName="MpEDOccOne" />
+          <ScalarProperty Name="MpEDOccOneBusiness" ColumnName="MpEDOccOneBusiness" />
+          <ScalarProperty Name="MpEDOccOneStatus" ColumnName="MpEDOccOneStatus" />
+          <ScalarProperty Name="MpEDOccOneFullPart" ColumnName="MpEDOccOneFullPart" />
+          <ScalarProperty Name="MpEDOccTwo" ColumnName="MpEDOccTwo" />
+          <ScalarProperty Name="MpEDOccTwoBusiness" ColumnName="MpEDOccTwoBusiness" />
+          <ScalarProperty Name="MpEDOccTwoStatus" ColumnName="MpEDOccTwoStatus" />
+          <ScalarProperty Name="MpEDOccTwoFullPart" ColumnName="MpEDOccTwoFullPart" />
+          <ScalarProperty Name="MpPersonalDetails" ColumnName="MpPersonalDetails" />
+          <ScalarProperty Name="MpPersonalDetailsTitle" ColumnName="MpPersonalDetailsTitle" />
+          <ScalarProperty Name="MpSurname" ColumnName="MpSurname" />
+          <ScalarProperty Name="MpForenames" ColumnName="MpForenames" />
+          <ScalarProperty Name="MpAtRiskAddress" ColumnName="MpAtRiskAddress" />
+          <ScalarProperty Name="MpFirstTimeBuyer" ColumnName="MpFirstTimeBuyer" />
+          <ScalarProperty Name="MpConvictions" ColumnName="MpConvictions" />
+          <ScalarProperty Name="MpClaimsLosses" ColumnName="MpClaimsLosses" />
+          <ScalarProperty Name="CBuildingsAndContents" ColumnName="CBuildingsAndContents" />
+          <ScalarProperty Name="CBCoverType" ColumnName="CBCoverType" />
+          <ScalarProperty Name="CBSumInsured" ColumnName="CBSumInsured" />
+          <ScalarProperty Name="CBVolExcess" ColumnName="CBVolExcess" />
+          <ScalarProperty Name="CBXSBuyBack" ColumnName="CBXSBuyBack" />
+          <ScalarProperty Name="CBPrevInsurer" ColumnName="CBPrevInsurer" />
+          <ScalarProperty Name="CBPrevInsurerName" ColumnName="CBPrevInsurerName" />
+          <ScalarProperty Name="CBPrevInsurerPolicyNo" ColumnName="CBPrevInsurerPolicyNo" />
+          <ScalarProperty Name="CBPrevInsurerDateLapse" ColumnName="CBPrevInsurerDateLapse" />
+          <ScalarProperty Name="CBPrevInsurerYearsNCB" ColumnName="CBPrevInsurerYearsNCB" />
+          <ScalarProperty Name="CBPrevInsurerNCBProofRec" ColumnName="CBPrevInsurerNCBProofRec" />
+          <ScalarProperty Name="CBPrevInsurerYearsInsured" ColumnName="CBPrevInsurerYearsInsured" />
+          <ScalarProperty Name="CBPrevInsurerTransferFeeRec" ColumnName="CBPrevInsurerTransferFeeRec" />
+          <ScalarProperty Name="CBPrevInsurerPOPRec" ColumnName="CBPrevInsurerPOPRec" />
+          <ScalarProperty Name="CCCoverType" ColumnName="CCCoverType" />
+          <ScalarProperty Name="CCSumInsuredValue" ColumnName="CCSumInsuredValue" />
+          <ScalarProperty Name="CCSumInsuredOneItem" ColumnName="CCSumInsuredOneItem" />
+          <ScalarProperty Name="CCValuablesValue" ColumnName="CCValuablesValue" />
+          <ScalarProperty Name="CCValuablesOneItem" ColumnName="CCValuablesOneItem" />
+          <ScalarProperty Name="CCVolExcess" ColumnName="CCVolExcess" />
+          <ScalarProperty Name="CCXSBuyBack" ColumnName="CCXSBuyBack" />
+          <ScalarProperty Name="CCPrevInsurer" ColumnName="CCPrevInsurer" />
+          <ScalarProperty Name="CCPrevInsurerName" ColumnName="CCPrevInsurerName" />
+          <ScalarProperty Name="CCPrevInsurerPolicyNo" ColumnName="CCPrevInsurerPolicyNo" />
+          <ScalarProperty Name="CCPrevInsurerDateLapse" ColumnName="CCPrevInsurerDateLapse" />
+          <ScalarProperty Name="CCPrevInsurerYearsNCB" ColumnName="CCPrevInsurerYearsNCB" />
+          <ScalarProperty Name="CCPrevInsurerNCBProofRec" ColumnName="CCPrevInsurerNCBProofRec" />
+          <ScalarProperty Name="CCPrevInsurerYearsInsured" ColumnName="CCPrevInsurerYearsInsured" />
+          <ScalarProperty Name="CBSummationBuildingCoverEnteredDetails" ColumnName="CBSummationBuildingCoverEnteredDetails" />
+          <ScalarProperty Name="CBBuildingsVolExcessEnteredDetails" ColumnName="CBBuildingsVolExcessEnteredDetails" />
+          <ScalarProperty Name="CCSummationContentsCoverEntered" ColumnName="CCSummationContentsCoverEntered" />
+          <ScalarProperty Name="CCContentsVolExcessEnteredDetails" ColumnName="CCContentsVolExcessEnteredDetails" />
+          <ScalarProperty Name="CAllRisks" ColumnName="CAllRisks" />
+          <ScalarProperty Name="CAllRiskUnspecEffectsValue" ColumnName="CAllRiskUnspecEffectsValue" />
+          <ScalarProperty Name="CAllRiskUnspecEffectsOneItem" ColumnName="CAllRiskUnspecEffectsOneItem" />
+          <ScalarProperty Name="CAllRiskUnspecEffectsTerritory" ColumnName="CAllRiskUnspecEffectsTerritory" />
+          <ScalarProperty Name="CAllRisksValuablesUnspecValue" ColumnName="CAllRisksValuablesUnspecValue" />
+          <ScalarProperty Name="CAllRisksValuablesUnspecOneItem" ColumnName="CAllRisksValuablesUnspecOneItem" />
+          <ScalarProperty Name="CAllRisksValuablesUnspecTerritory" ColumnName="CAllRisksValuablesUnspecTerritory" />
+          <ScalarProperty Name="CAllRisksPhotoUnspecValue" ColumnName="CAllRisksPhotoUnspecValue" />
+          <ScalarProperty Name="CAllRisksPhotoUnspecOneItem" ColumnName="CAllRisksPhotoUnspecOneItem" />
+          <ScalarProperty Name="CAllRisksPhotoUnspecTerritory" ColumnName="CAllRisksPhotoUnspecTerritory" />
+          <ScalarProperty Name="CAllRisksSportsUnspecValue" ColumnName="CAllRisksSportsUnspecValue" />
+          <ScalarProperty Name="CAllRisksSportsUnspecOneItem" ColumnName="CAllRisksSportsUnspecOneItem" />
+          <ScalarProperty Name="CAllRisksSportsUnspecTerritory" ColumnName="CAllRisksSportsUnspecTerritory" />
+          <ScalarProperty Name="CAllRiskBicycles" ColumnName="CAllRiskBicycles" />
+          <ScalarProperty Name="CAllRisksMoneyValue" ColumnName="CAllRisksMoneyValue" />
+          <ScalarProperty Name="CAllRisksMoneyTerritory" ColumnName="CAllRisksMoneyTerritory" />
+          <ScalarProperty Name="CAllRisksCreditCardsValue" ColumnName="CAllRisksCreditCardsValue" />
+          <ScalarProperty Name="CAllRiskCreditCardsTerritory" ColumnName="CAllRiskCreditCardsTerritory" />
+          <ScalarProperty Name="CAllRisksFreezerContentsValue" ColumnName="CAllRisksFreezerContentsValue" />
+          <ScalarProperty Name="CAllRisksFreezerContentsAge" ColumnName="CAllRisksFreezerContentsAge" />
+          <ScalarProperty Name="CSpecifiedItems" ColumnName="CSpecifiedItems" />
+          <ScalarProperty Name="AOLegalExpenses" ColumnName="AOLegalExpenses" />
+          <ScalarProperty Name="AOMotorPolicy" ColumnName="AOMotorPolicy" />
+          <ScalarProperty Name="AOCurrentMotorInsurer" ColumnName="AOCurrentMotorInsurer" />
+          <ScalarProperty Name="AOCaravans" ColumnName="AOCaravans" />
+          <ScalarProperty Name="AOSummationCaravansEnteredDetails" ColumnName="AOSummationCaravansEnteredDetails" />
+          <ScalarProperty Name="AOBoats" ColumnName="AOBoats" />
+          <ScalarProperty Name="AOSummationBoatEnteredDetails" ColumnName="AOSummationBoatEnteredDetails" />
+          <ScalarProperty Name="AOSearchesConsent" ColumnName="AOSearchesConsent" />
+          <ScalarProperty Name="AOSchemeNo" ColumnName="AOSchemeNo" />
+          <ScalarProperty Name="AOCoverDate" ColumnName="AOCoverDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PropertyODCommunicationAddresses">
+      <EntityTypeMapping TypeName="PolicyCheckModel.PropertyODCommunicationAddress">
+        <MappingFragment StoreEntitySet="PropertyODCommunicationAddress">
+          <ScalarProperty Name="CommunicationAddressPolicyId" ColumnName="CommunicationAddressPolicyId" />
+          <ScalarProperty Name="CANumberName" ColumnName="CANumberName" />
+          <ScalarProperty Name="CAStreet" ColumnName="CAStreet" />
+          <ScalarProperty Name="CATown" ColumnName="CATown" />
+          <ScalarProperty Name="CACounty" ColumnName="CACounty" />
+          <ScalarProperty Name="CAPostCode" ColumnName="CAPostCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PropertyODInterestedParties">
+      <EntityTypeMapping TypeName="PolicyCheckModel.PropertyODInterestedParty">
+        <MappingFragment StoreEntitySet="PropertyODInterestedParty">
+          <ScalarProperty Name="InterestedPartyPolicyId" ColumnName="InterestedPartyPolicyId" />
+          <ScalarProperty Name="IPType" ColumnName="IPType" />
+          <ScalarProperty Name="IPName" ColumnName="IPName" />
+          <ScalarProperty Name="IPNameOther" ColumnName="IPNameOther" />
+          <ScalarProperty Name="IPNumberName" ColumnName="IPNumberName" />
+          <ScalarProperty Name="IPStreet" ColumnName="IPStreet" />
+          <ScalarProperty Name="IPTown" ColumnName="IPTown" />
+          <ScalarProperty Name="IPCounty" ColumnName="IPCounty" />
+          <ScalarProperty Name="IPPostCode" ColumnName="IPPostCode" />
+          <ScalarProperty Name="IPRefMortgageNo" ColumnName="IPRefMortgageNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PropertyODRiskPropertyAddresses">
+      <EntityTypeMapping TypeName="PolicyCheckModel.PropertyODRiskPropertyAddress">
+        <MappingFragment StoreEntitySet="PropertyODRiskPropertyAddress">
+          <ScalarProperty Name="RiskPropertyAddressPolicyId" ColumnName="RiskPropertyAddressPolicyId" />
+          <ScalarProperty Name="RPNumberName" ColumnName="RPNumberName" />
+          <ScalarProperty Name="RPStreet" ColumnName="RPStreet" />
+          <ScalarProperty Name="RPTown" ColumnName="RPTown" />
+          <ScalarProperty Name="RPCounty" ColumnName="RPCounty" />
+          <ScalarProperty Name="RPPostCode" ColumnName="RPPostCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
